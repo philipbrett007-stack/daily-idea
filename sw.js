@@ -1,6 +1,6 @@
 /* Daily Idea service worker: keeps the app working offline.
    App files: cache first (bump VERSION when they change). Idea files: network first, cached copy when offline. */
-const VERSION = "daily-idea-v5";
+const VERSION = "daily-idea-v6";
 const SHELL = ["./", "index.html", "styles.css", "app.js", "manifest.webmanifest",
   "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png"];
 const RUNTIME = "daily-idea-runtime";
@@ -19,12 +19,14 @@ self.addEventListener("activate", (event) => {
 
 async function networkFirst(request) {
   const cache = await caches.open(RUNTIME);
+  const u = new URL(request.url);
+  const key = u.origin + u.pathname;   // one cached copy per file, whatever the query string
   try {
     const fresh = await fetch(request);
-    if (fresh && fresh.ok) cache.put(request, fresh.clone());
+    if (fresh && fresh.ok) cache.put(key, fresh.clone());
     return fresh;
   } catch (err) {
-    const cached = await cache.match(request, { ignoreSearch: true });
+    const cached = await cache.match(key, { ignoreSearch: true });
     if (cached) return cached;
     throw err;
   }
@@ -53,6 +55,12 @@ self.addEventListener("fetch", (event) => {
       return;
     }
     event.respondWith(cacheFirst(req));
+    return;
+  }
+
+  // Ideas on the scheduled task's branch: fresh when online, cached copy when offline.
+  if (url.hostname === "raw.githubusercontent.com" && url.pathname.includes("/ideas/")) {
+    event.respondWith(networkFirst(req));
     return;
   }
 

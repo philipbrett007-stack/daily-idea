@@ -119,8 +119,13 @@
   })();
 
   /* ---------- data ---------- */
+  // Ideas can arrive in two places: the app's own copy (main branch) and the scheduled
+  // task's branch (claude/ideas), which it can always push to. Read both, keep the fuller day.
+  const SOURCES = ["ideas/", "https://raw.githubusercontent.com/philipbrett007-stack/daily-idea/refs/heads/claude/ideas/ideas/"];
+  const daySource = new Map();    // date -> index into SOURCES
   async function getJSON(path) {
-    const r = await fetch(path, { cache: "no-cache" });
+    const url = /^https:/.test(path) ? path + "?t=" + Date.now() : path;
+    const r = await fetch(url, { cache: "no-cache" });
     if (!r.ok) { const e = new Error("HTTP " + r.status); e.status = r.status; throw e; }
     return r.json();
   }
@@ -131,21 +136,35 @@
     return { date: (d && d.date) || date, ideas: featured.concat(rest) };
   }
   async function loadIndex() {
-    try {
-      const data = await getJSON("ideas/index.json");
-      const days = (Array.isArray(data.days) ? data.days : [])
-        .filter((d) => d && /^\d{4}-\d{2}-\d{2}$/.test(d.date))
-        .sort((a, b) => (a.date < b.date ? 1 : -1));
-      index = { latest: days.length ? days[0].date : null, days };
-      indexMissing = false;
-    } catch (e) {
-      if (e.status === 404) { index = { latest: null, days: [] }; indexMissing = true; }
-      else throw e;
+    const results = await Promise.allSettled(SOURCES.map((s) => getJSON(s + "index.json")));
+    const byDate = new Map();
+    results.forEach((res, si) => {
+      if (res.status !== "fulfilled") return;
+      const list = Array.isArray(res.value && res.value.days) ? res.value.days : [];
+      for (const d of list) {
+        if (!d || !/^\d{4}-\d{2}-\d{2}$/.test(d.date)) continue;
+        const have = byDate.get(d.date);
+        if (!have || (Number(d.count) || 0) > (Number(have.d.count) || 0)) byDate.set(d.date, { d, si });
+      }
+    });
+    if (!results.some((r) => r.status === "fulfilled")) {
+      const e = results[0].reason;
+      if (e && e.status === 404) { index = { latest: null, days: [] }; indexMissing = true; return; }
+      throw e;
     }
+    daySource.clear();
+    for (const [date, v] of byDate) daySource.set(date, v.si);
+    const days = [...byDate.values()].map((v) => v.d).sort((a, b) => (a.date < b.date ? 1 : -1));
+    index = { latest: days.length ? days[0].date : null, days };
+    indexMissing = false;
   }
   async function loadDay(date, fresh) {
     if (!fresh && dayCache.has(date)) return dayCache.get(date);
-    const d = normaliseDay(await getJSON("ideas/" + date + ".json"), date);
+    const first = daySource.get(date) || 0;
+    let raw;
+    try { raw = await getJSON(SOURCES[first] + date + ".json"); }
+    catch (e) { raw = await getJSON(SOURCES[1 - first] + date + ".json"); }
+    const d = normaliseDay(raw, date);
     dayCache.set(date, d);
     return d;
   }
