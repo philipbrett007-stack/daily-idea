@@ -1,13 +1,29 @@
 /* Daily Idea — phone app logic.
    Ideas come from ideas/index.json and ideas/YYYY-MM-DD.json, written by the scheduled Claude task.
-   "New idea" swaps in an idea you haven't seen yet: today's first, then anything in the bank, up to 100 a day.
-   Everything personal (what you've read, your stash) stays in this phone's storage. */
+   "New idea" (or swiping the card left) swaps in an idea you haven't seen: today's first, then anything
+   in the bank, up to 100 a day. Everything personal (what you've read, your stash) stays on this phone. */
 (function () {
   "use strict";
 
   const TZ = "Europe/Dublin";
   const DAILY_LIMIT = 100;
   const KEYS = { stash: "di.stash.v1", seen: "di.seen.v1", shown: "di.shown.v2", taps: "di.taps.v2" };
+
+  // Each theme gets its own colour. Order matters: the first keyword that matches wins.
+  const THEME_COLOURS = [
+    ["creativ", "#FF7AC6"], ["invent", "#FF7AC6"],
+    ["history", "#FFA64D"], ["big idea", "#FFA64D"],
+    ["science", "#3DD6B5"], ["nature", "#3DD6B5"],
+    ["psych", "#FF8A7A"], ["behav", "#FF8A7A"],
+    ["philos", "#F6C35B"], ["wisdom", "#F6C35B"],
+    ["thought for", "#6EC1FF"], ["living", "#6EC1FF"],
+    ["think", "#8B7BFF"], ["decision", "#8B7BFF"]
+  ];
+  function themeColour(theme) {
+    const s = String(theme || "").toLowerCase();
+    for (const [k, c] of THEME_COLOURS) if (s.includes(k)) return c;
+    return "#8B7BFF";
+  }
 
   const store = {
     get(k, fallback) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fallback; } catch (_) { return fallback; } },
@@ -25,6 +41,7 @@
   let lastLoad = 0;
   let deferredInstall = null;
   let busy = false;
+  let canAnother = false;
 
   const $ = (s) => document.querySelector(s);
 
@@ -42,15 +59,19 @@
   }
   const ICONS = {
     video: '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8.5 5.8v12.4L18.8 12z" fill="currentColor"/></svg>',
-    image: '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 16.5l4-4.5 3 3 2.5-2.5 2.5 4z" fill="currentColor"/><circle cx="15.5" cy="9" r="1.4" fill="currentColor"/></svg>',
+    image: '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 16.5l4-4.5 3 3 2.5-2.5 2.5 4z" fill="currentColor"/><circle cx="15.5" cy="9" r="1.4" fill="currentColor"/></svg>',
     link: '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M10 14l4-4M9 7h-1a5 5 0 000 10h1M15 7h1a5 5 0 010 10h-1" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>',
+    out: '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M14 5h5v5M19 5l-8 8M17 14v4a1 1 0 01-1 1H6a1 1 0 01-1-1V8a1 1 0 011-1h4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     caret: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     play: '<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M9 6.5v11L18 12z" fill="currentColor"/></svg>',
-    share: '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 15V4M8 8l4-4 4 4M5 13v6h14v-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    star: '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3.5l1.9 5.2 5.6.3-4.4 3.5 1.5 5.4L12 14.8 7.4 17.9l1.5-5.4L4.5 9l5.6-.3z" fill="currentColor"/></svg>',
+    share: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 15V4M8 8l4-4 4 4M5 13v5a2 2 0 002 2h10a2 2 0 002-2v-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    bookmark: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 4h10v16l-5-3.5L7 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
   };
   function icon(name, cls) { const s = el("span", { class: cls }); s.innerHTML = ICONS[name] || ICONS.link; return s; }
 
   const dayFmt = new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" });
+  const hourFmt = new Intl.DateTimeFormat("en-GB", { timeZone: TZ, hour: "numeric", hour12: false });
   const longFmt = new Intl.DateTimeFormat("en-IE", { timeZone: "UTC", weekday: "long", day: "numeric", month: "long" });
   const shortFmt = new Intl.DateTimeFormat("en-IE", { timeZone: "UTC", day: "numeric", month: "short" });
   const dayKey = (d) => dayFmt.format(d);
@@ -62,6 +83,10 @@
     const d = asDate(key); return isNaN(d) ? key : longFmt.format(d);
   }
   const fmtShort = (key) => { const d = asDate(key); return isNaN(d) ? key : shortFmt.format(d); };
+  function greeting() {
+    const h = parseInt(hourFmt.format(new Date()), 10);
+    return h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening";
+  }
   function safeUrl(u) { try { const x = new URL(String(u)); return x.protocol === "https:" ? x.href : null; } catch (_) { return null; } }
   function host(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (_) { return ""; } }
   function ytId(u) {
@@ -77,6 +102,7 @@
   }
   const keyOf = (date, idea, i) => date + "#" + (idea && idea.id ? String(idea.id) : String(i + 1));
   const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
   let toastTimer = null;
   function toast(msg) {
@@ -131,11 +157,10 @@
   }
   function seenCount(date) { let n = 0; const p = date + "#"; for (const k of seen) if (k.startsWith(p)) n++; return n; }
 
-  // Next idea for the New idea button: today's newest set first (in order), then a random unseen idea from the bank.
+  // Next idea: the newest day's ideas first (in order), then a random unseen idea from the rest of the bank.
   async function nextUnseen() {
     if (!index || !index.days.length) return null;
-    const today = todayKey();
-    const shownToday = new Set(shown[today] || []);
+    const shownToday = new Set(shown[todayKey()] || []);
     const free = (k) => !seen.has(k) && !shownToday.has(k);
     const latest = index.latest;
     try {
@@ -152,42 +177,16 @@
     return null;
   }
 
-  /* ---------- card ---------- */
-  function block(label, content) { return el("div", { class: "block" }, el("div", { class: "label", text: label }), content); }
+  /* ---------- cards ---------- */
+  function section(label, content) { return el("div", null, el("div", { class: "label", text: label }), content); }
 
-  function card(idea, ctx) {
-    const key = ctx.key;
-    const d = el("details", { class: "card" + (ctx.fresh ? " enter" : ""), "data-key": key });
-    d.open = !!ctx.open;
-
-    const meta = el("div", { class: "meta" },
-      ctx.pos ? el("span", { class: "no", text: "Idea " + ctx.pos + (ctx.total ? "/" + ctx.total : "") })
-              : el("span", { class: "no", text: ctx.label || fmtShort(ctx.date) }),
-      idea.theme ? el("span", { text: String(idea.theme) }) : null,
-      idea.featured ? el("span", { class: "pill", text: "Pick of the day" }) : null,
-      ctx.fromDay ? el("span", { class: "pill", text: "From " + fmtShort(ctx.fromDay) }) : null);
-    const head = el("div", { class: "titlerow" }, el("h3", { class: "title", text: String(idea.title) }), icon("caret", "caret"));
-    d.append(el("summary", null, meta, head));
-
-    const body = el("div", { class: "body" });
-
+  // The readable body of an idea, shared by the main card and expanded rows.
+  function ideaBody(idea, key, date) {
+    const parts = [];
     if (idea.idea) {
       const box = el("div", { class: "idea" });
       for (const p of String(idea.idea).split(/\n\s*\n/)) if (p.trim()) box.append(el("p", { text: p.trim() }));
-      body.append(box);
-    }
-
-    if (typeof idea.sketch_svg === "string") {
-      const s = idea.sketch_svg.trim();
-      if (s.startsWith("<svg") && s.length < 80000 && !/<script|<foreignObject|\son\w+\s*=|href\s*=\s*["']?(?!#)/i.test(s)) {
-        body.append(el("figure", { class: "sketch" },
-          el("img", { src: "data:image/svg+xml;charset=utf-8," + encodeURIComponent(s), alt: idea.sketch_alt ? String(idea.sketch_alt) : "Sketch explaining the idea", loading: "lazy" }),
-          idea.sketch_alt ? el("figcaption", { text: String(idea.sketch_alt) }) : null));
-      }
-    }
-
-    if (Array.isArray(idea.why) && idea.why.length) {
-      body.append(block("Why it holds up", el("ul", { class: "why" }, ...idea.why.map((w) => el("li", { text: String(w) })))));
+      parts.push(box);
     }
 
     const v = idea.visual, vu = v && safeUrl(v.url);
@@ -212,29 +211,69 @@
           el("span", { class: "vlabel", text: v.label ? String(v.label) : (kind === "video" ? "Watch the clip" : "Open the image") }),
           v.note ? el("span", { class: "vnote", text: String(v.note) }) : null,
           el("span", { class: "vhost", text: host(vu) }))));
-      body.append(block(kind === "video" ? "Watch" : "See it", a));
+      parts.push(a);
+    }
+
+    if (typeof idea.sketch_svg === "string") {
+      const s = idea.sketch_svg.trim();
+      if (s.startsWith("<svg") && s.length < 80000 && !/<script|<foreignObject|\son\w+\s*=|href\s*=\s*["']?(?!#)/i.test(s)) {
+        parts.push(el("figure", { class: "sketch" },
+          el("img", { src: "data:image/svg+xml;charset=utf-8," + encodeURIComponent(s), alt: idea.sketch_alt ? String(idea.sketch_alt) : "Sketch explaining the idea", loading: "lazy" }),
+          idea.sketch_alt ? el("figcaption", { text: String(idea.sketch_alt) }) : null));
+      }
+    }
+
+    if (Array.isArray(idea.why) && idea.why.length) {
+      parts.push(section("Why it holds up", el("ul", { class: "why" }, ...idea.why.map((w) => el("li", { text: String(w) })))));
     }
 
     if (idea.try_this) {
-      body.append(el("div", { class: "try" }, el("div", { class: "label", text: "Try this today" }), el("p", { text: String(idea.try_this) })));
+      parts.push(el("div", { class: "try" }, el("div", { class: "label", text: "Try this today" }), el("p", { text: String(idea.try_this) })));
     }
 
     const srcs = (Array.isArray(idea.sources) ? idea.sources : []).map((s) => ({ t: s && s.title, u: s && safeUrl(s.url) })).filter((s) => s.u);
     if (srcs.length) {
-      body.append(block("Go deeper", el("ul", { class: "sources" },
-        ...srcs.map((s) => el("li", null, el("a", { href: s.u, target: "_blank", rel: "noopener noreferrer", text: s.t ? String(s.t) : host(s.u) }))))));
+      parts.push(section("Go deeper", el("ul", { class: "sources" },
+        ...srcs.map((s) => el("li", null, el("a", { href: s.u, target: "_blank", rel: "noopener noreferrer" }, icon("out", ""), el("span", { text: s.t ? String(s.t) : host(s.u) })))))));
     }
 
     const isStashed = !!stash[key];
-    const shareBtn = el("button", { type: "button", class: "chip" }, icon("share", ""), "Share");
+    const stashBtn = el("button", { type: "button", class: "act stash-btn", "aria-pressed": String(isStashed), "data-stash": key }, icon("bookmark", ""), el("span", { text: isStashed ? "Stashed" : "Stash" }));
+    stashBtn.addEventListener("click", () => toggleStash(key, date, idea));
+    const shareBtn = el("button", { type: "button", class: "act" }, icon("share", ""), el("span", { text: "Share" }));
     shareBtn.addEventListener("click", () => share(idea));
-    const stashBtn = el("button", { type: "button", class: "chip", "aria-pressed": String(isStashed) }, isStashed ? "Stashed" : "Stash");
-    stashBtn.addEventListener("click", () => toggleStash(key, ctx.date, idea, stashBtn));
-    body.append(el("div", { class: "foot" }, shareBtn, stashBtn));
+    parts.push(el("div", { class: "actions" }, stashBtn, shareBtn));
+    return parts;
+  }
 
-    d.append(body);
-    d.addEventListener("toggle", () => { if (d.open) markSeen(key); });
-    if (d.open) markSeen(key);
+  function mainCard(idea, ctx) {
+    const c = el("article", { class: "card main" + (ctx.fresh ? " enter" : ""), "data-key": ctx.key });
+    c.style.setProperty("--t", themeColour(idea.theme));
+    const right = idea.featured
+      ? el("span", { class: "badge" }, icon("star", ""), "Pick of the day")
+      : ctx.fromDay ? el("span", { class: "badge", text: "From " + fmtShort(ctx.fromDay) }) : null;
+    c.append(
+      el("div", { class: "card-top" }, idea.theme ? el("span", { class: "tag", text: String(idea.theme) }) : el("span"), right),
+      el("h2", { class: "title", text: String(idea.title) }),
+      ...ideaBody(idea, ctx.key, ctx.date));
+    markSeen(ctx.key);
+    return c;
+  }
+
+  function rowCard(idea, ctx) {
+    const d = el("details", { class: "card row", "data-key": ctx.key });
+    d.style.setProperty("--t", themeColour(idea.theme));
+    const meta = [idea.theme ? String(idea.theme) : null, ctx.showDate ? fmtShort(ctx.date) : null].filter(Boolean).join(", ");
+    d.append(el("summary", null,
+      el("span", { class: "row-dot", "aria-hidden": "true" }),
+      el("span", { class: "row-text" }, el("span", { class: "row-title", text: String(idea.title) }), meta ? el("span", { class: "row-meta", text: meta }) : null),
+      icon("caret", "caret")));
+    let built = false;
+    d.addEventListener("toggle", () => {
+      if (!d.open) return;
+      if (!built) { d.append(el("div", { class: "row-body" }, ...ideaBody(idea, ctx.key, ctx.date))); built = true; }
+      markSeen(ctx.key);
+    });
     return d;
   }
 
@@ -247,15 +286,14 @@
     try { await navigator.clipboard.writeText(text); toast("Copied to clipboard"); } catch (_) { toast("Couldn't share on this device"); }
   }
 
-  function toggleStash(key, date, idea, btn) {
-    if (stash[key]) { delete stash[key]; toast("Removed from Stash"); }
-    else { stash[key] = { date, idea, savedAt: new Date().toISOString() }; toast("Stashed"); }
+  function toggleStash(key, date, idea) {
+    if (stash[key]) { delete stash[key]; toast("Removed from your stash"); }
+    else { stash[key] = { date, idea, savedAt: new Date().toISOString() }; toast("Saved to your stash"); }
     store.set(KEYS.stash, stash);
     const on = !!stash[key];
-    document.querySelectorAll('[data-key="' + CSS.escape(key) + '"] .foot .chip[aria-pressed]').forEach((b) => {
-      b.setAttribute("aria-pressed", String(on)); b.textContent = on ? "Stashed" : "Stash";
+    document.querySelectorAll('[data-stash="' + CSS.escape(key) + '"]').forEach((b) => {
+      b.setAttribute("aria-pressed", String(on)); b.querySelector("span:last-child").textContent = on ? "Stashed" : "Stash";
     });
-    if (btn) { btn.setAttribute("aria-pressed", String(on)); btn.textContent = on ? "Stashed" : "Stash"; }
     renderStashCount();
     if (view === "stash") renderStash();
   }
@@ -263,16 +301,35 @@
   /* ---------- Today ---------- */
   function emptyBox(title, text) { return el("div", { class: "empty" }, el("p", { class: "etitle", text: title }), el("p", { text })); }
 
-  async function renderToday(opts) {
-    const cardsEl = $("#today-cards"), btn = $("#another"), ask = $("#ask-claude"), note = $("#another-note");
-    const earlier = $("#earlier"), earlierCards = $("#earlier-cards");
+  function setFab(state) {
+    const btn = $("#another"), ask = $("#ask-claude"), out = $("#out-box"), hint = $("#today-hint");
     const today = todayKey();
+    const used = taps[today] || 0;
+    btn.hidden = ask.hidden = out.hidden = true; hint.hidden = true; canAnother = false;
+    if (state === "none") return;
+    if (state === "limit") {
+      out.hidden = false; out.textContent = "That's your 100 for today. A fresh set arrives at 9:00 tomorrow.";
+      return;
+    }
+    if (state === "out") {
+      ask.hidden = false; out.hidden = false;
+      out.textContent = "You've read every idea in the bank. Claude can research a new one in about five minutes, then tap refresh at the top.";
+      return;
+    }
+    btn.hidden = false; btn.disabled = false; hint.hidden = false; canAnother = true;
+    $("#another-count").textContent = used ? (DAILY_LIMIT - used) + " left" : "";
+  }
+
+  async function renderToday(opts) {
+    const cardsEl = $("#today-cards"), earlier = $("#earlier"), earlierCards = $("#earlier-cards");
+    const today = todayKey();
+    $("#today-h").textContent = greeting();
     $("#today-date").textContent = longFmt.format(asDate(today));
 
     if (!index || !index.days.length) {
-      $("#today-sub").textContent = indexMissing ? "Your first ideas arrive at 9:00." : "No ideas yet.";
-      cardsEl.replaceChildren(emptyBox("Nothing here yet", "Each morning a fresh set of ideas lands here. Tap refresh at the top to check."));
-      btn.hidden = true; ask.hidden = true; earlier.hidden = true; note.textContent = ""; return;
+      cardsEl.replaceChildren(emptyBox(indexMissing ? "Your first ideas arrive at 9:00" : "No ideas yet",
+        "Each morning a fresh set of ideas lands here. Tap refresh at the top to check."));
+      earlier.hidden = true; setFab("none"); return;
     }
 
     let list = (shown[today] || []).slice();
@@ -282,52 +339,35 @@
       if (k) { list = [k]; shown[today] = list; store.set(KEYS.shown, shown); }
     }
 
-    const nodes = [];
     let current = null;
     for (let i = list.length - 1; i >= 0 && !current; i--) {
       try { current = await ideaByKey(list[i]); if (current) current.key = list[i]; } catch (_) { current = null; }
     }
     if (!current) {
       cardsEl.replaceChildren(emptyBox("Couldn't load the idea", "Check your connection and tap refresh at the top."));
-      btn.hidden = true; ask.hidden = true; earlier.hidden = true; note.textContent = ""; return;
+      earlier.hidden = true; setFab("none"); return;
     }
-    nodes.push(card(current.idea, {
-      key: current.key, date: current.date, open: true, fresh: opts && opts.fresh,
-      label: current.date === today ? "Today" : null, fromDay: current.date !== today ? current.date : null
+    const colour = themeColour(current.idea.theme);
+    document.documentElement.style.setProperty("--t", colour);
+    cardsEl.replaceChildren(mainCard(current.idea, {
+      key: current.key, date: current.date, fresh: opts && opts.fresh,
+      fromDay: current.date !== today ? current.date : null
     }));
-    cardsEl.replaceChildren(...nodes);
 
-    // Earlier today: everything shown before the current card, newest first, collapsed
     const prev = list.slice(0, -1).reverse();
-    const prevNodes = [];
+    const rows = [];
     for (const k of prev) {
-      try { const r = await ideaByKey(k); if (r) prevNodes.push(card(r.idea, { key: k, date: r.date, open: false, fromDay: r.date !== today ? r.date : null })); } catch (_) {}
+      try { const r = await ideaByKey(k); if (r) rows.push(rowCard(r.idea, { key: k, date: r.date })); } catch (_) {}
     }
-    earlier.hidden = !prevNodes.length;
-    earlierCards.replaceChildren(...prevNodes);
+    earlier.hidden = !rows.length;
+    earlierCards.replaceChildren(...rows);
 
-    // Button state
-    const used = taps[today] || 0;
-    $("#today-sub").textContent = "Not for you? Tap New idea for another.";
-    if (used >= DAILY_LIMIT) {
-      btn.hidden = false; btn.disabled = true; ask.hidden = true;
-      $("#another-label").textContent = "That's 100 for today";
-      note.textContent = "Fresh ideas arrive at 9:00 tomorrow.";
-      return;
-    }
-    const hasNext = !!(await nextUnseen());
-    if (hasNext) {
-      btn.hidden = false; btn.disabled = false; ask.hidden = true;
-      $("#another-label").textContent = "New idea";
-      note.textContent = used ? used + " of " + DAILY_LIMIT + " used today" : "Up to " + DAILY_LIMIT + " a day";
-    } else {
-      btn.hidden = true; ask.hidden = false;
-      note.textContent = "You've read every idea in the bank. Claude can research a fresh one in about 5 minutes; tap refresh here afterwards.";
-    }
+    if ((taps[today] || 0) >= DAILY_LIMIT) setFab("limit");
+    else setFab((await nextUnseen()) ? "ready" : "out");
   }
 
   async function newIdea() {
-    if (busy) return;
+    if (busy || !canAnother) return;
     const today = todayKey();
     if ((taps[today] || 0) >= DAILY_LIMIT) return;
     busy = true;
@@ -336,6 +376,8 @@
       let k = await nextUnseen();
       if (!k) { try { await loadIndex(); dayCache.delete(index.latest); } catch (_) {} k = await nextUnseen(); }
       if (k) {
+        const cur = document.querySelector("#today-cards .card.main");
+        if (cur && !reduceMotion()) { cur.classList.add("leave"); await wait(190); }
         const list = shown[today] || [];
         if (list.length) markSeen(list[list.length - 1]);
         shown[today] = list.concat(k); taps[today] = (taps[today] || 0) + 1;
@@ -345,9 +387,25 @@
       if (k) window.scrollTo({ top: 0, behavior: reduceMotion() ? "auto" : "smooth" });
     } finally {
       busy = false;
-      if ((taps[today] || 0) < DAILY_LIMIT) btn.disabled = false;
+      btn.disabled = false;
     }
   }
+
+  // Swipe the card left for a new idea
+  (function swipe() {
+    const area = $("#today-cards");
+    let x0 = null, y0 = 0, t0 = 0;
+    area.addEventListener("touchstart", (e) => {
+      if (e.touches.length !== 1 || e.target.closest("a, button")) { x0 = null; return; }
+      x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; t0 = Date.now();
+    }, { passive: true });
+    area.addEventListener("touchend", (e) => {
+      if (x0 == null) return;
+      const t = e.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0;
+      x0 = null;
+      if (dx < -70 && Math.abs(dx) > 2 * Math.abs(dy) && Date.now() - t0 < 800) newIdea();
+    }, { passive: true });
+  })();
 
   /* ---------- Stash ---------- */
   function renderStashCount() {
@@ -356,10 +414,12 @@
   }
   function renderStash() {
     const list = Object.entries(stash).sort((a, b) => (a[1].savedAt < b[1].savedAt ? 1 : -1));
-    $("#stash-sub").textContent = list.length ? list.length + (list.length === 1 ? " idea saved." : " ideas saved.") : "";
+    $("#stash-sub").textContent = list.length
+      ? list.length + (list.length === 1 ? " idea saved on this phone." : " ideas saved on this phone.")
+      : "Ideas you've saved, kept on this phone.";
     const target = $("#stash-cards");
-    if (!list.length) { target.replaceChildren(emptyBox("Nothing stashed yet", "Tap Stash on any card to keep it here. Your stash lives on this phone and works offline.")); return; }
-    target.replaceChildren(...list.map(([key, s]) => card(s.idea, { key, date: s.date, open: false })));
+    if (!list.length) { target.replaceChildren(emptyBox("Nothing saved yet", "Tap Stash on any idea to keep it here. Your stash works offline too.")); return; }
+    target.replaceChildren(...list.map(([key, s]) => rowCard(s.idea, { key, date: s.date, showDate: true })));
   }
 
   /* ---------- Archive ---------- */
@@ -371,24 +431,17 @@
       return;
     }
     const totalIdeas = index.days.reduce((s, d) => s + (Number(d.count) || 0), 0);
-    $("#archive-sub").textContent = totalIdeas + (totalIdeas === 1 ? " idea over " : " ideas over ") + index.days.length + (index.days.length === 1 ? " day." : " days.");
+    $("#archive-sub").textContent = totalIdeas + (totalIdeas === 1 ? " idea so far." : " ideas so far.");
     target.replaceChildren(...index.days.map((day) => {
       const n = Number(day.count) || 0;
-      const det = el("details", { class: "day" });
-      const sum = el("summary", null,
-        el("span", { class: "day-name", text: fmtDay(day.date) }),
-        el("span", { class: "day-count", text: n + (n === 1 ? " idea" : " ideas") }));
-      const body = el("div", { class: "day-body" });
-      det.append(sum, body);
-      det.addEventListener("toggle", async () => {
-        if (!det.open || body.childElementCount) return;
-        body.append(el("p", { class: "sub", text: "Loading…" }));
-        try {
-          const d = await loadDay(day.date);
-          body.replaceChildren(...d.ideas.map((idea, i) => card(idea, { key: keyOf(day.date, idea, i), date: day.date, pos: i + 1, total: d.ideas.length, open: false })));
-        } catch (_) { body.replaceChildren(el("p", { class: "sub", text: "Couldn't load this day. Check your connection." })); }
-      });
-      return det;
+      const rows = el("div", { class: "rows" }, el("p", { class: "row-meta", text: "Loading…" }));
+      const box = el("section", { class: "day" },
+        el("h2", { class: "day-head" }, el("span", { text: fmtDay(day.date) }), el("small", { text: n + (n === 1 ? " idea" : " ideas") })),
+        rows);
+      loadDay(day.date)
+        .then((d) => rows.replaceChildren(...d.ideas.map((idea, i) => rowCard(idea, { key: keyOf(day.date, idea, i), date: day.date }))))
+        .catch(() => rows.replaceChildren(el("p", { class: "row-meta", text: "Couldn't load this day. Check your connection." })));
+      return box;
     }));
   }
 
@@ -439,13 +492,14 @@
   window.addEventListener("appinstalled", () => { $("#install").hidden = true; toast("Installed. Find Daily Idea on your home screen."); });
 
   if ("serviceWorker" in navigator) {
-    // When an updated version of the app is installed, reload once so the new version shows straight away.
+    // When an updated version of the app is installed, reload once so it shows straight away.
     const hadController = !!navigator.serviceWorker.controller;
     let reloaded = false;
     navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadController && !reloaded) { reloaded = true; location.reload(); } });
     window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").then((r) => r.update()).catch(() => {}); });
   }
 
+  $("#today-h").textContent = greeting();
   renderStashCount();
   load(false);
 })();

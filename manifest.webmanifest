@@ -1,18 +1,36 @@
 {
   "name": "Daily Idea",
   "short_name": "Daily Idea",
-  "description": "One well-sourced idea every morning, with more waiting when you want them.",
+  "description": "One well-sourced idea every morning, and a fresh one whenever you want it.",
   "id": "./",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#ECEFF3",
-  "theme_color": "#284B7A",
-  "categories": ["education", "books"],
+  "background_color": "#15142A",
+  "theme_color": "#15142A",
+  "categories": [
+    "education",
+    "books"
+  ],
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }
