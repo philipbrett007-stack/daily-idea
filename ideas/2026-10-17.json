@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-17",
+  "generated_at": "2026-10-17T10:01:58+01:00",
+  "ideas": [
+    {
+      "id": "1",
+      "featured": true,
+      "theme": "History & big ideas",
+      "title": "Electricity took forty years to pay off",
+      "idea": "A new technology rarely pays off until people redesign the work around it, and that can take a generation.\n\nBy 1900 electric power had been on sale for two decades, yet American factories were barely more productive. Owners had swapped a big steam engine for a big electric motor and kept everything else: the overhead line shaft, the belts, the machines lined up wherever the shaft ran. Electricity's real gift was that every machine could have its own small motor, so a factory could be laid out around the flow of work instead of the route of the power. Lighter, single-storey, safer plants followed, but only as old mills wore out and managers learned to think differently. Productivity finally leapt in the 1920s.\n\nThe economist Paul David told this story in 1990 to explain why computers weren't yet showing up in the statistics.",
+      "why": [
+        "Paul David (Stanford), 'The Dynamo and the Computer', American Economic Review, 1990: electric motors drove under 5% of US factory machinery in 1899 and just over half by the early 1920s; their spread accounts for about half the 1920s jump in manufacturing productivity growth.",
+        "Tim Harford (Financial Times) adds a human side: the gains also needed retrained workers with more responsibility, nudged by WWI-era limits on cheap labour.",
+        "Caveat: David himself warns the analogy is loose. Computers differ from dynamos, and a past lag doesn't predict a timetable for any technology today."
+      ],
+      "visual": {
+        "label": "How factories powered machines before electric motors — Core77",
+        "note": "Look at the photos of overhead shafts and belts: every machine had to sit under the shaft. That is the layout electricity eventually freed factories from. There's also a short clip of a working line-shaft shop.",
+        "type": "image",
+        "url": "https://www.core77.com/posts/58982/how-did-factories-get-power-to-their-machines-before-electricity"
+      },
+      "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\"><text x=\"150\" y=\"30\" font-size=\"18\" fill=\"#1C2633\" text-anchor=\"middle\" font-weight=\"bold\">1900: motor swapped in</text><text x=\"450\" y=\"30\" font-size=\"18\" fill=\"#1C2633\" text-anchor=\"middle\" font-weight=\"bold\">1920s: work redesigned</text><line x1=\"300\" y1=\"45\" x2=\"300\" y2=\"300\" stroke=\"#D3DAE3\" stroke-width=\"2\"/><rect x=\"20\" y=\"70\" width=\"50\" height=\"50\" fill=\"#C2414B\"/><text x=\"45\" y=\"140\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">1 big motor</text><line x1=\"70\" y1=\"85\" x2=\"280\" y2=\"85\" stroke=\"#C2414B\" stroke-width=\"5\"/><text x=\"180\" y=\"72\" font-size=\"16\" fill=\"#C2414B\" text-anchor=\"middle\">line shaft</text><path d=\"M110 88 V180 M170 88 V180 M230 88 V180\" stroke=\"#586577\" stroke-width=\"2\" stroke-dasharray=\"4 4\"/><rect x=\"95\" y=\"180\" width=\"30\" height=\"30\" fill=\"#1C2633\"/><rect x=\"155\" y=\"180\" width=\"30\" height=\"30\" fill=\"#1C2633\"/><rect x=\"215\" y=\"180\" width=\"30\" height=\"30\" fill=\"#1C2633\"/><text x=\"150\" y=\"250\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">machines placed where</text><text x=\"150\" y=\"272\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">the power runs</text><path d=\"M335 120 H560\" stroke=\"#284B7A\" stroke-width=\"3\" fill=\"none\"/><path d=\"M548 112 L562 120 L548 128\" stroke=\"#284B7A\" stroke-width=\"3\" fill=\"none\"/><text x=\"450\" y=\"100\" font-size=\"16\" fill=\"#284B7A\" text-anchor=\"middle\">flow of work</text><rect x=\"340\" y=\"140\" width=\"30\" height=\"30\" fill=\"#1C2633\"/><rect x=\"410\" y=\"140\" width=\"30\" height=\"30\" fill=\"#1C2633\"/><rect x=\"480\" y=\"140\" width=\"30\" height=\"30\" fill=\"#1C2633\"/><circle cx=\"375\" cy=\"175\" r=\"6\" fill=\"#C2414B\"/><circle cx=\"445\" cy=\"175\" r=\"6\" fill=\"#C2414B\"/><circle cx=\"515\" cy=\"175\" r=\"6\" fill=\"#C2414B\"/><text x=\"450\" y=\"215\" font-size=\"16\" fill=\"#C2414B\" text-anchor=\"middle\">small motor on each machine</text><text x=\"450\" y=\"250\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">machines placed where</text><text x=\"450\" y=\"272\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">the work goes next</text></svg>",
+      "sketch_alt": "Left: one motor and a shaft dictate where machines sit. Right: a motor on each machine lets the layout follow the work.",
+      "try_this": "Pick one new tool you've adopted (an app, AI, a gadget). Are you using it to do the old routine slightly faster, or have you asked what the routine would look like if you designed it from scratch around the tool?",
+      "sources": [
+        {
+          "title": "The Dynamo and the Computer — Paul A. David / American Economic Review (1990)",
+          "url": "https://Www.Gwern.net/doc/economics/automation/1990-david.pdf"
+        },
+        {
+          "title": "It took decades for the economic impact of electricity to be felt — Tim Harford / Financial Times via History News Network",
+          "url": "https://www.historynewsnetwork.org/article/paul-david-it-took-decades-for-the-economic-impact"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Daily Idea</title>
+<meta name="description" content="One well-sourced idea every morning, with a few more waiting when you want them.">
+<meta name="theme-color" content="#ECEFF3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101418" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Schibsted+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">Daily Idea</span>
+    </div>
+    <div class="top-actions">
+      <button id="install" class="ghost" type="button" hidden>Install</button>
+      <button id="refresh" class="icon-btn" type="button" aria-label="Check for new ideas">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 11a8 8 0 10-2.3 5.7M20 4v7h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <p id="banner" class="banner" role="status" hidden></p>
+
+  <section id="view-today" class="view" aria-labelledby="today-h">
+    <div class="day-intro">
+      <p class="eyebrow" id="today-date">&nbsp;</p>
+      <h1 id="today-h">Today's ideas</h1>
+      <p class="sub" id="today-sub">Loading…</p>
+    </div>
+    <div id="today-cards" class="cards"></div>
+    <div class="more">
+      <button id="another" class="primary" type="button" hidden>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        <span id="another-label">Another idea</span>
+      </button>
+      <p id="another-note" class="more-note"></p>
+    </div>
+  </section>
+
+  <section id="view-stash" class="view" aria-labelledby="stash-h" hidden>
+    <div class="day-intro">
+      <p class="eyebrow">Kept on this phone</p>
+      <h1 id="stash-h">Stash</h1>
+      <p class="sub" id="stash-sub"></p>
+    </div>
+    <div id="stash-cards" class="cards"></div>
+  </section>
+
+  <section id="view-archive" class="view" aria-labelledby="archive-h" hidden>
+    <div class="day-intro">
+      <p class="eyebrow">Every idea so far</p>
+      <h1 id="archive-h">Archive</h1>
+      <p class="sub" id="archive-sub"></p>
+    </div>
+    <div id="archive-days" class="days"></div>
+  </section>
+</main>
+
+<nav class="tabbar" aria-label="Sections">
+  <div class="tabbar-inner">
+    <button class="tab" type="button" data-view="today" aria-current="page">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 9h16" stroke="currentColor" stroke-width="1.8"/></svg>
+      <span>Today</span>
+    </button>
+    <button class="tab" type="button" data-view="stash">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M7 4h10v16l-5-3.5L7 20z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <span>Stash <b id="stash-count" class="count" hidden></b></span>
+    </button>
+    <button class="tab" type="button" data-view="archive">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span>Archive</span>
+    </button>
+  </div>
+</nav>
+
+<p id="toast" class="toast" role="status" aria-live="polite" hidden></p>
+
+<script src="app.js"></script>
+</body>
+</html>
