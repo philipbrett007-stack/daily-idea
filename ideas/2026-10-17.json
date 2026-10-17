@@ -32,6 +32,316 @@
           "url": "https://www.historynewsnetwork.org/article/paul-david-it-took-decades-for-the-economic-impact"
         }
       ]
+    },
+    {
+      "id": "2",
+      "featured": false,
+      "theme": "Thinking tools",
+      "title": "Praise didn't make them worse",
+      "idea": "When something unusually good or bad happens, the next result will probably be closer to average, whatever you do. Daniel Kahneman learned this working with Israeli Air Force flight instructors. One insisted that praise backfired: cadets he praised for a superb manoeuvre usually flew worse next time, while those he shouted at improved. The pattern was real, but the cause was luck. An exceptional flight is partly skill and partly a good day, and good days don't repeat on demand, so the next attempt drifts back towards the cadet's normal level, praise or no praise.\n\nThe same trap catches the manager who 'fixes' a terrible quarter, the remedy taken at the worst point of a cold, and the club that sacks its coach after a losing run. Before crediting or blaming an intervention, ask whether things would have drifted back anyway.",
+      "why": [
+        "Kahneman tells the story in Thinking, Fast and Slow (2011), chapter 17.",
+        "Statisticians call it regression to the mean: wherever results mix skill with chance, extreme scores tend to be followed by less extreme ones. Francis Galton first described it in the 1880s.",
+        "Caveat: this doesn't mean feedback is useless. It means you need a comparison group, or many attempts, to tell whether it worked."
+      ],
+      "visual": {
+        "type": "image",
+        "url": "https://en.wikipedia.org/wiki/Regression_toward_the_mean",
+        "label": "Regression toward the mean — Wikipedia",
+        "note": "Look at Galton's height chart: children of very tall parents were tall, but less extreme than their parents."
+      },
+      "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\">\n<line x1=\"40\" y1=\"170\" x2=\"570\" y2=\"170\" stroke=\"#586577\" stroke-width=\"2\" stroke-dasharray=\"6 6\"/>\n<text x=\"570\" y=\"196\" font-size=\"16\" fill=\"#586577\" text-anchor=\"end\">cadet's usual level</text>\n<polyline points=\"50,172 110,160 170,182 240,62 310,158 370,178 430,276 500,184 560,166\" fill=\"none\" stroke=\"#284B7A\" stroke-width=\"3\"/>\n<circle cx=\"240\" cy=\"62\" r=\"9\" fill=\"#284B7A\"/>\n<circle cx=\"430\" cy=\"276\" r=\"9\" fill=\"#C2414B\"/>\n<text x=\"240\" y=\"38\" font-size=\"17\" fill=\"#284B7A\" text-anchor=\"middle\" font-weight=\"bold\">great flight: praised</text>\n<text x=\"330\" y=\"118\" font-size=\"16\" fill=\"#1C2633\">next: back to normal</text>\n<text x=\"300\" y=\"306\" font-size=\"17\" fill=\"#C2414B\" text-anchor=\"middle\" font-weight=\"bold\">bad flight: shouted at</text>\n<text x=\"512\" y=\"236\" font-size=\"16\" fill=\"#1C2633\">next: better anyway</text>\n</svg>",
+      "sketch_alt": "Extreme flights are followed by ordinary ones, whatever the instructor says.",
+      "try_this": "Think of something you changed straight after a bad week: a new routine, a diet, a pep talk. Would things have improved anyway?",
+      "sources": [
+        {
+          "title": "Thinking, Fast and Slow, chapter 17 — Daniel Kahneman (LitCharts summary)",
+          "url": "https://www.litcharts.com/lit/thinking-fast-and-slow/part-2-chapter-17"
+        },
+        {
+          "title": "Regression Toward the Mean — Online Statistics Education, Rice University",
+          "url": "https://www.onlinestatbook.com/mobile/regression/regression_toward_mean.html"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "featured": false,
+      "theme": "Science & nature",
+      "title": "The 'wood wide web' is mostly hype",
+      "idea": "Trees probably aren't chatting through underground fungal networks, at least not the way bestsellers suggest. Mycorrhizal fungi are real and vital: they wrap tree roots, trading water and nutrients for sugar, and some link several trees at once. But in 2023 three forest ecologists led by Justine Karst at the University of Alberta reviewed the field evidence for three popular claims: that these networks are widespread in forests, that big trees feed seedlings through them, and that trees use them to send warnings. Each claim turned out to be thinly supported. Only two studies had actually mapped shared fungal links between trees, and seedlings connected to networks did no better on average. Meanwhile, citations overstating the original results had nearly doubled over 25 years. A good story had outrun its data.",
+      "why": [
+        "Karst, Jones and Hoeksema, Nature Ecology & Evolution (2023), reviewed 26 seedling studies and more than 1,600 papers citing 18 key field studies.",
+        "The authors call the drift 'positive citation bias': each retelling slightly overstated what the original study showed.",
+        "Caveat: the fungi themselves are essential to forest health. The doubt is about network-wide sharing and signalling, not about mycorrhizae."
+      ],
+      "visual": {
+        "type": "image",
+        "url": "https://www.ualberta.ca/en/folio/2023/02/do-trees-really-talk-to-each-other-through-underground-fungal-networks.html",
+        "label": "Do trees really 'talk' to each other? — University of Alberta",
+        "note": "The researchers' own plain-English account of which claims hold up and which don't."
+      },
+      "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\">\n<text x=\"300\" y=\"30\" font-size=\"17\" fill=\"#284B7A\" text-anchor=\"middle\" font-weight=\"bold\">Fungi help each tree: well supported</text>\n<text x=\"300\" y=\"56\" font-size=\"17\" fill=\"#C2414B\" text-anchor=\"middle\" font-weight=\"bold\">Trees feeding and warning each other: weak evidence</text>\n<line x1=\"30\" y1=\"210\" x2=\"570\" y2=\"210\" stroke=\"#586577\" stroke-width=\"2\"/>\n<rect x=\"111\" y=\"130\" width=\"18\" height=\"80\" fill=\"#586577\"/>\n<circle cx=\"120\" cy=\"118\" r=\"44\" fill=\"#284B7A\"/>\n<rect x=\"471\" y=\"130\" width=\"18\" height=\"80\" fill=\"#586577\"/>\n<circle cx=\"480\" cy=\"118\" r=\"44\" fill=\"#284B7A\"/>\n<path d=\"M120 210 l-32 40 M120 210 l32 40 M120 210 v48\" stroke=\"#1C2633\" stroke-width=\"3\" fill=\"none\"/>\n<path d=\"M480 210 l-32 40 M480 210 l32 40 M480 210 v48\" stroke=\"#1C2633\" stroke-width=\"3\" fill=\"none\"/>\n<path d=\"M156 254 C 240 300, 360 300, 444 254\" stroke=\"#C2414B\" stroke-width=\"3\" stroke-dasharray=\"8 6\" fill=\"none\"/>\n<text x=\"300\" y=\"268\" font-size=\"16\" fill=\"#C2414B\" text-anchor=\"middle\">shared network?</text>\n</svg>",
+      "sketch_alt": "Fungi clearly help individual trees; tree-to-tree sharing through a network is the weak part.",
+      "try_this": "Pick a 'fact' you've repeated from a popular book or documentary. Can you name the study behind it, and did it show what you think it showed?",
+      "sources": [
+        {
+          "title": "Positive citation bias and overinterpreted results lead to misinformation on common mycorrhizal networks in forests — Karst, Jones & Hoeksema / Nature Ecology & Evolution",
+          "url": "https://olemiss.edu/hoeksemalab/docs/Karst%20et%20al.%202023.%20Positive%20citation%20bias%20and%20overinterpreted%20results%20lead%20to%20misinformation%20on%20common%20mycorrhizal%20networks%20in%20forests-1.pdf"
+        },
+        {
+          "title": "Do forest trees really 'talk' through underground fungi? — University of Alberta",
+          "url": "https://www.ualberta.ca/news/news-releases-and-statements/news-releases/2023/02-february/do-forest-trees-really-talk-through-underground-fungi.html"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "featured": false,
+      "theme": "Psychology & behaviour",
+      "title": "We overvalue what we build",
+      "idea": "Putting your own effort into making something makes you value it more, even when the result is mediocre. Michael Norton, Daniel Mochon and Dan Ariely called this the IKEA effect. Across four studies, people assembled IKEA storage boxes, folded origami and built Lego sets, then put a value on their work. They rated their amateur creations as similar in value to versions made by experts, and expected other people to agree. The extra love only appeared when the job was finished: when people built something and then had to take it apart, or never completed it, the effect faded.\n\nIt explains a lot at work: why teams defend their own designs, why 'not invented here' thinking is so stubborn, and why whoever built the spreadsheet struggles to see its flaws.",
+      "why": [
+        "Norton, Mochon & Ariely, 'The IKEA effect: When labor leads to love', Journal of Consumer Psychology (2012).",
+        "The effect held for keen DIYers and complete novices alike, and depended on successfully completing the task.",
+        "Caveat: the items were cheap and simple, and the extra value lives mainly in the builder's eyes. A buyer won't share it."
+      ],
+      "visual": {
+        "type": "image",
+        "url": "https://daily.jstor.org/why-we-pay-to-do-stuff-ourselves/",
+        "label": "Why we pay to do stuff ourselves — JSTOR Daily",
+        "note": "A short read on the study and why effort makes things feel more valuable."
+      },
+      "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\">\n<text x=\"300\" y=\"28\" font-size=\"17\" fill=\"#1C2633\" text-anchor=\"middle\" font-weight=\"bold\">How much people valued it (illustrative)</text>\n<line x1=\"50\" y1=\"240\" x2=\"560\" y2=\"240\" stroke=\"#586577\" stroke-width=\"2\"/>\n<rect x=\"80\" y=\"60\" width=\"120\" height=\"180\" rx=\"6\" fill=\"#284B7A\"/>\n<rect x=\"240\" y=\"135\" width=\"120\" height=\"105\" rx=\"6\" fill=\"#D3DAE3\"/>\n<rect x=\"400\" y=\"140\" width=\"120\" height=\"100\" rx=\"6\" fill=\"#C2414B\"/>\n<text x=\"140\" y=\"266\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">I built it</text>\n<text x=\"300\" y=\"266\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">Someone else</text>\n<text x=\"300\" y=\"286\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">built it</text>\n<text x=\"460\" y=\"266\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">I built it, then</text>\n<text x=\"460\" y=\"286\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">took it apart</text>\n</svg>",
+      "sketch_alt": "Building something raises its value to you, but only if you finish it.",
+      "try_this": "Next time you defend something you made, ask: would I rate this as highly if a stranger had built it?",
+      "sources": [
+        {
+          "title": "The IKEA effect: When labor leads to love — Norton, Mochon & Ariely / Journal of Consumer Psychology",
+          "url": "https://dash.harvard.edu/handle/1/12136084"
+        },
+        {
+          "title": "Why we pay to do stuff ourselves — JSTOR Daily",
+          "url": "https://daily.jstor.org/why-we-pay-to-do-stuff-ourselves/"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "featured": false,
+      "theme": "Philosophy & wisdom",
+      "title": "Most of your fears never arrive",
+      "idea": "Much of what we dread hurts more in anticipation than it ever does in reality. Seneca made the point to his friend Lucilius nearly 2,000 years ago, writing that we \"suffer more often in imagination than in reality\". He offered a simple audit for any looming worry. Is it certain, or just rumour and suspicion? Is it truly harmful, or merely embarrassing? Is it happening now, or might it never come? Time, he noted, often intervenes: threats fade, get postponed or turn into something else. Meanwhile, the worrier has already paid in full.\n\nThis isn't advice to ignore risks. It's a way to separate a real problem you can act on today from a story your mind is running ahead of the facts.",
+      "why": [
+        "Seneca, Letter 13 of the Moral Letters to Lucilius (around AD 65), quoted in Richard Gummere's 1917 translation.",
+        "Modern cognitive behavioural therapy uses a similar move, asking people to test anxious predictions against the evidence.",
+        "Caveat: some fears are accurate. The aim is to weigh them honestly, not to dismiss them."
+      ],
+      "visual": {
+        "type": "video",
+        "url": "https://www.youtube.com/watch?v=R9OCA6UFE-0",
+        "label": "The philosophy of Stoicism — TED-Ed",
+        "note": "A short animated introduction to the Stoics, including Seneca."
+      },
+      "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\">\n<line x1=\"40\" y1=\"260\" x2=\"570\" y2=\"260\" stroke=\"#586577\" stroke-width=\"2\"/>\n<text x=\"570\" y=\"290\" font-size=\"16\" fill=\"#586577\" text-anchor=\"end\">time</text>\n<line x1=\"420\" y1=\"40\" x2=\"420\" y2=\"260\" stroke=\"#586577\" stroke-width=\"2\" stroke-dasharray=\"5 5\"/>\n<text x=\"420\" y=\"30\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">the day itself</text>\n<path d=\"M50 258 C 150 250, 250 70, 400 74 L 420 80\" fill=\"none\" stroke=\"#C2414B\" stroke-width=\"4\"/>\n<path d=\"M410 258 C 430 200, 460 200, 500 258\" fill=\"none\" stroke=\"#284B7A\" stroke-width=\"4\"/>\n<text x=\"200\" y=\"120\" font-size=\"17\" fill=\"#C2414B\" font-weight=\"bold\">dread beforehand</text>\n<text x=\"510\" y=\"214\" font-size=\"17\" fill=\"#284B7A\" font-weight=\"bold\">the real</text>\n<text x=\"510\" y=\"234\" font-size=\"17\" fill=\"#284B7A\" font-weight=\"bold\">event</text>\n</svg>",
+      "sketch_alt": "The dread before an event is often bigger than the event itself.",
+      "try_this": "Write down one thing you're dreading. Run Seneca's three questions on it: is it certain, is it truly harmful, is it happening now?",
+      "sources": [
+        {
+          "title": "Letter 13: On groundless fears — Seneca / Roman Letters",
+          "url": "https://romanletters.org/letters/seneca/13/"
+        },
+        {
+          "title": "The philosophy of Stoicism — Massimo Pigliucci / TED-Ed",
+          "url": "https://ed.ted.com/lessons/the-philosophy-of-stoicism-massimo-pigliucci"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "featured": false,
+      "theme": "Creativity, invention & systems thinking",
+      "title": "Working complex systems start simple",
+      "idea": "If you want a complex system that works, start with a simple one that works and grow it. That's Gall's Law, from the paediatrician John Gall's 1975 book General Systemantics, a tongue-in-cheek study of why systems fail. His observation: every complex system that works turns out to have evolved from a simpler system that worked, while a complex system designed from scratch never works and can't be patched into working. You have to go back and start again with something simple.\n\nEngineers recognise it in the internet, which grew from a four-computer network in 1969, and in the advice to build a minimum viable product first. It also explains why big-bang IT rollouts so often go wrong: too many untested interactions at once, and no working baseline to fall back to.",
+      "why": [
+        "John Gall, General Systemantics (1975), later republished as Systemantics and The Systems Bible.",
+        "The same logic underpins iterative engineering: prototype, test, then add complexity one verified step at a time.",
+        "Caveat: it's a rule of thumb from experience, not a proven law. Some well-specified systems are designed whole and work, though usually from proven parts."
+      ],
+      "visual": {
+        "type": "image",
+        "url": "https://en.wikipedia.org/wiki/Systemantics",
+        "label": "Systemantics — Wikipedia",
+        "note": "Gall's other tongue-in-cheek rules are worth a skim, such as how fail-safe systems fail."
+      },
+      "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\">\n<text x=\"150\" y=\"30\" font-size=\"17\" fill=\"#284B7A\" text-anchor=\"middle\" font-weight=\"bold\">Grown from simple: works</text>\n<text x=\"450\" y=\"30\" font-size=\"17\" fill=\"#C2414B\" text-anchor=\"middle\" font-weight=\"bold\">Designed all at once: fails</text>\n<line x1=\"300\" y1=\"45\" x2=\"300\" y2=\"300\" stroke=\"#D3DAE3\" stroke-width=\"2\"/>\n<rect x=\"40\" y=\"230\" width=\"44\" height=\"44\" rx=\"4\" fill=\"#284B7A\"/>\n<rect x=\"110\" y=\"190\" width=\"70\" height=\"84\" rx=\"4\" fill=\"#284B7A\"/>\n<rect x=\"200\" y=\"110\" width=\"80\" height=\"164\" rx=\"4\" fill=\"#284B7A\"/>\n<path d=\"M88 250 L104 236 M184 210 L196 190\" stroke=\"#1C2633\" stroke-width=\"3\"/>\n<rect x=\"350\" y=\"80\" width=\"200\" height=\"194\" rx=\"4\" fill=\"#D3DAE3\" stroke=\"#C2414B\" stroke-width=\"3\"/>\n<path d=\"M370 100 L530 254 M530 100 L370 254\" stroke=\"#C2414B\" stroke-width=\"5\"/>\n<text x=\"150\" y=\"300\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">each step tested</text>\n<text x=\"450\" y=\"300\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">too many untested parts</text>\n</svg>",
+      "sketch_alt": "Systems grown step by step from something working tend to work; ones designed all at once tend not to.",
+      "try_this": "Take a project you're planning. What's the smallest version that would genuinely work end to end this week?",
+      "sources": [
+        {
+          "title": "John Gall (author) — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/John_Gall_(author)"
+        },
+        {
+          "title": "Systemantics — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Systemantics"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "featured": false,
+      "theme": "History & big ideas",
+      "title": "Hanoi's rat bounty bred more rats",
+      "idea": "Pay people per result and they'll find the cheapest way to produce that result, not the outcome you wanted. In 1902, French colonial officials in Hanoi were alarmed by rats swarming from the city's new sewers while plague spread across Asia. They offered a bounty of one cent per rat, and to spare officials from handling carcasses, a tail was enough proof. Soon tailless rats were spotted running through the streets: hunters were cutting off tails and releasing the animals to breed. Health inspectors later found rat farms on the city's outskirts, and the scheme was scrapped.\n\nThe historian Michael Vann, who found the story in French archives, points out it's better documented than the famous 'cobra effect'. The lesson: whenever you reward a measurable proxy, ask how someone could game it.",
+      "why": [
+        "Michael G. Vann, 'Of Rats, Rice, and Race' (2003) and The Great Hanoi Rat Hunt (Oxford University Press, 2018).",
+        "Economists call this a perverse incentive, a close cousin of Goodhart's law: a measure stops being useful once it becomes a target.",
+        "Caveat: some details, such as how widespread the rat farms were, come from colonial reports and may be exaggerated."
+      ],
+      "visual": {
+        "type": "image",
+        "url": "https://www.atlasobscura.com/articles/hanoi-rat-massacre-1902",
+        "label": "The Great Hanoi Rat Massacre of 1902 — Atlas Obscura",
+        "note": "Archive photos of colonial Hanoi and its sewers, plus the historian's own take."
+      },
+      "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\">\n<rect x=\"190\" y=\"18\" width=\"220\" height=\"44\" rx=\"8\" fill=\"#284B7A\"/>\n<text x=\"300\" y=\"46\" font-size=\"17\" fill=\"#FFFFFF\" text-anchor=\"middle\">1 cent per rat tail</text>\n<rect x=\"420\" y=\"135\" width=\"160\" height=\"44\" rx=\"8\" fill=\"#D3DAE3\"/>\n<text x=\"500\" y=\"163\" font-size=\"17\" fill=\"#1C2633\" text-anchor=\"middle\">cut off the tail</text>\n<rect x=\"210\" y=\"256\" width=\"180\" height=\"44\" rx=\"8\" fill=\"#D3DAE3\"/>\n<text x=\"300\" y=\"284\" font-size=\"17\" fill=\"#1C2633\" text-anchor=\"middle\">release the rat</text>\n<rect x=\"20\" y=\"135\" width=\"160\" height=\"44\" rx=\"8\" fill=\"#D3DAE3\"/>\n<text x=\"100\" y=\"163\" font-size=\"17\" fill=\"#1C2633\" text-anchor=\"middle\">it breeds more</text>\n<path d=\"M410 52 C 470 70, 495 100, 500 128\" stroke=\"#C2414B\" stroke-width=\"3\" fill=\"none\"/>\n<path d=\"M500 186 C 495 230, 450 262, 396 274\" stroke=\"#C2414B\" stroke-width=\"3\" fill=\"none\"/>\n<path d=\"M204 274 C 150 262, 105 230, 100 188\" stroke=\"#C2414B\" stroke-width=\"3\" fill=\"none\"/>\n<path d=\"M100 128 C 105 100, 130 70, 186 52\" stroke=\"#C2414B\" stroke-width=\"3\" fill=\"none\"/>\n<text x=\"300\" y=\"165\" font-size=\"18\" fill=\"#C2414B\" text-anchor=\"middle\" font-weight=\"bold\">more tails to sell</text>\n</svg>",
+      "sketch_alt": "A bounty on tails rewarded keeping rats alive and breeding.",
+      "try_this": "Look at one target you're measured on, or set for others. How could someone hit it while making the real problem worse?",
+      "sources": [
+        {
+          "title": "Great Hanoi Rat Massacre — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Great_Hanoi_Rat_Massacre"
+        },
+        {
+          "title": "The Great Hanoi Rat Massacre of 1902 — Atlas Obscura",
+          "url": "https://www.atlasobscura.com/articles/hanoi-rat-massacre-1902"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "featured": false,
+      "theme": "Thought for the day",
+      "title": "You have about 4,000 weeks",
+      "idea": "If you live to 80, you get just over 4,000 weeks. Oliver Burkeman built his 2021 book Four Thousand Weeks around that uncomfortable number, and his conclusion runs against most productivity advice: you will never get on top of everything, so stop trying. Becoming more efficient doesn't free you; it invites more tasks to fill the space, the way clearing your inbox earns you more email.\n\nHis alternative is to accept your limits and choose deliberately what to neglect. Decide which few things truly matter, do those first, and let the rest stay undone without guilt. Finitude isn't a problem for better time management to solve. It's what makes your choices mean something in the first place.",
+      "why": [
+        "Oliver Burkeman, Four Thousand Weeks: Time Management for Mortals (2021).",
+        "His 'efficiency trap' echoes the Jevons paradox: making something easier often means we end up doing more of it.",
+        "Caveat: the advice suits people with some control over their time. For many, the real constraint is workload, not mindset."
+      ],
+      "visual": {
+        "type": "video",
+        "url": "https://www.youtube.com/watch?v=i9juUTtvCzI",
+        "label": "Oliver Burkeman: Four Thousand Weeks — Talks at Google",
+        "note": "He sets out the core idea in the opening minutes of this 55-minute talk."
+      },
+      "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\">\n<text x=\"300\" y=\"40\" font-size=\"18\" fill=\"#1C2633\" text-anchor=\"middle\" font-weight=\"bold\">80 years x 52 weeks = about 4,160 weeks</text>\n<rect x=\"40\" y=\"120\" width=\"520\" height=\"56\" rx=\"6\" fill=\"#D3DAE3\"/>\n<rect x=\"40\" y=\"120\" width=\"260\" height=\"56\" rx=\"6\" fill=\"#284B7A\"/>\n<path d=\"M105 176 v10 M170 176 v10 M235 176 v10 M300 176 v14 M365 176 v10 M430 176 v10 M495 176 v10\" stroke=\"#586577\" stroke-width=\"2\"/>\n<text x=\"40\" y=\"210\" font-size=\"16\" fill=\"#586577\">0</text>\n<text x=\"300\" y=\"210\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">40 years: about 2,080 weeks gone</text>\n<text x=\"560\" y=\"210\" font-size=\"16\" fill=\"#586577\" text-anchor=\"end\">80</text>\n<text x=\"300\" y=\"268\" font-size=\"17\" fill=\"#C2414B\" text-anchor=\"middle\">You can't do everything. Choose what to neglect.</text>\n</svg>",
+      "sketch_alt": "A whole life fits in about 4,000 weeks.",
+      "try_this": "Write down three things you'll deliberately neglect this week, so the one that matters gets done.",
+      "sources": [
+        {
+          "title": "Four Thousand Weeks — Oliver Burkeman / Farrar, Straus and Giroux",
+          "url": "https://books.apple.com/us/book/id1530819924"
+        },
+        {
+          "title": "Four Thousand Weeks: Time and How to Use It — Talks at Google",
+          "url": "https://www.youtube.com/watch?v=i9juUTtvCzI"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "featured": false,
+      "theme": "Thinking tools",
+      "title": "Study the planes that didn't return",
+      "idea": "The evidence in front of you has often been filtered by the very thing you're trying to understand. During the Second World War, the mathematician Abraham Wald, working with Columbia University's Statistical Research Group, studied damage on bombers that came back from missions. The tempting move was to add armour where the bullet holes clustered. Wald's insight was that the sample was missing the planes that never came back. Areas that looked clean on survivors were likely where hits were fatal, so that's where protection mattered most.\n\nThe same filter distorts everyday judgement: studying only successful founders, the old buildings still standing, or the customers who stayed. Before drawing a lesson from survivors, ask what the failures would have told you.",
+      "why": [
+        "Wald wrote eight memoranda in 1943 on estimating aircraft vulnerability from returning planes; Mangel and Samaniego summarised them in the Journal of the American Statistical Association (1984).",
+        "The same reasoning applies wherever data has passed through a filter, from investment fund records to medical trials that lose drop-outs.",
+        "Caveat: the famous red-dotted plane picture is a later illustration, and some dramatic details of the popular story are embellished. The statistical point stands."
+      ],
+      "visual": {
+        "type": "image",
+        "url": "https://en.wikipedia.org/wiki/Survivorship_bias",
+        "label": "Survivorship bias — Wikipedia",
+        "note": "The well-known red-dot plane illustration and more everyday examples."
+      },
+      "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\">\n<ellipse cx=\"300\" cy=\"160\" rx=\"32\" ry=\"130\" fill=\"#D3DAE3\" stroke=\"#1C2633\" stroke-width=\"2\"/>\n<path d=\"M60 150 L540 150 L540 185 L60 185 Z\" fill=\"#D3DAE3\" stroke=\"#1C2633\" stroke-width=\"2\"/>\n<path d=\"M230 270 L370 270 L370 290 L230 290 Z\" fill=\"#D3DAE3\" stroke=\"#1C2633\" stroke-width=\"2\"/>\n<circle cx=\"170\" cy=\"167\" r=\"16\" fill=\"#FFFFFF\" stroke=\"#284B7A\" stroke-width=\"3\"/>\n<circle cx=\"430\" cy=\"167\" r=\"16\" fill=\"#FFFFFF\" stroke=\"#284B7A\" stroke-width=\"3\"/>\n<g fill=\"#C2414B\"><circle cx=\"90\" cy=\"160\" r=\"5\"/><circle cx=\"120\" cy=\"175\" r=\"5\"/><circle cx=\"230\" cy=\"158\" r=\"5\"/><circle cx=\"250\" cy=\"176\" r=\"5\"/><circle cx=\"360\" cy=\"160\" r=\"5\"/><circle cx=\"500\" cy=\"172\" r=\"5\"/><circle cx=\"520\" cy=\"158\" r=\"5\"/><circle cx=\"295\" cy=\"215\" r=\"5\"/><circle cx=\"308\" cy=\"240\" r=\"5\"/><circle cx=\"292\" cy=\"100\" r=\"5\"/><circle cx=\"260\" cy=\"280\" r=\"5\"/></g>\n<text x=\"20\" y=\"40\" font-size=\"17\" fill=\"#C2414B\" font-weight=\"bold\">Red: holes on planes that came back</text>\n<text x=\"20\" y=\"64\" font-size=\"17\" fill=\"#284B7A\" font-weight=\"bold\">Blue: engines, almost never hit on survivors</text>\n<text x=\"20\" y=\"310\" font-size=\"16\" fill=\"#1C2633\">Planes hit in the clean areas didn't make it home.</text>\n</svg>",
+      "sketch_alt": "Holes on returning planes show where a plane can be hit and still get home.",
+      "try_this": "Pick a success story you've learned from. What did the people who tried the same thing and failed have in common?",
+      "sources": [
+        {
+          "title": "Abraham Wald — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Abraham_Wald"
+        },
+        {
+          "title": "Survivorship bias — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Survivorship_bias"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "featured": false,
+      "theme": "Psychology & behaviour",
+      "title": "Spread-out study beats cramming",
+      "idea": "You'll remember far more if you split the same study time into sessions spread over days, rather than cramming it into one sitting. Hermann Ebbinghaus first measured this in the 1880s by memorising nonsense syllables and testing himself: memories faded fast, but each well-timed review flattened the forgetting curve. More than a century later, a 2006 review led by Nicholas Cepeda pooled 839 comparisons from 317 experiments and confirmed that spaced practice reliably beats massed practice. It also found a handy rule: the longer you need to remember something, the bigger the gaps between reviews should be.\n\nCramming feels productive because the material is fresh in the moment. That fluency is misleading. The effort of recalling something half-forgotten is what makes it stick.",
+      "why": [
+        "Ebbinghaus, Memory (1885), mapped the forgetting curve using himself as the only subject.",
+        "Cepeda and colleagues, Psychological Bulletin (2006): the ideal gap between sessions grows with how long you need to retain the material.",
+        "Caveat: most studies use verbal recall, like vocabulary. Spacing seems to help complex skills too, but that evidence is thinner."
+      ],
+      "visual": {
+        "type": "image",
+        "url": "https://en.wikipedia.org/wiki/Forgetting_curve",
+        "label": "Forgetting curve — Wikipedia",
+        "note": "See how each review makes the curve fall away more slowly."
+      },
+      "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\">\n<line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"270\" stroke=\"#586577\" stroke-width=\"2\"/>\n<line x1=\"50\" y1=\"270\" x2=\"570\" y2=\"270\" stroke=\"#586577\" stroke-width=\"2\"/>\n<text x=\"60\" y=\"34\" font-size=\"16\" fill=\"#586577\">how much you remember</text>\n<text x=\"570\" y=\"296\" font-size=\"16\" fill=\"#586577\" text-anchor=\"end\">days</text>\n<path d=\"M55 60 C 90 170, 120 220, 170 230\" fill=\"none\" stroke=\"#C2414B\" stroke-width=\"4\"/>\n<path d=\"M170 230 L170 60 C 220 130, 260 160, 320 170\" fill=\"none\" stroke=\"#284B7A\" stroke-width=\"4\"/>\n<path d=\"M320 170 L320 60 C 380 100, 430 115, 480 118\" fill=\"none\" stroke=\"#284B7A\" stroke-width=\"4\"/>\n<path d=\"M480 118 L480 60 C 510 72, 540 78, 565 80\" fill=\"none\" stroke=\"#284B7A\" stroke-width=\"4\"/>\n<text x=\"176\" y=\"56\" font-size=\"16\" fill=\"#1C2633\">review</text>\n<text x=\"326\" y=\"56\" font-size=\"16\" fill=\"#1C2633\">review</text>\n<text x=\"486\" y=\"56\" font-size=\"16\" fill=\"#1C2633\">review</text>\n<text x=\"70\" y=\"252\" font-size=\"16\" fill=\"#C2414B\">no review: fades fast</text>\n</svg>",
+      "sketch_alt": "Each spaced review resets memory and makes it fade more slowly.",
+      "try_this": "Learning something this week? Review it tomorrow, in three days and next week, and test yourself rather than rereading.",
+      "sources": [
+        {
+          "title": "Distributed practice in verbal recall tasks: A review and quantitative synthesis — Cepeda et al. / Psychological Bulletin (PubMed)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16719566/"
+        },
+        {
+          "title": "Forgetting curve — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Forgetting_curve"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "featured": false,
+      "theme": "History & big ideas",
+      "title": "Efficiency can raise consumption",
+      "idea": "Making something more efficient can increase how much of it we use, not reduce it. In 1865, the economist William Stanley Jevons spotted a puzzle in Britain's coal figures. James Watt's improved steam engine burned far less coal for the same work, yet national coal consumption kept soaring. Cheaper power made steam worth using in mines, mills and factories that couldn't justify it before, so total demand grew faster than efficiency saved. Jevons concluded that using fuel economically does not mean using less of it.\n\nEconomists now call this the rebound effect. Fuel-efficient cars tempt people to drive further; cheaper computing gets spent on ever bigger models. Efficiency is still worth having, but if the aim is to use less, it usually needs a cap or a price signal alongside it.",
+      "why": [
+        "William Stanley Jevons, The Coal Question (1865).",
+        "Later economists, including Khazzoom, Brookes and Saunders, extended the idea from single products to whole economies.",
+        "Caveat: full 'backfire', where total use actually rises, is debated. In most single markets the rebound is partial, so efficiency still cuts use."
+      ],
+      "visual": {
+        "type": "image",
+        "url": "https://energyhistory.yale.edu/w-stanley-jevons-the-coal-question-1865/",
+        "label": "W. Stanley Jevons, The Coal Question (1865) — Yale Energy History",
+        "note": "The original argument in context, with pages from the book."
+      },
+      "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\">\n<line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"270\" stroke=\"#586577\" stroke-width=\"2\"/>\n<line x1=\"60\" y1=\"270\" x2=\"570\" y2=\"270\" stroke=\"#586577\" stroke-width=\"2\"/>\n<text x=\"60\" y=\"296\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">1830</text>\n<text x=\"315\" y=\"296\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">1865</text>\n<text x=\"565\" y=\"296\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">1900</text>\n<path d=\"M65 80 C 200 120, 360 200, 560 240\" fill=\"none\" stroke=\"#284B7A\" stroke-width=\"4\"/>\n<path d=\"M65 250 C 200 230, 360 150, 560 60\" fill=\"none\" stroke=\"#C2414B\" stroke-width=\"4\"/>\n<text x=\"80\" y=\"66\" font-size=\"17\" fill=\"#284B7A\" font-weight=\"bold\">coal needed per unit of work</text>\n<text x=\"555\" y=\"46\" font-size=\"17\" fill=\"#C2414B\" font-weight=\"bold\" text-anchor=\"end\">total coal burned</text>\n<text x=\"300\" y=\"220\" font-size=\"16\" fill=\"#1C2633\">(shape only, not to scale)</text>\n</svg>",
+      "sketch_alt": "Coal needed per unit of work fell while total coal burned rose.",
+      "try_this": "Think of something that recently got cheaper or easier for you. Did you end up doing more of it?",
+      "sources": [
+        {
+          "title": "Jevons paradox — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Jevons_paradox"
+        },
+        {
+          "title": "W. Stanley Jevons, The Coal Question, 1865 — Yale Energy History",
+          "url": "https://energyhistory.yale.edu/w-stanley-jevons-the-coal-question-1865/"
+        }
+      ]
     }
   ]
 }
