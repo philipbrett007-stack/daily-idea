@@ -53,9 +53,11 @@ Reject: listicles, clickbait, "life hacks", hustle culture, motivational-quote m
 
 Verify: open the main source with WebFetch and confirm the idea is represented accurately, then cross-check the key claim against a second independent source. If a claim can't be verified, drop it.
 
+If WebFetch doesn't work in this run (for example "getaddrinfo ENOTFOUND", "403" or "host not allowed"), don't stop: verify with WebSearch instead. Run at least two searches per idea and only keep an idea when the key claim (who found what, the numbers, the dates) is stated in at least two independent, credible results. Use only URLs that appeared in your search results, never ones you've built or remembered, and attribute the claim to the source that states it. Be stricter here, not looser: drop anything you can't pin down. Note in step 9 that WebSearch-only checking was used.
+
 ## 5. Visuals (for each idea)
 
-**Linked visual.** One that genuinely helps. Prefer a short video (ideally under 10 minutes, or a timestamp to the relevant 1–3 minute segment) from a reputable channel such as TED-Ed, Kurzgesagt, Veritasium, 3Blue1Brown, Big Think, The School of Life, the Royal Institution, Numberphile, Practical Engineering, Vox, Aeon Video, BBC Ideas or Talks at Google. Otherwise an image, diagram or chart page from the source or a reputable site (Wikipedia/Wikimedia Commons is fine). Confirm the link exists and matches the idea. Never invent or guess a URL. Add `thumb_url` only for a direct image-file link (.jpg/.png/.webp or upload.wikimedia.org) you've confirmed exists.
+**Linked visual.** One that genuinely helps. Prefer a short video (ideally under 10 minutes, or a timestamp to the relevant 1–3 minute segment) from a reputable channel such as TED-Ed, Kurzgesagt, Veritasium, 3Blue1Brown, Big Think, The School of Life, the Royal Institution, Numberphile, Practical Engineering, Vox, Aeon Video, BBC Ideas or Talks at Google. Otherwise an image, diagram or chart page from the source or a reputable site (Wikipedia/Wikimedia Commons is fine). Confirm the link exists and matches the idea: open it with WebFetch, or if WebFetch doesn't work, use only a link that appeared in your WebSearch results and whose title and description match the idea (for videos, search for the exact video title and channel). Never invent or guess a URL. Add `thumb_url` only for a direct image-file link (.jpg/.png/.webp or upload.wikimedia.org) you've confirmed exists; skip it if you can't open it.
 
 **Sketch.** A simple explanatory SVG when the idea has a natural picture (a curve, before/after, a loop, a comparison, a timeline): root `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320" font-family="Helvetica, Arial, sans-serif">`; transparent background; colours only #1C2633, #586577, #284B7A, #C2414B, #D3DAE3 (and #FFFFFF for text on a filled box); text at least 16px; short labels kept inside the box and clear of lines; no scripts, event attributes, `<image>`, `<foreignObject>`, links or external references; under about 30 elements. It must explain, not decorate. Give it a one-line caption (`sketch_alt`). Skip it if nothing would genuinely help.
 
@@ -72,7 +74,7 @@ Check each before saving: would a thoughtful, well-read person learn something o
 
 ## 7. Save and push each idea as soon as it's finished
 
-For MORNING, the featured idea goes first, so it's in the app early.
+For MORNING, the featured idea goes first, so it's in the app early. Keep a copy of each finished card as a JSON file outside the repository (e.g. `/tmp/cards/`), so nothing is lost if you have to reset the branch.
 
 Day file `ideas/YYYY-MM-DD.json`:
 
@@ -94,7 +96,9 @@ git push origin HEAD:claude/ideas
 git push origin HEAD:main
 ```
 
-The push to `claude/ideas` is the one that matters: it's what puts the idea in the app. The push to `main` only works if this task allows pushes to any branch; if it's refused, ignore it and don't retry. If the push to `claude/ideas` fails, retry once; if it says the repository isn't in the session's authorised set, the repository isn't attached to this task. Say so in the message (step 8).
+The push to `claude/ideas` is the one that matters: it's what puts the idea in the app. The push to `main` may be refused; if it is, ignore it and don't retry.
+
+If the push to `claude/ideas` is rejected because the branch has moved on (another run pushed first), don't merge by hand. Run `git fetch origin && git reset --hard origin/claude/ideas`, re-add your finished card(s) to the fresh day file (next id = highest id + 1), update `ideas/index.json` again, commit and push. Repeat up to 3 times. If it says the repository isn't in the session's authorised set, the repository isn't attached to this task: say so in the message (step 8).
 
 ## 8. Send the notification message
 
