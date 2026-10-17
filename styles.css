@@ -175,7 +175,10 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px soli
 .empty { border: 1.5px dashed var(--line); border-radius: 22px; padding: 22px 20px; display: flex; flex-direction: column; gap: 6px; background: rgba(32, 30, 59, 0.5); }
 .empty p { margin: 0; color: var(--soft); }
 .empty .etitle { font-family: var(--f-display); font-weight: 700; font-size: 1.15rem; color: var(--text); }
-.out-box { margin: 0; padding: 14px 16px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); color: var(--soft); font-size: 0.93rem; }
+.out-box {
+  margin: 0; padding: 14px 16px; border-radius: 18px; font-size: 0.97rem; line-height: 1.5; font-weight: 500; color: var(--text);
+  background: color-mix(in srgb, var(--t) 12%, var(--surface)); border: 1px solid color-mix(in srgb, var(--t) 35%, transparent);
+}
 
 /* ---------- floating New idea button ---------- */
 .fab {

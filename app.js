@@ -301,18 +301,31 @@
   /* ---------- Today ---------- */
   function emptyBox(title, text) { return el("div", { class: "empty" }, el("p", { class: "etitle", text: title }), el("p", { text })); }
 
-  // Fresh batches of researched ideas start landing around these Dublin times.
-  const BATCH_TIMES = [[8, 0, "8:00"], [18, 0, "18:00"]];
+  // New batches of 10 researched ideas start arriving at these Dublin times (the scheduled task's run times).
+  const BATCH_SIZE = 10;
+  const BATCH_TIMES = [[7, 40, "7:40"], [17, 40, "17:40"]];
   function nextBatchLabel() {
     const parts = new Intl.DateTimeFormat("en-GB", { timeZone: TZ, hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
-    const h = +parts.find((p) => p.type === "hour").value, m = +parts.find((p) => p.type === "minute").value;
+    const h = +parts.find((p) => p.type === "hour").value % 24, m = +parts.find((p) => p.type === "minute").value;
     const now = h * 60 + m;
-    for (const [bh, bm, label] of BATCH_TIMES) if (bh * 60 + bm > now) return "around " + label + " today";
-    return "around " + BATCH_TIMES[0][2] + " tomorrow";
+    for (const [bh, bm, label] of BATCH_TIMES) if (bh * 60 + bm > now) return "at " + label + " today";
+    return "at " + BATCH_TIMES[0][2] + " tomorrow";
   }
 
   let waitTimer = null;
   function totalCount() { return index ? index.days.reduce((s, d) => s + (Number(d.count) || 0), 0) : 0; }
+  // Ideas in the bank you haven't opened yet.
+  function unreadCount() {
+    if (!index) return 0;
+    const dates = new Set(index.days.map((d) => d.date));
+    let read = 0;
+    for (const k of seen) if (dates.has(k.split("#")[0])) read++;
+    return Math.max(0, totalCount() - read);
+  }
+  function outOfIdeasText() {
+    const total = totalCount();
+    return "That's all " + total + (total === 1 ? " idea" : " ideas") + " read for now. " + BATCH_SIZE + " more arrive " + nextBatchLabel() + ".";
+  }
   function stopWaiting() { if (waitTimer) { clearInterval(waitTimer); waitTimer = null; } }
   // While the bank is empty, quietly check for newly researched ideas every 90 seconds.
   function startWaiting() {
@@ -327,19 +340,17 @@
 
   function setFab(state) {
     const btn = $("#another"), out = $("#out-box"), hint = $("#today-hint");
-    const today = todayKey();
-    const used = taps[today] || 0;
     btn.hidden = out.hidden = true; hint.hidden = true; canAnother = false;
     if (state === "none") return;
     if (state === "limit") {
-      out.hidden = false; out.textContent = "That's your 100 for today. Fresh ideas start arriving " + nextBatchLabel() + ".";
+      out.hidden = false; out.textContent = "That's your 100 for today. " + BATCH_SIZE + " more arrive " + nextBatchLabel() + ".";
       stopWaiting(); return;
     }
     btn.hidden = false; btn.disabled = false; canAnother = true;
-    $("#another-count").textContent = used ? (DAILY_LIMIT - used) + " left" : "";
+    $("#another-count").textContent = unreadCount() + " left";
     if (state === "out") {
       out.hidden = false;
-      out.textContent = "You've read every idea researched so far. The next batch starts arriving " + nextBatchLabel() + ", and this screen checks for it automatically.";
+      out.textContent = outOfIdeasText() + " This screen picks them up automatically.";
       startWaiting();
     } else {
       hint.hidden = false; stopWaiting();
@@ -404,7 +415,7 @@
         toast("Checking for new ideas…");
         try { await loadIndex(); dayCache.delete(index.latest); } catch (_) {}
         k = await nextUnseen();
-        if (!k) toast("No new ideas yet. The next batch starts arriving " + nextBatchLabel() + ".");
+        if (!k) toast("All read. " + BATCH_SIZE + " more arrive " + nextBatchLabel() + ".");
       }
       if (k) {
         const cur = document.querySelector("#today-cards .card.main");

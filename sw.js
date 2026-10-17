@@ -1,6 +1,6 @@
 /* Daily Idea service worker: keeps the app working offline.
    App files: cache first (bump VERSION when they change). Idea files: network first, cached copy when offline. */
-const VERSION = "daily-idea-v4";
+const VERSION = "daily-idea-v5";
 const SHELL = ["./", "index.html", "styles.css", "app.js", "manifest.webmanifest",
   "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png"];
 const RUNTIME = "daily-idea-runtime";
