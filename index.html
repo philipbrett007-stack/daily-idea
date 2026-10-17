@@ -37,17 +37,22 @@
   <section id="view-today" class="view" aria-labelledby="today-h">
     <div class="day-intro">
       <p class="eyebrow" id="today-date">&nbsp;</p>
-      <h1 id="today-h">Today's ideas</h1>
+      <h1 id="today-h">Today's idea</h1>
       <p class="sub" id="today-sub">Loading…</p>
     </div>
     <div id="today-cards" class="cards"></div>
-    <div class="more">
+    <div class="more" id="more">
       <button id="another" class="primary" type="button" hidden>
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
-        <span id="another-label">Another idea</span>
+        <span id="another-label">New idea</span>
       </button>
+      <a id="ask-claude" class="primary" href="https://claude.ai/artifact/4j3DptQKjsYnsgCdaEGsKy" target="_blank" rel="noopener noreferrer" hidden>Ask Claude for a fresh one</a>
       <p id="another-note" class="more-note"></p>
     </div>
+    <section id="earlier" class="earlier" aria-labelledby="earlier-h" hidden>
+      <h2 class="eyebrow" id="earlier-h">Earlier today</h2>
+      <div id="earlier-cards" class="cards"></div>
+    </section>
   </section>
 
   <section id="view-stash" class="view" aria-labelledby="stash-h" hidden>

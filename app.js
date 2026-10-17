@@ -1,11 +1,13 @@
 /* Daily Idea — phone app logic.
-   Data comes from ideas/index.json and ideas/YYYY-MM-DD.json, written each morning by the scheduled Claude task.
+   Ideas come from ideas/index.json and ideas/YYYY-MM-DD.json, written by the scheduled Claude task.
+   "New idea" swaps in an idea you haven't seen yet: today's first, then anything in the bank, up to 100 a day.
    Everything personal (what you've read, your stash) stays in this phone's storage. */
 (function () {
   "use strict";
 
   const TZ = "Europe/Dublin";
-  const KEYS = { revealed: "di.revealed.v1", stash: "di.stash.v1", seen: "di.seen.v1", pulled: "di.pulled.v1" };
+  const DAILY_LIMIT = 100;
+  const KEYS = { stash: "di.stash.v1", seen: "di.seen.v1", shown: "di.shown.v2", taps: "di.taps.v2" };
 
   const store = {
     get(k, fallback) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fallback; } catch (_) { return fallback; } },
@@ -15,13 +17,14 @@
   let index = null;               // { latest, days: [{date, count, titles}] }
   let indexMissing = false;
   const dayCache = new Map();     // date -> { date, ideas: [...] }
-  let revealed = store.get(KEYS.revealed, {});   // deckDate -> how many shown
   let stash = store.get(KEYS.stash, {});         // key -> { date, idea, savedAt }
   let seen = new Set(store.get(KEYS.seen, []));  // keys read
-  let pulled = store.get(KEYS.pulled, {});       // deckDate -> [keys from earlier days]
+  let shown = store.get(KEYS.shown, {});         // today -> [keys shown today, in order]
+  let taps = store.get(KEYS.taps, {});           // today -> New idea taps used
   let view = "today";
   let lastLoad = 0;
   let deferredInstall = null;
+  let busy = false;
 
   const $ = (s) => document.querySelector(s);
 
@@ -51,9 +54,10 @@
   const longFmt = new Intl.DateTimeFormat("en-IE", { timeZone: "UTC", weekday: "long", day: "numeric", month: "long" });
   const shortFmt = new Intl.DateTimeFormat("en-IE", { timeZone: "UTC", day: "numeric", month: "short" });
   const dayKey = (d) => dayFmt.format(d);
+  const todayKey = () => dayKey(new Date());
   const asDate = (key) => new Date(key + "T12:00:00Z");
   function fmtDay(key) {
-    if (key === dayKey(new Date())) return "Today";
+    if (key === todayKey()) return "Today";
     if (key === dayKey(new Date(Date.now() - 864e5))) return "Yesterday";
     const d = asDate(key); return isNaN(d) ? key : longFmt.format(d);
   }
@@ -71,7 +75,8 @@
       return id && /^[\w-]{6,20}$/.test(id) ? id : null;
     } catch (_) { return null; }
   }
-  const keyOf = (date, idea, i) => date + "#" + (idea && idea.id ? String(idea.id) : String(i));
+  const keyOf = (date, idea, i) => date + "#" + (idea && idea.id ? String(idea.id) : String(i + 1));
+  const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   let toastTimer = null;
   function toast(msg) {
@@ -79,6 +84,13 @@
     clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 2200);
   }
   function banner(msg) { const b = $("#banner"); b.textContent = msg || ""; b.hidden = !msg; }
+
+  // keep only the last week of per-day bookkeeping
+  (function prune() {
+    const cutoff = dayKey(new Date(Date.now() - 7 * 864e5));
+    for (const obj of [shown, taps]) for (const k of Object.keys(obj)) if (k < cutoff) delete obj[k];
+    store.set(KEYS.shown, shown); store.set(KEYS.taps, taps);
+  })();
 
   /* ---------- data ---------- */
   async function getJSON(path) {
@@ -111,10 +123,33 @@
     dayCache.set(date, d);
     return d;
   }
-  function deckDate() {
-    if (!index || !index.latest) return null;
-    const today = dayKey(new Date());
-    return index.days.some((d) => d.date === today) ? today : index.latest;
+  async function ideaByKey(k) {
+    const date = k.split("#")[0];
+    const d = await loadDay(date);
+    const i = d.ideas.findIndex((x, j) => keyOf(date, x, j) === k);
+    return i < 0 ? null : { date, idea: d.ideas[i] };
+  }
+  function seenCount(date) { let n = 0; const p = date + "#"; for (const k of seen) if (k.startsWith(p)) n++; return n; }
+
+  // Next idea for the New idea button: today's newest set first (in order), then a random unseen idea from the bank.
+  async function nextUnseen() {
+    if (!index || !index.days.length) return null;
+    const today = todayKey();
+    const shownToday = new Set(shown[today] || []);
+    const free = (k) => !seen.has(k) && !shownToday.has(k);
+    const latest = index.latest;
+    try {
+      const d = await loadDay(latest);
+      for (let i = 0; i < d.ideas.length; i++) { const k = keyOf(latest, d.ideas[i], i); if (free(k)) return k; }
+    } catch (_) { /* fall through to the bank */ }
+    const days = index.days.filter((x) => x.date !== latest && seenCount(x.date) < (Number(x.count) || 0)).map((x) => x.date);
+    for (let i = days.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [days[i], days[j]] = [days[j], days[i]]; }
+    for (const date of days) {
+      let d; try { d = await loadDay(date); } catch (_) { continue; }
+      const pool = d.ideas.map((x, i) => keyOf(date, x, i)).filter(free);
+      if (pool.length) return pool[Math.floor(Math.random() * pool.length)];
+    }
+    return null;
   }
 
   /* ---------- card ---------- */
@@ -126,7 +161,8 @@
     d.open = !!ctx.open;
 
     const meta = el("div", { class: "meta" },
-      ctx.pos ? el("span", { class: "no", text: "Idea " + ctx.pos + (ctx.total ? "/" + ctx.total : "") }) : el("span", { class: "no", text: fmtShort(ctx.date) }),
+      ctx.pos ? el("span", { class: "no", text: "Idea " + ctx.pos + (ctx.total ? "/" + ctx.total : "") })
+              : el("span", { class: "no", text: ctx.label || fmtShort(ctx.date) }),
       idea.theme ? el("span", { text: String(idea.theme) }) : null,
       idea.featured ? el("span", { class: "pill", text: "Pick of the day" }) : null,
       ctx.fromDay ? el("span", { class: "pill", text: "From " + fmtShort(ctx.fromDay) }) : null);
@@ -159,9 +195,9 @@
       const yt = ytId(vu);
       const kind = yt || v.type === "video" ? "video" : v.type === "image" ? "image" : "link";
       const a = el("a", { class: "visual", href: vu, target: "_blank", rel: "noopener noreferrer" });
-      let thumbSrc = null;
       const looksLikeImage = (u) => /\.(jpe?g|png|webp|gif|svg)(\?|#|$)/i.test(u) || /^https:\/\/upload\.wikimedia\.org\//.test(u);
       const tu = safeUrl(v.thumb_url);
+      let thumbSrc = null;
       if (yt) thumbSrc = "https://i.ytimg.com/vi/" + yt + "/hqdefault.jpg";
       else if (tu && looksLikeImage(tu)) thumbSrc = tu;
       else if (kind === "image" && looksLikeImage(vu)) thumbSrc = vu;
@@ -202,7 +238,7 @@
     return d;
   }
 
-  function markSeen(key) { if (!seen.has(key)) { seen.add(key); store.set(KEYS.seen, Array.from(seen).slice(-3000)); } }
+  function markSeen(key) { if (!seen.has(key)) { seen.add(key); store.set(KEYS.seen, Array.from(seen).slice(-5000)); } }
 
   async function share(idea) {
     const src = (Array.isArray(idea.sources) ? idea.sources : []).map((s) => s && safeUrl(s.url)).find(Boolean);
@@ -228,102 +264,89 @@
   function emptyBox(title, text) { return el("div", { class: "empty" }, el("p", { class: "etitle", text: title }), el("p", { text })); }
 
   async function renderToday(opts) {
-    const cardsEl = $("#today-cards"), btn = $("#another"), note = $("#another-note");
-    const today = dayKey(new Date());
+    const cardsEl = $("#today-cards"), btn = $("#another"), ask = $("#ask-claude"), note = $("#another-note");
+    const earlier = $("#earlier"), earlierCards = $("#earlier-cards");
+    const today = todayKey();
     $("#today-date").textContent = longFmt.format(asDate(today));
-    const dd = deckDate();
-    if (!dd) {
-      $("#today-h").textContent = "Today's ideas";
-      $("#today-sub").textContent = indexMissing ? "Your first set of ideas arrives at 9:00." : "No ideas yet.";
-      cardsEl.replaceChildren(emptyBox("Nothing here yet", "Each morning at 9:00 a fresh set of ideas lands here. Pull the refresh button at the top to check."));
-      btn.hidden = true; note.textContent = ""; return;
-    }
-    let deck;
-    try { deck = await loadDay(dd); }
-    catch (_) {
-      cardsEl.replaceChildren(emptyBox("Couldn't load the ideas", "Check your connection and tap refresh at the top."));
-      btn.hidden = true; note.textContent = ""; return;
-    }
-    const total = deck.ideas.length;
-    const isToday = dd === today;
-    $("#today-h").textContent = isToday ? "Today's ideas" : "Latest ideas";
-    $("#today-sub").textContent = isToday
-      ? (total === 1 ? "One idea today." : total + " ideas today. Start with the pick, then tap for more.")
-      : "Today's set arrives at 9:00. Here's the latest, from " + (fmtDay(dd) === "Yesterday" ? "yesterday" : fmtDay(dd)) + ".";
 
-    let n = Math.max(1, Math.min(total, revealed[dd] || 1));
-    const extraKeys = (pulled[dd] || []).slice();
-    const freshKey = opts && opts.freshKey;
+    if (!index || !index.days.length) {
+      $("#today-sub").textContent = indexMissing ? "Your first ideas arrive at 9:00." : "No ideas yet.";
+      cardsEl.replaceChildren(emptyBox("Nothing here yet", "Each morning a fresh set of ideas lands here. Tap refresh at the top to check."));
+      btn.hidden = true; ask.hidden = true; earlier.hidden = true; note.textContent = ""; return;
+    }
+
+    let list = (shown[today] || []).slice();
+    if (!list.length) {
+      let k = await nextUnseen();
+      if (!k) { try { const d = await loadDay(index.latest); if (d.ideas.length) k = keyOf(index.latest, d.ideas[0], 0); } catch (_) {} }
+      if (k) { list = [k]; shown[today] = list; store.set(KEYS.shown, shown); }
+    }
 
     const nodes = [];
-    deck.ideas.slice(0, n).forEach((idea, i) => {
-      const key = keyOf(dd, idea, i);
-      const isLast = i === n - 1 && !extraKeys.length;
-      nodes.push(card(idea, { key, date: dd, pos: i + 1, total, open: isLast || key === freshKey, fresh: key === freshKey }));
-    });
-    for (const k of extraKeys) {
-      const date = k.split("#")[0];
-      try {
-        const day = await loadDay(date);
-        const i = day.ideas.findIndex((x, j) => keyOf(date, x, j) === k);
-        if (i < 0) continue;
-        const isLast = k === extraKeys[extraKeys.length - 1];
-        nodes.push(card(day.ideas[i], { key: k, date, fromDay: date, open: isLast, fresh: k === freshKey }));
-      } catch (_) { /* skip if that day can't load */ }
+    let current = null;
+    for (let i = list.length - 1; i >= 0 && !current; i--) {
+      try { current = await ideaByKey(list[i]); if (current) current.key = list[i]; } catch (_) { current = null; }
     }
+    if (!current) {
+      cardsEl.replaceChildren(emptyBox("Couldn't load the idea", "Check your connection and tap refresh at the top."));
+      btn.hidden = true; ask.hidden = true; earlier.hidden = true; note.textContent = ""; return;
+    }
+    nodes.push(card(current.idea, {
+      key: current.key, date: current.date, open: true, fresh: opts && opts.fresh,
+      label: current.date === today ? "Today" : null, fromDay: current.date !== today ? current.date : null
+    }));
     cardsEl.replaceChildren(...nodes);
 
-    btn.hidden = false; btn.disabled = false;
-    if (n < total) {
-      $("#another-label").textContent = "Another idea";
-      note.textContent = n + " of " + total + (isToday ? " today" : "");
+    // Earlier today: everything shown before the current card, newest first, collapsed
+    const prev = list.slice(0, -1).reverse();
+    const prevNodes = [];
+    for (const k of prev) {
+      try { const r = await ideaByKey(k); if (r) prevNodes.push(card(r.idea, { key: k, date: r.date, open: false, fromDay: r.date !== today ? r.date : null })); } catch (_) {}
+    }
+    earlier.hidden = !prevNodes.length;
+    earlierCards.replaceChildren(...prevNodes);
+
+    // Button state
+    const used = taps[today] || 0;
+    $("#today-sub").textContent = "Not for you? Tap New idea for another.";
+    if (used >= DAILY_LIMIT) {
+      btn.hidden = false; btn.disabled = true; ask.hidden = true;
+      $("#another-label").textContent = "That's 100 for today";
+      note.textContent = "Fresh ideas arrive at 9:00 tomorrow.";
+      return;
+    }
+    const hasNext = !!(await nextUnseen());
+    if (hasNext) {
+      btn.hidden = false; btn.disabled = false; ask.hidden = true;
+      $("#another-label").textContent = "New idea";
+      note.textContent = used ? used + " of " + DAILY_LIMIT + " used today" : "Up to " + DAILY_LIMIT + " a day";
     } else {
-      const next = await findUnseenEarlier(dd, true);
-      if (next) {
-        $("#another-label").textContent = "Dip into an earlier day";
-        note.textContent = "That's all " + total + (isToday ? " of today's." : ".") + " New set at 9:00.";
-      } else {
-        btn.hidden = true;
-        note.textContent = "You've read every idea so far. New set at 9:00.";
-      }
+      btn.hidden = true; ask.hidden = false;
+      note.textContent = "You've read every idea in the bank. Claude can research a fresh one in about 5 minutes; tap refresh here afterwards.";
     }
   }
 
-  async function findUnseenEarlier(dd, probeOnly) {
-    if (!index) return null;
-    const taken = new Set(pulled[dd] || []);
-    for (const day of index.days) {
-      if (day.date === dd) continue;
-      let d;
-      try { d = await loadDay(day.date); } catch (_) { continue; }
-      for (let i = 0; i < d.ideas.length; i++) {
-        const k = keyOf(day.date, d.ideas[i], i);
-        if (!seen.has(k) && !taken.has(k)) return k;
-      }
-      if (probeOnly && dayCache.size > 40) break;
-    }
-    return null;
-  }
-
-  async function another() {
-    const dd = deckDate(); if (!dd) return;
+  async function newIdea() {
+    if (busy) return;
+    const today = todayKey();
+    if ((taps[today] || 0) >= DAILY_LIMIT) return;
+    busy = true;
     const btn = $("#another"); btn.disabled = true;
-    const deck = dayCache.get(dd); if (!deck) { btn.disabled = false; return; }
-    const n = Math.max(1, Math.min(deck.ideas.length, revealed[dd] || 1));
-    let freshKey = null;
-    if (n < deck.ideas.length) {
-      revealed[dd] = n + 1; store.set(KEYS.revealed, revealed);
-      freshKey = keyOf(dd, deck.ideas[n], n);
-    } else {
-      const k = await findUnseenEarlier(dd, false);
-      if (!k) { btn.disabled = false; await renderToday(); return; }
-      pulled[dd] = (pulled[dd] || []).concat(k); store.set(KEYS.pulled, pulled);
-      freshKey = k;
+    try {
+      let k = await nextUnseen();
+      if (!k) { try { await loadIndex(); dayCache.delete(index.latest); } catch (_) {} k = await nextUnseen(); }
+      if (k) {
+        const list = shown[today] || [];
+        if (list.length) markSeen(list[list.length - 1]);
+        shown[today] = list.concat(k); taps[today] = (taps[today] || 0) + 1;
+        store.set(KEYS.shown, shown); store.set(KEYS.taps, taps);
+      }
+      await renderToday({ fresh: !!k });
+      if (k) window.scrollTo({ top: 0, behavior: reduceMotion() ? "auto" : "smooth" });
+    } finally {
+      busy = false;
+      if ((taps[today] || 0) < DAILY_LIMIT) btn.disabled = false;
     }
-    document.querySelectorAll("#today-cards details[open]").forEach((d) => { d.open = false; });
-    await renderToday({ freshKey });
-    const fresh = document.querySelector('#today-cards [data-key="' + CSS.escape(freshKey) + '"]');
-    if (fresh) fresh.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
   }
 
   /* ---------- Stash ---------- */
@@ -344,16 +367,17 @@
     const target = $("#archive-days");
     if (!index || !index.days.length) {
       $("#archive-sub").textContent = "";
-      target.replaceChildren(emptyBox("No ideas yet", "Every morning's set is kept here, newest first."));
+      target.replaceChildren(emptyBox("No ideas yet", "Every idea is kept here by day, newest first."));
       return;
     }
     const totalIdeas = index.days.reduce((s, d) => s + (Number(d.count) || 0), 0);
     $("#archive-sub").textContent = totalIdeas + (totalIdeas === 1 ? " idea over " : " ideas over ") + index.days.length + (index.days.length === 1 ? " day." : " days.");
     target.replaceChildren(...index.days.map((day) => {
+      const n = Number(day.count) || 0;
       const det = el("details", { class: "day" });
       const sum = el("summary", null,
         el("span", { class: "day-name", text: fmtDay(day.date) }),
-        el("span", { class: "day-count", text: (Number(day.count) || 0) + ((Number(day.count) || 0) === 1 ? " idea" : " ideas") }));
+        el("span", { class: "day-count", text: n + (n === 1 ? " idea" : " ideas") }));
       const body = el("div", { class: "day-body" });
       det.append(sum, body);
       det.addEventListener("toggle", async () => {
@@ -380,14 +404,16 @@
 
   async function load(manual) {
     const rb = $("#refresh"); rb.classList.add("spin");
-    const before = index && index.latest;
+    const before = index ? index.days.reduce((s, d) => s + (Number(d.count) || 0), 0) : 0;
     try {
       await loadIndex();
-      const dd = deckDate();
-      if (dd) { try { await loadDay(dd, true); } catch (_) { /* renderToday reports it */ } }
+      if (index.latest) { try { await loadDay(index.latest, true); } catch (_) { /* renderToday reports it */ } }
       banner(navigator.onLine === false ? "You're offline. Showing ideas saved on this phone." : "");
       lastLoad = Date.now();
-      if (manual) toast(index.latest && index.latest !== before ? "New ideas are in" : "You're up to date");
+      if (manual) {
+        const after = index.days.reduce((s, d) => s + (Number(d.count) || 0), 0);
+        toast(after > before ? (after - before) + " new idea" + (after - before === 1 ? "" : "s") + " in" : "You're up to date");
+      }
     } catch (_) {
       banner("You're offline or the ideas couldn't load. Showing what's saved on this phone.");
       if (!index) index = { latest: null, days: [] };
@@ -398,7 +424,7 @@
   }
 
   document.querySelectorAll(".tab").forEach((t) => t.addEventListener("click", () => show(t.dataset.view)));
-  $("#another").addEventListener("click", another);
+  $("#another").addEventListener("click", newIdea);
   $("#refresh").addEventListener("click", () => load(true));
   document.addEventListener("visibilitychange", () => { if (!document.hidden && Date.now() - lastLoad > 15 * 60 * 1000) load(false); });
   window.addEventListener("online", () => load(false));
@@ -413,7 +439,11 @@
   window.addEventListener("appinstalled", () => { $("#install").hidden = true; toast("Installed. Find Daily Idea on your home screen."); });
 
   if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(() => {}); });
+    // When an updated version of the app is installed, reload once so the new version shows straight away.
+    const hadController = !!navigator.serviceWorker.controller;
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadController && !reloaded) { reloaded = true; location.reload(); } });
+    window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").then((r) => r.update()).catch(() => {}); });
   }
 
   renderStashCount();
