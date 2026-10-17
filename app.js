@@ -301,23 +301,49 @@
   /* ---------- Today ---------- */
   function emptyBox(title, text) { return el("div", { class: "empty" }, el("p", { class: "etitle", text: title }), el("p", { text })); }
 
+  // Fresh batches of researched ideas start landing around these Dublin times.
+  const BATCH_TIMES = [[8, 0, "8:00"], [18, 0, "18:00"]];
+  function nextBatchLabel() {
+    const parts = new Intl.DateTimeFormat("en-GB", { timeZone: TZ, hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
+    const h = +parts.find((p) => p.type === "hour").value, m = +parts.find((p) => p.type === "minute").value;
+    const now = h * 60 + m;
+    for (const [bh, bm, label] of BATCH_TIMES) if (bh * 60 + bm > now) return "around " + label + " today";
+    return "around " + BATCH_TIMES[0][2] + " tomorrow";
+  }
+
+  let waitTimer = null;
+  function totalCount() { return index ? index.days.reduce((s, d) => s + (Number(d.count) || 0), 0) : 0; }
+  function stopWaiting() { if (waitTimer) { clearInterval(waitTimer); waitTimer = null; } }
+  // While the bank is empty, quietly check for newly researched ideas every 90 seconds.
+  function startWaiting() {
+    if (waitTimer) return;
+    waitTimer = setInterval(async () => {
+      if (document.hidden || view !== "today" || busy) return;
+      const before = totalCount();
+      try { await loadIndex(); if (index.latest) await loadDay(index.latest, true); } catch (_) { return; }
+      if (totalCount() > before) { stopWaiting(); toast("Fresh ideas are in. Tap Refresh idea."); await renderToday(); }
+    }, 90000);
+  }
+
   function setFab(state) {
-    const btn = $("#another"), ask = $("#ask-claude"), out = $("#out-box"), hint = $("#today-hint");
+    const btn = $("#another"), out = $("#out-box"), hint = $("#today-hint");
     const today = todayKey();
     const used = taps[today] || 0;
-    btn.hidden = ask.hidden = out.hidden = true; hint.hidden = true; canAnother = false;
+    btn.hidden = out.hidden = true; hint.hidden = true; canAnother = false;
     if (state === "none") return;
     if (state === "limit") {
-      out.hidden = false; out.textContent = "That's your 100 for today. A fresh set arrives at 9:00 tomorrow.";
-      return;
+      out.hidden = false; out.textContent = "That's your 100 for today. Fresh ideas start arriving " + nextBatchLabel() + ".";
+      stopWaiting(); return;
     }
-    if (state === "out") {
-      ask.hidden = false; out.hidden = false;
-      out.textContent = "You've read every idea in the bank. Claude can research a new one in about five minutes, then tap refresh at the top.";
-      return;
-    }
-    btn.hidden = false; btn.disabled = false; hint.hidden = false; canAnother = true;
+    btn.hidden = false; btn.disabled = false; canAnother = true;
     $("#another-count").textContent = used ? (DAILY_LIMIT - used) + " left" : "";
+    if (state === "out") {
+      out.hidden = false;
+      out.textContent = "You've read every idea researched so far. The next batch starts arriving " + nextBatchLabel() + ", and this screen checks for it automatically.";
+      startWaiting();
+    } else {
+      hint.hidden = false; stopWaiting();
+    }
   }
 
   async function renderToday(opts) {
@@ -374,7 +400,12 @@
     const btn = $("#another"); btn.disabled = true;
     try {
       let k = await nextUnseen();
-      if (!k) { try { await loadIndex(); dayCache.delete(index.latest); } catch (_) {} k = await nextUnseen(); }
+      if (!k) {
+        toast("Checking for new ideas…");
+        try { await loadIndex(); dayCache.delete(index.latest); } catch (_) {}
+        k = await nextUnseen();
+        if (!k) toast("No new ideas yet. The next batch starts arriving " + nextBatchLabel() + ".");
+      }
       if (k) {
         const cur = document.querySelector("#today-cards .card.main");
         if (cur && !reduceMotion()) { cur.classList.add("leave"); await wait(190); }

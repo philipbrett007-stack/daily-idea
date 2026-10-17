@@ -42,8 +42,8 @@
     <div class="stage" id="stage">
       <div id="today-cards" class="cards"></div>
     </div>
-    <p id="today-hint" class="hint">Not for you? Swipe the card left or tap New idea.</p>
-    <div id="out-box" class="out-box" hidden></div>
+    <p id="today-hint" class="hint">Not for you? Swipe the card left or tap Refresh idea.</p>
+    <div id="out-box" class="out-box" role="status" hidden></div>
 
     <section id="earlier" class="earlier" aria-labelledby="earlier-h" hidden>
       <h2 id="earlier-h">Earlier today</h2>
@@ -51,14 +51,10 @@
     </section>
 
     <button id="another" class="fab" type="button" hidden>
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3.5l1.9 5.2 5.6.3-4.4 3.5 1.5 5.4L12 14.8 7.4 17.9l1.5-5.4L4.5 9l5.6-.3z" fill="currentColor"/></svg>
-      <span id="another-label">New idea</span>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 11a8 8 0 10-2.3 5.7M20 4v7h-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span id="another-label">Refresh idea</span>
       <small id="another-count"></small>
     </button>
-    <a id="ask-claude" class="fab" href="https://claude.ai/artifact/4j3DptQKjsYnsgCdaEGsKy" target="_blank" rel="noopener noreferrer" hidden>
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3.5l1.9 5.2 5.6.3-4.4 3.5 1.5 5.4L12 14.8 7.4 17.9l1.5-5.4L4.5 9l5.6-.3z" fill="currentColor"/></svg>
-      <span>Ask Claude for more</span>
-    </a>
   </section>
 
   <section id="view-stash" class="view" aria-labelledby="stash-h" hidden>
