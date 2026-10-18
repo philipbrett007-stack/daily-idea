@@ -1,6 +1,6 @@
 {
  "date": "2026-10-18",
- "generated_at": "2026-10-18T08:30:00+01:00",
+ "generated_at": "2026-10-18T18:30:00+01:00",
  "ideas": [
   {
    "theme": "Thought for the day",
@@ -463,6 +463,398 @@
     }
    ],
    "id": "10"
+  },
+  {
+   "id": "11",
+   "theme": "Thinking tools",
+   "title": "Praise followed by decline is often luck",
+   "idea": "When something extreme happens, such as a brilliant performance or a dreadful one, the next attempt will usually be less extreme, even if nothing at all has changed. That drift back towards the average is called regression to the mean, and it quietly fools almost everyone.\n\nIt works because most results are skill plus luck. An exceptional result usually has an exceptional slice of luck in it, and luck doesn't repeat on demand. So the cadet who flew beautifully today will, on average, fly a little worse tomorrow, and the one who flew badly will do a little better.\n\nThe trap is the story we tell. If you praised the good flight and the next one was worse, praise seems to backfire. If you shouted at the bad flight and the next one was better, shouting seems to work. Both conclusions can be completely wrong, because the same pattern appears with no feedback whatsoever.\n\nWhenever you see a change after an extreme result, ask first what would have happened anyway.",
+   "deep_dive": "The idea starts with Francis Galton. In the 1880s he compared the heights of adult children with those of their parents, using the average of the two parents (the \"mid-parent\"), after scaling women's heights up by 1.08. Children of very tall parents were tall, but on average less tall than their parents; children of very short parents were short, but taller than theirs. Galton put the ratio at roughly two to three: a child's deviation from the average was about two-thirds of the mid-parent's. He called it \"regression towards mediocrity\", which is where the word \"regression\" in statistics comes from. It is a statistical effect, not a genetic law: select anything for being extreme on one measurement and the next, imperfectly related measurement will sit closer to the middle.\n\nDaniel Kahneman, in Thinking, Fast and Slow, told how a flight instructor in the Israeli Air Force said praise made cadets worse and shouting made them better. Kahneman saw that the instructor's observation was accurate but his explanation was wrong, and demonstrated it by having instructors toss coins at a target twice: the best first-time tossers did worse, the worst did better.\n\nHow strongly results regress depends on how much luck is involved. The less reliably one measurement predicts the next, the stronger the pull to the average. For something like height, it's modest; for a golf round or a quarter's sales, it can be large.\n\nWhere it stops applying: it isn't a force that drags people to mediocrity, and genuine change can happen on top of it. The skill is separating the two, usually by comparing with a group that didn't get the intervention.",
+   "examples": [
+    {
+     "title": "Kahneman's flight instructors",
+     "text": "In his account in Thinking, Fast and Slow, Kahneman describes a lecture to Israeli Air Force flight instructors about the value of praise. One senior instructor objected: when he praised a cadet for a clean manoeuvre, the next attempt was usually worse, and when he screamed at a cadet for a bad one, the next try was usually better. Kahneman explained that this is what you'd expect from chance alone, since an exceptional flight is likely to be followed by an ordinary one. To make the point, he had instructors toss coins at a target twice. The best first-time tossers did worse the second time and the worst improved, with no feedback involved."
+    },
+    {
+     "title": "Speed cameras at accident black spots",
+     "text": "Cameras tend to be put where crashes have recently clustered, which is exactly where a run of bad luck would also make crashes fall afterwards. A 2008 study in the Journal of Safety Research looked at mobile cameras in Norfolk, England, and reported crashes down about 19% and fatal and serious crashes down about 44% at camera sites. A later commentary in the same journal argued the regression-to-the-mean adjustment had been miscalculated and underestimated, and the original authors agreed their conclusion needed amending. Careful camera studies now use control sites to separate the real effect from regression."
+    },
+    {
+     "title": "The Sports Illustrated cover jinx",
+     "text": "Athletes who make the cover of Sports Illustrated often have a worse spell afterwards, which gave rise to a 'jinx' legend. The usual explanation is statistical: you only reach the cover after an unusually strong run, which generally includes a good dose of luck, so the next stretch tends to look weaker. Discover magazine treats it as a variation on regression to the mean, and the Wikipedia entry on the jinx gives the same account. It's an everyday case anyone who follows sport will recognise, and a reminder that a drop after a peak is the default, not evidence of a curse."
+    }
+   ],
+   "why": [
+    "Evidence: Galton's 1880s height data, plus a century of statistics; the flight-instructor story comes from Kahneman's own telling and is a teaching anecdote, not a controlled study.",
+    "Caveat: regression explains only part of any change. Real effects exist, and the cure is a comparison group, not assuming everything is luck."
+   ],
+   "try_this": "Think of something you changed after a bad run (a routine, a tool, a tactic) and credited for the recovery. What would you have expected to happen anyway?",
+   "sources": [
+    {
+     "title": "Thinking, Fast and Slow (excerpts and summaries of the flight-instructor story) — Daniel Kahneman",
+     "url": "https://3quarksdaily.com/?p=36184"
+    },
+    {
+     "title": "The effects of mobile speed camera introduction on road traffic crashes and casualties in a rural county of England — Jones, Sauerzapf & Haynes / Journal of Safety Research",
+     "url": "https://ueaeprints.uea.ac.uk/id/eprint/24867/"
+    },
+    {
+     "title": "Regression towards the mean: Galton's height study — York University history of statistics",
+     "url": "https://www.york.ac.uk/depts/maths/histstat/galton_reg.htm"
+    },
+    {
+     "title": "Sports Illustrated cover jinx — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Sports_Illustrated_cover_jinx"
+    }
+   ]
+  },
+  {
+   "id": "12",
+   "theme": "Thinking tools",
+   "title": "A crowd's average can beat the experts",
+   "idea": "At a livestock fair in the west of England, around 800 people paid to guess the weight of an ox after it had been slaughtered and dressed. Francis Galton, who disliked the idea that ordinary people could judge anything well, collected the tickets. The middle guess was 1,207 lb. The real weight was 1,198 lb, a miss of under one per cent.\n\nThe lesson is that when many people estimate independently, their individual errors point in different directions and largely cancel out. What's left is the useful information they share. A crowd doesn't need to be clever, only varied and independent.\n\nThat second condition is the catch. Once people see one another's guesses, or defer to a loud voice, their errors line up instead of cancelling, and the crowd can be worse than a lone individual.\n\nSo the practical rule is simple: if you want a good estimate, collect several independent opinions before anyone discusses them, then take the middle value. Compare before you confer.",
+   "deep_dive": "Galton described the contest in a short note called \"Vox Populi\" in Nature in 1907. Visitors to a livestock show paid to guess the weight of an ox, and Galton obtained the tickets afterwards and analysed them. Counts of the entries vary slightly in accounts (about 787 usable tickets, roughly 800 overall), and a later check of his notes found small arithmetic slips in his own summary, but the main result is robust: the median guess, which he called the middlemost estimate, was 1,207 lb against an actual dressed weight of 1,198 lb.\n\nThe mechanism is statistical rather than mystical. Each guess is the truth plus an error. If the errors are unbiased and independent, they average towards zero as the group grows. Using the median, as Galton did, also stops a few wild guesses from dragging the answer.\n\nThe conditions matter more than the headline. Diversity of information helps, and so does independence. A well-known experiment by Lorenz and colleagues, published in PNAS in 2011, found that when participants could see others' estimates, the group's diversity shrank and the crowd's accuracy suffered, even while people felt more confident. Biases that everyone shares don't cancel either: a crowd asked to guess something it systematically misjudges will be confidently wrong together.\n\nIt stops applying whenever the question needs specialist knowledge nobody in the crowd has. Averaging a thousand people's guesses at a surgical dose won't help. It shines on estimation problems, such as quantities, dates and probabilities, where each person holds a scrap of relevant knowledge.",
+   "examples": [
+    {
+     "title": "Galton's ox",
+     "text": "At a livestock show in the west of England, visitors paid to guess the weight of an ox once slaughtered and dressed. Galton gathered the tickets and found the median guess was 1,207 lb. The butchered ox weighed 1,198 lb. He reported this in Nature in 1907 under the title 'Vox Populi'. Later analyses of his notes disagree slightly on the number of entries, from about 787 usable tickets to roughly 800, but all agree on the near-perfect median. It's the founding case for the idea, and it came from a man who had expected the crowd to do badly."
+    },
+    {
+     "title": "Lorenz's experiment on social influence",
+     "text": "In a 2011 PNAS study, Jan Lorenz and colleagues had people estimate facts and let some of them see others' estimates before revising their own. Secondary accounts of the study report that the group's range of answers narrowed under social influence, which damaged the benefit of averaging, even though individuals grew more confident. The finding is a useful warning for meetings: if the boss speaks first, or the group discusses before anyone writes anything down, you lose most of the crowd's advantage. Collect private estimates first, then compare."
+    }
+   ],
+   "why": [
+    "Evidence: Galton's single 1907 data set is real but a one-off; the independence requirement is supported by later experiments such as Lorenz et al. (2011).",
+    "Caveat: crowds fail on questions needing specialist knowledge and when everyone shares the same bias."
+   ],
+   "try_this": "Before your next team decision, ask each person to write down an estimate (a date, a cost, a probability) privately, then compare the median with the loudest opinion.",
+   "sources": [
+    {
+     "title": "Revisiting Francis Galton's Forecasting Competition — Wallis / Statistical Science (arXiv)",
+     "url": "https://arxiv.org/pdf/1410.3989"
+    },
+    {
+     "title": "The Wisdom of the Crowd — Futility Closet (quoting Galton's Nature note)",
+     "url": "https://futilitycloset.com/2014/12/31/the-wisdom-of-the-crowd"
+    },
+    {
+     "title": "Wisdom of crowds — Atticus Li on Galton and Lorenz et al. (2011)",
+     "url": "https://atticusli.com/replication-crisis/wisdom-of-crowds/"
+    }
+   ]
+  },
+  {
+   "id": "13",
+   "theme": "Science & nature",
+   "title": "Islands shrink giants and enlarge mice",
+   "idea": "On islands, big animals tend to get smaller and small animals tend to get bigger. Elephants end up the size of a pony; rodents grow to the size of a small dog. This is known as the island rule, after the biologist J. Bristol Foster, who set it out in the 1960s.\n\nThe logic runs on resources and risk. A large animal on a small island runs out of food sooner, so the individuals that need less food leave more offspring, and over many generations the species shrinks. A small animal, freed from the predators of the mainland, can afford to be bigger, which helps it survive scarce food and compete with its own kind.\n\nOn Sicily, an extinct dwarf elephant stood about a metre at the shoulder, a few per cent of the weight of its mainland ancestor. On Crete, a rodent grew at least eight times the size of its ancestor.\n\nIt is a tendency, not a law. Many species ignore it, and some famous cases turn out to have other explanations.",
+   "deep_dive": "Foster's 1964 work compared island mammals with their mainland relatives and found a pattern: small species such as rodents tended to grow, while large ones such as elephants and deer tended to shrink. Van Valen developed it further in 1973, and it became known as the island rule. A 2007 paper in Biology Letters traced the idea to these two and noted that exceptions have been reported, with some species or whole orders failing to conform.\n\nThe leading explanation is about energy and ecology. On a small island, food is limited and big predators are usually absent. Large animals gain from being smaller because they need less energy, and the pressure from competing with their own kind on limited land pushes towards smaller bodies. Small animals gain from being bigger when predators vanish, because larger bodies are better at storing fat, defending territory and surviving lean seasons.\n\nThe Mediterranean offers some of the best evidence because fossils are abundant. Sicily and Malta held at least three dwarf elephants; the Sicilian Palaeoloxodon falconeri stood about a metre tall. Crete's giant rodent Kritimys catreus was at least eight times heavier than its ancestor. On Flores in Indonesia, a dwarf Stegodon (a relative of elephants) lived before a larger species replaced it.\n\nWhere it stops applying: the rule is statistical, and a number of cases are disputed. The Galápagos giant tortoises, for example, need a different explanation. The hobbit of Flores, Homo floresiensis, is often cited as an island dwarf, but whether it fits is still argued.",
+   "examples": [
+    {
+     "title": "Sicily's one-metre elephants",
+     "text": "Sicily and Malta yielded the remains of at least three dwarf elephants, though reviews say the picture is complicated. The best known on Sicily, Palaeoloxodon falconeri, stood around one metre at the shoulder and weighed only a few per cent of its mainland ancestor. The animals were cut off on islands with limited food and no large predators. A bone-for-bone comparison with the ancestor shows how thoroughly evolution can shrink a species when resources are scarce."
+    },
+    {
+     "title": "Crete's giant rodent",
+     "text": "The other half of the rule shows up in rodents. Kritimys catreus, an extinct rodent of Crete, was at least eight times the size of its ancestor. Freed from many mainland predators and competitors, small animals on islands often grow larger. Reports on island giants, such as those summarised by Reuters-based coverage in the Jakarta Post, pair the Cretan rodent with other cases to show the same trend running in reverse."
+    },
+    {
+     "title": "The Wrangel Island mammoth correction",
+     "text": "For years the last mammoths, which lived on Russia's Wrangel Island until about 4,000 years ago, were described as dwarfs. A 1993 report argued that their teeth were small. Later work, including studies co-authored by Vartanyan himself, found the Holocene Wrangel mammoths stood about 180 to 230 cm at the shoulder, comparable to northern Siberian mammoths, and long-bone measurements in 2008 matched mainland animals. They were small, but not dwarfed. It's a good reminder that even a famous island story can be revised by better measurements."
+    }
+   ],
+   "why": [
+    "Evidence: Foster (1964) and Van Valen (1973), with strong fossil support from Mediterranean islands.",
+    "Caveat: many species don't conform, and flagship cases such as the Wrangel mammoths and the Flores hominin have been revised or remain disputed."
+   ],
+   "try_this": "Next time you see an 'obvious' evolutionary rule stated confidently, ask what the exceptions are and who has measured them.",
+   "sources": [
+    {
+     "title": "The island rule: evidence from primates (Biology Letters, 2007) — Bromham & Cardillo",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2390661"
+    },
+    {
+     "title": "Dwarf elephants, giant rats: strange island creatures at high risk — Reuters via The Jakarta Post",
+     "url": "https://www.thejakartapost.com/world/2023/03/10/dwarf-elephants-giant-rats-strange-island-creatures-at-high-risk"
+    },
+    {
+     "title": "Collection of radiocarbon dates on the mammoths of Wrangel Island — Vartanyan et al. / Quaternary Research",
+     "url": "https://www.cambridge.org/core/product/DA6977370F5578DA1669462F0472F6D1"
+    }
+   ]
+  },
+  {
+   "id": "14",
+   "theme": "Psychology & behaviour",
+   "title": "Say when and where, and you will",
+   "idea": "Good intentions fail mostly at the moment of action, not at the moment of deciding. A simple fix is to turn \"I will do X\" into \"If situation Y happens, then I will do X.\" Psychologists call this an implementation intention, and the idea was developed by Peter Gollwitzer.\n\nThe difference is specificity. \"I'll get a flu jab\" is a wish. \"I'll get my flu jab on Thursday at 10am\" is a plan with a cue. When the cue arrives, the action is triggered more or less automatically, instead of depending on you remembering and finding the motivation at that moment.\n\nA large meta-analysis of 94 tests found that forming these if-then plans had a medium-to-large effect on whether people reached their goals. Field studies back it up: asking people to write down a date and time for a flu vaccination raised take-up, and helping voters plan how they'd vote increased turnout.\n\nThe plan works best for a clear, single action you already want to do. It won't create motivation you don't have.",
+   "deep_dive": "The concept comes from Peter Gollwitzer, who distinguished two kinds of intention. A goal intention states what you want (\"I want to exercise more\"). An implementation intention adds the where, when and how (\"When I get home on Monday, I'll put on my trainers before I sit down\"). By linking a specific situation to a specific response, you hand part of the work to the environment. When the cue appears, the plan is cued, rather than relying on conscious effort.\n\nIn 2006 Gollwitzer and Paschal Sheeran published a meta-analysis in Advances in Experimental Social Psychology. It combined 94 independent tests from 63 reports and found an average effect of d = 0.65 on goal attainment, a medium-to-large effect. That is a statistical effect size, not a 65 per cent improvement. A 2024 follow-up by Sheeran, Listrom and Gollwitzer reportedly covers 642 tests, so the newer estimate is the one to look for.\n\nThe field studies are the most convincing. In the flu study by Katherine Milkman and colleagues (PNAS, 2011), a firm's employees were mailed a prompt to write down their planned vaccination date and time. The control rate was 33.1%; asking for the date alone made little difference, while asking for date and time raised take-up by 4.2 percentage points. In Nickerson and Rogers (2010, Psychological Science), phone calls that helped voters plan when, where and how they would vote raised turnout by 4.1 points among those reached.\n\nWhere it stops applying: plans help with intentions you already hold. They struggle when the goal itself is vague, when the situation is unpredictable, or when you don't want to do the thing.",
+   "examples": [
+    {
+     "title": "Flu jabs at a large company",
+     "text": "Milkman, Beshears, Choi, Laibson and Madrian ran a field experiment at a large firm that offered free on-site flu clinics. Some employees got a mailing with a prompt to write down the date they planned to be vaccinated; others were asked to write down date and time. About 33.1% of the control group were vaccinated. Writing down the date alone raised take-up by 1.5 points, which was not statistically significant. Writing down date and time raised it by 4.2 points, which was. The result was published in PNAS in 2011."
+    },
+    {
+     "title": "A voting plan on the phone",
+     "text": "Before the 2008 US election, David Nickerson and Todd Rogers randomised more than 287,000 people to different phone scripts. A standard encouragement call did nothing measurable, but a script that asked people when, where and how they'd vote raised turnout by 4.1 percentage points among those reached. The effect was concentrated in single-voter households, where turnout rose by 9.1 points, while households with several voters were unaffected, possibly because they already talk about voting. Sources disagree on which 2008 election (the primary or the general), so check the paper for detail."
+    },
+    {
+     "title": "The 94-study review",
+     "text": "Gollwitzer and Sheeran's 2006 meta-analysis pooled 94 independent tests from 63 reports of if-then planning, covering goals from exercising to avoiding unwanted habits. The average effect on goal attainment was d = 0.65. The authors also reported benefits at several stages of pursuing a goal: starting, protecting an activity from interruption, and dropping a plan that isn't working. It's the evidence base to quote, though newer meta-analyses have since appeared."
+    }
+   ],
+   "why": [
+    "Evidence: a 94-test meta-analysis (Gollwitzer & Sheeran, 2006) plus large randomised field trials on flu vaccination and voting.",
+    "Caveat: real-world effects are a few percentage points, not dramatic, and they work only for goals you already want."
+   ],
+   "try_this": "Pick one thing you keep meaning to do and write: 'When [specific time/place cue], I will [one concrete action].' Put it in your calendar.",
+   "sources": [
+    {
+     "title": "Using Implementation Intentions Prompts to Enhance Influenza Vaccination Rates — Milkman et al. / PNAS",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3127912"
+    },
+    {
+     "title": "Do You Have a Voting Plan? — Nickerson & Rogers / Psychological Science",
+     "url": "https://www.psychologicalscience.org/journals/psychological-science/0956797609359326/"
+    },
+    {
+     "title": "Implementation intentions and goal achievement: a meta-analysis — Gollwitzer & Sheeran",
+     "url": "https://www.socmot.uni-konstanz.de/publications/implementation-intentions-and-goal-achievement-meta-analysis-effects-and-processes"
+    }
+   ]
+  },
+  {
+   "id": "15",
+   "theme": "Philosophy & wisdom",
+   "title": "Design a society without knowing your place",
+   "idea": "Imagine you must choose the rules of a society, but you won't know whether you'll be born rich or poor, healthy or ill, talented or not. What rules would you pick? That is the veil of ignorance, the thought experiment at the centre of John Rawls's A Theory of Justice (1971).\n\nRawls argued that behind the veil, nobody could tailor rules to their own advantage, so the rules that emerge are fair by construction. He thought people would protect the worst-off position, since it might be theirs.\n\nThe device is useful beyond politics. Any time you're setting a rule for others, such as how to split a bonus, set a policy or divide chores, you can ask: would I accept this if I didn't know which seat I'd get?\n\nIt also reveals a real disagreement. Rawls said you'd protect the worst case. The economist John Harsanyi, who used a similar device earlier, said you'd maximise the average. Experiments suggest most people want something in between.",
+   "deep_dive": "Rawls's argument in A Theory of Justice asks us to imagine representatives in an \"original position\" who choose principles of justice behind a veil that hides their class, talents, gender and even their own idea of the good life. Because nobody knows where they'll land, Rawls claimed they'd choose principles that are fair to all. He argued for equal basic liberties, fair equality of opportunity, and the difference principle: inequalities are acceptable only if they benefit the worst-off.\n\nA key point is the decision rule. Rawls denied the people behind the veil any knowledge of probabilities about which position they'd occupy, which pushes them to a cautious maximin strategy: make the worst outcome as good as possible. John Harsanyi had used a similar idea in 1953, before Rawls, but told the contractors they'd have an equal chance of being anyone, which leads to maximising the average welfare. The dispute between these decision rules is still live. Critics such as Nozick argued maximin is risk aversion taken to an extreme.\n\nExperiments add something. In 1987 Frohlich, Oppenheimer and Eavey ran groups of five students who ranked and debated four principles of distributive justice behind a veil-like set-up. Groups reached agreement every time, but none chose pure maximin. They overwhelmingly picked maximising average income subject to a guaranteed minimum. A later study by Jackson and Hill found little support for maximin too.\n\nWhere it stops applying: the veil is a tool for testing fairness, not a decision machine. It can't settle trade-offs between liberty and equality by itself, and it assumes you can strip away your biases, which is harder than it sounds.",
+   "examples": [
+    {
+     "title": "Students choosing a distribution",
+     "text": "Frohlich, Oppenheimer and Eavey's 1987 experiments put 34 groups of five university students behind a veil-like set-up. Each student ranked four principles, then groups deliberated and needed unanimity to pick one. Every group reached agreement, but none chose to maximise the income of the worst-off alone. They overwhelmingly settled on the highest average income combined with a floor below which no one fell. The authors concluded that people's ideas of justice are complex and don't reduce to a single rule."
+    },
+    {
+     "title": "Harsanyi's equal-chance observer",
+     "text": "John Harsanyi proposed in 1953 an impartial observer who imagines having an equal chance of being any member of society, and who therefore favours the policy that maximises average utility. Rawls, by contrast, denied that the contractors know the odds of any position. Same device, different assumption about probabilities, different recommended society. Later philosophers have argued that neither standard utilitarianism nor prioritarianism follows unless people are insensitive to ambiguity. It's the cleanest demonstration that the veil doesn't give one answer."
+    }
+   ],
+   "why": [
+    "Evidence: a canonical philosophical argument, tested lab-style by Frohlich et al. (1987) with student groups; small, artificial samples.",
+    "Caveat: experiments favoured an average-with-floor rule rather than Rawls's strict worst-off priority, and the veil can't remove all bias."
+   ],
+   "try_this": "Think of a rule you set or follow at work or home. Would you still choose it if you were randomly assigned a role in it, including the least advantaged one?",
+   "sources": [
+    {
+     "title": "Laboratory results on Rawls's distributive justice — Frohlich, Oppenheimer & Eavey / British Journal of Political Science",
+     "url": "https://resolve.cambridge.org/core/journals/british-journal-of-political-science/article/laboratory-results-on-rawlss-distributive-justice/DD2CB2203A12790BB2B566127F4FAAA3"
+    },
+    {
+     "title": "John Harsanyi and Rawls: the veil of ignorance argument — Springer (Synthese)",
+     "url": "https://link.springer.com/article/10.1007/s11229-019-02455-8"
+    },
+    {
+     "title": "Original position — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Original_position"
+    }
+   ]
+  },
+  {
+   "id": "16",
+   "theme": "Creativity, invention & systems thinking",
+   "title": "Your product will copy your org chart",
+   "idea": "Organisations that design systems tend to produce designs that mirror their own communication structure. This is Conway's law, from the programmer Melvin Conway in 1968. If four teams build a compiler, you will probably get a four-stage compiler.\n\nThe reason is practical. Interfaces between components get built where people have to negotiate across team boundaries, and the parts that need constant discussion end up inside one team. So the shape of the software follows the shape of who talks to whom, whether or not anyone intended it.\n\nIt matters because we usually think the other way round: we design the system, then assign people to it. Conway's law says the org chart is already designing the system for you.\n\nThe practical use is the \"inverse Conway manoeuvre\": if you want a particular architecture, shape the teams first. And if the product is awkward, look at where the teams meet.",
+   "deep_dive": "Melvin Conway wrote \"How Do Committees Invent?\" in 1967. Harvard Business Review rejected it, reportedly because he hadn't proved his thesis, and Datamation published it in April 1968. His claim was that any organisation that designs a system will produce a design whose structure is a copy of the organisation's communication structure. Fred Brooks later named it Conway's law in The Mythical Man-Month.\n\nThe mechanism is simple. Early in a project the first decisions are about how to split the work, and that split determines who must talk to whom. Interfaces form where people don't talk easily; tightly coupled parts form where they do. Later changes to the design have to fight the existing communication paths.\n\nFor a long time the claim was folklore. In 2008 Nachiappan Nagappan, Brendan Murphy and Victor Basili published an empirical study of Windows Vista at Microsoft. They built metrics for organisational complexity, such as how many engineers touched a component and how scattered ownership was, and found these predicted failure-proneness better than traditional measures like code churn, complexity and dependencies.\n\nIn Conway's own anecdote, a research group of eight people building COBOL and ALGOL compilers split five and three, and the COBOL compiler ended up with more phases than the ALGOL one. Summaries disagree on the exact pass counts, so check his paper at melconway.com.\n\nWhere it stops applying: it describes a strong tendency, not a law of nature. Teams can deliberately reorganise, and small groups with fast communication can break the pattern.",
+   "examples": [
+    {
+     "title": "Windows Vista's organisation and bugs",
+     "text": "At Microsoft, Nagappan, Murphy and Basili studied how Windows Vista's organisational structure related to post-release failures. Their organisational metrics were statistically significant predictors of failure-proneness, and the precision and recall for finding failure-prone binaries were significantly higher than with traditional metrics such as code churn, complexity, coverage, dependencies and pre-release bugs. They framed it as testing Brooks's claim that product quality depends on organisation structure, a claim that had little empirical support until then."
+    },
+    {
+     "title": "Conway's two compilers",
+     "text": "Conway's own illustration involved a contract research group of eight people asked to build both a COBOL and an ALGOL compiler. The group split roughly five and three. According to summaries of his paper, the COBOL compiler, built by the larger team, ended up with more passes than the ALGOL one. Treat the exact figures with some caution, since the sources I could check cut off before confirming the pass counts, but the shape of the story is consistent: the software mirrored the team sizes and how the work was divided."
+    }
+   ],
+   "why": [
+    "Evidence: Conway's 1968 argument plus an empirical Microsoft study of Windows Vista (2008).",
+    "Caveat: the Vista result shows correlation between organisation and failures, and the original compiler story is anecdotal."
+   ],
+   "try_this": "Draw your team's communication lines on paper next to the product's main components. Where do they match, and where is the product awkward because two teams meet?",
+   "sources": [
+    {
+     "title": "The Influence of Organizational Structure On Software Quality: An Empirical Case Study — Nagappan, Murphy & Basili / Microsoft Research",
+     "url": "https://www.microsoft.com/en-us/research/?p=153188"
+    },
+    {
+     "title": "Voices on software design: Melvin E. Conway — Stefan Lesser",
+     "url": "https://stefanlesser.substack.com/p/voices-on-software-design-melvin"
+    },
+    {
+     "title": "Conway's Law — Making Software (O'Reilly)",
+     "url": "https://www.oreilly.com/library/view/making-software/9780596808310/ch11s01.html"
+    }
+   ]
+  },
+  {
+   "id": "17",
+   "theme": "Creativity, invention & systems thinking",
+   "title": "Great discoveries tend to arrive in pairs",
+   "idea": "Inventions and discoveries that look like flashes of individual genius very often turn up in several places at once. The sociologist Robert Merton called these \"multiples\" and argued in 1963 that they are the normal pattern in science, not the exception.\n\nNewton and Leibniz both developed calculus. Priestley and Scheele both isolated oxygen in the 1770s. Darwin and Wallace both reached natural selection. Elisha Gray filed a telephone patent the same day as Alexander Graham Bell.\n\nThe explanation is that ideas become reachable at particular moments. Once the earlier pieces exist (the right mathematics, better instruments, a certain body of data), several capable people are standing at the same frontier, and one of them will step over it soon.\n\nThat doesn't make individuals irrelevant. It means timing and groundwork matter at least as much as talent, and that if you notice the ingredients coming together, someone else probably has too. Speed and sharing are then the advantage.",
+   "deep_dive": "Merton's 1963 essay \"Multiple Discoveries as Strategic Research Site\" developed the argument that multiples may be the common pattern in science. He suggested that discoveries are, in principle, multiples, and that the ones that look singular are often multiples that were never completed or noticed. A sociology of science has a hard time with the \"lone genius\" story as a result.\n\nThe pattern appears on many scales. Calculus is the standard example: the mathematics that made it possible already existed, so the discovery would probably have occurred even without Newton's written work. Oxygen was found by Scheele and Priestley around 1774, quickly after studies of air showed it to be a mixture of gases and after better scales were invented. The telephone is a famous patent race, with Elisha Gray unaware of Bell's specifics yet filing on the same day.\n\nThe cleanest case may be evolution. In February 1858 Alfred Russel Wallace, ill with fever on Ternate, wrote an essay on natural selection and sent it to Darwin. Darwin passed it to Lyell and Hooker, who arranged for it to be read, alongside extracts from Darwin's writings, at the Linnean Society on 1 July 1858. Neither man attended. Lyell and Hooker's introduction described them as having independently, and unknown to one another, conceived the same theory.\n\nWhere it stops applying: priority disputes can be bitter, and independent discovery isn't always as simultaneous as the stories make it sound. Stories of coincidence sometimes hide that one party saw the other's work or letters first.",
+   "examples": [
+    {
+     "title": "Darwin, Wallace and the Linnean Society",
+     "text": "In February 1858, Wallace wrote an essay on natural selection while ill at Ternate and sent it to Darwin, who had been working on the same theory for years. Lyell and Hooker arranged a joint presentation at the Linnean Society on 1 July 1858, reading Wallace's essay alongside an extract of Darwin's earlier essay and his 1857 letter to Asa Gray. Neither man was present. The papers were published on 20 August 1858, with an introduction saying they had conceived the theory independently and unknown to one another."
+    },
+    {
+     "title": "Calculus: Newton and Leibniz",
+     "text": "Newton and Leibniz are the textbook case of simultaneous discovery. Sources on Merton's work note that the mathematical ground for calculus already existed, which is why the discovery would very probably have occurred even without Newton's written work. The case shows how ideas can be waiting in the available pieces, and also how bitter the priority fight can become when two capable people reach the same place."
+    },
+    {
+     "title": "Oxygen and the telephone",
+     "text": "Scheele and Priestley are credited with isolating oxygen independently, with the date given as 1774. One source ties the timing to earlier studies showing air is a mixture and to the invention of advanced scales. For the telephone, Elisha Gray, unacquainted with the specifics of Bell's work, filed a patent on the same day Bell did. Both examples show a discovery becoming reachable once surrounding tools and knowledge arrive."
+    }
+   ],
+   "why": [
+    "Evidence: Merton's 1963 essay on multiples and numerous well-documented cases.",
+    "Caveat: some famous 'simultaneous' cases are muddied by priority disputes and shared sources."
+   ],
+   "try_this": "Pick a project you're proud of that you think nobody else could have thought of. Who else had the same ingredients, and what would you do differently if you knew they were close?",
+   "sources": [
+    {
+     "title": "What is multiple discovery? — A Moment of Science / Indiana Public Media",
+     "url": "https://www.ipm.org/show/amomentofscience/2021-08-06/what-is-multiple-discovery"
+    },
+    {
+     "title": "Darwin and Wallace papers — Wallacea (Charles Darwin University)",
+     "url": "https://cduebooks.pressbooks.pub/wallacea/?p=62"
+    },
+    {
+     "title": "Simultaneity — Generalist Academy",
+     "url": "https://generalist.academy/2019/12/22/simultaneity/"
+    }
+   ]
+  },
+  {
+   "id": "18",
+   "theme": "History & big ideas",
+   "title": "The chemistry that feeds half of us",
+   "idea": "In 1909 Fritz Haber showed in a laboratory that nitrogen from the air could be combined with hydrogen to make ammonia. Carl Bosch scaled it up at the chemical company BASF, and by 9 September 1913 the world's first Haber-Bosch ammonia plant was producing at Oppau, in Germany.\n\nIt matters because plants need fixed nitrogen, and for most of history farmers relied on manure, legumes and imported guano or nitrate. Ammonia synthesis made fertiliser from air and energy. The historian-scientist Vaclav Smil argued that nearly half the world would go hungry without it, and that population could not have grown from 1.6 billion in 1900 to six billion without it.\n\nThe same chemistry made explosives. A century on, researchers writing in Nature Geoscience called it central to modern life, with benefits (food) and costs (war, and nitrogen pollution of rivers and seas).\n\nFew inventions show so clearly that one technology can be both life-saving and deadly.",
+   "deep_dive": "Before Haber and Bosch, the supply of fixed nitrogen was a strategic problem. Crops need it, and nitrate came from limited natural deposits. Haber, a German chemist, patented his method in 1908 and demonstrated it in the lab in 1909. The practical challenge was making it work at industrial scale under high pressure and temperature, which was Bosch's contribution at BASF. Commercial production began at Oppau on 9 September 1913, just over four years after Haber's demonstration.\n\nThe scale of the effect is why Smil's argument gets cited so often. His 1999 essay in Nature argued that without ammonia there would be no inorganic fertilisers and nearly half of humanity would go hungry. Other estimates differ. A 2008 review in Nature Geoscience by Erisman and colleagues reports that around 2000, roughly 40% of the world's population depended on fertiliser inputs for food, and notes that the number is hard to pin down because of changes in crop varieties, mechanisation and breeding.\n\nThe history has a dark side. Ammonia is also the feedstock for explosives, and the review links Haber-Bosch nitrogen with millions of deaths in conflict. Haber himself championed chlorine gas as a weapon, overseeing its development before the attack at Ypres on 22 April 1915, and he still received the 1918 Nobel Prize in Chemistry for ammonia synthesis. The environmental cost, such as reduced biodiversity and algal blooms from nitrogen runoff, is also documented.\n\nWhere the story stops: \"feeds half the world\" is a rough estimate, not a measured figure, and yields also depend on seeds, irrigation and machinery.",
+   "examples": [
+    {
+     "title": "Oppau, 1913: the first plant",
+     "text": "BASF's own history records that the world's first Haber-Bosch ammonia plant started operating in 1913 at its new Oppau works north of Ludwigshafen. A Nature article dates commercial production to 9 September 1913, four years and two months after Haber's lab demonstration. The speed of that scale-up, carried out by Carl Bosch's engineers, is part of why the process changed agriculture within a generation."
+    },
+    {
+     "title": "The Oppau explosion, 1921",
+     "text": "On 21 September 1921 at 7:32am, blasting intended to loosen hardened fertiliser in a silo at Oppau ended in a catastrophic explosion. The silo held about 4,500 tonnes of ammonium sulphate nitrate. BASF's history says more than 500 people were killed, and a German school text gives 561 dead and over 2,000 injured. BASF stopped producing that fertiliser and did not resume until 1940, with a modified process. It's a sobering example of how a food technology carries industrial risk."
+    },
+    {
+     "title": "Haber's chlorine and Nobel Prize",
+     "text": "Haber also championed chlorine gas as a weapon, supervising the technology at his institute. A Norwegian encyclopedia reports that 167 tonnes of chlorine were released against British and French troops near Ypres on 22 April 1915, with limited tactical result because German troops did not follow up. In 1918 he received the Nobel Prize in Chemistry for ammonia synthesis. The pairing of the two facts is why historians still argue about how to judge him."
+    }
+   ],
+   "why": [
+    "Evidence: BASF's records, Smil's essay in Nature (1999) and the 2008 Erisman et al. review in Nature Geoscience.",
+    "Caveat: 'half the world' is an estimate; figures range from about 40% to nearly half depending on method."
+   ],
+   "try_this": "Next time you eat bread or rice, trace one step back: where did the nitrogen in that plant come from? What would the same field have yielded without it?",
+   "sources": [
+    {
+     "title": "How a century of ammonia synthesis changed the world — Erisman et al. / Nature Geoscience",
+     "url": "https://www.nature.com/articles/ngeo325.pdf"
+    },
+    {
+     "title": "Detonator of the population explosion — Vaclav Smil / Nature",
+     "url": "https://www.nature.com/articles/22672"
+    },
+    {
+     "title": "1913: first ammonia synthesis plant at Oppau — BASF history",
+     "url": "https://www.basf.com/global/de/who-we-are/history/chronology/1902-1924/1913"
+    },
+    {
+     "title": "100th anniversary of the Oppau explosion — BASF",
+     "url": "https://www.basf.com/rs/sr/who-we-are/History/Oppau1921"
+    }
+   ]
+  },
+  {
+   "id": "19",
+   "theme": "History & big ideas",
+   "title": "The doctor ignored for saving mothers",
+   "idea": "In 1847, Ignaz Semmelweis, a young doctor at Vienna's General Hospital, noticed that women giving birth in the clinic staffed by doctors and medical students died far more often than those in the midwives' clinic. He suspected something carried from the autopsy room on the doctors' hands.\n\nHe ordered handwashing in chlorinated lime solution. In April 1847 mortality in the doctors' clinic was around 18%. By June it was about 2%.\n\nHis colleagues largely refused to accept it. Semmelweis had no theory of germs to offer, only a pattern, and it implied that doctors were killing patients. He died in 1865, shortly after being committed to an asylum. Germ theory and Lister's antiseptic surgery later vindicated him.\n\nThe \"Semmelweis reflex\" is the habit of rejecting evidence because it clashes with what we believe. It shows that being right about the data isn't enough; how a finding threatens people matters too.",
+   "deep_dive": "Vienna's General Hospital had two obstetric clinics. In the First Clinic, doctors and students delivered babies; in the Second, midwives did. Mortality from childbed fever was much higher in the First. Semmelweis tried and rejected many explanations, and concluded that \"cadaverous particles\" were carried by examining hands from the dissecting room to the labour ward.\n\nIn May 1847 he required handwashing in chlorinated lime. One account gives the April 1847 monthly rate as 18.3%, and the June rate as 2.2%, with July 1.2% and August 1.9%. Other accounts quote different baselines (a multi-year First Clinic average near 10% against under 4% in the Second), so the exact numbers depend on the period. The Second Clinic acted as a rough control, with unchanged practice.\n\nHis mechanism was wrong in detail. He picked chlorinated lime partly because it removed the smell of dead tissue; disinfection properties weren't yet known. Germ theory, developed by Pasteur and others, supplied an explanation, and Joseph Lister began applying carbolic acid to wounds around 1865. Semmelweis was committed to an asylum in 1865 at age 47 and died two weeks later from an infected wound, according to one account.\n\nWhere the story needs care: some popular retellings overstate things, for example that he \"invented germ theory\", which he did not. The \"Semmelweis reflex\" label came later and is a shorthand, not a rigorous psychological finding.",
+   "examples": [
+    {
+     "title": "Two clinics in Vienna",
+     "text": "Semmelweis's natural experiment compared the doctors' First Clinic with the midwives' Second Clinic at the Vienna General Hospital. Doctors' wards had roughly three times the mortality of the midwives' wards. After he introduced handwashing with chlorinated lime in mid-May 1847, monthly mortality in the First Clinic fell from 18.3% in April to 2.2% in June, according to a table reproduced from Wikipedia, and sources describe it as a drop of about 90%. The Second Clinic, where nothing changed, served as the comparison."
+    },
+    {
+     "title": "Lister's carbolic acid",
+     "text": "Around 1865 Joseph Lister began applying carbolic acid to wound dressings, drawing on Pasteur's research on microbes. A BMJ piece notes that neither in Vienna nor in Glasgow did the new ideas meet with approval at first. Like Semmelweis, Lister had to wait. His approach eventually became standard surgical practice as germ theory took hold, showing that the same practical insight can win acceptance once a convincing explanation is available."
+    },
+    {
+     "title": "The asylum and aftermath",
+     "text": "Semmelweis's ideas were rejected in his lifetime. One account says he was committed to a mental asylum in 1865 at age 47 and died two weeks later from an infected wound. His reputation recovered decades later as Pasteur's work and Lister's antisepsis explained what he had observed. The story is why 'Semmelweis reflex' has become shorthand for rejecting evidence that contradicts established belief."
+    }
+   ],
+   "why": [
+    "Evidence: hospital mortality records from Vienna, with a rough natural control in the Second Clinic.",
+    "Caveat: baselines vary by source, his own explanation was wrong, and the popular version simplifies his motives and fate."
+   ],
+   "try_this": "Recall the last time evidence challenged something you or your team do. What was your first reaction, and what would you have said if the messenger were someone you trusted?",
+   "sources": [
+    {
+     "title": "Ignaz Semmelweis, the original hand hygiene pioneer — Hektoen International",
+     "url": "https://hekint.org/2026/02/09/ignaz-semmelweis-the-original-hand-hygiene-pioneer/"
+    },
+    {
+     "title": "Ignaz Semmelweis — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Ignaz_Semmelweis"
+    },
+    {
+     "title": "Lister and Semmelweis: two misunderstood geniuses — RAPS",
+     "url": "https://www.raps.org/resource/lister-and-semmelweis-two-misunderstood-geniuses.html"
+    }
+   ]
+  },
+  {
+   "id": "20",
+   "theme": "Thought for the day",
+   "title": "We adapt less than we expect",
+   "idea": "We tend to assume a big change, good or bad, will set our happiness permanently higher or lower. Mostly it doesn't. People adjust, and their mood drifts back towards where it was. This is hedonic adaptation.\n\nThe classic study, from Brickman, Coates and Janoff-Bulman in 1978, compared 22 Illinois lottery winners with 22 controls and 29 people who had been paralysed in accidents. Winners were not noticeably happier than the controls, and the paralysed group, though less happy, was less so than most people would predict.\n\nBut the story is often told too neatly. Dan Gilbert acknowledged that he had overstated it: the groups were not equally happy. And later large panel studies suggest that some events, such as long-term disability, divorce and unemployment, leave lasting marks.\n\nSo the useful version is more modest: we over-predict how much a purchase or a promotion will change us, and under-predict how well we cope with setbacks. Enjoy good things deliberately, because the glow fades.",
+   "deep_dive": "The 1978 study by Philip Brickman, Dan Coates and Ronnie Janoff-Bulman is the origin of the lottery-winner story. It used small samples: 22 winners, 22 controls and 29 accident victims who were paralysed. Mean happiness ratings were 3.82 for the controls and 4.00 for the winners, a small difference, and 2.96 for the paralysed group.\n\nThe study's reputation exceeded its evidence. Dan Gilbert later acknowledged that he had misstated the results, saying that the groups were not equally happy and that the findings were weak, although the point about adaptation has been supported by later research.\n\nThe stronger evidence comes from long-running panel studies that follow the same people through life events. Richard Lucas, using the German Socio-Economic Panel and the British Household Panel, argued in a 2007 paper that long-term disability is associated with lasting changes in subjective wellbeing, and in a related review that divorced and unemployed people, on average, do not return to their previous happiness. Other researchers using German data found adaptation for working-age men, so the picture is not settled.\n\nThe takeaway is about forecasting. We tend to focus on the change and ignore how much of daily life stays the same, and we underestimate how much we will adjust. Where it stops applying: adaptation is partial and depends on the event. Some losses and some chronic conditions don't fade.",
+   "examples": [
+    {
+     "title": "The Illinois lottery study",
+     "text": "Brickman, Coates and Janoff-Bulman interviewed 22 Illinois lottery winners, 22 people from the same area as controls, and 29 people paralysed in accidents. Winners averaged 4.00 on a happiness scale against 3.82 for controls, and the paralysed group averaged 2.96. The authors read this as evidence of adaptation. Later commentary, including from Gilbert, points out the groups weren't equally happy and that the samples were small, so it's best treated as a suggestive early study, not proof."
+    },
+    {
+     "title": "Lucas and the national panels",
+     "text": "Richard Lucas followed people through life events in two nationally representative longitudinal surveys: the German Socio-Economic Panel and the British Household Panel. His 2007 paper in the Journal of Personality and Social Psychology concluded that long-term disability is associated with lasting changes in wellbeing. A related review argued that people who divorce or become unemployed do not, on average, return to their earlier happiness. Pagán-Rodríguez, using German data on working-age men, reported that adaptation does occur, so researchers still disagree on how complete it is."
+    }
+   ],
+   "why": [
+    "Evidence: the 1978 lottery study (small samples, since criticised) plus later panel studies following thousands of people.",
+    "Caveat: adaptation is partial and varies by event; disability, divorce and unemployment appear to leave lasting effects in some studies."
+   ],
+   "try_this": "Name one thing you were sure would make you happier and now barely notice. What could you do this week to notice it again on purpose?",
+   "sources": [
+    {
+     "title": "How winning the lottery affects happiness according to psychology research — ScienceAlert",
+     "url": "https://www.sciencealert.com/how-winning-the-lottery-affects-happiness-according-to-psychology-research"
+    },
+    {
+     "title": "Long-term disability is associated with lasting changes in subjective well-being — Lucas / JPSP (World Database of Happiness)",
+     "url": "https://worlddatabaseofhappiness.eur.nl/publications/long-term-disability-is-associated-with-lasting-changes-in-subjective-well-being-evidence-from-two-nationally-representative-longitudinal-studies-7686"
+    },
+    {
+     "title": "Life's ups and downs may stick — APS Observer",
+     "url": "https://www.psychologicalscience.org/observer/lifes-ups-and-downs-may-stick"
+    }
+   ]
   }
  ]
 }
