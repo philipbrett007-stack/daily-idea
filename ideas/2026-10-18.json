@@ -53,6 +53,60 @@
    ],
    "id": "1",
    "featured": true
+  },
+  {
+   "theme": "Thinking tools",
+   "title": "A rare coincidence isn't proof of guilt",
+   "idea": "\"How unlikely is this by chance?\" and \"How likely is it that the accused is innocent?\" are different questions, and mixing them up has put innocent people in prison.\n\nThis is the prosecutor's fallacy. Suppose an event is very rare if someone is innocent. It feels as though that makes innocence very unlikely too. It doesn't, because you have to compare it with the alternative explanation, which may be rarer still. Winning the lottery is a one-in-millions event, yet someone wins most weeks. A baby dying suddenly is rare; two such deaths in one family is rarer; but a mother murdering two of her own children is rarer again.\n\nThe habit worth building is simple: whenever you hear \"the odds of this happening by chance are tiny\", ask \"compared with what?\"",
+   "deep_dive": "The fallacy turns on a piece of probability that is easy to state and hard to feel. The chance of seeing this evidence if the person is innocent is not the same as the chance the person is innocent given this evidence. They only coincide if you ignore how rare the alternative is. The tool for getting it right is Bayes' theorem, which says you must weigh the likelihood of the evidence under each competing explanation, and also how plausible each explanation was to begin with.\n\nTake the numbers from the most famous British case. Roy Meadow, a paediatrician, told Sally Clark's jury in 1999 that the chance of two cot deaths in an affluent, non-smoking family was about 1 in 73 million. He got there by taking a figure of roughly 1 in 8,500 for one such death and squaring it. That arithmetic assumes the deaths are independent, but cot death can run in families through shared genetic and environmental factors, so the true figure is higher. The Royal Statistical Society said there was no statistical basis for the number.\n\nThen came the deeper mistake. Even if 1 in 73 million had been right, it describes how rare the deaths are. It does not say how likely it is that she was guilty. Double murder of babies is itself astronomically rare, and the jury needed to compare the two rarities, not hear only one.\n\nThe limit: this does not mean small probabilities are useless. It means they must always be set against the rival story. And in cases like these there is usually a prior question, whether any crime happened at all, that no probability can answer on its own.",
+   "examples": [
+    {
+     "title": "Sally Clark and the 73 million",
+     "text": "Sally Clark, a solicitor, lost two baby sons, in 1996 and 1998, and was convicted of murdering both in 1999. At trial, paediatrician Roy Meadow said the odds of two cot deaths in such a family were 1 in 73 million, a figure reached by squaring a single-death estimate of about 1 in 8,543. The Royal Statistical Society later criticised it. Her conviction was quashed by the Court of Appeal in January 2003 after it emerged that bacteriological evidence suggesting a natural death had not been disclosed. She had served more than three years and died in 2007."
+    },
+    {
+     "title": "Lucia de Berk and 342 million",
+     "text": "Lucia de Berk, a Dutch nurse, was convicted in 2003 and 2004 of seven murders and three attempted murders, after deaths clustered on her shifts. A criminologist told the court the odds of this happening by chance were 1 in 342 million. The Royal Statistical Society later noted that, once real factors were allowed for, a cluster like it could be as likely as 1 in 25 in some hospitals. The case was reopened in 2008 and she was cleared of all charges. The tiny number had done the work that evidence should have done."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_courts_of_justice.jpg?width=1000",
+     "caption": "The Royal Courts of Justice on the Strand, London, home of the Court of Appeal that quashed Sally Clark's conviction in 2003.",
+     "credit": "Anthony M / CC BY 2.0, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Royal_courts_of_justice.jpg"
+    }
+   ],
+   "visual": {
+    "type": "video",
+    "url": "https://www.ted.com/talks/view/id/67",
+    "label": "How juries are fooled by statistics — Peter Donnelly, TEDGlobal 2005",
+    "note": "Donnelly, an Oxford statistician, explains why people misjudge probabilities and walks through the Sally Clark case."
+   },
+   "why": [
+    "Evidence: the Clark and de Berk cases are documented in court records, the Criminal Cases Review Commission and Royal Statistical Society statements.",
+    "Caveat: these were extreme cases where a wrong number was presented to a jury as near-proof. In ordinary life the fix is just to ask what the competing explanation is and how likely it is."
+   ],
+   "try_this": "Next time you read \"the odds of this being a coincidence are a million to one\", write down the rival explanation and ask honestly how likely that is.",
+   "sources": [
+    {
+     "title": "Sally Clark case decision — Criminal Cases Review Commission",
+     "url": "https://ccrc.gov.uk/decision/clark-sally"
+    },
+    {
+     "title": "The danger of trial by statistics — UnHerd (2024)",
+     "url": "https://unherd.com/2024/05/the-danger-of-trial-by-statistics/"
+    },
+    {
+     "title": "How juries are fooled by statistics — Peter Donnelly / TED",
+     "url": "https://www.ted.com/talks/view/id/67"
+    },
+    {
+     "title": "The Prosecutor's Fallacy — Statistical Modeling, Causal Inference, and Social Science (Columbia)",
+     "url": "https://statmodeling.stat.columbia.edu/?p=9180"
+    }
+   ],
+   "id": "2"
   }
  ]
 }
