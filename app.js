@@ -7,7 +7,8 @@
 
   const TZ = "Europe/Dublin";
   const DAILY_LIMIT = 100;
-  const KEYS = { stash: "di.stash.v1", seen: "di.seen.v1", shown: "di.shown.v2", taps: "di.taps.v2" };
+  const KEYS = { stash: "di.stash.v1", seen: "di.seen.v1", shown: "di.shown.v2", taps: "di.taps.v2",
+    reads: "di.reads.v1", tune: "di.tune.v1", mindSeen: "di.mindseen.v1" };
 
   // Each theme gets its own colour. Order matters: the first keyword that matches wins.
   const THEME_COLOURS = [
@@ -37,6 +38,8 @@
   let seen = new Set(store.get(KEYS.seen, []));  // keys read
   let shown = store.get(KEYS.shown, {});         // today -> [keys shown today, in order]
   let taps = store.get(KEYS.taps, {});           // today -> New idea taps used
+  let reads = store.get(KEYS.reads, {});         // key -> { t: when first opened (ms), th: theme }, for Mindset
+  let tune = store.get(KEYS.tune, {});           // mindset axis id -> weight (0.5 less, 1 normal, 2 more)
   let view = "today";
   let lastLoad = 0;
   let deferredInstall = null;
@@ -116,6 +119,9 @@
     const cutoff = dayKey(new Date(Date.now() - 7 * 864e5));
     for (const obj of [shown, taps]) for (const k of Object.keys(obj)) if (k < cutoff) delete obj[k];
     store.set(KEYS.shown, shown); store.set(KEYS.taps, taps);
+    const old = Date.now() - 70 * 864e5;   // Mindset only needs the last couple of months of reading
+    for (const [k, r] of Object.entries(reads)) if (!r || r.t < old) delete reads[k];
+    store.set(KEYS.reads, reads);
   })();
 
   /* ---------- data ---------- */
@@ -176,7 +182,8 @@
   }
   function seenCount(date) { let n = 0; const p = date + "#"; for (const k of seen) if (k.startsWith(p)) n++; return n; }
 
-  // Next idea: the newest day's ideas first (in order), then a random unseen idea from the rest of the bank.
+  // Next idea: the newest day's ideas first, then an unseen idea from the rest of the bank.
+  // If you've tuned your feed on the Mindset tab, themes you asked for come up more often.
   async function nextUnseen() {
     if (!index || !index.days.length) return null;
     const shownToday = new Set(shown[todayKey()] || []);
@@ -184,16 +191,27 @@
     const latest = index.latest;
     try {
       const d = await loadDay(latest);
-      for (let i = 0; i < d.ideas.length; i++) { const k = keyOf(latest, d.ideas[i], i); if (free(k)) return k; }
+      const open = d.ideas.map((x, i) => ({ x, k: keyOf(latest, x, i) })).filter((c) => free(c.k));
+      if (open.length) {
+        if (open[0].x.featured || !isTuned()) return open[0].k;
+        let best = open[0];
+        for (const c of open) if (themeWeight(c.x.theme) > themeWeight(best.x.theme)) best = c;
+        return best.k;
+      }
     } catch (_) { /* fall through to the bank */ }
     const days = index.days.filter((x) => x.date !== latest && seenCount(x.date) < (Number(x.count) || 0)).map((x) => x.date);
     for (let i = days.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [days[i], days[j]] = [days[j], days[i]]; }
+    const pool = [];
+    let looked = 0;
     for (const date of days) {
       let d; try { d = await loadDay(date); } catch (_) { continue; }
-      const pool = d.ideas.map((x, i) => keyOf(date, x, i)).filter(free);
-      if (pool.length) return pool[Math.floor(Math.random() * pool.length)];
+      d.ideas.forEach((x, i) => { const k = keyOf(date, x, i); if (free(k)) pool.push({ k, w: themeWeight(x.theme) }); });
+      if (pool.length && (!isTuned() || ++looked >= 6)) break;
     }
-    return null;
+    if (!pool.length) return null;
+    let r = Math.random() * pool.reduce((s, c) => s + c.w, 0);
+    for (const c of pool) { r -= c.w; if (r <= 0) return c.k; }
+    return pool[pool.length - 1].k;
   }
 
   /* ---------- media: videos play inside the app, images open full screen here ---------- */
@@ -386,7 +404,7 @@
       el("div", { class: "card-top" }, idea.theme ? el("span", { class: "tag", text: String(idea.theme) }) : el("span"), right),
       el("h2", { class: "title", text: String(idea.title) }),
       ...ideaBody(idea, ctx.key, ctx.date));
-    markSeen(ctx.key);
+    markSeen(ctx.key, idea);
     return c;
   }
 
@@ -402,12 +420,16 @@
     d.addEventListener("toggle", () => {
       if (!d.open) return;
       if (!built) { d.append(el("div", { class: "row-body" }, ...ideaBody(idea, ctx.key, ctx.date))); built = true; }
-      markSeen(ctx.key);
+      markSeen(ctx.key, idea);
     });
     return d;
   }
 
-  function markSeen(key) { if (!seen.has(key)) { seen.add(key); store.set(KEYS.seen, Array.from(seen).slice(-5000)); } }
+  function markSeen(key, idea) {
+    if (seen.has(key)) return;
+    seen.add(key); store.set(KEYS.seen, Array.from(seen).slice(-5000));
+    if (idea && !reads[key]) { reads[key] = { t: Date.now(), th: String(idea.theme || "") }; store.set(KEYS.reads, reads); }
+  }
 
   async function share(idea) {
     const src = (Array.isArray(idea.sources) ? idea.sources : []).map((s) => s && safeUrl(s.url)).find(Boolean);
@@ -426,6 +448,7 @@
     });
     renderStashCount();
     if (view === "stash") renderStash();
+    updateMindNudges();
   }
 
   /* ---------- Today ---------- */
@@ -617,13 +640,295 @@
     }));
   }
 
+  /* ---------- Weekly Mindset ---------- */
+  // Six ways of thinking, one per theme family. Worked out on this phone from what you open (1 point)
+  // and stash (3 points) each week, Monday to Sunday. A playful mirror, not a personality test.
+  const AXES = [
+    { id: "systems", name: "Systems", colour: "#FF7AC6", who: "The Builder",
+      trait: "pragmatic, structured and mechanism-minded",
+      blurb: "You went for how things are put together and why they fail: designs, processes and the hidden plumbing of systems." },
+    { id: "decisions", name: "Decisions", colour: "#8B7BFF", who: "The Strategist",
+      trait: "analytical, probabilistic and sceptical of easy stories",
+      blurb: "You collected tools for thinking straight: bias, odds, evidence and how to choose well when you can't be sure." },
+    { id: "science", name: "Science", colour: "#3DD6B5", who: "The Explorer",
+      trait: "curious and evidence-hungry, drawn to how the world really works",
+      blurb: "You chased mechanisms and surprising findings, and liked it best when the data overturned the story." },
+    { id: "people", name: "People", colour: "#FF8A7A", who: "The People-Reader",
+      trait: "observant of motives, habits and the quirks behind behaviour",
+      blurb: "You were drawn to why people do what they do, at work, at home and in groups." },
+    { id: "meaning", name: "Meaning", colour: "#F6C35B", who: "The Reflector",
+      trait: "meaning-driven, second-order and focused on principles",
+      blurb: "You leaned towards the big questions: how to live, what matters and how to steady your own mind." },
+    { id: "history", name: "History", colour: "#FFA64D", who: "The Long-View Thinker",
+      trait: "pattern-seeking across time and wary of 'this time is different'",
+      blurb: "You looked backwards to understand the present: turning points, unintended consequences and their long tails." }
+  ];
+  const AXIS_BY_ID = Object.fromEntries(AXES.map((a) => [a.id, a]));
+  // Order matters: "Creativity, invention & systems thinking" must land on Systems, not on Decisions via "think".
+  const AXIS_MATCH = [
+    ["systems", ["creativ", "invent", "system", "engineer", "design"]],
+    ["history", ["history", "big idea"]],
+    ["science", ["science", "nature"]],
+    ["people", ["psych", "behav"]],
+    ["meaning", ["philos", "wisdom", "thought for", "living"]],
+    ["decisions", ["think", "decision", "probab", "tool"]]
+  ];
+  function axisOf(theme) {
+    const s = String(theme || "").toLowerCase();
+    for (const [id, words] of AXIS_MATCH) if (words.some((w) => s.includes(w))) return id;
+    return null;
+  }
+  const TUNE_STEPS = [[0.5, "Less"], [1, "Normal"], [2, "More"]];
+  function isTuned() { return Object.values(tune).some((w) => w !== 1); }
+  function themeWeight(theme) { const a = axisOf(theme); return (a && tune[a]) || 1; }
+
+  const plural = (n, word) => n + " " + word + (n === 1 ? "" : "s");
+  const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+  // Weeks run Monday to Sunday, Irish time.
+  function addDays(key, n) { const d = asDate(key); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); }
+  function mondayOf(key) { const d = asDate(key); return addDays(key, -((d.getUTCDay() + 6) % 7)); }
+  function weekLabel(mon) {
+    const a = asDate(mon), b = asDate(addDays(mon, 6));
+    const f = (d, o) => new Intl.DateTimeFormat("en-IE", Object.assign({ timeZone: "UTC" }, o)).format(d);
+    return a.getUTCMonth() === b.getUTCMonth()
+      ? f(a, { day: "numeric" }) + "–" + f(b, { day: "numeric", month: "short" })
+      : f(a, { day: "numeric", month: "short" }) + " – " + f(b, { day: "numeric", month: "short" });
+  }
+
+  function weekData(mon) {
+    const end = addDays(mon, 6), inWeek = (k) => k >= mon && k <= end;
+    const pts = Object.fromEntries(AXES.map((a) => [a.id, 0]));
+    const days = new Set(), stashed = [];
+    let nRead = 0;
+    for (const r of Object.values(reads)) {
+      const dk = dayKey(new Date(r.t)); if (!inWeek(dk)) continue;
+      nRead++; days.add(dk); const a = axisOf(r.th); if (a) pts[a] += 1;
+    }
+    for (const s of Object.values(stash)) {
+      const t = Date.parse(s.savedAt); if (isNaN(t)) continue;
+      const dk = dayKey(new Date(t)); if (!inWeek(dk)) continue;
+      days.add(dk); stashed.push(s); const a = axisOf(s.idea && s.idea.theme); if (a) pts[a] += 3;
+    }
+    stashed.sort((x, y) => (x.savedAt < y.savedAt ? 1 : -1));
+    const total = Object.values(pts).reduce((s, v) => s + v, 0);
+    const share = Object.fromEntries(AXES.map((a) => [a.id, total ? Math.round((pts[a.id] / total) * 100) : 0]));
+    return { mon, nRead, nStash: stashed.length, days: days.size, stashed, total, share, sparse: stashed.length < 3 && nRead < 6 };
+  }
+
+  function profileOf(w) {
+    const ranked = AXES.slice().sort((a, b) => w.share[b.id] - w.share[a.id]);
+    const top = ranked[0], second = ranked[1], blind = ranked[ranked.length - 1];
+    const wide = ranked.filter((a) => w.share[a.id] >= 12);
+    if (wide.length >= 4 && w.share[top.id] < 35)
+      return { title: "The Polymath", colour: "#8B7BFF", ranked, top, blind, wide,
+        trait: "connective and cross-disciplinary, linking ideas between fields",
+        blurb: "You didn't settle in one place. You moved across " + wide.length + " fields this week and kept what connected them." };
+    if (w.share[second.id] >= 25 && w.share[top.id] - w.share[second.id] <= 10)
+      return { title: top.who + ", with a " + second.who.replace(/^The /, "") + " streak", colour: top.colour, ranked, top, blind,
+        trait: top.trait + ", with a strong " + second.name.toLowerCase() + " side",
+        blurb: top.blurb + " " + second.name + " ran a close second." };
+    return { title: top.who, colour: top.colour, ranked, top, blind, trait: top.trait, blurb: top.blurb };
+  }
+
+  function narrative(w, p, prev) {
+    const out = ["You opened " + plural(w.nRead, "idea") + " and stashed " + w.nStash + ", across " + plural(w.days, "day") + "."];
+    if (p.wide) out.push("Your attention spread across " + p.wide.map((a) => a.name).join(", ") + ": the mark of a mind that's " + p.trait + ".");
+    else out.push("Your saves leaned towards " + p.top.name + " (" + w.share[p.top.id] + "%): the mark of a mind that's " + p.trait + ".");
+    const kept = w.stashed.slice(0, 3).map((s) => "“" + s.idea.title + "”");
+    if (kept.length) out.push((kept.length === 1 ? "The idea you kept: " : "Ideas you kept: ") + kept.join(", ") + ".");
+    if (prev && !prev.sparse) {
+      let best = null, d = 0;
+      for (const a of AXES) { const delta = w.share[a.id] - prev.share[a.id]; if (Math.abs(delta) > Math.abs(d)) { d = delta; best = a; } }
+      if (best && Math.abs(d) >= 8) out.push("Compared with the week before, you moved " + (d > 0 ? "towards " : "away from ") + best.name + " (" + (d > 0 ? "+" : "") + d + " points).");
+    }
+    if (w.share[p.blind.id] <= 8) out.push("Blind spot: " + p.blind.name + ". One " + p.blind.name.toLowerCase() + " idea a day would round out your week.");
+    return out;
+  }
+
+  function radarSvg(w, colour) {
+    const NS = "http://www.w3.org/2000/svg", c = 160, R = 100, n = AXES.length;
+    const mk = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); return e; };
+    const pt = (i, r) => { const a = -Math.PI / 2 + (i * 2 * Math.PI) / n; return [c + r * Math.cos(a), c + r * Math.sin(a)]; };
+    const max = Math.max(1, ...AXES.map((a) => w.share[a.id]));
+    const svg = mk("svg", { viewBox: "-64 0 448 320", class: "radar", role: "img",
+      "aria-label": "Thinking map: " + AXES.map((a) => a.name + " " + w.share[a.id] + "%").join(", ") });
+    for (const f of [0.25, 0.5, 0.75, 1]) svg.append(mk("polygon", { points: AXES.map((_, i) => pt(i, R * f).join(",")).join(" "), class: "r-grid" }));
+    AXES.forEach((_, i) => { const [x, y] = pt(i, R); svg.append(mk("line", { x1: c, y1: c, x2: x, y2: y, class: "r-spoke" })); });
+    const r = (a) => R * Math.max(0.12, Math.sqrt(w.share[a.id] / max));   // square root keeps small themes visible
+    svg.append(mk("polygon", { points: AXES.map((a, i) => pt(i, r(a)).join(",")).join(" "), class: "r-shape", style: "fill:" + colour + ";stroke:" + colour }));
+    AXES.forEach((a, i) => { const [x, y] = pt(i, r(a)); svg.append(mk("circle", { cx: x, cy: y, r: 4, fill: a.colour })); });
+    AXES.forEach((a, i) => {
+      const [x, y] = pt(i, R + 18);
+      const t = mk("text", { x, y: y + 5, class: "r-label", "text-anchor": Math.abs(x - c) < 5 ? "middle" : x > c ? "start" : "end" });
+      t.textContent = a.name + " ";
+      const p = mk("tspan", { class: "r-pct" }); p.textContent = w.share[a.id] + "%";
+      t.append(p); svg.append(t);
+    });
+    return svg;
+  }
+
+  function mindBars(w) {
+    return el("div", { class: "mbars" }, ...AXES.slice().sort((a, b) => w.share[b.id] - w.share[a.id]).map((a) => {
+      const fill = el("span", { class: "mbar-fill" });
+      fill.style.width = w.share[a.id] + "%"; fill.style.background = a.colour;
+      return el("div", { class: "mbar" }, el("span", { class: "mbar-name", text: a.name }), el("span", { class: "mbar-track" }, fill), el("span", { class: "mbar-pct", text: w.share[a.id] + "%" }));
+    }));
+  }
+
+  function setTune(id, v) {
+    if (v === 1) delete tune[id]; else tune[id] = v;
+    store.set(KEYS.tune, tune);
+    const name = AXIS_BY_ID[id].name;
+    toast(v === 2 ? "More " + name + " coming up" : v === 0.5 ? "Less " + name + " from now on" : name + " back to normal");
+    renderMind();
+  }
+  function tuneBox(p) {
+    const chips = [];
+    if (p) {
+      const lean = el("button", { type: "button", class: "chip", text: "More " + p.top.name });
+      lean.addEventListener("click", () => setTune(p.top.id, 2));
+      const fill = el("button", { type: "button", class: "chip", text: "Fill my blind spot: " + p.blind.name });
+      fill.addEventListener("click", () => setTune(p.blind.id, 2));
+      chips.push(lean, fill);
+    }
+    if (isTuned()) {
+      const reset = el("button", { type: "button", class: "chip ghost", text: "Reset" });
+      reset.addEventListener("click", () => { tune = {}; store.set(KEYS.tune, tune); toast("Back to an even mix"); renderMind(); });
+      chips.push(reset);
+    }
+    const rows = AXES.map((a) => {
+      const cur = tune[a.id] || 1;
+      const seg = el("div", { class: "tseg", role: "radiogroup", "aria-label": a.name });
+      for (const [v, label] of TUNE_STEPS) {
+        const b = el("button", { type: "button", role: "radio", "aria-checked": String(cur === v), text: label });
+        b.addEventListener("click", () => { if ((tune[a.id] || 1) !== v) setTune(a.id, v); });
+        seg.append(b);
+      }
+      const dot = el("i", { class: "tdot" }); dot.style.background = a.colour;
+      return el("div", { class: "trow" }, el("span", { class: "tname" }, dot, a.name), seg);
+    });
+    return el("section", { class: "mcard" }, el("h2", { class: "mh", text: "Tune your next week" }),
+      el("p", { class: "mnote", text: "Choose what Refresh idea serves up more or less often." }),
+      chips.length ? el("div", { class: "chips" }, ...chips) : null,
+      el("div", { class: "trows" }, ...rows));
+  }
+
+  // A 4:5 image for Instagram, WhatsApp and the like, drawn on the phone.
+  function wrapText(g, text, x, y, maxW, lh) {
+    let line = "";
+    for (const word of text.split(" ")) {
+      const test = line ? line + " " + word : word;
+      if (g.measureText(test).width > maxW && line) { g.fillText(line, x, y); line = word; y += lh; } else line = test;
+    }
+    if (line) g.fillText(line, x, y);
+    return y;
+  }
+  function pill(g, x, y, w, h, colour) { g.fillStyle = colour; g.beginPath(); g.roundRect ? g.roundRect(x, y, w, h, h / 2) : g.rect(x, y, w, h); g.fill(); }
+  function rgba(hex, a) { const n = parseInt(hex.slice(1), 16); return "rgba(" + (n >> 16) + "," + ((n >> 8) & 255) + "," + (n & 255) + "," + a + ")"; }
+  async function shareMind(w, p) {
+    try { await document.fonts.ready; } catch (_) {}
+    const W = 1080, H = 1350, cv = document.createElement("canvas"); cv.width = W; cv.height = H;
+    const g = cv.getContext("2d");
+    const bg = g.createLinearGradient(0, 0, 0, H); bg.addColorStop(0, "#1D1B3A"); bg.addColorStop(1, "#15142A");
+    g.fillStyle = bg; g.fillRect(0, 0, W, H);
+    const glow = g.createRadialGradient(W * 0.85, 120, 10, W * 0.85, 120, 760);
+    glow.addColorStop(0, rgba(p.colour, 0.42)); glow.addColorStop(1, rgba(p.colour, 0));
+    g.fillStyle = glow; g.fillRect(0, 0, W, H);
+    const D = "'Bricolage Grotesque', 'Segoe UI', sans-serif", B = "'Figtree', 'Segoe UI', sans-serif";
+    g.fillStyle = "#ABA8C9"; g.font = "700 32px " + B; g.fillText("HOW MY MIND WORKED", 90, 150);
+    g.fillStyle = "#7D799E"; g.font = "500 32px " + B; g.fillText("Week of " + weekLabel(w.mon), 90, 196);
+    const size = p.title.length > 30 ? 70 : p.title.length > 18 ? 82 : 98;
+    g.fillStyle = "#EEEDF7"; g.font = "800 " + size + "px " + D;
+    let y = wrapText(g, p.title, 90, 300 + size * 0.3, 900, size * 1.08);
+    g.fillStyle = p.colour; g.font = "600 38px " + B;
+    y = wrapText(g, cap(p.trait) + ".", 90, y + 74, 900, 50);
+    g.fillStyle = "#C9C7E0"; g.font = "400 34px " + B;
+    y = wrapText(g, p.blurb, 90, y + 70, 900, 48);
+    y = Math.min(Math.max(y + 100, 640), H - 560);
+    for (const a of p.ranked.slice(0, 4)) {
+      g.fillStyle = "#EEEDF7"; g.font = "600 36px " + B; g.textAlign = "left"; g.fillText(a.name, 90, y);
+      g.fillStyle = "#ABA8C9"; g.textAlign = "right"; g.fillText(w.share[a.id] + "%", 990, y); g.textAlign = "left";
+      pill(g, 90, y + 20, 900, 20, "rgba(255,255,255,0.08)");
+      pill(g, 90, y + 20, Math.max(20, (900 * w.share[a.id]) / 100), 20, a.colour);
+      y += 104;
+    }
+    g.fillStyle = "#ABA8C9"; g.font = "500 34px " + B;
+    g.fillText(plural(w.nRead, "idea") + " read  ·  " + w.nStash + " stashed  ·  " + plural(w.days, "active day"), 90, H - 150);
+    g.fillStyle = "#EEEDF7"; g.font = "800 40px " + D; g.fillText("Daily Idea", 90, H - 84);
+    const blob = await new Promise((r) => cv.toBlob(r, "image/png"));
+    if (!blob) { toast("Couldn't make the image on this device"); return; }
+    const file = new File([blob], "my-week-in-mind.png", { type: "image/png" });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      try { await navigator.share({ files: [file], title: "How my mind worked this week" }); } catch (_) { /* cancelled */ }
+      return;
+    }
+    const a = el("a", { href: URL.createObjectURL(blob), download: file.name });
+    document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    toast("Image saved");
+  }
+
+  let mindWeek = "this";
+  function lastMonday() { return addDays(mondayOf(todayKey()), -7); }
+  // Last week's report is ready if it has enough to go on and you haven't opened it yet.
+  function mindReady() { const m = lastMonday(); return !weekData(m).sparse && store.get(KEYS.mindSeen, "") !== m; }
+  function updateMindNudges() {
+    const ready = mindReady();
+    const dot = $("#mind-dot"); if (dot) dot.hidden = !ready;
+    const ban = $("#mind-banner"); if (ban) ban.hidden = !ready;
+  }
+
+  function renderMind() {
+    const body = $("#mind-body"); if (!body) return;
+    const mon = mindWeek === "last" ? lastMonday() : mondayOf(todayKey());
+    document.querySelectorAll("#mind-weeks button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.w === mindWeek)));
+    $("#mind-sub").textContent = (mindWeek === "last" ? "Last week, " : "This week so far, ") + weekLabel(mon) + ".";
+    if (mindWeek === "last") store.set(KEYS.mindSeen, mon);
+    updateMindNudges();
+    const w = weekData(mon), parts = [];
+    if (w.sparse) {
+      const meter = (n, of, label) => {
+        const fill = el("span", { class: "mbar-fill" }); fill.style.width = Math.min(100, (n / of) * 100) + "%"; fill.style.background = "var(--accent)";
+        return el("div", { class: "mbar" }, el("span", { class: "mbar-name", text: label }), el("span", { class: "mbar-track" }, fill), el("span", { class: "mbar-pct", text: Math.min(n, of) + "/" + of }));
+      };
+      parts.push(el("div", { class: "empty" },
+        el("p", { class: "etitle", text: mindWeek === "last" ? "Not much to go on last week" : "Your Mindset is warming up" }),
+        el("p", { text: "It's built from what you open and stash. Stash 3 ideas or open 6 in a week to unlock it." }),
+        el("div", { class: "mbars" }, meter(w.nStash, 3, "Stashed"), meter(w.nRead, 6, "Opened"))));
+      parts.push(tuneBox(null));
+    } else {
+      const p = profileOf(w);
+      const hero = el("section", { class: "mhero" },
+        el("span", { class: "mkicker", text: "How your mind worked" }),
+        el("h2", { class: "mtitle", text: p.title }),
+        el("p", { class: "mtrait", text: cap(p.trait) + "." }),
+        el("p", { class: "mblurb", text: p.blurb }));
+      hero.style.setProperty("--m", p.colour);
+      const stat = (n, label) => el("div", { class: "mstat" }, el("b", { text: String(n) }), el("span", { text: label }));
+      const shareBtn = el("button", { type: "button", class: "act" }, icon("share", ""), el("span", { text: "Share as image" }));
+      shareBtn.addEventListener("click", () => shareMind(w, p));
+      parts.push(hero,
+        el("div", { class: "mstats" }, stat(w.nRead, "opened"), stat(w.nStash, "stashed"), stat(w.days, w.days === 1 ? "active day" : "active days")),
+        el("section", { class: "mcard" }, el("h2", { class: "mh", text: "Your thinking map" }), radarSvg(w, p.colour), mindBars(w)),
+        el("section", { class: "mcard" }, el("h2", { class: "mh", text: "The week in a nutshell" }),
+          el("ul", { class: "mlist" }, ...narrative(w, p, weekData(addDays(mon, -7))).map((t) => el("li", { text: t })))),
+        el("div", { class: "actions" }, shareBtn),
+        tuneBox(p));
+    }
+    parts.push(el("p", { class: "mnote center", text: "Worked out on this phone from what you open and stash; nothing is sent anywhere. A playful mirror, not a personality test." }));
+    body.replaceChildren(...parts);
+  }
+  document.querySelectorAll("#mind-weeks button").forEach((b) => b.addEventListener("click", () => { mindWeek = b.dataset.w; renderMind(); }));
+  $("#mind-banner").addEventListener("click", () => { mindWeek = "last"; show("mind"); });
+
   /* ---------- views & loading ---------- */
   function show(name) {
+    if (name === "mind" && view !== "mind" && mindReady()) mindWeek = "last";  // a fresh report opens first
     view = name;
-    for (const v of ["today", "stash", "archive"]) $("#view-" + v).hidden = v !== name;
+    for (const v of ["today", "stash", "mind", "archive"]) $("#view-" + v).hidden = v !== name;
     document.querySelectorAll(".tab").forEach((t) => { if (t.dataset.view === name) t.setAttribute("aria-current", "page"); else t.removeAttribute("aria-current"); });
     if (name === "stash") renderStash();
     if (name === "archive") renderArchive();
+    if (name === "mind") renderMind();
     window.scrollTo(0, 0);
   }
 
@@ -644,6 +949,7 @@
       if (!index) index = { latest: null, days: [] };
     }
     rb.classList.remove("spin");
+    updateMindNudges();
     await renderToday();
     if (view === "archive") renderArchive();
   }

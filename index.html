@@ -39,6 +39,10 @@
       <p class="intro-date" id="today-date">&nbsp;</p>
     </div>
 
+    <button id="mind-banner" class="mind-banner" type="button" hidden>
+      <span class="mb-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3l7.8 4.5v9L12 21l-7.8-4.5v-9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.5l3.9 2.2v4.6L12 16.5l-3.9-2.2V9.7z" fill="currentColor" opacity=".55"/></svg></span>
+      <span><b>Your week in mind is ready</b><small>See how your mind worked last week</small></span>
+    </button>
     <div id="out-box" class="out-box" role="status" hidden></div>
     <div class="stage" id="stage">
       <div id="today-cards" class="cards"></div>
@@ -65,6 +69,18 @@
     <div id="stash-cards" class="rows"></div>
   </section>
 
+  <section id="view-mind" class="view" aria-labelledby="mind-h" hidden>
+    <div class="intro">
+      <h1 id="mind-h">Your mindset</h1>
+      <p class="intro-date" id="mind-sub">&nbsp;</p>
+    </div>
+    <div class="seg" id="mind-weeks" role="tablist" aria-label="Week">
+      <button type="button" role="tab" data-w="this" aria-selected="true">This week</button>
+      <button type="button" role="tab" data-w="last" aria-selected="false">Last week</button>
+    </div>
+    <div id="mind-body" class="mind"></div>
+  </section>
+
   <section id="view-archive" class="view" aria-labelledby="archive-h" hidden>
     <div class="intro">
       <h1 id="archive-h">Archive</h1>
@@ -85,6 +101,13 @@
       <b id="stash-count" class="count" hidden></b>
     </span>
     <span>Stash</span>
+  </button>
+  <button class="tab" type="button" data-view="mind">
+    <span class="tab-icon">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3l7.8 4.5v9L12 21l-7.8-4.5v-9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.5l3.9 2.2v4.6L12 16.5l-3.9-2.2V9.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <b id="mind-dot" class="dot-new" hidden></b>
+    </span>
+    <span>Mindset</span>
   </button>
   <button class="tab" type="button" data-view="archive">
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
