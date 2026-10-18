@@ -293,6 +293,53 @@
     }
    ],
    "id": "6"
+  },
+  {
+   "theme": "Psychology & behaviour",
+   "title": "We remember how it ended, not how long",
+   "idea": "We judge an experience by its most intense moment and its ending, and largely ignore how long it lasted.\n\nPsychologists call this the peak-end rule, with a companion effect called duration neglect. In a 1993 experiment led by Daniel Kahneman, people held a hand in painfully cold water twice: once for 60 seconds, and once for those same 60 seconds followed by 30 more in which the water was slightly warmer. Logic says the second trial is plainly worse, since it contains all the pain of the first plus extra. Yet most people chose to repeat the longer one, because it ended on a gentler note.\n\nThe practical upshot is odd but useful. How an experience ends can shape how you remember it, and decide whether you do it again, so endings are worth designing.",
+   "deep_dive": "The finding comes from work by Daniel Kahneman and colleagues, including Barbara Fredrickson, Charles Schreiber and Donald Redelmeier, on the difference between the experiencing self and the remembering self. The experiencing self lives through each moment. The remembering self keeps the story, and the story is what we consult when we decide whether something was good.\n\nIn the 1993 cold-water study, participants put a hand in water at 14 degrees Celsius for 60 seconds. In the other trial, the same 60 seconds was followed by 30 more seconds while the water warmed slightly to 15 degrees. They were then asked which they would repeat. Most chose the longer trial. Memory had weighted the worst moment and the end, and let the duration drop out.\n\nThe real-world version came in medicine. In a 1996 paper in the journal Pain, Redelmeier and Kahneman compared patients' moment-by-moment ratings of two minimally invasive procedures with their later memories. Then, in 2003, Redelmeier, Katz and Kahneman ran a randomised trial of 682 colonoscopy patients. For half of them, the scope was left in place without moving for a short interval at the end, which produced mild discomfort instead of an abrupt finish. Those patients rated the whole procedure as significantly less unpleasant afterwards, despite having had slightly more total discomfort.\n\nThe limits: the studies used short, discrete episodes, so it is hard to say how far the effect stretches to long ones. It is a tendency in memory, not a law, and it does not mean the experiencing self's suffering is any less real.",
+   "examples": [
+    {
+     "title": "Ninety seconds beat sixty",
+     "text": "In the 1993 study by Kahneman, Fredrickson, Schreiber and Redelmeier, volunteers kept a hand in painfully cold water for 60 seconds at 14 degrees Celsius, then in a second trial for 60 seconds followed by 30 more as the water warmed to 15 degrees. Later, given the choice, most chose to repeat the longer trial, even though it contained all the discomfort of the shorter one and more. This is the founding experiment behind both the peak-end rule and duration neglect: the added half-minute improved the memory by worsening the experience."
+    },
+    {
+     "title": "The colonoscopy trial",
+     "text": "In 2003 Donald Redelmeier, Joel Katz and Daniel Kahneman randomly assigned 682 colonoscopy patients to one of two groups. In one, the procedure ended as usual. In the other, the tip of the scope was left in the rectum for a short extra interval, a milder discomfort than the main procedure. Patients in the extended group rated the experience as significantly less unpleasant when they looked back on it. The study, published in Pain, suggests that how a medical procedure ends can alter how patients remember it, which could matter because memory shapes whether people agree to repeat a procedure."
+    },
+    {
+     "title": "Vacations and concerts",
+     "text": "Kahneman uses the same logic in his TED talk, with vacations and a concert as illustrations: a painful episode is remembered as less painful if the pain tapers off than if it stops sharply at its height, even when the total pain is greater. Roger Ebert's essay on the talk recounts a symphony anecdote in which a bad ending seems to spoil the whole concert in memory, even though the listener enjoyed it while it lasted. The remembering self edits the story, and the ending carries disproportionate weight."
+    }
+   ],
+   "images": [],
+   "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\"><text x=\"150\" y=\"30\" font-size=\"18\" fill=\"#1C2633\" text-anchor=\"middle\" font-weight=\"bold\">Trial A: 60 seconds</text><text x=\"450\" y=\"30\" font-size=\"18\" fill=\"#1C2633\" text-anchor=\"middle\" font-weight=\"bold\">Trial B: 90 seconds</text><line x1=\"300\" y1=\"45\" x2=\"300\" y2=\"300\" stroke=\"#D3DAE3\" stroke-width=\"2\"/><rect x=\"60\" y=\"90\" width=\"180\" height=\"140\" fill=\"#C2414B\"/><text x=\"150\" y=\"165\" font-size=\"16\" fill=\"#FFFFFF\" text-anchor=\"middle\">cold, painful</text><text x=\"150\" y=\"270\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">ends at peak pain</text><rect x=\"340\" y=\"90\" width=\"150\" height=\"140\" fill=\"#C2414B\"/><rect x=\"490\" y=\"160\" width=\"75\" height=\"70\" fill=\"#284B7A\"/><text x=\"415\" y=\"165\" font-size=\"16\" fill=\"#FFFFFF\" text-anchor=\"middle\">same pain</text><text x=\"450\" y=\"270\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">+30s slightly warmer ending</text><text x=\"450\" y=\"70\" font-size=\"16\" fill=\"#284B7A\" text-anchor=\"middle\">most chose to repeat this</text></svg>",
+   "sketch_alt": "Trial B is Trial A plus a milder 30 seconds, and most people chose to repeat Trial B.",
+   "why": [
+    "Evidence: Kahneman et al. (1993) cold-water experiment; Redelmeier & Kahneman (Pain, 1996); a randomised trial of 682 colonoscopy patients (Redelmeier, Katz & Kahneman, Pain, 2003).",
+    "Caveat: strongest for short, distinct episodes; it is a bias in memory, not a rule for long experiences, and the experiencing self's pain still counts."
+   ],
+   "try_this": "Pick something you do regularly that you half-dread, such as a hard meeting or a long run. Add a small pleasant ending to it this week and see whether you dread it less.",
+   "sources": [
+    {
+     "title": "Memories of colonoscopy: a randomized trial — Redelmeier, Katz & Kahneman / Pain (2003), PubMed",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/12855328/"
+    },
+    {
+     "title": "Duration neglect — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Duration_neglect"
+    },
+    {
+     "title": "The Riddle of Experience vs. Memory — Daniel Kahneman / TED, via Association for Psychological Science",
+     "url": "https://www.psychologicalscience.org/video/daniel-kahneman-the-riddle-of-experience-vs-memory.html"
+    },
+    {
+     "title": "Thinking, Fast and Slow, part 5 chapter 35 — Daniel Kahneman (LitCharts summary)",
+     "url": "https://www.litcharts.com/lit/thinking-fast-and-slow/part-5-chapter-35"
+    }
+   ],
+   "id": "7"
   }
  ]
 }
