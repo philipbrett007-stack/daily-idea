@@ -1,0 +1,58 @@
+{
+ "date": "2026-10-18",
+ "generated_at": "2026-10-18T08:30:00+01:00",
+ "ideas": [
+  {
+   "theme": "Thought for the day",
+   "title": "Buy back time, not more things",
+   "idea": "Spending money to get time back may do more for your wellbeing than spending it on things.\n\nMost of us feel short of time, yet reach for stuff when we have a spare few euro. In 2017 a team led by Ashley Whillans, with Elizabeth Dunn and colleagues, tested the alternative. They looked at what happens when people pay to shed a chore or a commute, such as a cleaner, a delivery, or an errand done by someone else. In a survey of more than 6,000 adults across four countries, those who spent money this way reported higher life satisfaction, and the link held at every income level. In a small field experiment, the same people felt happier after a time-saving purchase than after a material one.\n\nThe point is to notice that hours are scarcer than euro.",
+   "deep_dive": "The paper is \"Buying time promotes happiness\", published in the Proceedings of the National Academy of Sciences in 2017 by Whillans, Dunn, Paul Smeets, Rene Bekkers and Michael Norton. It grew out of a plain observation: in rich countries, people report feeling more rushed than ever, and chronic time pressure is linked to lower wellbeing. Money is one of the few things that can be traded for time, yet most people do not do the trade.\n\nThe researchers combined two kinds of evidence. First, a survey of 6,271 adults in the United States, Canada, Denmark and the Netherlands asked how much they spent each month on services that free up time, and how satisfied they were with life. People who spent more on time-saving purchases were more satisfied, and the pattern was similar for richer and poorer respondents. Only around 28 per cent reported spending anything this way, averaging about $148 a month.\n\nSecond, the team ran an experiment, because a survey cannot say which causes which. Sixty working adults in Canada were given $40 on two weekends, once to spend on a time-saving purchase and once on a material one. They rated their mood afterwards on a five-point scale. Time-saving purchases scored about 4.0 against about 3.7, and people felt less time stress.\n\nThe limits are real. The experiment was small and the sum modest. The survey shows a link, not proof. And the idea is about discretionary spending: it does nothing for those who cannot afford the basics, and the effect may differ across tasks and people.",
+   "examples": [
+    {
+     "title": "Four countries, one pattern",
+     "text": "Whillans and colleagues surveyed 6,271 working adults in the United States, Canada, Denmark and the Netherlands. They asked about monthly spending on things that buy time, like paying someone to clean, cook or run errands. Those who did so reported greater life satisfaction, and the relationship held whether people earned a lot or a little. Only about 28 per cent reported any such spending, averaging roughly $148 a month. So the most common choice was to spend nothing on saving time at all, even among people who could afford it."
+    },
+    {
+     "title": "The $40 weekend experiment",
+     "text": "To test cause and effect, the researchers recruited 60 working adults in Canada and gave each $40 on two separate weekends. On one, they had to spend it on a time-saving purchase, such as paying for a meal to be delivered or a task done for them. On the other, they bought a material item. Afterwards participants rated their happiness: about 4.0 out of 5 after the time-saving weekend, against about 3.7 after the material one. They also reported feeling less time pressure in the week they had bought time."
+    },
+    {
+     "title": "What people say they would buy",
+     "text": "In a separate part of the study, 98 working adults were asked how they would spend an unexpected $40 windfall. Only 2 per cent of the purchases they described were time-saving ones. Most imagined spending it on goods or treats. Harvard Magazine's account of the work makes the same point from real life: people who outsource chores like housecleaning, or who live closer to work, tend to report being happier, yet the default for most of us is still to buy something we can hold."
+    }
+   ],
+   "images": [],
+   "visual": {
+    "type": "video",
+    "url": "https://www.ted.com/talks/a_simple_strategy_for_happiness",
+    "label": "A simple strategy for happiness — Ashley Whillans, TEDxCambridge",
+    "note": "Listen for how she describes 'time poverty' and why people choose money over time even when it makes them feel worse."
+   },
+   "why": [
+    "Evidence: a survey of 6,271 adults in four countries plus a randomised experiment with 60 working adults in Canada, published in PNAS (2017).",
+    "Caveat: the experiment was small, the sum was only $40, and the survey shows a link rather than proof. It applies to people with spare money, not those struggling with basics."
+   ],
+   "try_this": "What is one recurring chore you dislike that you could pay someone to do, or remove, for under €40 a month? Try it for four weeks and notice what you do with the time.",
+   "sources": [
+    {
+     "title": "Buying time promotes happiness — Whillans, Dunn, Smeets, Bekkers & Norton / PNAS (via PubMed Central)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5559044/"
+    },
+    {
+     "title": "New research: Using money to buy time linked to increased happiness — UBC Psychology",
+     "url": "https://psych.ubc.ca/news/new-research-using-money-to-buy-time-linked-to-increased-happiness/"
+    },
+    {
+     "title": "Cashing Out For Happiness — Harvard Magazine",
+     "url": "https://www.harvardmagazine.com/index%2ephp/2017/10/buying-things-and-happiness"
+    },
+    {
+     "title": "A simple strategy for happiness — Ashley Whillans / TEDxCambridge",
+     "url": "https://www.ted.com/talks/a_simple_strategy_for_happiness"
+    }
+   ],
+   "id": "1",
+   "featured": true
+  }
+ ]
+}
