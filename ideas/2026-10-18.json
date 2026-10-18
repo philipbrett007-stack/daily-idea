@@ -66,7 +66,7 @@
     },
     {
      "title": "Lucia de Berk and 342 million",
-     "text": "Lucia de Berk, a Dutch nurse, was convicted in 2003 and 2004 of seven murders and three attempted murders, after deaths clustered on her shifts. A criminologist told the court the odds of this happening by chance were 1 in 342 million. The Royal Statistical Society later noted that, once real factors were allowed for, a cluster like it could be as likely as 1 in 25 in some hospitals. The case was reopened in 2008 and she was cleared of all charges. The tiny number had done the work that evidence should have done."
+     "text": "Lucia de Berk, a Dutch nurse, was convicted in 2003 and 2004 of seven murders and three attempted murders, after deaths clustered on her shifts. A criminologist told the court the odds of this happening by chance were 1 in 342 million. The Royal Statistical Society later noted that, once real factors were allowed for, a cluster like it could be as likely as 1 in 25. The case was reopened in 2008 and she was cleared of all charges. The tiny number had done the work that evidence should have done."
     }
    ],
    "images": [
@@ -107,6 +107,58 @@
     }
    ],
    "id": "2"
+  },
+  {
+   "theme": "Science & nature",
+   "title": "Zebra stripes are a fly repellent",
+   "idea": "The most likely reason zebras have stripes is not camouflage or cooling, but to keep biting flies off.\n\nFor over a century, people offered tidy explanations: stripes dazzle lions, shed heat, help zebras recognise each other. In 2014 a team led by Tim Caro at the University of California, Davis, tested five of these ideas against data from across Africa. Only one lined up. Where biting flies such as horseflies and tsetse were worst, the animals' stripes were boldest and covered the most of their bodies. Later experiments backed this up. Horses dressed in zebra-striped coats attracted fewer landing flies than plain ones, and in Japan, cows painted with stripes drew roughly half as many bites as unpainted cows.\n\nIt is a good reminder that a satisfying story is not evidence, and that evolution often solves ordinary problems, such as being bitten.",
+   "deep_dive": "The puzzle is old, and the popular answers sounded plausible: stripes confuse predators, cool the body, or signal identity. What was missing was a direct, comparative test.\n\nCaro and colleagues supplied one. They mapped the range and stripe pattern of the zebra species and their relatives, and set them against environmental variables, including temperature, habitat and the breeding conditions for tabanid flies (horseflies), tsetse and other biters. They found no consistent support for camouflage, predator avoidance, heat management or social interaction. The one factor that matched was the biting-fly hypothesis: stripe intensity was strongest where the flies were thickest.\n\nThen came experiments on the how. When researchers watched horseflies approach captive zebras and domestic horses, the flies had trouble landing on the stripes. Dressing horses in striped coats had a similar effect. Biting flies also carry diseases such as trypanosomiasis, so avoiding bites is a real evolutionary advantage.\n\nThe limits matter. The cow trial used only six animals. A later study found sharply contrasting stripes deterred flies while faint ones did not, found no evidence that polarised light was the key, and a 2024 review notes how stripes work is still poorly understood. The fly explanation looks strong, but it is not the final word.",
+   "examples": [
+    {
+     "title": "A continent-wide comparison",
+     "text": "In 2014, Tim Caro's team at UC Davis published \"The function of zebra stripes\" in Nature Communications. They compared stripe patterns across zebras, horses and asses against five hypotheses: camouflage, predator avoidance, heat management, social function and fly avoidance. Stripes were most extensive where horseflies, tsetse and other biting flies were most troublesome, and there was no consistent support for any other explanation. Because the horsefly distribution wasn't mapped directly, they used the best breeding conditions for those flies as a stand-in."
+    },
+    {
+     "title": "Painting cows in Japan",
+     "text": "In 2019, Tomoki Kojima and colleagues in Japan painted six Japanese Black cows in a Latin-square design: black-and-white stripes, black stripes only, or nothing. The black-and-white striped cows attracted significantly fewer biting flies than either of the others, roughly half as many in press coverage, and they showed fewer fly-repelling behaviours like head throws, ear beats and tail flicks. The authors saw it as a possible way to protect cattle without pesticides, though the trial was small and only a first step."
+    },
+    {
+     "title": "Horses in zebra coats",
+     "text": "Caro and Martin How went further, watching horseflies as they tried to land on captive zebras and domestic horses, and testing horses dressed in zebra-striped coats. The flies repeatedly failed to land on the striped coats. A later study found that sharply contrasting stripes deterred flies while faintly contrasting ones did not. For a farmer or rider the practical lesson is real: bold contrast seems to disrupt a fly's landing, though exactly why is still being researched."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plains_zebras_(Equus_quagga)_Maputo.jpg?width=1000",
+     "caption": "Plains zebras in Maputo National Park, Mozambique. The bold stripes may matter less for predators than for the flies that bite them.",
+     "credit": "Charlesjsharp / CC BY-SA, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Plains_zebras_(Equus_quagga)_Maputo.jpg"
+    }
+   ],
+   "why": [
+    "Evidence: Caro et al. (Nature Communications, 2014) compared five hypotheses across species; field and cow experiments since then point the same way.",
+    "Caveat: the experimental samples are small, and how the stripes actually put flies off is still not understood. 'Biting flies' is the best-supported explanation, not a closed case."
+   ],
+   "try_this": "Think of a 'just so' story you accept without evidence, about your work or your family. What would a direct test of it look like?",
+   "sources": [
+    {
+     "title": "Scientists solve riddle of zebra stripes — UC Davis",
+     "url": "https://www.ucdavis.edu/news/scientists-solve-riddle-zebras-stripes"
+    },
+    {
+     "title": "Painting stripes on cows, a natural pest repellent — Understanding Animal Research",
+     "url": "https://www.understandinganimalresearch.org.uk/news/painting-stripes-on-cows-a-natural-pest-repellent"
+    },
+    {
+     "title": "We know why zebras got their stripes, but how do they work? — Mongabay (2019)",
+     "url": "https://news.mongabay.com/2019/02/we-know-why-zebras-got-their-stripes-but-how-do-they-work/"
+    },
+    {
+     "title": "Stripes Shoo Flies — The Scientist",
+     "url": "https://www.the-scientist.com/stripes-shoo-flies-37692"
+    }
+   ],
+   "id": "3"
   }
  ]
 }
