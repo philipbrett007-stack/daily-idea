@@ -244,6 +244,55 @@
     }
    ],
    "id": "5"
+  },
+  {
+   "theme": "Thinking tools",
+   "title": "The trend that reverses when you split the data",
+   "idea": "A pattern in the combined numbers can disappear, or even flip, when you look inside the groups.\n\nThis is Simpson's paradox. In autumn 1973 the University of California, Berkeley admitted about 44 per cent of male graduate applicants but only about 35 per cent of female ones. It looked like clear bias against women. Yet when statisticians broke the figures down by department, women were admitted at equal or higher rates in most of them. The gap came from where people applied: women applied in greater numbers to the most competitive departments, which turned away most candidates of either sex, while many men applied to easier ones.\n\nNeither number is false. The question is which comparison answers the question you are really asking, and that depends on understanding what is driving the groups, not on the arithmetic.",
+   "deep_dive": "The effect is named after the statistician Edward Simpson, who described it in 1951, although Karl Pearson and Udny Yule had noticed similar effects decades earlier. It happens whenever a hidden third factor affects both the groups you are comparing and the outcome you are measuring. If the groups are very unevenly spread across that factor, the pooled average can point the opposite way from every subgroup.\n\nThe Berkeley case comes from a 1975 paper in Science by Peter Bickel, Eugene Hammel and J. William O'Connell. In the 1973 data, 3,738 of 8,442 male applicants (44.3 per cent) were admitted, against 1,494 of 4,321 women (34.6 per cent). That gap was large enough to be statistically significant. But applicants were applying to departments, not to the university as a whole, and the departments differed hugely in how hard they were to enter. Women's applications were concentrated in the harder ones. Within departments, there was no significant disparity, and women did slightly better in most.\n\nA medical version appeared in a 1986 study of kidney stone treatments. Open surgery did better than a newer keyhole method for both small and large stones, yet the newer method looked better overall, because it was used more on the easier, small-stone cases.\n\nThe limit is that splitting the data is not automatically correct either. You can split on the wrong variable and manufacture a false story. You need a causal picture of why the groups differ to decide which numbers to trust.",
+   "examples": [
+    {
+     "title": "Berkeley's graduate admissions, 1973",
+     "text": "In 1973 Berkeley received 8,442 male and 4,321 female graduate applications; 3,738 men (44.3 per cent) and 1,494 women (34.6 per cent) were admitted. Bickel, Hammel and O'Connell checked the figures department by department. Women applied disproportionately to departments that were hard to get into, and within departments the sexes did not differ significantly. The 1975 Science paper concluded the pooled figures reflected application patterns rather than bias in the admissions committees. The finding still leaves open why those patterns existed."
+    },
+    {
+     "title": "Kidney stones and a better treatment that looked worse",
+     "text": "In a 1986 study, Charig and colleagues compared open surgery with percutaneous nephrolithotomy for kidney stones. Open surgery had the higher success rate for small stones and for large ones. Yet pooled together, the newer procedure appeared more successful. The reason, as secondary accounts explain, is that doctors tended to use the more difficult approach on the harder, larger-stone cases, which have lower success rates for any method. Judging by the totals alone would have favoured the wrong treatment."
+    }
+   ],
+   "images": [],
+   "visual": {
+    "type": "video",
+    "url": "https://www.ted.com/talks/mark_liddell_how_statistics_can_be_misleading",
+    "label": "How statistics can be misleading — Mark Liddell, TED-Ed",
+    "note": "A four-minute walk through Simpson's paradox with a two-hospital example; watch how the comparison reverses once patients are split by condition."
+   },
+   "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\"><text x=\"150\" y=\"30\" font-size=\"18\" fill=\"#1C2633\" text-anchor=\"middle\" font-weight=\"bold\">All departments pooled</text><text x=\"450\" y=\"30\" font-size=\"18\" fill=\"#1C2633\" text-anchor=\"middle\" font-weight=\"bold\">Inside each department</text><line x1=\"300\" y1=\"45\" x2=\"300\" y2=\"300\" stroke=\"#D3DAE3\" stroke-width=\"2\"/><rect x=\"60\" y=\"110\" width=\"70\" height=\"150\" fill=\"#284B7A\"/><rect x=\"170\" y=\"140\" width=\"70\" height=\"120\" fill=\"#C2414B\"/><text x=\"95\" y=\"100\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">44%</text><text x=\"205\" y=\"130\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">35%</text><text x=\"95\" y=\"285\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">men</text><text x=\"205\" y=\"285\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">women</text><text x=\"450\" y=\"120\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">women admitted at equal</text><text x=\"450\" y=\"146\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">or higher rates in most</text><text x=\"450\" y=\"190\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">women applied more to the</text><text x=\"450\" y=\"216\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">hardest departments</text></svg>",
+   "sketch_alt": "Pooled Berkeley rates favour men, 44% to 35%, but inside departments women did as well or better.",
+   "why": [
+    "Evidence: Bickel, Hammel & O'Connell (Science, 1975) analysed Berkeley's 1973 graduate admissions; the kidney stone reversal comes from a 1986 study by Charig and colleagues.",
+    "Caveat: splitting data can mislead as well, if you split on the wrong variable. Decide which figures to trust by understanding the causes, not by the arithmetic alone."
+   ],
+   "try_this": "Next time you see a headline average comparing two groups, ask which hidden factor might be spread unevenly between them, and whether the figures would look the same split by it.",
+   "sources": [
+    {
+     "title": "Sex Bias in Graduate Admissions: Data from Berkeley — Bickel, Hammel & O'Connell / Science (1975), as summarised by the University of Iowa",
+     "url": "https://homepage.stat.uiowa.edu/~mbognar/1030/Bickel-Berkeley.pdf"
+    },
+    {
+     "title": "Simpson's paradox — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Simpson%27s_paradox"
+    },
+    {
+     "title": "Revisiting the Berkeley Admissions data — arXiv (2025)",
+     "url": "https://arxiv.org/html/2502.10161v1"
+    },
+    {
+     "title": "How statistics can be misleading — Mark Liddell / TED-Ed",
+     "url": "https://www.ted.com/talks/mark_liddell_how_statistics_can_be_misleading"
+    }
+   ],
+   "id": "6"
   }
  ]
 }
