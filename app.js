@@ -196,29 +196,149 @@
     return null;
   }
 
+  /* ---------- media: videos play inside the app, images open full screen here ---------- */
+  const looksLikeImage = (u) => /\.(jpe?g|png|webp|gif|svg)(\?|#|$)/i.test(u) || /^https:\/\/upload\.wikimedia\.org\//.test(u) || /\/Special:FilePath\//.test(u);
+  const looksLikeVideoFile = (u) => /\.(mp4|webm|ogv|m4v)(\?|#|$)/i.test(u);
+  // "90", "1:30", "1m30s", "90s" -> seconds
+  function toSeconds(t) {
+    if (t == null || t === "") return 0;
+    if (typeof t === "number") return Math.max(0, Math.floor(t));
+    const s = String(t).trim();
+    if (/^\d+$/.test(s)) return +s;
+    if (/^\d+(:\d{1,2}){1,2}$/.test(s)) return s.split(":").reduce((a, b) => a * 60 + +b, 0);
+    const m = s.match(/^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/);
+    return m ? (+(m[1] || 0)) * 3600 + (+(m[2] || 0)) * 60 + (+(m[3] || 0)) : 0;
+  }
+  // Work out how to play a video link inside the app. Returns null if it can't be embedded.
+  function embedFor(v) {
+    const u = safeUrl(v && v.url); if (!u) return null;
+    let x; try { x = new URL(u); } catch (_) { return null; }
+    const start = toSeconds(v.start != null ? v.start : x.searchParams.get("t") || x.searchParams.get("start"));
+    const end = toSeconds(v.end);
+    const yt = ytId(u);
+    if (yt) {
+      const q = new URLSearchParams({ autoplay: "1", playsinline: "1", rel: "0", modestbranding: "1" });
+      if (start) q.set("start", String(start)); if (end > start) q.set("end", String(end));
+      return { kind: "iframe", src: "https://www.youtube-nocookie.com/embed/" + yt + "?" + q, poster: "https://i.ytimg.com/vi/" + yt + "/hqdefault.jpg", open: u, site: "YouTube" };
+    }
+    const vm = x.hostname.endsWith("vimeo.com") && x.pathname.match(/\/(?:video\/)?(\d{5,})/);
+    if (vm) return { kind: "iframe", src: "https://player.vimeo.com/video/" + vm[1] + "?autoplay=1&playsinline=1" + (start ? "#t=" + start + "s" : ""), poster: safeUrl(v.thumb_url), open: u, site: "Vimeo" };
+    const ted = /(^|\.)ted\.com$/.test(x.hostname) && x.pathname.match(/\/talks\/([\w-]+)/);
+    if (ted) return { kind: "iframe", src: "https://embed.ted.com/talks/" + ted[1], poster: safeUrl(v.thumb_url), open: u, site: "TED" };
+    if (looksLikeVideoFile(u)) return { kind: "video", src: u + (start ? "#t=" + start : ""), poster: safeUrl(v.thumb_url), open: u, site: host(u) };
+    return null;
+  }
+
+  function videoPlayer(v) {
+    const e = embedFor(v); if (!e) return null;
+    const label = v.label ? String(v.label) : "Watch the clip";
+    const frame = el("div", { class: "player" });
+    const startBtn = el("button", { type: "button", class: "poster", "aria-label": "Play: " + label });
+    if (e.poster) {
+      const img = el("img", { src: e.poster, alt: "", loading: "lazy", referrerpolicy: "no-referrer" });
+      img.addEventListener("error", () => img.remove());
+      startBtn.append(img);
+    }
+    startBtn.append(el("span", { class: "play" }, icon("play", "")));
+    const t = toSeconds(v.start);
+    if (t) startBtn.append(el("span", { class: "starts", text: "from " + Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0") }));
+    frame.append(startBtn);
+    startBtn.addEventListener("click", () => {
+      // Stop any other clip that's playing, then start this one in place.
+      document.querySelectorAll(".player.on").forEach((p) => { if (p !== frame && p._reset) p._reset(); });
+      const media = e.kind === "iframe"
+        ? el("iframe", { src: e.src, title: label, allow: "autoplay; encrypted-media; picture-in-picture; fullscreen", allowfullscreen: true, referrerpolicy: "strict-origin-when-cross-origin" })
+        : el("video", { src: e.src, controls: true, autoplay: true, playsinline: true, preload: "metadata", poster: e.poster || null });
+      frame.replaceChildren(media); frame.classList.add("on");
+    });
+    frame._reset = () => { frame.replaceChildren(startBtn); frame.classList.remove("on"); };
+    return el("div", { class: "visual video" }, frame,
+      el("div", { class: "vrow" },
+        el("span", { class: "vtext" },
+          el("span", { class: "vlabel", text: label }),
+          v.note ? el("span", { class: "vnote", text: String(v.note) }) : null),
+        el("a", { class: "vopen", href: e.open, target: "_blank", rel: "noopener noreferrer", "aria-label": "Open on " + e.site }, icon("out", ""))));
+  }
+
+  // Full-screen image viewer that stays inside the app. The phone's back button closes it.
+  let lightbox = null;
+  function openImage(src, caption, credit, page) {
+    if (!lightbox) {
+      lightbox = el("div", { class: "lightbox", role: "dialog", "aria-modal": "true", "aria-label": "Image" });
+      lightbox.addEventListener("click", (ev) => { if (!ev.target.closest("a")) history.back(); });
+      document.body.append(lightbox);
+      window.addEventListener("popstate", () => { if (!lightbox.hidden) { lightbox.hidden = true; lightbox.replaceChildren(); document.body.classList.remove("noscroll"); } });
+    }
+    lightbox.replaceChildren(
+      el("button", { type: "button", class: "lb-close", "aria-label": "Close" }, "✕"),
+      el("img", { src, alt: caption || "", referrerpolicy: "no-referrer" }),
+      caption || credit ? el("div", { class: "lb-cap" },
+        caption ? el("p", { text: caption }) : null,
+        credit ? (page ? el("a", { href: page, target: "_blank", rel: "noopener noreferrer", text: credit }) : el("small", { text: credit })) : null) : null);
+    lightbox.hidden = false; document.body.classList.add("noscroll");
+    history.pushState({ lightbox: 1 }, "");
+  }
+
+  function imageFigure(im, cls) {
+    const src = safeUrl(im && im.url); if (!src || !looksLikeImage(src)) return null;
+    const caption = im.caption ? String(im.caption) : "", credit = im.credit ? String(im.credit) : "", page = safeUrl(im.page_url);
+    const img = el("img", { src, alt: caption, loading: "lazy", referrerpolicy: "no-referrer" });
+    const btn = el("button", { type: "button", class: "shot-btn", "aria-label": "View image full screen" }, img);
+    const fig = el("figure", { class: cls || "shot" }, btn,
+      caption || credit ? el("figcaption", null, caption ? el("span", { text: caption }) : null, credit ? el("small", { text: credit }) : null) : null);
+    btn.addEventListener("click", () => openImage(src, caption, credit, page));
+    img.addEventListener("error", () => { const g = fig.parentElement; fig.remove(); if (g && g.classList.contains("gallery") && !g.children.length) g.remove(); });
+    return fig;
+  }
+
+  function paragraphs(text, cls) {
+    const box = el("div", { class: cls });
+    for (const p of String(text).split(/\n\s*\n/)) if (p.trim()) box.append(el("p", { text: p.trim() }));
+    return box.children.length ? box : null;
+  }
+
   /* ---------- cards ---------- */
   function section(label, content) { return el("div", null, el("div", { class: "label", text: label }), content); }
 
   // The readable body of an idea, shared by the main card and expanded rows.
   function ideaBody(idea, key, date) {
     const parts = [];
-    if (idea.idea) {
-      const box = el("div", { class: "idea" });
-      for (const p of String(idea.idea).split(/\n\s*\n/)) if (p.trim()) box.append(el("p", { text: p.trim() }));
-      parts.push(box);
-    }
+    if (idea.idea) { const b = paragraphs(idea.idea, "idea"); if (b) parts.push(b); }
 
     const v = idea.visual, vu = v && safeUrl(v.url);
-    if (vu) {
-      const yt = ytId(vu);
-      const kind = yt || v.type === "video" ? "video" : v.type === "image" ? "image" : "link";
+    const player = vu ? videoPlayer(v) : null;
+    if (player) parts.push(player);
+
+    const imgs = (Array.isArray(idea.images) ? idea.images : []).map((im) => imageFigure(im)).filter(Boolean);
+    if (imgs.length) parts.push(el("div", { class: "gallery" + (imgs.length === 1 ? " single" : "") }, ...imgs));
+
+    if (idea.deep_dive) { const b = paragraphs(idea.deep_dive, "prose"); if (b) parts.push(section("How it works", b)); }
+
+    if (typeof idea.sketch_svg === "string") {
+      const s = idea.sketch_svg.trim();
+      if (s.startsWith("<svg") && s.length < 80000 && !/<script|<foreignObject|\son\w+\s*=|href\s*=\s*["']?(?!#)/i.test(s)) {
+        parts.push(el("figure", { class: "sketch" },
+          el("img", { src: "data:image/svg+xml;charset=utf-8," + encodeURIComponent(s), alt: idea.sketch_alt ? String(idea.sketch_alt) : "Sketch explaining the idea", loading: "lazy" }),
+          idea.sketch_alt ? el("figcaption", { text: String(idea.sketch_alt) }) : null));
+      }
+    }
+
+    const ex = (Array.isArray(idea.examples) ? idea.examples : []).filter((x) => x && (x.title || x.text));
+    if (ex.length) {
+      parts.push(section("In practice", el("div", { class: "examples" }, ...ex.map((x) => el("div", { class: "example" },
+        x.title ? el("h3", { text: String(x.title) }) : null,
+        x.text ? paragraphs(x.text, "prose") : null,
+        x.image ? imageFigure(x.image, "shot inline") : null)))));
+    }
+
+    const directImage = vu && !player && looksLikeImage(vu) ? imageFigure({ url: vu, caption: v.label, credit: v.note }) : null;
+    if (directImage) parts.push(el("div", { class: "gallery single" }, directImage));
+    else if (vu && !player) {
+      // A web page we can't show inside the app: a tidy link card instead.
+      const kind = v.type === "video" ? "video" : v.type === "image" ? "image" : "link";
       const a = el("a", { class: "visual", href: vu, target: "_blank", rel: "noopener noreferrer" });
-      const looksLikeImage = (u) => /\.(jpe?g|png|webp|gif|svg)(\?|#|$)/i.test(u) || /^https:\/\/upload\.wikimedia\.org\//.test(u);
       const tu = safeUrl(v.thumb_url);
-      let thumbSrc = null;
-      if (yt) thumbSrc = "https://i.ytimg.com/vi/" + yt + "/hqdefault.jpg";
-      else if (tu && looksLikeImage(tu)) thumbSrc = tu;
-      else if (kind === "image" && looksLikeImage(vu)) thumbSrc = vu;
+      const thumbSrc = tu && looksLikeImage(tu) ? tu : null;
       if (thumbSrc) {
         const img = el("img", { src: thumbSrc, alt: "", loading: "lazy", referrerpolicy: "no-referrer" });
         const thumb = el("div", { class: "thumb" }, img, kind === "video" ? el("div", { class: "play" }, icon("play", "")) : null);
@@ -231,15 +351,6 @@
           v.note ? el("span", { class: "vnote", text: String(v.note) }) : null,
           el("span", { class: "vhost", text: host(vu) }))));
       parts.push(a);
-    }
-
-    if (typeof idea.sketch_svg === "string") {
-      const s = idea.sketch_svg.trim();
-      if (s.startsWith("<svg") && s.length < 80000 && !/<script|<foreignObject|\son\w+\s*=|href\s*=\s*["']?(?!#)/i.test(s)) {
-        parts.push(el("figure", { class: "sketch" },
-          el("img", { src: "data:image/svg+xml;charset=utf-8," + encodeURIComponent(s), alt: idea.sketch_alt ? String(idea.sketch_alt) : "Sketch explaining the idea", loading: "lazy" }),
-          idea.sketch_alt ? el("figcaption", { text: String(idea.sketch_alt) }) : null));
-      }
     }
 
     if (Array.isArray(idea.why) && idea.why.length) {
@@ -457,7 +568,7 @@
     const area = $("#today-cards");
     let x0 = null, y0 = 0, t0 = 0;
     area.addEventListener("touchstart", (e) => {
-      if (e.touches.length !== 1 || e.target.closest("a, button")) { x0 = null; return; }
+      if (e.touches.length !== 1 || e.target.closest("a, button, .gallery, .player")) { x0 = null; return; }
       x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; t0 = Date.now();
     }, { passive: true });
     area.addEventListener("touchend", (e) => {

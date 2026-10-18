@@ -131,6 +131,46 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px soli
 .vnote { font-size: 0.9rem; color: var(--soft); line-height: 1.45; }
 .vhost { font-size: 0.78rem; color: var(--faint); overflow-wrap: anywhere; }
 
+/* In-app video player */
+.visual.video { display: flex; flex-direction: column; }
+.player { position: relative; aspect-ratio: 16 / 9; background: #0B0A18; }
+.player iframe, .player video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: #000; }
+.poster { position: absolute; inset: 0; padding: 0; margin: 0; border: 0; background: #1A1934; cursor: pointer; display: block; width: 100%; }
+.poster img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.poster .play { position: absolute; inset: 0; display: grid; place-items: center; }
+.poster .play span { width: 60px; height: 60px; border-radius: 50%; background: var(--t); color: var(--on-t); display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); transition: transform 0.15s ease; }
+.poster:active .play span { transform: scale(0.94); }
+.poster .starts { position: absolute; right: 10px; bottom: 10px; background: rgba(10, 9, 24, 0.8); color: #fff; font-size: 0.78rem; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
+.vopen { flex: none; margin-left: auto; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; color: var(--soft); background: rgba(255, 255, 255, 0.05); }
+
+/* Images: swipe through, tap to view full screen */
+.gallery { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+.gallery::-webkit-scrollbar { display: none; }
+.shot { margin: 0; flex: 0 0 86%; scroll-snap-align: start; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.gallery.single .shot { flex-basis: 100%; }
+.shot-btn { padding: 0; margin: 0; border: 1px solid var(--line); background: var(--surface-2); cursor: zoom-in; display: block; width: 100%; border-radius: 16px; overflow: hidden; }
+.shot img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.shot figcaption { font-size: 0.85rem; color: var(--soft); line-height: 1.4; display: flex; flex-direction: column; gap: 2px; padding: 0 2px; }
+.shot figcaption small { color: var(--faint); font-size: 0.74rem; }
+.shot.inline { margin-top: 2px; }
+
+/* Longer write-ups */
+.prose { display: flex; flex-direction: column; gap: 10px; }
+.prose p { margin: 0; color: #DCDAEC; line-height: 1.62; }
+.examples { display: flex; flex-direction: column; gap: 12px; }
+.example { padding: 14px 14px 14px 16px; border-radius: 16px; background: var(--surface-2); border-left: 3px solid var(--t); display: flex; flex-direction: column; gap: 8px; }
+.example h3 { margin: 0; font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.35; }
+.example .prose p { font-size: 0.96rem; }
+
+.lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(8, 7, 20, 0.97); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 64px 16px 28px; gap: 14px; }
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 100%; max-height: 72vh; object-fit: contain; border-radius: 10px; }
+.lb-cap { max-width: 640px; text-align: center; color: var(--soft); font-size: 0.92rem; display: flex; flex-direction: column; gap: 6px; }
+.lb-cap p { margin: 0; color: var(--text); line-height: 1.45; }
+.lb-cap a, .lb-cap small { color: var(--faint); font-size: 0.78rem; }
+.lb-close { position: absolute; top: calc(12px + env(safe-area-inset-top)); right: 12px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.1); color: #fff; font-size: 1.1rem; cursor: pointer; }
+body.noscroll { overflow: hidden; }
+
 .try { border-radius: 18px; padding: 14px 16px; background: color-mix(in srgb, var(--t) 13%, var(--surface-2)); border: 1px solid color-mix(in srgb, var(--t) 28%, transparent); }
 .try .label { color: var(--t); margin-bottom: 4px; }
 .try p { margin: 0; font-size: 1.02rem; line-height: 1.55; }

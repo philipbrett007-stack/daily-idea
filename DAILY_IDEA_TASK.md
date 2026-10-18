@@ -45,7 +45,8 @@ Read every title in `ideas/index.json` (all days). Never reuse an idea already i
 Run web searches. Each idea must be:
 - Surprising or counter-intuitive, but true
 - From a credible source: a respected book, a peer-reviewed study, a recognised expert, or a serious long-form essay
-- Explainable in under two minutes, and something Phil can think with today, not just a trivia fact
+- Something Phil can think with today, not just a trivia fact
+- Backed by real cases: you need at least two concrete, sourced examples of the idea being applied or observed in the real world (step 6). If you can't find them, pick a different idea.
 
 Good hunting grounds (not exhaustive): Aeon, Psyche, Nautilus, Quanta Magazine, Big Think, Farnam Street, The Marginalian, Knowable Magazine, Scientific American, New Scientist, The Conversation, BBC Future, Smithsonian, Stanford Encyclopedia of Philosophy, Paul Graham's essays, the Royal Institution, TED and TED-Ed, university news sites, and well-reviewed non-fiction books.
 
@@ -55,22 +56,39 @@ Verify: open the main source with WebFetch and confirm the idea is represented a
 
 If WebFetch doesn't work in this run (for example "getaddrinfo ENOTFOUND", "403" or "host not allowed"), don't stop: verify with WebSearch instead. Run at least two searches per idea and only keep an idea when the key claim (who found what, the numbers, the dates) is stated in at least two independent, credible results. Use only URLs that appeared in your search results, never ones you've built or remembered, and attribute the claim to the source that states it. Be stricter here, not looser: drop anything you can't pin down. Note in step 9 that WebSearch-only checking was used.
 
-## 5. Visuals (for each idea)
+## 5. Video and images (for each idea)
 
-**Linked visual.** One that genuinely helps. Prefer a short video (ideally under 10 minutes, or a timestamp to the relevant 1–3 minute segment) from a reputable channel such as TED-Ed, Kurzgesagt, Veritasium, 3Blue1Brown, Big Think, The School of Life, the Royal Institution, Numberphile, Practical Engineering, Vox, Aeon Video, BBC Ideas or Talks at Google. Otherwise an image, diagram or chart page from the source or a reputable site (Wikipedia/Wikimedia Commons is fine). Confirm the link exists and matches the idea: open it with WebFetch, or if WebFetch doesn't work, use only a link that appeared in your WebSearch results and whose title and description match the idea (for videos, search for the exact video title and channel). Never invent or guess a URL. Add `thumb_url` only for a direct image-file link (.jpg/.png/.webp or upload.wikimedia.org) you've confirmed exists; skip it if you can't open it.
+The app plays videos and shows images inside itself, so Phil never has to leave it. Give every idea a video if a good one exists, and 1–3 images. Never invent or guess a URL.
+
+**Video (`visual`).** A short clip that genuinely explains or shows the idea, from a reputable channel such as TED-Ed, Kurzgesagt, Veritasium, 3Blue1Brown, Big Think, The School of Life, the Royal Institution, Numberphile, Practical Engineering, Vox, Aeon Video, BBC Ideas, Smithsonian or Talks at Google. YouTube is best (it plays inside the app); Vimeo and TED talks also play inside the app. If the relevant part of a longer video is in the middle, set `start` (seconds) so it opens at that moment, and optionally `end`.
+- Check that it exists and allows embedding: WebFetch `https://www.youtube.com/oembed?url=<the video URL>&format=json`. A JSON reply with a title means it's fine; check the title and channel match what you expect. An error means pick another video.
+- If WebFetch doesn't work, use only a video URL that appeared in your WebSearch results, with a matching title and channel.
+- If no good video exists, leave `visual` out rather than using a weak one.
+
+**Images (`images`).** 1–3 pictures that help: the person, the place, the original diagram, the invention, the chart. Use Wikimedia Commons, where images are free to reuse:
+- Find the exact file name, e.g. `File:Survivorship-bias.svg`. Confirm it exists by opening `https://commons.wikimedia.org/wiki/File:<name>` with WebFetch (or, without WebFetch, by seeing that exact Commons file page in your search results). Note the author and licence from that page.
+- Set `url` to `https://commons.wikimedia.org/wiki/Special:FilePath/<name>?width=1000` (spaces as underscores), `page_url` to the Commons file page, `caption` to one sentence on what it shows and why it matters, and `credit` to "<author> / <licence>, via Wikimedia Commons".
+- Other free sources are fine if you open the page and the licence clearly allows reuse (NASA, Library of Congress, public-domain archives). Don't use images from news sites, stock libraries or social media.
+- Don't use photos of private individuals.
 
 **Sketch.** A simple explanatory SVG when the idea has a natural picture (a curve, before/after, a loop, a comparison, a timeline): root `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320" font-family="Helvetica, Arial, sans-serif">`; transparent background; colours only #1C2633, #586577, #284B7A, #C2414B, #D3DAE3 (and #FFFFFF for text on a filled box); text at least 16px; short labels kept inside the box and clear of lines; no scripts, event attributes, `<image>`, `<foreignObject>`, links or external references; under about 30 elements. It must explain, not decorate. Give it a one-line caption (`sketch_alt`). Skip it if nothing would genuinely help.
 
 ## 6. Write each card (plain, direct Irish/British English)
 
+Phil wants detail: each card should be a satisfying 4–5 minute read, with real examples of the idea in use. Write in your own words; at most one short quote (under 15 words) per card, attributed. Separate paragraphs with a blank line.
+
 - `title`: the idea in 4–8 words
 - `theme`: the theme name, e.g. "Thinking tools"
-- `idea`: 90–150 words (Sunday's featured idea 60–100). Lead with the insight in the first sentence; explain it simply with one concrete example or analogy. Your own words; at most one short quote (under 15 words), attributed. Separate paragraphs with a blank line.
-- `why`: 2–3 short bullets: evidence or reasoning (who/where), and the main caveat or limit
-- `try_this`: one specific question to reflect on, or a small experiment to try today
-- `sources`: 1–2 `{title, url}`, title as "Title — Author / Publication"
+- `idea`: 100–160 words. The core insight, stated in the first sentence, then explained simply with one concrete example or analogy.
+- `deep_dive`: 200–320 words in 2–4 paragraphs, shown under "How it works". Where the idea comes from (who, when, the original study, story or data), how it actually works (the mechanism, with numbers where you have them), and where it stops applying.
+- `examples`: 2–4 real cases, shown under "In practice". Each is `{"title": "3–8 words", "text": "60–110 words", "image": {optional, same shape as images}}`. Say who, where and when, what they did, and what happened, with sourced figures. Aim for a mix: at least one where someone deliberately used the idea (a company, a government, a scientist, a sports team), and one from everyday life or work that Phil could recognise. No invented or composite stories; every example must come from a source in `sources`.
+- `images`: 1–3 images (step 5), each `{"url", "caption", "credit", "page_url"}`.
+- `visual`: the video (step 5), `{"type": "video", "url", "start": seconds (optional), "end": seconds (optional), "label": "what it is", "note": "what to watch for"}`.
+- `why`: 2–3 short bullets: the strength of the evidence (who/where), and the main caveat or limit.
+- `try_this`: one specific question to reflect on, or a small experiment to try today.
+- `sources`: 2–4 `{title, url}`, title as "Title — Author / Publication", covering the idea and the examples.
 
-Check each before saving: would a thoughtful, well-read person learn something or see something differently? Is every claim sourced and checked? Are all links real? Is it free of hype and clichés? Can it be read on a phone in about two minutes?
+Check each before saving: would a thoughtful, well-read person learn something or see something differently? Are the examples real, specific and sourced? Is every claim checked? Are all links real, and does the video allow embedding? Is it free of hype and clichés?
 
 ## 7. Save and push each idea as soon as it's finished
 
@@ -80,9 +98,11 @@ Day file `ideas/YYYY-MM-DD.json`:
 
 ```json
 {"date": "YYYY-MM-DD", "generated_at": "<ISO with Dublin offset>", "ideas": [
-  {"id": "1", "featured": true, "theme": "...", "title": "...", "idea": "...", "why": ["..."],
-   "visual": {"type": "video or image", "url": "...", "label": "...", "note": "what to watch or look for", "thumb_url": "(optional)"},
-   "sketch_svg": "(optional)", "sketch_alt": "(optional)", "try_this": "...", "sources": [{"title": "...", "url": "..."}]}
+  {"id": "1", "featured": true, "theme": "...", "title": "...", "idea": "...", "deep_dive": "...",
+   "examples": [{"title": "...", "text": "...", "image": {"url": "...", "caption": "...", "credit": "...", "page_url": "..."}}],
+   "images": [{"url": "https://commons.wikimedia.org/wiki/Special:FilePath/<name>?width=1000", "caption": "...", "credit": "...", "page_url": "https://commons.wikimedia.org/wiki/File:<name>"}],
+   "visual": {"type": "video", "url": "https://www.youtube.com/watch?v=...", "start": 0, "label": "...", "note": "what to watch for"},
+   "why": ["..."], "sketch_svg": "(optional)", "sketch_alt": "(optional)", "try_this": "...", "sources": [{"title": "...", "url": "..."}]}
 ]}
 ```
 
