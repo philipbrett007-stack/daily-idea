@@ -192,6 +192,58 @@
     }
    ],
    "id": "4"
+  },
+  {
+   "theme": "History & big ideas",
+   "title": "A volcano gave us Frankenstein and the bicycle",
+   "idea": "A single eruption on an Indonesian island in 1815 helped shape a famous novel and, plausibly, a vehicle you still ride.\n\nWhen Mount Tambora blew in April 1815, it threw an estimated 100 cubic kilometres of debris into the sky, the biggest eruption in recorded history. Its sulphur veil dimmed the sun across the northern hemisphere, and 1816 became \"the year without a summer\": cold, wet, with failed harvests and soaring food prices. Locked indoors beside Lake Geneva, a group of writers, Lord Byron, Mary Shelley and John Polidori among them, passed the time with a ghost-story contest. It produced Frankenstein, The Vampyre and Byron's poem Darkness. The same shortage of oats is often said to have set a German inventor, Karl Drais, thinking about transport that needed no horse.\n\nThe lesson is how far distant events ripple: the connections are partly plausible rather than proven, but they are real enough to learn from.",
+   "deep_dive": "Tambora, on the island of Sumbawa in what is now Indonesia, began erupting in April 1815 and rated 7 on the Volcanic Explosivity Index, the second-highest level. Its climactic blast around 10 April left a caldera about 6 km across and 1,100 m deep. Estimates of the human toll vary: roughly 10,000 deaths in the initial eruption, and up to 71,000 if the starvation and disease that followed are counted.\n\nThe global effect came from sulphur dioxide, which turns into tiny droplets high in the stratosphere and reflects sunlight. Average temperatures fell across the northern hemisphere in 1816. A 2019 study reported by CNN found that the cold summers of that year would not have happened without the eruption. In Europe and North America the result was crop failure, famine and food riots; the price of oats, which fed the horses that moved everything, rose sharply.\n\nHistorians are more cautious about the cultural links. The Villa Diodati gathering is well documented: on 16 June 1816, with bad weather keeping the party indoors, Byron proposed that each guest write a ghost story. Mary Shelley, then 18, began Frankenstein there. Polidori's The Vampyre and Byron's Darkness came out of the same summer. That the weather helped is clear; how much it mattered compared with the company and the reading of German horror stories is a judgement call.\n\nThe bicycle link is the shakiest. Drais is said to have been spurred by the lack of horse feed, and his first ride took place on 12 June 1817. Sources describe it as plausible and widely repeated, not settled.",
+   "examples": [
+    {
+     "title": "A summer that never came",
+     "text": "After Tambora, the northern hemisphere suffered a summer so cold that 1816 is remembered as the year without one. A 2019 study reported by CNN found that those cold summer temperatures wouldn't have been possible without the eruption. The cold and wet brought crop failures and famine across Europe and North America, and food prices soared. It was a climate shock with a single, identifiable cause on the other side of the world."
+    },
+    {
+     "title": "Ghost stories at Lake Geneva",
+     "text": "In June 1816 Lord Byron rented the Villa Diodati near Geneva and hosted Percy and Mary Shelley, Claire Clairmont and John Polidori. Poor weather kept them indoors for days, and on 16 June Byron proposed that each write the scariest ghost story they could. Mary Shelley, then 18, began Frankenstein; Polidori wrote The Vampyre; Byron wrote the apocalyptic poem Darkness. Most accounts agree the gloomy weather shaped the mood, though how much is debated."
+    },
+    {
+     "title": "Karl Drais and the running machine",
+     "text": "In 1817, the German inventor Karl Drais made the first recorded ride of his Laufmaschine, a wooden two-wheeler pushed along with the feet, from Mannheim towards Schwetzingen on 12 June. CNN and other accounts say that high oat prices after the cold harvest of 1816 helped inspire his search for transport that didn't depend on horses. The link is plausible rather than proven, and the machine itself did not catch on during his lifetime on the poor roads of the day."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1815_Tambora_Sumbawa_explosion_path_large.jpg?width=1000",
+     "caption": "Map of the April 1815 Tambora eruption on Sumbawa, showing the explosion path and ashfall around the caldera.",
+     "credit": "Wikimedia Commons contributor / CC BY-SA 3.0 (base map from NASA), via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:1815_Tambora_Sumbawa_explosion_path_large.jpg"
+    }
+   ],
+   "why": [
+    "Evidence: the Tambora eruption and the cold of 1816 are well documented; a 2019 study found the cool summers would not have occurred without it.",
+    "Caveat: the Frankenstein link is plausible and widely cited, and the bicycle link is the weakest, so treat them as likely contributing factors rather than sole causes."
+   ],
+   "try_this": "Pick one thing in your life that seems purely local, and trace a distant event, such as a harvest or a price rise, that may have shaped it.",
+   "sources": [
+    {
+     "title": "Tambora eruption, year without summer — CNN (2019)",
+     "url": "https://edition.cnn.com/2019/09/17/world/tambora-eruption-year-without-summer-scn"
+    },
+    {
+     "title": "Day in history: Mount Tambora explosively erupts, 1815 — NOAA / NESDIS",
+     "url": "https://www.nesdis.noaa.gov/news/day-history-mount-tambora-explosively-erupts-1815"
+    },
+    {
+     "title": "Villa Diodati — Atlas Obscura",
+     "url": "https://atlasobscura.com/places/villa-diodati"
+    },
+    {
+     "title": "The true story of Frankenstein — Erin Blakemore / History.com",
+     "url": "https://www.history.com/articles/frankenstein-true-story-mary-shelley"
+    }
+   ],
+   "id": "5"
   }
  ]
 }
