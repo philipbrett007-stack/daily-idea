@@ -159,6 +159,39 @@
     }
    ],
    "id": "3"
+  },
+  {
+   "theme": "Psychology & behaviour",
+   "title": "Everyone privately disagrees, and nobody says so",
+   "idea": "Groups can follow a norm that almost nobody privately believes in, because each person thinks everyone else does.\n\nPsychologists call this pluralistic ignorance. Picture a lecture where the speaker asks if anyone is confused. Every hand stays down. Each student reads the stillness as proof that they alone are lost, so they keep quiet, and the silence confirms everyone else's reading. Nobody lies; everybody is misreading everybody. The effect is strongest where people judge others by behaviour (what they can see) while judging themselves by private feelings (what they can't).\n\nIn a classic study at Princeton, students were uneasy about the campus drinking culture but assumed the average student was comfortable with it. Left alone, that gap kept the culture going. A later study found that teaching students about this gap, in a peer-focused session, reduced their drinking.",
+   "deep_dive": "Much of the modern evidence comes from Deborah Prentice and Dale Miller at Princeton. In a 1993 paper in the Journal of Personality and Social Psychology, they surveyed students about drinking on campus. Each rated their own comfort with campus drinking habits, and their estimate of the average student's comfort, on a scale of 0 to 10. The students consistently believed they were more uncomfortable than the typical student. That cannot be true of everyone at once.\n\nWhat made the finding matter was what the misperception did. In their longitudinal study, a random sample of 25 male and 25 female sophomores was phoned in September and again in December. Over those months, the men shifted their own attitudes towards what they wrongly thought was the norm. Women did not change their attitudes, but felt more alienated. Perceived deviance, though illusory, tracked with campus alienation.\n\nThe remedy is information. Schroeder and Prentice tested this in 1998. Students were told about pluralistic ignorance, either in a group discussion focused on peers or in a session aimed at the individual. Four to six months later, those in the peer-oriented condition reported drinking significantly less.\n\nThe limits: the samples were small, the data were self-reports, and critics argue some of the effect is people genuinely updating from what they see, or simple measurement error. It also depends on a norm being publicly visible but privately doubted, which is not always the case.",
+   "examples": [
+    {
+     "title": "The Princeton drinking study",
+     "text": "In 1993, Prentice and Miller phoned a random sample of 50 Princeton sophomores, 25 women and 25 men, in September and again in December. Students rated their own comfort with campus drinking and that of the typical student on a 0 to 10 scale. They saw themselves as less comfortable than their peers, an impossible result if everyone was right. Over the term, male students' attitudes drifted towards the imagined norm, while female students kept their private views but felt more alienated from campus life. Believing you are the odd one out had real costs."
+    },
+    {
+     "title": "Telling students the truth",
+     "text": "In 1998, Schroeder and Prentice tried to fix it. Students in a peer-oriented condition discussed pluralistic ignorance as a group problem. Four to six months later they reported drinking significantly less than students given an individually focused version. It is a rare case where a psychological bias was tackled directly, with a follow-up. The intervention was cheap: one session, aimed at getting private opinions into the open."
+    }
+   ],
+   "images": [],
+   "why": [
+    "Evidence: Prentice & Miller (JPSP, 1993), 50 Princeton sophomores surveyed twice; Schroeder & Prentice (1998) tested an intervention with follow-up after 4 to 6 months.",
+    "Caveat: small samples and self-reported behaviour; some critics think part of the effect is real information-based conformity. It works best where a norm is visible but privately doubted."
+   ],
+   "try_this": "Next time a room goes quiet after 'any objections?', say what you privately think, or ask the question you suspect others share, and see how many nod.",
+   "sources": [
+    {
+     "title": "Pluralistic Ignorance and Alcohol Use on Campus — Prentice & Miller / Journal of Personality and Social Psychology (Princeton)",
+     "url": "https://collaborate.princeton.edu/en/publications/pluralistic-ignorance-and-alcohol-use-on-campus-some-consequences/"
+    },
+    {
+     "title": "Exposing Pluralistic Ignorance to Reduce Alcohol Use Among College Students — Schroeder & Prentice (1998)",
+     "url": "https://sparq.stanford.edu/sites/g/files/sbiybj19021/files/media/file/schroeder_prentice_1998_-_exposing_pluralistic_ignorance.pdf"
+    }
+   ],
+   "id": "4"
   }
  ]
 }
