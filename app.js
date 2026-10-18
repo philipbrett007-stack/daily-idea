@@ -224,7 +224,7 @@
     const vm = x.hostname.endsWith("vimeo.com") && x.pathname.match(/\/(?:video\/)?(\d{5,})/);
     if (vm) return { kind: "iframe", src: "https://player.vimeo.com/video/" + vm[1] + "?autoplay=1&playsinline=1" + (start ? "#t=" + start + "s" : ""), poster: safeUrl(v.thumb_url), open: u, site: "Vimeo" };
     const ted = /(^|\.)ted\.com$/.test(x.hostname) && x.pathname.match(/\/talks\/([\w-]+)/);
-    if (ted) return { kind: "iframe", src: "https://embed.ted.com/talks/" + ted[1], poster: safeUrl(v.thumb_url), open: u, site: "TED" };
+    if (ted && ted[1] !== "view") return { kind: "iframe", src: "https://embed.ted.com/talks/" + ted[1], poster: safeUrl(v.thumb_url), open: u, site: "TED" };
     if (looksLikeVideoFile(u)) return { kind: "video", src: u + (start ? "#t=" + start : ""), poster: safeUrl(v.thumb_url), open: u, site: host(u) };
     return null;
   }
