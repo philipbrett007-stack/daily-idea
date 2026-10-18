@@ -383,6 +383,49 @@
     }
    ],
    "id": "8"
+  },
+  {
+   "theme": "Creativity, invention & systems thinking",
+   "title": "Disasters need several small holes to line up",
+   "idea": "Serious accidents rarely come from one mistake; they come from several small weaknesses lining up.\n\nThe psychologist James Reason pictured it as slices of Swiss cheese. Every safeguard in a system, such as a procedure, an alarm or a second pair of eyes, is a slice, and every slice has holes. Most of the time a hole in one slice is covered by solid cheese in the next. Harm gets through only on the rare occasion when the holes in all the slices align. That changes how you prevent accidents. Blaming the last person who touched the problem misses the point, because the holes were there already. The better question is how to add slices and shrink holes.\n\nThe idea cuts both ways. It explains why a flight can run out of fuel at 41,000 feet, and why a simple surgical checklist can cut deaths.",
+   "deep_dive": "Reason developed the model from studies of major accidents and catastrophic system failures, which tended to show multiple smaller failures leading up to the final hazard. His framework distinguishes two kinds of hole. Active failures are the unsafe acts of people at the sharp end, such as a slip or a wrong decision. Latent conditions are weaknesses built into the system long before, like confusing procedures, poor design, fatigue or missing equipment. Latent conditions are the dangerous ones because they sit dormant, waiting for an active failure to meet them.\n\nThe practical consequence is a different view of blame. If the holes pre-exist, then punishing the person who finally triggers the accident leaves the holes in place for the next person. A safer system adds independent layers, so one failure is caught by the next, and fixes the latent weaknesses it finds.\n\nThat is what the World Health Organization's surgical safety checklist does. It adds a few quick, standard checks, such as confirming the patient and the site of operation, at key moments. In a study of eight hospitals in eight cities, by Haynes and colleagues in the New England Journal of Medicine in 2009, the death rate fell from 1.5 per cent to 0.8 per cent after the checklist, and complications fell from 11 per cent to 7 per cent.\n\nThe limits: Reason's diagram is a metaphor, and a 2005 survey found safety professionals interpret its features quite differently. Checklists reduce errors but, as one review put it, alone will not prevent all of them.",
+   "examples": [
+    {
+     "title": "The Gimli Glider, 1983",
+     "text": "On 23 July 1983, Air Canada Flight 143, a new Boeing 767, lost both engines at 41,000 feet over Red Lake, Ontario, having been fuelled with far less than it needed. Several holes lined up. Fuel was converted from litres using a pounds-per-litre factor, in an aircraft that worked in kilograms. The fuel-quantity system was already faulty and the jet had been dispatched under the minimum equipment list, so the cockpit gauges were blank. The pilots glided to a closed air base at Gimli, Manitoba. All 69 people on board survived."
+    },
+    {
+     "title": "The WHO surgical safety checklist",
+     "text": "In a study published in the New England Journal of Medicine in 2009, researchers introduced a checklist in eight hospitals in eight cities, from rich and poor settings. They compared 3,733 patients before it with 3,955 after. The death rate after surgery fell from 1.5 per cent to 0.8 per cent, and inpatient complications fell from 11 per cent to 7 per cent, according to secondary coverage of the paper. A review applying Reason's model found the checklist effective at reducing wrong-site surgeries and other errors."
+    }
+   ],
+   "images": [],
+   "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\"><text x=\"300\" y=\"28\" font-size=\"18\" fill=\"#1C2633\" text-anchor=\"middle\" font-weight=\"bold\">Each safeguard has holes</text><rect x=\"90\" y=\"60\" width=\"60\" height=\"190\" fill=\"#D3DAE3\"/><rect x=\"210\" y=\"60\" width=\"60\" height=\"190\" fill=\"#D3DAE3\"/><rect x=\"330\" y=\"60\" width=\"60\" height=\"190\" fill=\"#D3DAE3\"/><rect x=\"450\" y=\"60\" width=\"60\" height=\"190\" fill=\"#D3DAE3\"/><circle cx=\"120\" cy=\"150\" r=\"16\" fill=\"#FFFFFF\"/><circle cx=\"240\" cy=\"150\" r=\"16\" fill=\"#FFFFFF\"/><circle cx=\"360\" cy=\"150\" r=\"16\" fill=\"#FFFFFF\"/><circle cx=\"480\" cy=\"150\" r=\"16\" fill=\"#FFFFFF\"/><circle cx=\"120\" cy=\"95\" r=\"12\" fill=\"#FFFFFF\"/><circle cx=\"240\" cy=\"210\" r=\"12\" fill=\"#FFFFFF\"/><circle cx=\"360\" cy=\"100\" r=\"12\" fill=\"#FFFFFF\"/><circle cx=\"480\" cy=\"220\" r=\"12\" fill=\"#FFFFFF\"/><line x1=\"30\" y1=\"150\" x2=\"560\" y2=\"150\" stroke=\"#C2414B\" stroke-width=\"4\"/><path d=\"M548 140 L562 150 L548 160\" stroke=\"#C2414B\" stroke-width=\"4\" fill=\"none\"/><text x=\"300\" y=\"285\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">harm passes only when the holes align</text></svg>",
+   "sketch_alt": "Four slices with holes; harm travels through only where the holes line up.",
+   "why": [
+    "Evidence: Reason's model is widely used in aviation and healthcare safety; the 2009 WHO checklist study covered 8 hospitals and about 7,700 patients; the Gimli Glider is a well-documented case.",
+    "Caveat: it is a metaphor, not a measured law, and professionals interpret it differently. Checklists reduce errors but won't prevent all of them."
+   ],
+   "try_this": "Think of a process at work where one person's slip could cause real harm. What is the second layer that would catch it, and has it got a hole in the same place?",
+   "sources": [
+    {
+     "title": "Swiss cheese model — AHRQ Patient Safety Network",
+     "url": "https://psnet.ahrq.gov/glossary/swiss-cheese-model"
+    },
+    {
+     "title": "James Reason HF Model — SKYbrary",
+     "url": "https://www.skybrary.aero/articles/james-reason-hf-model"
+    },
+    {
+     "title": "Gimli Glider — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Gimli_Glider"
+    },
+    {
+     "title": "A Surgical Safety Checklist to Reduce Morbidity and Mortality in a Global Population — Haynes et al. / NEJM (2009), via AHRQ PSNet",
+     "url": "https://psnet.ahrq.gov/issue/surgical-safety-checklist-reduce-morbidity-and-mortality-global-population"
+    }
+   ],
+   "id": "9"
   }
  ]
 }
