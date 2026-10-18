@@ -426,6 +426,43 @@
     }
    ],
    "id": "9"
+  },
+  {
+   "theme": "Philosophy & wisdom",
+   "title": "Odysseus tied himself to the mast",
+   "idea": "The wisest use of willpower is to arrange things so you won't need it.\n\nIn Homer's Odyssey, Odysseus wants to hear the Sirens, whose song lures sailors to their deaths. He plugs his crew's ears with wax, has himself tied to the mast, and orders them to ignore his pleas. He does not trust his future self, so he takes the choice away in advance. The Norwegian philosopher Jon Elster, in his 1979 book Ulysses and the Sirens, made this the paradigm of precommitment: a rational person who knows they are prone to weakness of will accepts a small, deliberate cost now to avoid a greater loss later.\n\nThe idea is humble rather than heroic. It treats your future self as a stranger with different appetites and designs for that, instead of hoping you'll simply be strong. It is also practical, as the studies of savings accounts and psychiatric directives below show.",
+   "deep_dive": "Elster's argument starts from a puzzle in rationality. People can plan well, yet fail to do what they planned when the moment comes, through weakness of will. One response is to push harder at the moment. Elster's is to act earlier, while you are calm: bind yourself so the later temptation is either impossible to act on or more costly. He calls this precommitment, or self-binding, and takes Odysseus as the standard case.\n\nThe approach appears in many forms. Elster's own ordinary examples include a smoker who announces an intention to quit so that relapse would be costlier. Economists have tested it. In 2006, Nava Ashraf, Dean Karlan and Wesley Yin ran a randomised trial of a commitment savings product, SEED, at a bank in the Philippines. Clients choosing it agreed not to touch their money until they reached a goal or date. Of 710 clients offered it, 202 (28.4 per cent) accepted. Women who said at the start that they favoured present over future consumption later described themselves as disciplined savers, which is what a successful rope looks like.\n\nIn medicine, the same logic led to self-binding directives, sometimes called Ulysses contracts. People with conditions that come and go, such as bipolar disorder, can agree in advance to be admitted and treated during a future crisis even if they refuse at the time. The Netherlands amended its law in 2008 to include them.\n\nThe limits are real. Critics worry about self-paternalism, about pressure during drafting, and about the difficulty of allowing for a genuine change of mind. Binding yourself is wise only when the future self's resistance is the very thing you distrust.",
+   "examples": [
+    {
+     "title": "A bank account you can't raid",
+     "text": "In the Philippines, researchers Nava Ashraf, Dean Karlan and Wesley Yin worked with Green Bank of Caraga to offer a commitment savings account. Savers could not withdraw until a goal or date they chose was reached. Of 710 clients randomly offered it, 202 (28.4 per cent) opened one. Women who said at the start that they favoured present over future consumption later described themselves as disciplined savers. The study is the standard test of whether people knowingly tie their own hands, and some do."
+    },
+    {
+     "title": "Ulysses contracts in psychiatry",
+     "text": "In mental health care, a self-binding directive lets a person who knows their capacity fluctuates agree in advance to hospital admission and treatment in a future crisis. The Netherlands added a self-binding paragraph to its Compulsory Admissions Act in 2008. Critics point to self-paternalism, undue influence during drafting, and the impossibility of accommodating a change of mind, so legal status varies across countries, and commentators note some of these contracts are not intended to be legally binding. It is the Odysseus story turned into law."
+    }
+   ],
+   "images": [],
+   "why": [
+    "Evidence: Elster's philosophical account (1979) plus a randomised field trial of 710 offered clients (Ashraf, Karlan & Yin, Quarterly Journal of Economics, 2006), and legal practice such as Dutch law since 2008.",
+    "Caveat: binding yourself costs flexibility and can fail if your circumstances change; the ethics of self-binding in psychiatry are contested."
+   ],
+   "try_this": "Name one temptation you reliably lose to, and make it harder tonight, not tomorrow: delete the app, move the biscuits, schedule the transfer on payday.",
+   "sources": [
+    {
+     "title": "Precommitment — Wikipedia (on Jon Elster, Ulysses and the Sirens)",
+     "url": "https://en.wikipedia.org/wiki/Precommitment"
+    },
+    {
+     "title": "Commitment Savings Products in the Philippines — J-PAL",
+     "url": "https://www.povertyactionlab.org/evaluation/commitment-savings-products-philippines"
+    },
+    {
+     "title": "Choosing to limit choice: Self-binding directives in Dutch mental health care — Maastricht University",
+     "url": "https://cris.maastrichtuniversity.nl/en/publications/choosing-to-limit-choice-self-binding-directives-in-dutch-mental-"
+    }
+   ],
+   "id": "10"
   }
  ]
 }
