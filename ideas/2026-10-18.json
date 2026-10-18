@@ -340,6 +340,49 @@
     }
    ],
    "id": "7"
+  },
+  {
+   "theme": "Creativity, invention & systems thinking",
+   "title": "A slime mould designed Tokyo's rail network",
+   "idea": "A brainless yellow blob can find network designs as efficient as those engineers draw up, by overbuilding first and pruning later.\n\nIn 2010 a team led by Atsushi Tero at Hokkaido University placed oat flakes on a damp surface at positions matching the cities around Tokyo, then set a slime mould, Physarum polycephalum, loose at the spot for Tokyo itself. The organism first spread out in every direction, covering the space with a dense web of tubes. Then it thinned that web, keeping the thick tubes that carried the most food and letting the rest wither. The result resembled the real rail network, and when scored on efficiency, fault tolerance and cost, it did comparably well.\n\nThe design lesson is that growth and selection can substitute for foresight. Rather than planning one perfect network, you start with plenty of connections and let use decide which survive.",
+   "deep_dive": "Physarum polycephalum is a single giant cell with many nuclei, not a plant or a fungus, that spreads as a bright yellow network of tubes. It has no brain, yet it can link food sources efficiently, and reportedly find its way through a maze. The 2010 study asked whether it could do something harder: build a good network between many points at once.\n\nTero and colleagues placed oat flakes, which the mould likes, at locations that corresponded to the cities around Tokyo. Because the mould avoids bright light, they used light to represent obstacles like mountains and lakes. The mould began by filling the space densely, and then gradually thinned the network, strengthening the tubes that carried the most flow and abandoning the others. The final network was compared with the real Tokyo rail system on three measures: efficiency (short travel between points), fault tolerance (still working if a link is cut) and cost (total length). On those measures the mould's network was comparable to the engineered one.\n\nThe team also turned the mould's behaviour into a mathematical model, published in Science as 'Rules for biologically inspired adaptive network design'. The point was not to replace planners, but to show a decentralised rule, reinforce what is used and let the rest decay, can produce robust results.\n\nThe limits: the mould was solving a simplified map, without gradients, politics, existing land use or demand. It matched the rail network on the chosen measures, not on everything a planner cares about. It is a design principle, not a blueprint.",
+   "examples": [
+    {
+     "title": "Oat flakes for cities, light for mountains",
+     "text": "In the 2010 Science study, Atsushi Tero and colleagues set oat flakes on a wet surface where cities around Tokyo would be, and let the mould grow from the position of Tokyo. They shone light on areas to stand for mountains and lakes, which the mould avoids. It first filled the whole space, then thinned its network to the branches connecting the food. The authors reported that the network showed efficiency, fault tolerance and cost comparable to the real Tokyo rail system."
+    },
+    {
+     "title": "Finding the shortest path through a maze",
+     "text": "The Tokyo study built on earlier work showing the same organism could solve simpler problems. As Discover Magazine described, the mould can find the most efficient way of linking scattered food sources, and it can find the shortest path through a maze. The Tokyo study asked whether the same organism could handle a far harder problem: linking many points at once, not just two."
+    }
+   ],
+   "images": [],
+   "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\"><text x=\"150\" y=\"30\" font-size=\"18\" fill=\"#1C2633\" text-anchor=\"middle\" font-weight=\"bold\">1. Grow everywhere</text><text x=\"450\" y=\"30\" font-size=\"18\" fill=\"#1C2633\" text-anchor=\"middle\" font-weight=\"bold\">2. Keep what is used</text><line x1=\"300\" y1=\"45\" x2=\"300\" y2=\"300\" stroke=\"#D3DAE3\" stroke-width=\"2\"/><g stroke=\"#586577\" stroke-width=\"2\"><line x1=\"60\" y1=\"90\" x2=\"240\" y2=\"90\"/><line x1=\"60\" y1=\"90\" x2=\"240\" y2=\"230\"/><line x1=\"60\" y1=\"230\" x2=\"240\" y2=\"90\"/><line x1=\"60\" y1=\"230\" x2=\"240\" y2=\"230\"/><line x1=\"60\" y1=\"90\" x2=\"60\" y2=\"230\"/><line x1=\"240\" y1=\"90\" x2=\"240\" y2=\"230\"/></g><g stroke=\"#284B7A\" stroke-width=\"6\"><line x1=\"360\" y1=\"90\" x2=\"540\" y2=\"90\"/><line x1=\"360\" y1=\"90\" x2=\"360\" y2=\"230\"/><line x1=\"540\" y1=\"90\" x2=\"540\" y2=\"230\"/></g><g fill=\"#C2414B\"><circle cx=\"60\" cy=\"90\" r=\"10\"/><circle cx=\"240\" cy=\"90\" r=\"10\"/><circle cx=\"60\" cy=\"230\" r=\"10\"/><circle cx=\"240\" cy=\"230\" r=\"10\"/><circle cx=\"360\" cy=\"90\" r=\"10\"/><circle cx=\"540\" cy=\"90\" r=\"10\"/><circle cx=\"360\" cy=\"230\" r=\"10\"/><circle cx=\"540\" cy=\"230\" r=\"10\"/></g><text x=\"150\" y=\"280\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">many links to food</text><text x=\"450\" y=\"280\" font-size=\"16\" fill=\"#586577\" text-anchor=\"middle\">busy links thicken</text></svg>",
+   "sketch_alt": "The mould first links every food source with many tubes, then keeps only the busy, thick ones.",
+   "why": [
+    "Evidence: Tero et al., Science (2010), with coverage by National Geographic and ScienceDaily; the organism's maze-solving is reported separately.",
+    "Caveat: the test used a simplified map and three chosen measures. It shows a useful design principle, not that mould beats planners."
+   ],
+   "try_this": "Think of a process in your work that was planned in detail and never works well. What would 'start with many options, then keep what gets used' look like instead?",
+   "sources": [
+    {
+     "title": "Rules for Biologically Inspired Adaptive Network Design — Tero et al. / Science (2010), PubMed",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/20093467/"
+    },
+    {
+     "title": "Slime mould attacks, simulates Tokyo rail network — National Geographic",
+     "url": "https://www.nationalgeographic.com/science/article/slime-mould-attacks-simulates-tokyo-rail-network"
+    },
+    {
+     "title": "Slime mould attacks, simulates Tokyo rail network — Discover Magazine",
+     "url": "https://www.discovermagazine.com/slime-mould-attacks-simulates-tokyo-rail-network-8933"
+    },
+    {
+     "title": "Slime mould network design — ScienceDaily (2010)",
+     "url": "https://sciencedaily.com/releases/2010/01/100121141051.htm"
+    }
+   ],
+   "id": "8"
   }
  ]
 }
