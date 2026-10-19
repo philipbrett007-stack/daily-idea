@@ -1,6 +1,6 @@
 {
  "date": "2026-10-19",
- "generated_at": "2026-10-19T07:55:00+01:00",
+ "generated_at": "2026-10-19T18:10:00+01:00",
  "ideas": [
   {
    "id": "1",
@@ -576,6 +576,638 @@
      "url": "https://pubmed.ncbi.nlm.nih.gov/29715721/"
     }
    ]
+  },
+  {
+   "id": "11",
+   "featured": false,
+   "theme": "Thinking tools",
+   "title": "Chesterton's fence: know why before removing",
+   "idea": "Before you tear down a rule, a habit or a barrier, find out why someone put it there. That is Chesterton's fence. G. K. Chesterton set it out in his 1929 book The Thing: imagine a fence across a road, and a reformer who sees no use for it and wants it cleared away. The sensible answer is that if he cannot see the point of it, he should not be allowed to remove it. Only someone who has gone off, found out why it was built, and come back can be trusted to say it is no longer needed.\n\nThe principle is not a defence of the status quo. If you do discover the reason and it has expired, take the fence down. The target is one specific mistake: treating \"I can't see the purpose\" as if it meant \"there is no purpose\". Your ignorance of a reason is a fact about you, not about the fence.",
+   "deep_dive": "The passage comes from Chesterton's chapter \"The Drift from Domesticity\" in The Thing (1929), where he contrasts two kinds of reformer. The first looks at an institution or law, sees no use in it and wants it gone. The second says, in effect, that if you cannot see the use, you cannot clear it away; go and think, and if you come back and tell him you see its use, he may then allow you to destroy it. The label \"Chesterton's fence\" came much later and has since been taken up by writers on decision-making, such as Farnam Street.\n\nWhy does it work? Rules, habits and structures that survive for a long time have usually met some problem, and the problem is often invisible once the rule is working. A fence that keeps cattle off a road looks pointless in a year when no cattle have strayed, and the absence of cattle is the evidence that it works. Complex systems also depend on parts whose function is not obvious from outside, so removing one is a bet that you understand the whole.\n\nThe principle has limits. Investigating costs time, and some fences were built for reasons that were bad, or have long since disappeared. Sometimes the records are lost and nobody can tell you. In that case the question becomes how costly and reversible the removal is: a trial, a staged removal or a reversible change is wiser than a bulldozer. The aim is not to keep everything, but to make the removal an informed decision rather than an act of confidence.",
+   "examples": [
+    {
+     "title": "China's sparrow campaign, 1958 to 1960",
+     "text": "In 1958 China's Four Pests campaign set out to wipe out rats, flies, mosquitoes and sparrows, the last for eating grain. Ornithologists warned that sparrows also eat insects, but the campaign went ahead. A University of Chicago working paper (Frank, Wang and colleagues) finds that counties better suited to sparrows lost more rice and wheat after the birds were driven out, and links the effect to roughly two million excess deaths in the Great Famine, which killed an estimated 16.5 to 45 million in all. Sparrows were dropped from the target list in 1960, replaced by bed bugs.",
+     "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian_tree_sparrow_3.jpg?width=1000",
+      "caption": "A Eurasian tree sparrow, the bird at the centre of the 1958 campaign.",
+      "credit": "Via Wikimedia Commons (author and licence on the file page)",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Eurasian_tree_sparrow_3.jpg"
+     }
+    },
+    {
+     "title": "Gorsuch's fence in a US Supreme Court dissent",
+     "text": "On 22 January 2018 the US Supreme Court decided Artis v. District of Columbia by five votes to four, holding that a federal law stops the clock on refiling state-law claims. Justice Neil Gorsuch, joined by Justices Kennedy, Thomas and Alito, dissented. He opened and closed with Chesterton's fence, arguing that a rule whose purpose is not obvious should be understood before it is cleared away, and that the majority was removing a boundary between federal and state power. Whether he was right is a matter of legal debate, but it shows the principle used deliberately as an argument."
+    },
+    {
+     "title": "Knight Capital and the forgotten code",
+     "text": "On 1 August 2012 the trading firm Knight Capital lost about 440 million dollars in roughly 45 minutes. According to the US Securities and Exchange Commission's account, a new feature had reused a flag that once switched on an old function called Power Peg, which Knight stopped using in 2003 but never deleted. One of eight servers did not receive the new code, so the old function ran and sent millions of unintended orders. The lesson is the mirror image: old parts nobody understands are a hazard whether you remove them or leave them untouched."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chesterton,_Gilbert_Keith.jpg?width=1000",
+     "caption": "G. K. Chesterton, whose 1929 book The Thing contains the parable of the fence.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Chesterton,_Gilbert_Keith.jpg"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian_tree_sparrow_3.jpg?width=1000",
+     "caption": "The Eurasian tree sparrow was a target of China's Four Pests campaign.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Eurasian_tree_sparrow_3.jpg"
+    }
+   ],
+   "why": [
+    "The principle is a reasoning rule from an essayist, not an experiment; its strength is that it explains many documented failures, such as the sparrow campaign.",
+    "The sparrow case has real data behind it (a University of Chicago working paper using agricultural records), though the famine had several causes and the paper's estimate is for sparrow loss alone.",
+    "It can be misused to defend anything old. It asks you to look for the reason, not to treat the fence as sacred."
+   ],
+   "try_this": "Pick one rule, process or habit that annoys you at work or at home. Before you suggest dropping it, spend ten minutes asking the person who has been there longest: what went wrong before this existed?",
+   "sources": [
+    {
+     "title": "Chesterton's Fence: A Lesson in Thinking — Farnam Street",
+     "url": "https://fs.blog/chestertons-fence/"
+    },
+    {
+     "title": "Campaigning for Extinction: Eradication of Sparrows and the Great Famine in China — Frank, Wang, Wang, Wang and You / University of Chicago EPIC",
+     "url": "https://epic.uchicago.edu/working-papers/campaigning-for-extinction-eradication-of-sparrows-and-the-great-famine-in-china"
+    },
+    {
+     "title": "G. K. Chesterton and the US Supreme Court — Trevin Wax / The Gospel Coalition",
+     "url": "https://thegospelcoalition.org/blogs/trevin-wax/g-k-chesterton-u-s-supreme-court"
+    },
+    {
+     "title": "Knight Capital Group — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Knight_Capital_Group"
+    }
+   ],
+   "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\">\n<rect x=\"170\" y=\"15\" width=\"260\" height=\"52\" rx=\"6\" fill=\"none\" stroke=\"#586577\" stroke-width=\"2\"/>\n<text x=\"300\" y=\"46\" font-size=\"17\" text-anchor=\"middle\" fill=\"#1C2633\">A fence you can't explain</text>\n<line x1=\"300\" y1=\"67\" x2=\"300\" y2=\"105\" stroke=\"#586577\" stroke-width=\"2\"/>\n<rect x=\"170\" y=\"105\" width=\"260\" height=\"52\" rx=\"6\" fill=\"#284B7A\"/>\n<text x=\"300\" y=\"136\" font-size=\"17\" text-anchor=\"middle\" fill=\"#FFFFFF\">Find out why it was built</text>\n<line x1=\"300\" y1=\"157\" x2=\"150\" y2=\"228\" stroke=\"#586577\" stroke-width=\"2\"/>\n<line x1=\"300\" y1=\"157\" x2=\"450\" y2=\"228\" stroke=\"#586577\" stroke-width=\"2\"/>\n<rect x=\"20\" y=\"228\" width=\"260\" height=\"52\" rx=\"6\" fill=\"none\" stroke=\"#284B7A\" stroke-width=\"2\"/>\n<text x=\"150\" y=\"259\" font-size=\"17\" text-anchor=\"middle\" fill=\"#1C2633\">Reason holds: keep it</text>\n<rect x=\"320\" y=\"228\" width=\"260\" height=\"52\" rx=\"6\" fill=\"none\" stroke=\"#C2414B\" stroke-width=\"2\"/>\n<text x=\"450\" y=\"259\" font-size=\"17\" text-anchor=\"middle\" fill=\"#1C2633\">Reason gone: remove it</text>\n<text x=\"300\" y=\"305\" font-size=\"16\" text-anchor=\"middle\" fill=\"#586577\">Not seeing a purpose is not the same as having none</text>\n</svg>",
+   "sketch_alt": "Flow: a fence you cannot explain leads to finding out why it was built, then keep it or remove it."
+  },
+  {
+   "id": "12",
+   "featured": false,
+   "theme": "Thinking tools",
+   "title": "Fermi estimation: guess in pieces, not in one",
+   "idea": "Fermi estimation means taking a quantity you could never look up, splitting it into parts you can reasonably guess, and multiplying them together. How many piano tuners are there in Chicago? Nobody knows offhand, but you can guess the city's population, how many homes have a piano, how often a piano is tuned and how many a tuner can do in a year. Each guess is rough. The answer is still usually within a factor of two or three.\n\nThe trick is that a single wild guess about something unfamiliar can be out by a factor of a hundred. Several small guesses about familiar things are each out by a little, in both directions, and the errors partly cancel when you combine them. You do not get the exact number. You get the right order of magnitude, which is often all you need to decide whether a plan is sensible, an idea is worth pursuing or a claim is absurd.",
+   "deep_dive": "The method is named after the physicist Enrico Fermi, who was known for working out rough answers from almost nothing. The best-known story is his estimate of the yield of the Trinity bomb test in New Mexico on 16 July 1945, described below. In teaching, he is also said to have set students at the University of Chicago the question of how many piano tuners the city had, which is why such puzzles are called Fermi problems.\n\nWhy it works comes down to arithmetic. When you multiply several estimated factors, you are adding their logarithms, so one factor that is too high can be offset by another that is too low. If you guess five factors, each wrong by up to a factor of two, the chance that all five miss in the same direction is small. That is why decomposing a problem usually beats guessing the total directly. A second benefit is less obvious: breaking the problem down shows you which assumptions matter most, and where it is worth finding a real figure.\n\nThere are limits. The cancelling only works if the errors are roughly independent. If you are biased in the same direction on every factor, they pile up instead. A badly built model, such as leaving out a major part of the problem, is not fixed by clever arithmetic, and some quantities are driven by one factor you cannot know. In the Drake equation, for example, the uncertainty is so large that the output is a range spanning many orders of magnitude. A Fermi estimate is a way to organise what you know and don't know, not a substitute for measurement.",
+   "examples": [
+    {
+     "title": "Fermi's paper scraps at Trinity",
+     "text": "At the Trinity test on 16 July 1945, Fermi stood several miles from the explosion. In his own account he dropped small pieces of paper from about six feet before and during the arrival of the blast wave, and measured how far they moved: about 2.5 metres. From that shift he estimated the explosion at ten thousand tons of TNT. The accepted yield is about 21 kilotons, so he was low by about half, but right to within an order of magnitude, from a handful of paper scraps and a quick calculation.",
+     "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trinity_Test_Fireball_16ms.jpg?width=1000",
+      "caption": "The Trinity fireball 16 milliseconds after detonation, 16 July 1945.",
+      "credit": "Via Wikimedia Commons (author and licence on the file page)",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Trinity_Test_Fireball_16ms.jpg"
+     }
+    },
+    {
+     "title": "Drake's equation at Green Bank, 1961",
+     "text": "In November 1961 the astronomer Frank Drake opened a small meeting at Green Bank Observatory in West Virginia by writing seven factors on a board: the rate of star formation, the share of stars with planets, habitable planets per system, and the fractions where life, intelligence and detectable technology arise, plus how long a civilisation keeps signalling. It was an agenda, not a result. Only the first factor had any observational basis then. Wikipedia reports the meeting concluded there were probably between 1,000 and 100 million such civilisations in our galaxy, a spread that shows how far one unknown can swamp the rest."
+    },
+    {
+     "title": "Superforecasters break questions down",
+     "text": "In Superforecasting (2015), Philip Tetlock and Dan Gardner describe how the best forecasters in Tetlock's tournaments often used Fermi's approach, which they call Fermi-izing. Their advice is to split a seemingly intractable problem into tractable sub-problems, separating what is knowable from what is not. For the piano-tuner puzzle, that means estimating the number of pianos, how often each is tuned, how long a tuning takes and how many hours a tuner works in a year. The point is to make the guess visible, so it can be checked and argued about."
+    },
+    {
+     "title": "Same puzzle, different answers",
+     "text": "Classroom write-ups of the Chicago piano-tuner puzzle give different answers because they make different assumptions. One teaching resource from Australia reaches about 34 tuners, another worked version gets about 60, and a third lands near 130. None is wrong as such, since the inputs, such as the city's population and the share of homes with a piano, vary between versions. All of them sit within a factor of about four of each other, which is exactly the accuracy Fermi estimation is designed for. It also shows how much each assumption matters."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Enrico_Fermi_1943-49.jpg?width=1000",
+     "caption": "Enrico Fermi in the 1940s, the physicist who gave his name to this kind of estimate.",
+     "credit": "United States Department of Energy, via Wikimedia Commons (licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Enrico_Fermi_1943-49.jpg"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trinity_Test_Fireball_16ms.jpg?width=1000",
+     "caption": "The Trinity fireball 16 milliseconds after detonation; Fermi estimated its force from scraps of paper.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Trinity_Test_Fireball_16ms.jpg"
+    }
+   ],
+   "visual": {
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=0YzvupOX8Is",
+    "label": "A clever way to estimate enormous numbers — Michael Mitchell, TED-Ed",
+    "note": "Watch how powers of ten make a quick estimate, using the Chicago piano-tuner question."
+   },
+   "why": [
+    "The Trinity estimate is documented in Fermi's own account and the yield is well established, so this is a real, checkable success, though it came out about half the modern figure.",
+    "The error-cancelling effect is well explained mathematically, but it needs independent, unbiased guesses. It is weaker if you are wrong in the same direction every time.",
+    "The Drake equation shows the limit: with unknowns spanning many orders of magnitude, a Fermi estimate frames the question but cannot answer it."
+   ],
+   "try_this": "Estimate something you can check later, such as the number of cafes in your town or the litres of water your household uses in a week. Write each factor down before you look anything up, then compare the result with the real figure.",
+   "sources": [
+    {
+     "title": "My Observations During the Explosion at Trinity on July 16, 1945 — Enrico Fermi / Atomic Archive",
+     "url": "https://www.atomicarchive.com/resources/documents/trinity/fermi.html"
+    },
+    {
+     "title": "Fermi problem — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Fermi_problem"
+    },
+    {
+     "title": "Drake Equation — SETI Institute",
+     "url": "https://seti.org/drake-equation-index"
+    },
+    {
+     "title": "Ten Commandments for Aspiring Superforecasters — Philip Tetlock and Dan Gardner / Farnam Street",
+     "url": "https://fs.blog/ten-commandments-for-superforecasters/"
+    }
+   ],
+   "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\">\n<rect x=\"20\" y=\"12\" width=\"320\" height=\"40\" rx=\"6\" fill=\"none\" stroke=\"#284B7A\" stroke-width=\"2\"/>\n<text x=\"180\" y=\"38\" font-size=\"17\" text-anchor=\"middle\" fill=\"#1C2633\">Chicago: 3,000,000 people</text>\n<rect x=\"20\" y=\"74\" width=\"320\" height=\"40\" rx=\"6\" fill=\"none\" stroke=\"#284B7A\" stroke-width=\"2\"/>\n<text x=\"180\" y=\"100\" font-size=\"17\" text-anchor=\"middle\" fill=\"#1C2633\">1,200,000 households</text>\n<text x=\"360\" y=\"66\" font-size=\"16\" fill=\"#586577\">÷ 2.5 people a home</text>\n<line x1=\"180\" y1=\"58\" x2=\"180\" y2=\"74\" stroke=\"#586577\" stroke-width=\"2\"/>\n<rect x=\"20\" y=\"136\" width=\"320\" height=\"40\" rx=\"6\" fill=\"none\" stroke=\"#284B7A\" stroke-width=\"2\"/>\n<text x=\"180\" y=\"162\" font-size=\"17\" text-anchor=\"middle\" fill=\"#1C2633\">60,000 pianos</text>\n<text x=\"360\" y=\"128\" font-size=\"16\" fill=\"#586577\">× 1 home in 20 has one</text>\n<line x1=\"180\" y1=\"120\" x2=\"180\" y2=\"136\" stroke=\"#586577\" stroke-width=\"2\"/>\n<rect x=\"20\" y=\"198\" width=\"320\" height=\"40\" rx=\"6\" fill=\"none\" stroke=\"#284B7A\" stroke-width=\"2\"/>\n<text x=\"180\" y=\"224\" font-size=\"17\" text-anchor=\"middle\" fill=\"#1C2633\">60,000 tunings a year</text>\n<text x=\"360\" y=\"190\" font-size=\"16\" fill=\"#586577\">× tuned once a year</text>\n<line x1=\"180\" y1=\"182\" x2=\"180\" y2=\"198\" stroke=\"#586577\" stroke-width=\"2\"/>\n<rect x=\"20\" y=\"260\" width=\"320\" height=\"40\" rx=\"6\" fill=\"#284B7A\" stroke=\"#284B7A\" stroke-width=\"2\"/>\n<text x=\"180\" y=\"286\" font-size=\"17\" text-anchor=\"middle\" fill=\"#FFFFFF\">About 60 tuners</text>\n<text x=\"360\" y=\"252\" font-size=\"16\" fill=\"#586577\">÷ 1,000 tunings each a year</text>\n<line x1=\"180\" y1=\"244\" x2=\"180\" y2=\"260\" stroke=\"#586577\" stroke-width=\"2\"/>\n</svg>",
+   "sketch_alt": "A worked Fermi chain for Chicago's piano tuners, from population to about 60 tuners."
+  },
+  {
+   "id": "13",
+   "featured": false,
+   "theme": "Science & nature",
+   "title": "Why an elephant isn't a hundred thousand mice",
+   "idea": "An elephant weighs about 200,000 times what a mouse does, yet it burns only around 9,000 times as much energy. That is Kleiber's law: across mammals, resting metabolic rate rises roughly with body mass raised to the power of three-quarters, not in simple proportion to mass. The consequence is that every kilogram of a large animal runs more slowly than a kilogram of a small one. Gram for gram, a mouse burns something like twenty times the energy of an elephant, so its heart races at several hundred beats a minute while the elephant's ticks over at about thirty. Plot energy use against mass on logarithmic axes and the animals fall along a straight line with a slope of about 0.75, from shrews to whales. Why that number, and whether it is really universal, is still argued over by biologists. The pattern itself is one of the most robust in all of biology.",
+   "deep_dive": "The pattern is named after the biologist Max Kleiber, who worked at what is now the University of California, Davis, and reported in 1932 that metabolic rate scaled with mass to about the three-quarter power. Before that, many biologists expected a two-thirds exponent. The reasoning was geometry: heat is lost through the skin, and surface area grows as the square of length while volume (and so mass) grows as the cube, giving a surface-to-mass relation of two-thirds. Kleiber's data came out closer to three-quarters, and the figure has been repeated in textbooks ever since.\n\nThe puzzle was why. In 1997 the physicist Geoffrey West and the ecologists James Brown and Brian Enquist proposed, in Science, that the answer lies in the networks that deliver resources inside a body: arteries, airways and the like. They argued that such networks branch in a space-filling, fractal-like way, end in capillaries of roughly the same size whatever the animal, and are shaped by evolution to minimise the energy needed to pump fluid. A network that does all three delivers supply to the whole body with a three-quarter exponent. The same logic gives related rules: heart rate falls with mass to roughly the power of minus one quarter, and lifespan rises with mass to roughly one quarter.\n\nThose rules explain a famous coincidence. Multiply heart rate by lifespan and most mammals land in the same region, around a billion beats, because the quarter-power terms cancel. Humans are the outlier, with perhaps double that, helped by modern medicine.\n\nWhere does it stop applying? The exponent is contested. White and Seymour re-analysed 619 mammal species in 2003 and found 0.69, close to two-thirds. Others reply that the exponent varies between groups, and it does not hold cleanly from one group to another, say from bacteria to insects to mammals. Treat 0.75 as a good rule of thumb, not a law of nature.",
+   "examples": [
+    {
+     "title": "A billion heartbeats, give or take",
+     "text": "In 1997 the cardiologist Benjamin Levine's group published, in the Journal of the American College of Cardiology, a comparison of resting heart rate and life expectancy across mammals. Multiplying the two gave a lifetime beat count that was, within an order of magnitude, remarkably constant, averaging about 7 x 10^8 and nearer 10^9 after adjustment. A mouse gets there in a couple of years at several hundred beats a minute; a much larger, slower-hearted animal takes decades. The authors read heart rate as a marker of metabolic rate, which is Kleiber's law at work. They also noted that whether slowing the heart could extend human life remained an open question."
+    },
+    {
+     "title": "619 mammals and a rival exponent",
+     "text": "In 2003 Craig White and Roger Seymour published a re-analysis of basal metabolic rate in 619 mammal species in PNAS. After correcting for body temperature, whether the animal had finished digesting its last meal, and evolutionary relatedness, they found an exponent of about 0.69, statistically in line with two-thirds rather than three-quarters. They suggested large fermenting herbivores, which take a long time to become fully fasted, had pulled the older figure upwards. This is a good example of how science works around a law: the data got a second look, and the argument over the number is still running."
+    },
+    {
+     "title": "Flatworms that grow and shrink",
+     "text": "A team led by Albert Thommen and Jochen Rink studied the flatworm Schmidtea mediterranea, which can grow and shrink reversibly across three orders of magnitude in mass. Published in eLife in 2019, their work found Kleiber-like scaling in these animals. It did not come from individual cells slowing down in bigger worms. Instead, larger worms stored more energy per cell, so mass per cell increased. It is evidence that a body can produce the pattern in a way very different from the network story."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kleiber1947.jpg?width=1000",
+     "caption": "Max Kleiber's own 1947 hand-drawn graph of body size against metabolic rate across animals, the line the law is named after.",
+     "credit": "Max Kleiber, via Wikimedia Commons (licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Kleiber1947.jpg"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/African_Bush_Elephants,_Amboseli_National_Park_(32312286377).jpg?width=1000",
+     "caption": "African bush elephants in Amboseli National Park: each kilogram of these animals burns far less energy than a kilogram of mouse.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:African_Bush_Elephants,_Amboseli_National_Park_(32312286377).jpg"
+    }
+   ],
+   "visual": {
+    "type": "video",
+    "url": "https://www.ted.com/talks/geoffrey_west_the_surprising_math_of_cities_and_corporations",
+    "label": "Geoffrey West, TEDGlobal 2011: the surprising math of cities and corporations",
+    "note": "West opens with the scaling of animals before moving on to cities; watch how a single straight line on a log graph links mammals of every size."
+   },
+   "why": [
+    "The three-quarter pattern has been reported for decades across mammals and birds, with Kleiber's 1932 data and many re-analyses since.",
+    "The cause is disputed: the 1997 network theory is elegant, but a 2003 PNAS analysis of 619 mammals found an exponent nearer 0.69, and the 2019 flatworm work points to energy storage instead.",
+    "It works best inside one group of animals; it should be read as a strong trend with scatter, not an exact law."
+   ],
+   "try_this": "Next time you see a very small animal, a shrew or a wren, ask what it implies that its heart is racing and it must keep feeding, while a large animal can go for hours without. Then ask which of your own systems (a team, a household, a budget) cost less per unit as they grow, and which cost more.",
+   "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\"><line x1=\"60\" y1=\"272\" x2=\"570\" y2=\"272\" stroke=\"#586577\" stroke-width=\"2\"/><line x1=\"60\" y1=\"30\" x2=\"60\" y2=\"272\" stroke=\"#586577\" stroke-width=\"2\"/><line x1=\"80\" y1=\"260\" x2=\"500\" y2=\"60\" stroke=\"#586577\" stroke-width=\"3\" stroke-dasharray=\"8 6\"/><line x1=\"80\" y1=\"260\" x2=\"500\" y2=\"110\" stroke=\"#284B7A\" stroke-width=\"4\"/><circle cx=\"80\" cy=\"260\" r=\"7\" fill=\"#1C2633\"/><circle cx=\"500\" cy=\"60\" r=\"7\" fill=\"#586577\"/><circle cx=\"500\" cy=\"110\" r=\"7\" fill=\"#284B7A\"/><text x=\"12\" y=\"22\" font-size=\"16\" fill=\"#1C2633\">Energy use (log scale)</text><text x=\"300\" y=\"314\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">Body mass (log scale)</text><text x=\"80\" y=\"296\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">mouse</text><text x=\"500\" y=\"296\" font-size=\"16\" fill=\"#1C2633\" text-anchor=\"middle\">elephant</text><text x=\"488\" y=\"48\" font-size=\"16\" fill=\"#586577\" text-anchor=\"end\">elephant if energy matched mass</text><text x=\"90\" y=\"100\" font-size=\"16\" fill=\"#586577\">dashed: slope 1</text><text x=\"330\" y=\"215\" font-size=\"16\" fill=\"#284B7A\">real animals: slope 0.75</text><text x=\"512\" y=\"132\" font-size=\"16\" fill=\"#284B7A\">far less</text></svg>",
+   "sketch_alt": "On log axes, real animals' energy use rises more slowly (slope 0.75) than mass, so an elephant uses far less than if energy matched mass.",
+   "sources": [
+    {
+     "title": "Life's Added Dimensions — Scientific American",
+     "url": "https://www.scientificamerican.com/article/lifes-added-dimensions"
+    },
+    {
+     "title": "Mammalian basal metabolic rate is proportional to body mass^2/3 — White & Seymour / PNAS",
+     "url": "https://www.pnas.org/doi/10.1073/pnas.0436428100"
+    },
+    {
+     "title": "Body size-dependent energy storage causes Kleiber's law scaling of the metabolic rate in planarians — Thommen et al. / eLife",
+     "url": "https://www.elifesciences.org/articles/38187"
+    },
+    {
+     "title": "Rest heart rate and life expectancy — Levine / Journal of the American College of Cardiology",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/9316546/"
+    }
+   ]
+  },
+  {
+   "id": "14",
+   "featured": false,
+   "theme": "Philosophy & wisdom",
+   "title": "Moral luck: judged by what happened",
+   "idea": "Two drivers leave the same pub after the same number of drinks, and both swerve onto the footpath. One finds it empty. The other finds a child. We judge the second as a killer and the first as someone who got away with it, though only chance separates them. That is the puzzle of moral luck, named by the philosopher Bernard Williams in 1976 and sharpened by Thomas Nagel in a reply the same year.\n\nThe trouble is that we also hold a principle that seems obvious: people should be judged only for what they control. Yet in practice we keep judging people partly by results they did not control. Stanford's Encyclopedia of Philosophy calls this a clash between that Control Principle and our everyday habits of blame. It prompts a question worth asking of any decision, yours or someone else's: if the outcome had gone the other way, would I judge the choice differently?",
+   "deep_dive": "Williams introduced the term in a 1976 paper in the Proceedings of the Aristotelian Society. His best-known case is a loosely fictionalised Gauguin, who leaves his family for Tahiti to paint, without knowing whether he has the talent to be great. Williams argued that what could justify the choice afterwards is success itself, which depends partly on luck. If Gauguin fails, the same decision looks like selfish folly. Nagel's paper appeared in the same volume, and he later expanded it in his 1979 book Mortal Questions.\n\nNagel then sorted the problem into kinds of luck, which the Stanford entry lists as resultant, circumstantial, constitutive and causal. Resultant luck is luck in how things turn out, and it is the one in the driver story. Circumstantial luck is about the situation you happen to be in. His example is life under the Nazis, where some citizens were tested and failed, while others elsewhere were never tested at all. Constitutive luck is about the temperament you were born with.\n\nThe entry sets out the main responses: deny that luck should affect moral assessment, accept that it does, or call the whole idea incoherent. Philosophers still disagree. A useful distinction is between blame and responsibility for consequences. Most people think it right to feel worse about killing someone than about nearly doing so, even when they accept the near-miss driver was just as careless. The puzzle bites hardest when we use outcomes as evidence of quality, which is where psychology has measured the effect directly.",
+   "examples": [
+    {
+     "title": "Baron and Hershey's outcome bias studies",
+     "text": "In 1988 Jonathan Baron and John Hershey gave undergraduates descriptions of decisions made under uncertainty, such as a doctor choosing between treatments or a gamble. Everything about the decision was held constant and only the result changed. When the result was good, people rated the thinking as better, the decision-maker as more competent, and were readier to hand them the next decision. Across five studies, the pattern held even though participants were told the decision-maker had the same information. A 2023 replication with 692 online participants found the effect again, including among people who said outcomes should not count."
+    },
+    {
+     "title": "Death sets the sentence for drivers",
+     "text": "English and Welsh sentencing guidelines show moral luck written into law. Causing death by dangerous driving, in force since July 2023, carries an offence range of 2 to 18 years' custody. For offences after 28 June 2022 the maximum is life. The Sentencing Council's guidance treats death as part of the offence itself. So similar bad driving can land in very different brackets depending on who happened to be in the road. Whether that is justice or luck is the live argument."
+    },
+    {
+     "title": "The nurse who was lucky",
+     "text": "An NHS England patient-safety presentation by June Woodward describes how health services often react to errors. A nurse whose mistake causes no harm is regarded as lucky, while a colleague who makes the identical mistake and injures a patient is treated as blameworthy. The presentation calls this a flawed system, since outcomes are not fully in anyone's control. Hospitals that follow the Just Culture approach respond to the behaviour, such as carelessness or deliberate risk-taking, rather than the result. The practical aim is that near-misses are reported and learned from, instead of hidden until someone is hurt."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Nagel_(cropped).jpg?width=1000",
+     "caption": "Thomas Nagel, whose 1976 reply to Williams set out four kinds of moral luck.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page; listed as CC BY-SA 4.0)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Thomas_Nagel_(cropped).jpg"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paul_Gauguin_-_D'ou_venons-nous.jpg?width=1000",
+     "caption": "Gauguin's Tahiti painting Where Do We Come From? (1897), the artist behind Williams's thought experiment about a risky life choice.",
+     "credit": "Paul Gauguin (public domain), via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_-_D'ou_venons-nous.jpg"
+    }
+   ],
+   "why": [
+    "The puzzle comes from two heavyweight papers (Williams, Nagel, 1976) and is covered in the Stanford Encyclopedia of Philosophy; the psychology is measured in Baron and Hershey's five studies and a larger 2023 replication.",
+    "Philosophers still disagree on what follows: some say we should blame less by outcome, others that results rightly matter. Outcome bias shows we do it; it does not prove we should not.",
+    "Gauguin is fictionalised by Williams himself, so treat it as a thought experiment, not biography."
+   ],
+   "try_this": "Think of a decision you judged harshly or generously this month because of how it turned out. Ask: if the result had been reversed, what would I have said about the choice itself?",
+   "sources": [
+    {
+     "title": "Moral Luck — Stanford Encyclopedia of Philosophy",
+     "url": "https://plato.stanford.edu/entries/moral-luck/"
+    },
+    {
+     "title": "Outcome Bias in Decision Evaluation — Baron & Hershey, Journal of Personality and Social Psychology (1988)",
+     "url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/baron-hershey-jpsp1988.pdf"
+    },
+    {
+     "title": "Causing death by dangerous driving — Sentencing Council for England and Wales",
+     "url": "https://sentencingcouncil.org.uk/guidelines/causing-death-by-dangerous-driving/"
+    },
+    {
+     "title": "Sign up to Safety presentation — June Woodward / NHS England",
+     "url": "https://www.england.nhs.uk/signuptosafety/wp-content/uploads/sites/16/2015/06/su2s-nhs-confed-june-woodward.pdf"
+    }
+   ],
+   "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\"><rect x=\"20\" y=\"20\" width=\"560\" height=\"60\" rx=\"6\" fill=\"#284B7A\"/><text x=\"300\" y=\"57\" text-anchor=\"middle\" font-size=\"20\" fill=\"#FFFFFF\">Same reckless choice</text><line x1=\"300\" y1=\"80\" x2=\"150\" y2=\"140\" stroke=\"#586577\" stroke-width=\"2\"/><line x1=\"300\" y1=\"80\" x2=\"450\" y2=\"140\" stroke=\"#586577\" stroke-width=\"2\"/><text x=\"150\" y=\"165\" text-anchor=\"middle\" font-size=\"18\" fill=\"#1C2633\">Path empty</text><text x=\"450\" y=\"165\" text-anchor=\"middle\" font-size=\"18\" fill=\"#1C2633\">Child on path</text><rect x=\"40\" y=\"190\" width=\"220\" height=\"50\" rx=\"6\" fill=\"#D3DAE3\"/><text x=\"150\" y=\"222\" text-anchor=\"middle\" font-size=\"18\" fill=\"#1C2633\">Seen as lucky</text><rect x=\"340\" y=\"190\" width=\"220\" height=\"50\" rx=\"6\" fill=\"#C2414B\"/><text x=\"450\" y=\"222\" text-anchor=\"middle\" font-size=\"18\" fill=\"#FFFFFF\">Seen as guilty</text><text x=\"300\" y=\"288\" text-anchor=\"middle\" font-size=\"16\" fill=\"#586577\">Only chance separates the two drivers</text></svg>",
+   "sketch_alt": "One reckless choice leads to two verdicts, depending only on chance."
+  },
+  {
+   "id": "15",
+   "featured": false,
+   "theme": "History & big ideas",
+   "title": "The commons was not doomed",
+   "idea": "In 1968 the ecologist Garrett Hardin published \"The Tragedy of the Commons\" in Science. His picture was a shared pasture: each herder gains the full benefit of adding one more animal, but the cost of overgrazing is spread across everyone, so every rational herder adds another and the pasture is ruined. For decades the lesson drawn was that shared resources need either private owners or a strong state.\n\nElinor Ostrom spent her career checking whether this happens in the real world. It often does not. Fishers, farmers and villagers have managed shared forests, pastures, fisheries and irrigation systems for centuries without collapse, by writing their own rules, watching each other and punishing cheats. Hardin had described an open-access free-for-all, not a managed commons. Ostrom's work on exactly this earned her the 2009 Nobel Prize in Economics. The interesting question is no longer whether people can cooperate, but what makes the rules hold.",
+   "deep_dive": "Hardin's essay appeared in Science in 1968 (volume 162, pages 1243 to 1248) and became one of the most cited pieces the journal has published. His model is tidy and, for a resource that really is open to anyone, correct. The weakness is the assumption that herders cannot talk to one another or make rules. Critics, including historians of real commons, pointed out that he showed no actual village where this had happened.\n\nOstrom's answer, set out in her 1990 book Governing the Commons, was empirical. She began with case studies such as the Swiss village of Törbel and then compared communities that sustained their resources with others that failed. From this she drew eight design principles that recur in the successes: clearly defined boundaries; rules that fit local conditions; users who take part in making the rules; monitoring; graduated sanctions (a small penalty first, heavier ones for repeat offenders); cheap ways to resolve conflicts; recognition by outside authorities of the group's right to organise; and, for larger systems, nested layers of governance.\n\nThe mechanism is trust. People keep to a rule when they believe others do too, and that belief depends on visible monitoring and proportionate penalties. Where it stops: the principles were derived by comparing cases, so they are a description of what often works, not a guarantee. Some of her showpiece cases have been questioned by later researchers, and commons fail when outsiders can walk in, when groups are too large or too unequal, or when monitoring is impossible. Global problems such as the climate have no boundary or shared community, which is why they are so much harder.",
+   "examples": [
+    {
+     "title": "Törbel's Alpine pasture rules",
+     "text": "Törbel, a village in the Swiss canton of Valais, has shared its high summer pasture, forest and irrigation for centuries. Robert Netting studied it, and Ostrom made it a founding case. The key rule, as the sources give it, is that nobody may send more cows to the alp than they can feed through the winter on their own hay, which stops anyone loading the common pasture with extra animals. Only village members have rights, and everyone can see how many cattle each member sends, so breaches are noticed and penalised. Formal articles of association date from 1483. Later work on the Grisons region questions how far Netting's account generalises."
+    },
+    {
+     "title": "Maine's lobster harbour gangs",
+     "text": "In Maine a state licence lets you fish, but in practice you also need to be accepted by the local harbour gang, an informal group of as few as eight and rarely more than fifty boats that holds a territory. The anthropologist James Acheson documented this in The Lobster Gangs of Maine (1988). Intruders get verbal warnings first; if they persist, their traps may be cut, which is illegal and risky. Fishers also notch the tails of egg-bearing females and return them to the sea, a conservation norm that spread informally from the mid twentieth century. Acheson linked these rules to Maine's healthy catches, though the system is eroding offshore."
+    },
+    {
+     "title": "Valencia's farmers' water court",
+     "text": "Every Thursday at noon, at the Apostles' Door of Valencia Cathedral, a court of elected farmers settles disputes over irrigation water drawn from the River Turia. Each of the irrigation communities sends a representative (the síndic), and the proceedings are public and oral, in Valencian and judgments are given on the spot. Its origins are traced to at least the tenth century, though that is uncertain. UNESCO added it, together with the Council of Wise Men of Murcia, to its list of intangible cultural heritage in 2009,, the year Ostrom won her Nobel.",
+     "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Tribunal_de_las_Aguas_of_Valencia.jpg?width=1000",
+      "caption": "The Water Tribunal meets at the Apostles' Door of Valencia Cathedral.",
+      "credit": "José Jordán, via Wikimedia Commons (licence on the file page)",
+      "page_url": "https://commons.wikimedia.org/wiki/File:The_Tribunal_de_las_Aguas_of_Valencia.jpg"
+     }
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Elinor_Ostrom_close-up_(cropped).jpg?width=1000",
+     "caption": "Elinor Ostrom at the Royal Swedish Academy of Sciences press conference after the 2009 Nobel announcement.",
+     "credit": "Holger Motzkau / CC BY-SA 3.0, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Elinor_Ostrom_close-up_(cropped).jpg"
+    }
+   ],
+   "why": [
+    "Ostrom's conclusions rest on decades of field studies and comparisons of successful and failed commons across several countries, and earned the 2009 Nobel Prize in Economics (shared with Oliver Williamson).",
+    "Hardin's model is right for genuinely open-access resources; his error was treating every shared resource as one.",
+    "Limits: the design principles were induced from cases and some cases, such as Törbel, have been contested. Global commons like the climate lack a bounded community."
+   ],
+   "try_this": "Pick one shared resource in your life (a kitchen, a shared drive, a local green space). Does it have clear boundaries, visible monitoring and a mild first penalty? Change one of those and see whether behaviour shifts.",
+   "sources": [
+    {
+     "title": "Ostrom's Eight Design Principles for a Successfully Managed Commons — Agrarian Trust",
+     "url": "https://www.agrariantrust.org/ostroms-eight-design-principles-for-a-successfully-managed-commons/"
+    },
+    {
+     "title": "Governing the Commons: Why Self-Administered Farm Outlets Flourish in Switzerland — The International Journal of the Commons",
+     "url": "https://thecommonsjournal.org/articles/10.5334/ijc.960"
+    },
+    {
+     "title": "Lobster Gangs and Debunking the Tragedy of the Commons — YES! Magazine",
+     "url": "https://www.yesmagazine.org/economy/2021/08/11/the-commons-lobster-maine-elinor-ostrom"
+    },
+    {
+     "title": "Water Tribunal of the plain of Valencia — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Water_Tribunal_of_the_plain_of_Valencia"
+    }
+   ]
+  },
+  {
+   "id": "16",
+   "featured": false,
+   "theme": "Creativity, invention & systems thinking",
+   "title": "When people fail, blame the design",
+   "idea": "When someone makes a mistake with a door, a stove or a control panel, the instinct is to call it human error. Don Norman, the cognitive scientist and designer, argued the opposite in The Design of Everyday Things: if a sensible person keeps getting it wrong, the fault usually lies with the design. A door with an identical handle on both sides gives no clue whether to push or pull, so the person who pushes a pull door has done nothing foolish. They have been misled. The practical consequence is a different question. Instead of asking who slipped, ask what the design let them believe, what it failed to show, and why one slip could do so much damage. People are predictably imperfect, so good systems are built to expect errors, make the right action obvious, and make the wrong one hard, reversible or visible straight away.",
+   "deep_dive": "Norman's book first appeared in 1988 as The Psychology of Everyday Things and was later retitled and, in 2013, revised and expanded. Its starting point is that people act on what a design tells them. He distinguishes discoverability (can you work out what actions are possible?) from understanding (do you know what they mean?). In the revised edition he introduced the word signifier for the visible cue that tells you where an action should happen: a flat plate says push, a handle says pull. The doors that break this rule became known as Norman doors, a name he has said he accepts with some dismay and secret pride.\n\nThe larger argument is about error. Norman's chapter on the subject is called \"Human Error? No, Bad Design\". Slips, such as pressing the wrong switch, and mistakes, such as misreading the situation, are normal products of attention and memory. If your design only works when nobody is ever tired, rushed or distracted, it does not work. So designers should make state visible, provide feedback, keep dangerous actions apart from harmless ones, and allow recovery.\n\nThis changes how investigations run. Asking \"why did the person do that?\" tends to stop at a name. Asking \"why did that action make sense at the time?\" leads back to labels, layouts, procedures and incentives. Note the limits. Some failures do involve negligence or deliberate rule-breaking, and not every accident has a design culprit. The claim is narrower and more useful: when a mistake is easy to make and repeated by different people, treat the person as the symptom, not the cause.",
+   "examples": [
+    {
+     "title": "Three Mile Island's misleading indicator light",
+     "text": "On 28 March 1979 a relief valve on the reactor at Three Mile Island, Pennsylvania, stuck open and coolant drained away. The control-room light for that valve showed only that the signal to close it had been sent, not that the valve had actually closed. Operators who trusted the light did not realise the loss of coolant was continuing, and it ran on for over two hours. The President's Commission, chaired by John Kemeny, also listed poor training, unclear procedures and control-room design as contributing causes. It did not stop at \"operator error\".",
+     "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TMI-2_control_panel.png?width=1000",
+      "caption": "The TMI-2 control panel, where indicator lights could be misread or covered during the accident.",
+      "credit": "Via Wikimedia Commons (author and licence on the file page)",
+      "page_url": "https://commons.wikimedia.org/wiki/File:TMI-2_control_panel.png"
+     }
+    },
+    {
+     "title": "Hawaii's false missile alert, 2018",
+     "text": "At 8:08 a.m. on 13 January 2018, a ballistic missile alert went to phones across Hawaii and was not corrected for 38 minutes. The state first blamed a wrong menu choice. The Federal Communications Commission found something more systemic: the employee believed a drill was real, because the drill recording wrongly included the words \"This is not a drill\". Nobody else had to confirm a live alert, and there was no ready procedure for correcting a false one. The FCC concluded the cause was human error plus inadequate safeguards, and recommended two-person validation and keeping test and live alerts apart in the software."
+    },
+    {
+     "title": "The push-pull door in everyday life",
+     "text": "A Norman door is any door whose design gives the wrong signal about whether to push, pull or slide, often because the same handle is fitted on both sides. In 2016 Roman Mars of 99% Invisible and Joe Posner of Vox interviewed Norman about them, and the term spread well beyond design circles. Norman has written that he feels dismay and secret pride that badly designed doors are called Norman doors. The cheap fix works at the level of signifiers: a flat plate where you push, a handle where you pull, so nobody needs a sign saying which."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Donald_Norman_at_AWF05.jpg?width=1000",
+     "caption": "Don Norman, whose book made 'blame the design' a working principle for designers.",
+     "credit": "Jordan Fischer / CC BY 2.0, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Donald_Norman_at_AWF05.jpg"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TMI-2_control_panel.png?width=1000",
+     "caption": "A TMI-2 control panel. Operators testified that maintenance tags covered one of the indicator lights during the first minutes of the accident.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:TMI-2_control_panel.png"
+    }
+   ],
+   "why": [
+    "The core argument is a long-standing principle in human factors, backed by Norman's book and by official inquiries into Three Mile Island and the 2018 Hawaii alert.",
+    "The Hawaii case is messier than the first story: the FCC found a misunderstood drill, not a simple wrong click, and officials' released screenshots of the interface were disputed. The lesson holds, but the detail needs care.",
+    "Limit: design is rarely the only cause. Training, procedures and individual choices matter too, and genuine negligence exists."
+   ],
+   "try_this": "Pick one thing at home or work that people keep getting wrong (a form, a door, a shared spreadsheet). Instead of reminding people to be careful, change one thing so the wrong action is harder or the right one is obvious.",
+   "sources": [
+    {
+     "title": "Norman Doors: Don't Know Whether to Push or Pull? Blame Design — 99% Invisible",
+     "url": "https://99percentinvisible.org/article/norman-doors-dont-know-whether-push-pull-blame-design/"
+    },
+    {
+     "title": "Report and Recommendations: Hawaii Emergency Management Agency January 13, 2018 False Alert — FCC",
+     "url": "https://docs.fcc.gov/public/attachments/DOC-350119A1.pdf"
+    },
+    {
+     "title": "FCC On Hawaii's Bogus Alert: Don't Say 'This Is Not A Drill' During Drills — NPR",
+     "url": "https://www.npr.org/sections/thetwo-way/2018/04/11/601394064/federal-communications-commission-dont-say-this-is-not-a-drill-during-drills"
+    },
+    {
+     "title": "The Accident at Three Mile Island — President's Commission (Kemeny Commission)",
+     "url": "https://www.tmia.com/sites/tmia.com/files/media/Presidents-Commission.pdf"
+    }
+   ]
+  },
+  {
+   "id": "17",
+   "featured": false,
+   "theme": "Psychology & behaviour",
+   "title": "The bystander effect is weaker than the myth",
+   "idea": "Most of us learned that a crowd makes people less likely to help: the more witnesses, the less anyone acts. The story behind it, that 38 neighbours watched Kitty Genovese die in New York in 1964 and did nothing, turns out to be largely false. And the effect, though real in some laboratory settings, shrinks sharply when a situation is clearly dangerous. When researchers watched what actually happened in 219 real conflicts caught on street cameras in three countries, someone intervened in about 91 per cent of them, and victims were more, not less, likely to get help as the crowd grew. The sensible conclusion is not that people never freeze. It is that help is the usual response in real emergencies, and that the old parable has been scaring us about each other for sixty years without good reason.",
+   "deep_dive": "The textbook version begins in March 1964, when a young woman, Kitty Genovese, was attacked and killed in Kew Gardens, Queens. A New York Times story claimed that 38 witnesses had watched and none had called for help. Two psychologists in New York, Bibb Latané and John Darley, took up the question, and their laboratory experiments through the late 1960s showed that people were often slower to act when others were present. The finding was named the bystander effect and was taught for decades.\n\nIn 2007 Rachel Manning, Mark Levine and Alan Collins went back to the trial records and police files for American Psychologist. They found no evidence for 38 witnesses, or that those who knew something was wrong had seen the attack, or that they stayed inactive. Prosecutor Charles Skoller later said only about half a dozen could be used, and the fatal attack took place inside a building, out of sight. In 2016 the Times itself called its original reporting flawed.\n\nThe laboratory effect is a separate matter. In 2011 Peter Fischer and colleagues pooled 105 effect sizes from over 7,700 participants in Psychological Bulletin. They found a real overall effect (g = -0.35), but it weakened where a situation was seen as dangerous, where a perpetrator was present, and where helping would carry a physical cost.\n\nThe third step came from cameras. Richard Philpot and colleagues studied 219 aggressive incidents captured on CCTV, and found intervention in 91 per cent.\n\nThe limits: the footage came from city centres, so it excludes some of the most violent gang-related areas, and a camera cannot tell you what people were thinking. Crowds can still freeze in ambiguous situations. The better lesson is narrower: when something is clearly wrong, people usually act.",
+   "examples": [
+    {
+     "title": "What really happened on Austin Street",
+     "text": "The 38-witness story came from a New York Times report on the killing of Kitty Genovese in Kew Gardens, Queens, in 1964. In 2007 Manning, Levine and Collins reviewed the trial and police records and found no support for it. They found no evidence of 38 witnesses who saw the attack and did nothing. One neighbour shouted at the attacker, who briefly broke off. The fatal assault then happened inside a building where witnesses could not see. In 2016 the Times called its own early reporting flawed. The parable lasted because it was a tidy story."
+    },
+    {
+     "title": "219 fights, filmed by accident",
+     "text": "Richard Philpot and colleagues at Lancaster University, with researchers from Copenhagen and the Netherlands, analysed 219 arguments and assaults recorded on public CCTV in inner-city Amsterdam, Lancaster and Cape Town. In 91 per cent, at least one bystander intervened, by calming the aggressor, blocking or pulling them away, or comforting the victim. The odds of help rose by about 10 per cent with each extra bystander. Rates did not differ significantly between the three cities, though Cape Town is seen as less safe. Philpot argued more people simply means a bigger pool of potential helpers."
+    },
+    {
+     "title": "A meta-analysis that found a hidden catch",
+     "text": "In 2011 Peter Fischer and eight co-authors pooled 105 effect sizes from over 7,700 participants across decades of bystander experiments, published in Psychological Bulletin. Overall, people were slightly less likely to help when others were present (g = -0.35). But the effect weakened when the situation was seen as dangerous, when the perpetrator was present, or when helping carried a physical cost. The authors explained this with the arousal-cost-reward model: dangerous emergencies are recognised faster as real emergencies, so the usual confusion about whether anything is wrong fades."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Surveillance_camera_(52941293305).jpg?width=1000",
+     "caption": "A street surveillance camera, the kind of footage the Amsterdam, Lancaster and Cape Town study analysed.",
+     "credit": "Chad Davis / CC BY 2.0, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Surveillance_camera_(52941293305).jpg"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Site_of_the_murder_of_Kitty_Genovese_in_alleyway_from_Kew_Gardens_LIRR_station_to_Lefferts_Boulevard.jpg?width=1000",
+     "caption": "The alleyway in Kew Gardens, Queens, near where Kitty Genovese was attacked, where the fatal assault took place out of sight.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Site_of_the_murder_of_Kitty_Genovese_in_alleyway_from_Kew_Gardens_LIRR_station_to_Lefferts_Boulevard.jpg"
+    }
+   ],
+   "why": [
+    "Three separate lines of evidence agree: the 2007 archival review of the Genovese case, the 2011 meta-analysis of 105 effect sizes, and the CCTV study of 219 real incidents.",
+    "The laboratory effect is real but modest, and it shrinks in dangerous emergencies.",
+    "Caveat: the CCTV footage is from city centres and shows what people did, not why, and ambiguous situations can still leave people hesitating."
+   ],
+   "try_this": "Next time you are in a crowd and something seems off, ask yourself: what would I do if I knew it was an emergency? Then act on that, because others are probably waiting for someone to move first.",
+   "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\"><text x=\"40\" y=\"70\" font-size=\"18\" fill=\"#1C2633\">219 real conflicts caught on CCTV</text><text x=\"40\" y=\"96\" font-size=\"16\" fill=\"#586577\">Amsterdam, Lancaster and Cape Town</text><rect x=\"40\" y=\"120\" width=\"520\" height=\"70\" fill=\"#D3DAE3\"/><rect x=\"40\" y=\"120\" width=\"473\" height=\"70\" fill=\"#284B7A\"/><text x=\"60\" y=\"164\" font-size=\"20\" fill=\"#FFFFFF\">Someone stepped in: 91%</text><line x1=\"536\" y1=\"190\" x2=\"536\" y2=\"218\" stroke=\"#C2414B\" stroke-width=\"2\"/><text x=\"560\" y=\"242\" font-size=\"16\" fill=\"#C2414B\" text-anchor=\"end\">Nobody did: 9%</text><text x=\"40\" y=\"290\" font-size=\"16\" fill=\"#586577\">Help was the norm, not the exception.</text></svg>",
+   "sketch_alt": "In 91% of 219 real public conflicts on CCTV, at least one bystander intervened.",
+   "sources": [
+    {
+     "title": "The Kitty Genovese Murder and the Social Psychology of Helping: The Parable of the 38 Witnesses — Manning, Levine & Collins / American Psychologist",
+     "url": "https://eprints.lancs.ac.uk/id/eprint/3591/"
+    },
+    {
+     "title": "The Bystander-Effect: A Meta-Analytic Review — Fischer et al. / Psychological Bulletin",
+     "url": "https://pred.uni-regensburg.de/id/eprint/20599/"
+    },
+    {
+     "title": "Bystanders will intervene to help victims of aggressive public disputes — Lancaster University",
+     "url": "https://lancaster.ac.uk/news/bystanders-will-intervene-to-help-victims-of-aggressive-public-disputes"
+    },
+    {
+     "title": "Surveillance Cameras Debunk the Bystander Effect — Nextgov",
+     "url": "https://www.nextgov.com/emerging-tech/2019/07/surveillance-cameras-debunk-bystander-effect/158391"
+    }
+   ]
+  },
+  {
+   "id": "18",
+   "featured": false,
+   "theme": "Thought for the day",
+   "title": "We underestimate how much thanks means",
+   "idea": "Most of us have someone we mean to thank properly and never do. The reasons sound sensible: it will be awkward, I will not say it well, they know already. In 2018 the psychologists Amit Kumar and Nicholas Epley tested those worries in Psychological Science. People wrote a gratitude letter to someone who had made a difference to them, predicted how the reader would feel, and then the researchers found out how the readers really felt.\n\nThe writers got it wrong in a consistent direction. They underestimated how surprised and how positive the recipients would be, and they overestimated how awkward the recipients would feel. Writers fretted about how well they had put things. Recipients mostly noticed the warmth of being thought of.\n\nThe lesson is narrower than a cure-all: when your instinct says a thank-you will land flat, that instinct is probably biased, and the cost of testing it is a few minutes.",
+   "deep_dive": "The paper is \"Undervaluing Gratitude: Expressers Misunderstand the Consequences of Showing Appreciation\", Kumar and Epley, Psychological Science, 2018. Across several experiments (coverage varies between three and four) participants wrote a letter to someone who had affected their life in a meaningful way. Before sending, writers predicted how recipients would feel: how surprised, how positive, how awkward. The researchers then contacted the recipients and asked them.\n\nThe gap was consistent. Recipients were more surprised that the writer was grateful, and more surprised by the reasons, than writers expected. They felt more positive than predicted, and less awkward. The authors' explanation is a difference in perspective. Writers concentrate on competence: is this well written, will I sound clumsy? Recipients concentrate on warmth and intent: someone bothered. Writers may also assume the other person already knows how they feel, so a letter seems to add little. According to the British Psychological Society's digest, the misjudgment also shaped willingness to send: people were least inclined to write to those they thought would benefit least.\n\nThere are limits. The sample consisted of letters people chose to write about relationships that mattered, so it does not tell us about formulaic thanks, or about thanks that is insincere. Coverage notes that a gesture seen as disingenuous could land very differently. The study also measures how recipients felt at a moment, not lasting effects on a relationship. Separate work on gratitude letters found the happiness boost for writers had faded by six months, so the benefit should not be oversold.",
+   "examples": [
+    {
+     "title": "The letter-writing experiments themselves",
+     "text": "In Kumar and Epley's experiments, participants wrote to someone they felt they had never adequately thanked. Writers then forecast how surprised and happy the recipient would be and how awkward. When the recipients were contacted, the forecasts were off in every experiment: recipients were more surprised and more positive than expected and less awkward. Writers were also unduly worried about expressing gratitude skilfully, while recipients responded simply to the warmth of the gesture. The paper's own summary is that expressing gratitude may not buy everything, but it may buy more than people expect."
+    },
+    {
+     "title": "Couples under-read each other's thanks",
+     "text": "A study of romantic relationships, indexed on PubMed Central, used an accuracy and bias approach to compare how much gratitude partners felt with how much the other person perceived. Perceivers generally underestimated their partner's gratitude, and lower perceived gratitude went with lower relationship satisfaction for the perceiver. It is a different setting from letters, but it points the same way: the thanks we feel often goes unnoticed, so saying it aloud is not redundant. Familiarity does not guarantee the message has landed."
+    },
+    {
+     "title": "Seligman's gratitude visit",
+     "text": "In a 2005 American Psychologist study, Martin Seligman and colleagues asked internet volunteers in one condition to write a letter of gratitude and deliver it in person within a week. Summaries by Berkeley's Greater Good in Action report that this exercise gave the biggest boost to happiness a month later of the exercises tested, with participants also less depressed. By six months, happiness had returned to where it started. So the benefit to the writer is real but short-lived, and the recipient's side was not what the study measured."
+    }
+   ],
+   "images": [],
+   "why": [
+    "The core finding comes from a peer-reviewed paper (Kumar and Epley, 2018) and is reported consistently by the University of Chicago, Chicago Booth, the British Psychological Society and the Association for Psychological Science.",
+    "Caveat: the participants wrote to people who mattered and were willing to take part, so it says little about forced, formulaic or insincere thanks, and sources disagree on whether there were three or four experiments."
+   ],
+   "try_this": "Pick one person you have meant to thank properly. Write three or four sentences saying what they did and what difference it made, and send it today before you can talk yourself out of it.",
+   "sources": [
+    {
+     "title": "People underestimate value of sending letters of appreciation — University of Chicago News (on Kumar & Epley, Psychological Science, 2018)",
+     "url": "https://news.uchicago.edu/story/people-underestimate-value-sending-letters-appreciation"
+    },
+    {
+     "title": "Gratitude Letter — Greater Good in Action, UC Berkeley",
+     "url": "https://ggia.berkeley.edu/practice/practice_as_pdf/gratitude_letter"
+    },
+    {
+     "title": "Underestimating the power of gratitude — British Psychological Society Research Digest",
+     "url": "https://www.bps.org.uk/research-digest/underestimating-power-gratitude"
+    },
+    {
+     "title": "Understanding the Links Between Perceiving Gratitude and Romantic Relationship Satisfaction — PubMed Central",
+     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10516740/"
+    }
+   ]
+  },
+  {
+   "id": "19",
+   "featured": false,
+   "theme": "Creativity, invention & systems thinking",
+   "title": "Desire paths: let users show you the route",
+   "idea": "A desire path is the dirt track worn across a lawn by people who ignored the pavement and took the shortest or easiest way. Planners often treat it as a nuisance, but it is also free research: a map of what people actually want, drawn by the people who matter, with no survey and no bias. The idea for designers is to watch behaviour before you commit to a layout. Let people use the space, see where the grass wears away, then build the formal route along it. The same logic applies to software and organisations. When users invent workarounds, copy and paste a code, or add a convention the system never planned for, they are marking a desire path. The sensible response is usually to learn from it, not to scold people for leaving the official route.",
+   "deep_dive": "The phrase is often credited to the French philosopher Gaston Bachelard, who is said to have written of les chemins du desir in The Poetics of Space. Be wary of that. A library-science paper notes the attribution is widely repeated, but that the book itself makes no explicit mention of desire lines. Treat the origin of the term as unsettled; the phenomenon is not. Other names include elephant paths, cow paths and desire lines.\n\nThe mechanism is simple. A route is chosen by cost: time, effort, comfort, the mud on a wet day. Planners usually draw the plan from above and from the entrances of buildings, while walkers decide from the ground, one step at a time. Each person who cuts a corner makes the next person's choice slightly easier, because the grass is already flattened. Within weeks, a faint track becomes a visible line. In effect, many individual decisions combine into a vote.\n\nThat is why some campuses deliberately waited. Others plan holistically and try to get the layout right first time; a University of Wisconsin-Madison planner has described the aim as a balance between paving everything and keeping green space.\n\nThe limits matter. A desire path shows what is convenient, not necessarily what is good. It can cut through flower beds, erode slopes, create mud, or be unusable for someone in a wheelchair or with a pram, and some critics argue they exclude people. Treat them as evidence to weigh, not as an instruction. The best use is as a first question: why did so many people reject the route we gave them?",
+   "examples": [
+    {
+     "title": "Michigan State left the grass unpaved",
+     "text": "Michigan State University says some informal paths were created by students around its founding in 1855 and later shaped the sidewalk network still used on campus. A design write-up on Pop-Up City describes the early public space as grass only, with footpaths deliberately missing, so that students would pick the shortest routes between buildings; the paths were then asphalted and formalised roughly a year later. A University of Wisconsin-Madison news story uses MSU as the contrast to its own practice of planning pathways in advance. The detail is sourced to university material and a design blog, not to the original plans."
+    },
+    {
+     "title": "Virginia Tech paved the worn Drillfield tracks",
+     "text": "In summer 2014 Virginia Tech paved three dirt paths that students had worn across the Drillfield, its central lawn. The university said the routes had evolved from use rather than from any plan, and that they were muddy and tracked dirt into buildings. The new asphalt strips were five feet wide, against twelve feet for the older paths. Officials called the work a temporary fix while they sought a long-term design, and in 2015 they laid test paths in 13 materials. Reaction was mixed: some students wanted the green space kept for sport, others welcomed dry routes."
+    },
+    {
+     "title": "Twitter learned hashtags from its users",
+     "text": "Early Twitter had no way to group posts by topic. On 23 August 2007 Chris Messina, a user and designer, proposed using the # sign, and a few days later set out a fuller proposal. Reports say Twitter's founders thought it too nerdy to catch on. Users adopted it anyway, notably for the 2007 San Diego wildfires, and in 2009 Twitter began linking hashtags to search. It is the digital version of the same story: a route worn by users, later paved by the company."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Desire_path_-_52849400711.jpg?width=1000",
+     "caption": "A desire path across grass at Ohio State University, worn where people chose a more direct route than the sidewalk.",
+     "credit": "Released to the public domain (CC0), via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Desire_path_-_52849400711.jpg"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Desire_path_(19811581366).jpg?width=1000",
+     "caption": "A desire path in Belem, a trodden shortcut that formal paving did not provide.",
+     "credit": "Metro Centric / CC BY 2.0, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Desire_path_(19811581366).jpg"
+    }
+   ],
+   "why": [
+    "The practice is documented at several universities, including Michigan State and Virginia Tech, and in software, where Twitter's hashtag is a well-recorded case.",
+    "Evidence is mostly case-based, not experimental. Some campus tales, such as a 1914 balloon survey of snow tracks, rest on a single blog and are left out here.",
+    "Limit: a worn path shows convenience, not safety, access or environmental cost, so weigh it against other needs."
+   ],
+   "try_this": "Find one shortcut or workaround people keep using around you: a worn corner, a spreadsheet hack, a message format. Ask what the official route fails to offer, and whether you could build the formal version along it.",
+   "sources": [
+    {
+     "title": "Desire paths: the unofficial footpaths that frustrate, captivate campus planners — Parker Schorr / University of Wisconsin-Madison News",
+     "url": "https://news.wisc.edu/desire-paths-the-unofficial-footpaths-that-frustrate-captivate-campus-planners/"
+    },
+    {
+     "title": "Dirt paths on Drillfield to be paved — Virginia Tech News",
+     "url": "https://news.vt.edu/articles/2014/08/080514-vpa-drillfieldpaths.html"
+    },
+    {
+     "title": "Elephant Paths: Paving the Way for a Human-Centered Public Space at Michigan State University — Pop-Up City",
+     "url": "https://popupcity.net/insights/elephant-paths-paving-the-way-for-a-human-centered-public-space-at-michigan-state-university/"
+    },
+    {
+     "title": "Chris Messina, hashtag inventor — CNBC",
+     "url": "https://www.cnbc.com/2018/04/30/chris-messina-hashtag-inventor.html"
+    }
+   ]
+  },
+  {
+   "id": "20",
+   "featured": false,
+   "theme": "History & big ideas",
+   "title": "Clair Patterson and the lead in everything",
+   "idea": "The geochemist Clair Patterson set out to answer a simple question: how old is the Earth? To do it he had to count tiny amounts of lead in meteorites, and his samples kept coming out contaminated. Chasing the contamination turned a pure-science project into one of the great public health stories of the twentieth century.\n\nIn 1956 he published an age for the Earth of about 4.55 billion years, a figure that has barely moved since. Then he asked where all the stray lead had come from. His answer was that lead was not a trace natural element in the modern environment but a pervasive industrial pollutant, with leaded petrol a leading source. He spent decades arguing this against an industry that had paid for much of the opposing science. The idea: the clean measurement you need for one question can reveal a far bigger problem you were not looking for, and a comfortable consensus can rest on contaminated data.",
+   "deep_dive": "Patterson's age of the Earth came from lead isotopes in the Canyon Diablo meteorite, the iron meteorite associated with Meteor Crater in Arizona. Meteorites are leftovers from the formation of the solar system, so their lead records how much radioactive decay of uranium has happened since. Comparing isotope ratios gave a date. His 1956 paper put the Earth at about 4.55 billion years, with an uncertainty of around 70 million, far more accurate than earlier estimates.\n\nThe hard part was contamination. To measure so few atoms he built one of the first clean rooms, filtering the air, acid-washing equipment and distilling his reagents. Even so, he found lead in glassware, tap water, dust and paint. Working with Mitsunobu Tatsumoto, he showed in 1963 that deep ocean water held several times less lead than surface water (the National Academies biography gives 3 to 10 times), suggesting modern human sources. In 1965 he published a long paper on contaminated and natural lead environments, arguing that the northern hemisphere's atmosphere held roughly a thousand times its natural lead and that lead additives in petrol should be removed.\n\nThe opposing view was championed by Robert Kehoe, who had been hired in 1924 to look into health problems of tetraethyl lead production and directed a laboratory funded by Ethyl, General Motors and DuPont. Kehoe held that low-level lead was a normal part of the human environment. Patterson's central point was that industry should not be the only judge of its own product's safety. Where it stops: Patterson's figures differ between sources, and the proof of harm to children came later, from other researchers.",
+   "examples": [
+    {
+     "title": "Dating the Earth from a meteorite",
+     "text": "In the early 1950s at Caltech, Patterson analysed lead from the Canyon Diablo meteorite, fragments of which were found around Meteor Crater in Arizona. He had to count lead atoms in minute samples and separate four isotopes of lead, which meant building a contamination-free laboratory himself. He finished the analysis in 1953 and published the age of about 4.55 billion years in 1956. Estimates before this had been much less precise. The figure has stood for nearly seventy years, and it is the reason the Earth's age is quoted with such confidence today.",
+     "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canyon-diablo-meteorite.jpg?width=1000",
+      "caption": "A specimen of the Canyon Diablo meteorite, the iron meteorite Patterson used to date the Earth.",
+      "credit": "Geoffrey Notkin / CC BY-SA 2.5, via Wikimedia Commons",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Canyon-diablo-meteorite.jpg"
+     }
+    },
+    {
+     "title": "Industry pushback and the Senate hearing",
+     "text": "When Patterson's 1965 paper appeared, the American Petroleum Institute replied in September that his findings might be of academic interest but had no real bearing on public health. Funding from oil companies for his research dried up; in his own oral history he said they stopped his work after he blamed leaded petrol. In 1966 he and Kehoe testified before a US Senate subcommittee chaired by Edmund Muskie. Kehoe argued that his own laboratory was the main source of reliable information on lead exposure, while Patterson criticised public health agencies for relying on industry-linked research."
+    },
+    {
+     "title": "What happened to the lead in children",
+     "text": "The United States began cutting lead in petrol in 1973, with a gradual phase-down, and the Clean Air Act ban on leaded petrol for road vehicles took full effect on 1 January 1996. Our World in Data reports that the average blood lead of American children aged one to five was 15 micrograms per decilitre in 1978; by 2016 the median was 0.7, a fall of 95 per cent, with petrol the biggest single cause of the drop. Globally, the UN announced in August 2021 that Algeria had used its last stocks, ending leaded petrol worldwide; UNEP estimated that this prevents 1.2 million premature deaths a year."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canyon-diablo-meteorite.jpg?width=1000",
+     "caption": "A specimen of the Canyon Diablo meteorite, the iron meteorite Patterson used to date the Earth.",
+     "credit": "Geoffrey Notkin / CC BY-SA 2.5, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Canyon-diablo-meteorite.jpg"
+    }
+   ],
+   "why": [
+    "The 4.55 billion year age is one of the most robust results in earth science, and the lead-in-the-environment findings were confirmed by later studies of ice, water and blood lead that tracked the petrol phase-out.",
+    "Evidence on harm: blood lead fell steeply as leaded petrol was withdrawn, in the US and elsewhere.",
+    "Caveat: popular retellings simplify. Patterson did not act alone, and sources disagree on some figures, such as how much lead was in polar ice or the exact pressure applied to him."
+   ],
+   "try_this": "Think of a number or fact you treat as a natural baseline (normal cholesterol, normal traffic fumes, a normal level of anything). Who measured it, and could the measurement itself have been contaminated by the thing it is meant to be free of?",
+   "sources": [
+    {
+     "title": "Getting the Lead Out — Douglas L. Smith / Caltech",
+     "url": "https://www.caltech.edu/about/news/getting-lead-out-47935"
+    },
+    {
+     "title": "Clair Patterson and Robert Kehoe: Two Views of Lead Toxicity — Herbert Needleman / Environmental Research",
+     "url": "https://eclass.uniwa.gr/modules/document/file.php/EEE195/2023-2024/4aithylo-Lead/Clair%20Patterson%20and%20Robert%20Kehoe%20Two%20Views%20of%20Lead%20Toxicity.pdf"
+    },
+    {
+     "title": "Many countries have achieved an impressive reduction in lead poisoning — Our World in Data",
+     "url": "https://ourworldindata.org/decline-lead-poisoning"
+    },
+    {
+     "title": "The world has finally stopped using leaded gasoline — NPR",
+     "url": "https://npr.org/2021/08/30/1031429212/the-world-has-finally-stopped-using-leaded-gasoline-algeria-used-the-last-stockp"
+    }
+   ],
+   "sketch_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" width=\"600\" height=\"320\" font-family=\"Helvetica, Arial, sans-serif\"><line x1=\"40\" y1=\"165\" x2=\"560\" y2=\"165\" stroke=\"#586577\" stroke-width=\"3\"/><g fill=\"#284B7A\"><circle cx=\"70\" cy=\"165\" r=\"9\"/><circle cx=\"185\" cy=\"165\" r=\"9\"/><circle cx=\"300\" cy=\"165\" r=\"9\"/><circle cx=\"415\" cy=\"165\" r=\"9\"/><circle cx=\"530\" cy=\"165\" r=\"9\"/></g><g stroke=\"#D3DAE3\" stroke-width=\"2\"><line x1=\"70\" y1=\"156\" x2=\"70\" y2=\"120\"/><line x1=\"185\" y1=\"174\" x2=\"185\" y2=\"210\"/><line x1=\"300\" y1=\"156\" x2=\"300\" y2=\"120\"/><line x1=\"415\" y1=\"174\" x2=\"415\" y2=\"210\"/><line x1=\"530\" y1=\"156\" x2=\"530\" y2=\"120\"/></g><g fill=\"#1C2633\" font-size=\"18\" font-weight=\"bold\" text-anchor=\"middle\"><text x=\"70\" y=\"85\">1956</text><text x=\"185\" y=\"245\">1965</text><text x=\"300\" y=\"85\">1973</text><text x=\"415\" y=\"245\">1996</text><text x=\"530\" y=\"85\">2021</text></g><g fill=\"#586577\" font-size=\"16\" text-anchor=\"middle\"><text x=\"70\" y=\"108\">Earth 4.55bn yrs</text><text x=\"185\" y=\"268\">Lead paper</text><text x=\"300\" y=\"108\">US phase-down</text><text x=\"415\" y=\"268\">US lead ban</text><text x=\"530\" y=\"108\">Last sales end</text></g></svg>",
+   "sketch_alt": "Timeline: 1956 Earth dated at 4.55 billion years; 1965 lead paper; 1973 US phase-down begins; 1996 US ban; 2021 last sales end."
   }
  ]
 }
