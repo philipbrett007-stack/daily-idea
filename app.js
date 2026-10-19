@@ -8,7 +8,7 @@
   const TZ = "Europe/Dublin";
   const DAILY_LIMIT = 100;
   const KEYS = { stash: "di.stash.v1", seen: "di.seen.v1", shown: "di.shown.v2", taps: "di.taps.v2",
-    reads: "di.reads.v1", tune: "di.tune.v1", mindSeen: "di.mindseen.v1" };
+    reads: "di.reads.v1", tune: "di.tune.v1", mindSeen: "di.mindseen.v1", gh: "di.gh.v1" };
 
   // Each theme gets its own colour. Order matters: the first keyword that matches wins.
   const THEME_COLOURS = [
@@ -920,6 +920,72 @@
   document.querySelectorAll("#mind-weeks button").forEach((b) => b.addEventListener("click", () => { mindWeek = b.dataset.w; renderMind(); }));
   $("#mind-banner").addEventListener("click", () => { mindWeek = "last"; show("mind"); });
 
+  /* ---------- Smart top-ups: tell the 7:40 task how many ideas are waiting unread ---------- */
+  // Only one number leaves the phone: the unread count, written to status/unread.json on the repo's
+  // "status" branch (not main, so the site doesn't rebuild). The task skips the day when it's over 10.
+  const GH = { owner: "philipbrett007-stack", repo: "daily-idea", branch: "status", path: "status/unread.json" };
+  let gh = store.get(KEYS.gh, null);   // { token, sha, sent: { unread, at }, error }
+  function ghFetch(method, body, keepalive) {
+    const url = "https://api.github.com/repos/" + GH.owner + "/" + GH.repo + "/contents/" + GH.path + (method === "GET" ? "?ref=" + GH.branch : "");
+    const headers = { Authorization: "Bearer " + gh.token, Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" };
+    if (body) headers["Content-Type"] = "application/json";
+    return fetch(url, { method, headers, body: body ? JSON.stringify(body) : undefined, keepalive: !!keepalive, cache: "no-store" });
+  }
+  async function reportUnread(opts) {
+    opts = opts || {};
+    if (!gh || !gh.token || !index || !index.days.length) return { ok: false };
+    const unread = unreadCount(), now = Date.now();
+    if (!opts.force && gh.sent && gh.sent.unread === unread && now - gh.sent.at < 6 * 3600e3) return { ok: true };
+    const report = { unread, total: totalCount(), latest_day: index.latest, reported_at: new Date(now).toISOString() };
+    const content = btoa(JSON.stringify(report, null, 1) + "\n");
+    const put = (sha) => ghFetch("PUT", Object.assign({ message: "Unread: " + unread, content, branch: GH.branch }, sha ? { sha } : {}), opts.keepalive);
+    try {
+      let r = await put(gh.sha);
+      if ((r.status === 409 || r.status === 422) && !opts.keepalive) {   // our copy of the file version is stale: fetch it and retry
+        const g = await ghFetch("GET");
+        r = await put(g.ok ? (await g.json()).sha : null);
+      }
+      if (!r.ok) { gh.error = r.status === 401 || r.status === 403 || r.status === 404 ? "key" : "other"; store.set(KEYS.gh, gh); return { ok: false, status: r.status }; }
+      try { const j = await r.json(); if (j.content && j.content.sha) gh.sha = j.content.sha; } catch (_) { /* page closing */ }
+      gh.sent = { unread, at: now }; delete gh.error; store.set(KEYS.gh, gh);
+      return { ok: true };
+    } catch (_) { return { ok: false, offline: true }; }
+  }
+
+  function ago(ms) {
+    const m = Math.round((Date.now() - ms) / 60000);
+    return m < 1 ? "just now" : m < 60 ? m + " min ago" : m < 1440 ? Math.round(m / 60) + " h ago" : Math.round(m / 1440) + " days ago";
+  }
+  function renderSettings() {
+    const st = $("#gh-status"), linked = !!(gh && gh.token);
+    $("#gh-form").hidden = linked; $("#gh-linked").hidden = !linked;
+    st.className = "gh-status";
+    if (!linked) { st.textContent = "Not linked. The 7:40 task adds 5 ideas every morning."; return; }
+    if (gh.error === "key") { st.classList.add("bad"); st.textContent = "GitHub didn't accept the key. It may have expired or lack Contents: Read and write. Unlink and add a new one."; return; }
+    st.classList.add("good");
+    st.textContent = gh.sent
+      ? "Linked. Last sent " + ago(gh.sent.at) + ": " + plural(gh.sent.unread, "idea") + " unread, so the next 7:40 run will " + (gh.sent.unread > 10 ? "skip the day." : "add 5.")
+      : "Linked. Your unread count will be sent shortly.";
+  }
+  const sheet = $("#sheet");
+  $("#settings").addEventListener("click", () => { renderSettings(); sheet.showModal(); });
+  $("#sheet-close").addEventListener("click", () => sheet.close());
+  sheet.addEventListener("click", (e) => { if (e.target === sheet) sheet.close(); });
+  $("#gh-link").addEventListener("click", async () => {
+    const token = $("#gh-token").value.trim();
+    if (!/^(github_pat_|ghp_)[\w]{20,}$/.test(token)) { toast("That doesn't look like a GitHub token"); return; }
+    const btn = $("#gh-link"); btn.disabled = true; btn.querySelector("span").textContent = "Linking…";
+    gh = { token }; store.set(KEYS.gh, gh);
+    const r = await reportUnread({ force: true });
+    btn.disabled = false; btn.querySelector("span").textContent = "Link";
+    if (r.ok) { $("#gh-token").value = ""; toast("Linked"); }
+    else if (r.offline) toast("You're offline. Try again when connected.");
+    else { gh = null; store.set(KEYS.gh, null); toast("GitHub didn't accept that key. Check step 4 and try again."); }
+    renderSettings();
+  });
+  $("#gh-send").addEventListener("click", async () => { const r = await reportUnread({ force: true }); toast(r.ok ? "Sent" : "Couldn't send. Check your connection."); renderSettings(); });
+  $("#gh-unlink").addEventListener("click", () => { gh = null; store.set(KEYS.gh, null); toast("Unlinked. Delete the key on GitHub too if you like."); renderSettings(); });
+
   /* ---------- views & loading ---------- */
   function show(name) {
     if (name === "mind" && view !== "mind" && mindReady()) mindWeek = "last";  // a fresh report opens first
@@ -950,6 +1016,7 @@
     }
     rb.classList.remove("spin");
     updateMindNudges();
+    reportUnread();
     await renderToday();
     if (view === "archive") renderArchive();
   }
@@ -957,7 +1024,10 @@
   document.querySelectorAll(".tab").forEach((t) => t.addEventListener("click", () => show(t.dataset.view)));
   $("#another").addEventListener("click", newIdea);
   $("#refresh").addEventListener("click", () => load(true));
-  document.addEventListener("visibilitychange", () => { if (!document.hidden && Date.now() - lastLoad > 15 * 60 * 1000) load(false); });
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) { reportUnread({ keepalive: true }); return; }   // leaving the app: send the latest unread count
+    if (Date.now() - lastLoad > 15 * 60 * 1000) load(false);
+  });
   window.addEventListener("online", () => load(false));
 
   window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); deferredInstall = e; $("#install").hidden = false; });

@@ -24,6 +24,14 @@ git merge --no-edit origin/main
 
 If the merge conflicts, run `git merge --abort`, carry on without it, and mention it in step 9.
 
+**Skip the day if Phil already has plenty to read (MORNING runs only).** His phone app reports how many ideas he hasn't opened yet:
+
+```
+git fetch origin status 2>/dev/null; git show origin/status:status/unread.json 2>/dev/null
+```
+
+If that prints a report, estimate his unread ideas now: its `unread`, plus the number of ideas in `ideas/index.json` on days after its `latest_day`. If the estimate is more than 10, stop straight away: no research, no push, no message, no status report. If there's no report, carry on as normal.
+
 ## 2. Themes
 
 - Monday — Thinking tools: mental models, decision-making, cognitive biases, probability
