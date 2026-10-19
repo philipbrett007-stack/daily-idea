@@ -1,0 +1,581 @@
+{
+ "date": "2026-10-19",
+ "generated_at": "2026-10-19T07:55:00+01:00",
+ "ideas": [
+  {
+   "id": "1",
+   "featured": true,
+   "theme": "Thinking tools",
+   "title": "Ask how similar projects actually went",
+   "idea": "When you plan something, you naturally look at its details: the steps, the people, the obstacles you can foresee. Daniel Kahneman and Amos Tversky called this the inside view, and it is reliably too optimistic, because it can only count the problems you can imagine. The outside view does the opposite. You ignore the particulars at first and ask what happened to similar projects in the past: how long did they take, what did they cost, how many never finished? Start from that record, then adjust for what is genuinely different about your case.\n\nKahneman's own example is a school curriculum he helped design in Israel. Everyone on the team, including him, guessed about two years. When he finally asked a colleague with experience of similar projects, the honest answer was far gloomier. It took eight. The unsettling part is that he already had the information; it just never occurred to anyone to use it until asked.",
+   "deep_dive": "The distinction comes from Kahneman and Tversky's work in the 1970s on forecasting and the planning fallacy. Kahneman tells the curriculum story in Thinking, Fast and Slow and in a McKinsey Quarterly interview. After about a year of work, each team member wrote down how long a complete draft would take. The guesses ran from 18 to 30 months. Then Kahneman asked Seymour Fox, the curriculum expert on the team, to recall similar teams at the same stage. The real project took eight, and the ministry had lost interest by the time it was done.\n\nThe Danish planning scholar Bent Flyvbjerg turned this into a working method, reference class forecasting. You pick a class of comparable past projects, build a distribution of their outcomes (for example cost overrun), and place your project within it. The more your project resembles the class, the more weight the class deserves. Flyvbjerg's approach was taken up in UK appraisal guidance in the early 2000s, which gave planners standard percentage uplifts for optimism bias.\n\nIt has limits. A reference class is only as good as its data, and choosing it is a judgement: a bridge may belong with bridges, tunnels or all megaprojects, and each gives a different answer. Truly novel projects have no good class. And the method corrects the numbers, not the incentives; if sponsors gain from low estimates, they may simply argue about which class applies. Used well, it is a starting point for a harder conversation, not a final answer.",
+   "examples": [
+    {
+     "title": "The curriculum that took eight years",
+     "text": "In the 1970s Kahneman worked with a team, including the Hebrew University dean Seymour Fox, on a decision-making curriculum for Israeli schools. A year in, members estimated 18 to 30 months to a full draft. Asked about comparable teams, Fox said many never finished and the rest took seven to ten years. Kahneman says the team noted this and carried on regardless. The textbook took eight years and, by then, the ministry's enthusiasm had faded and it was not used. The case shows the inside view winning even when the outside view was sitting in the room.",
+     "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniel_Kahneman_(3283955327).jpg?width=1000",
+      "caption": "Daniel Kahneman, whose curriculum-planning story is the classic illustration of the inside view versus the outside view.",
+      "credit": "nrkbeta / CC BY-SA 2.0, via Wikimedia Commons",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Daniel_Kahneman_(3283955327).jpg"
+     }
+    },
+    {
+     "title": "HM Treasury's optimism bias uplifts",
+     "text": "The UK Treasury's Green Book acknowledges that appraisers are systematically over-optimistic. Supplementary guidance, based on a 2002 Mott MacDonald review of past public projects, sets upper-bound capital cost uplifts by type: 24 per cent for standard buildings, 44 per cent for standard civil engineering, 51 per cent for non-standard buildings and 66 per cent for non-standard civil engineering. Planners start from these figures and may reduce them only where they can show that specific risks have been managed. The figures reflect average historic overruns at outline business case stage, so earlier stages may need more."
+    },
+    {
+     "title": "Edinburgh trams, a method meeting reality",
+     "text": "In 2004 Flyvbjerg and the consultancy Cowi built a reference class of 46 rail projects with the UK Department for Transport; Edinburgh Tram Line 2 was an early practical use of the method. Later the Edinburgh Tram Inquiry heard Flyvbjerg's evidence that the main tram contract was let with an optimism bias allowance of zero per cent, on the grounds that all risks were known. The line from the airport to Newhaven was first budgeted at £545 million; the shorter airport to York Place line that opened in 2014 had a best-estimate cost of £835.7 million. The council disputed his framing."
+    },
+    {
+     "title": "The Olympics as a reference class",
+     "text": "A 2016 Oxford study by Flyvbjerg and colleagues looked at cost data for 19 of the 30 Summer and Winter Games held since 1960. It found an average overrun of 156 per cent in real terms, the highest of any megaproject type they had studied. For comparison, reported averages for roads were around 20 per cent, rail 45 per cent and IT projects 107 per cent. The authors recommend that future host cities base their budgets on previous Games' actual costs rather than on a bottom-up estimate of their own bid."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniel_Kahneman_(3283955327).jpg?width=1000",
+     "caption": "Daniel Kahneman, whose curriculum-planning story is the classic illustration of the inside view versus the outside view.",
+     "credit": "nrkbeta / CC BY-SA 2.0, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Daniel_Kahneman_(3283955327).jpg"
+    }
+   ],
+   "why": [
+    "Kahneman's anecdote is one team's story told from memory, but Flyvbjerg's data on large infrastructure projects is extensive and consistent: overruns are the norm, not the exception.",
+    "UK government guidance has used reference-class uplifts since the early 2000s, though the Edinburgh trams show that having the method does not guarantee it is applied.",
+    "The main limit is choosing the reference class, and novel projects may have no good one."
+   ],
+   "try_this": "Think of something you are planning with a deadline. Before estimating it, list three similar things you or others have done and how long each actually took. Does your usual estimate survive that comparison?",
+   "sources": [
+    {
+     "title": "Daniel Kahneman: Beware the inside view — McKinsey Quarterly",
+     "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/daniel-kahneman-beware-the-inside-view"
+    },
+    {
+     "title": "Report for the Edinburgh Tram Inquiry — Bent Flyvbjerg",
+     "url": "https://arxiv.org/pdf/1805.12106"
+    },
+    {
+     "title": "The Oxford Olympics Study 2016: Cost and Cost Overrun at the Games — Flyvbjerg, Stewart and Budzier",
+     "url": "https://arxiv.org/pdf/1607.04484"
+    },
+    {
+     "title": "Optimism bias guidance (Green Book supplementary tables) — NHS Wales Specialist Estates Services",
+     "url": "https://nwssp.nhs.wales/ourservices/specialist-estates-services/specialist-estates-services-documents/ircf-business-case-and-scrutiny-guidance-misc-docs/optimism-bias/"
+    }
+   ]
+  },
+  {
+   "id": "2",
+   "featured": false,
+   "theme": "Thinking tools",
+   "title": "Imagine the plan failed, then explain why",
+   "idea": "A premortem asks a team to do something that feels slightly perverse: before a project starts, imagine it is a year later and the project has failed completely, then write down why. The psychologist Gary Klein proposed the technique in the Harvard Business Review in 2007, as a counterweight to the optimism and quiet self-censorship that creep into planning meetings. Once a plan has momentum, doubting it feels disloyal, so people with reservations stay silent. The premortem changes the job. Failure is treated as a given, so naming a weakness is no longer an attack on the plan; it is the task. Because the failure is imagined as already having happened, people also tend to come up with more concrete, specific causes than when they are asked what might go wrong. Someone who suspects a weakness finally has permission to say so, while fixing it is still cheap.",
+   "deep_dive": "Klein built the idea on an older finding. In 1989 the psychologists Deborah Mitchell, Jay Russo and Nancy Pennington reported in the Journal of Behavioral Decision Making that people asked to explain an event as if it had already happened (\"prospective hindsight\") generated roughly 30 per cent more reasons than people asked to consider what might happen. Klein took that effect and turned it into a short group exercise: describe the plan, ask everyone to imagine it has failed, give them a few minutes to write down every reason they can think of, then go round the room collecting one reason at a time until the list is exhausted. The team then revises the plan to deal with the most serious items.\n\nIt is worth being precise about what the evidence shows. The 30 per cent figure measured the number of reasons produced, not how accurate or important they were, so claims that premortems find 30 per cent more of the real risks go further than the study. The most direct test of the technique itself, by Veinott, Klein and Wiggins in 2010, was a small experiment with students and found that the premortem lowered confidence in a plan more than a standard critique or a pros-and-cons list. Lower confidence is not the same as better outcomes, and independent research on premortems is thin.\n\nIts value is therefore best understood as social as much as cognitive: it makes dissent safe and routine. It works best before commitment, when the plan can still change. It does little if a decision has already been made for other reasons.",
+   "examples": [
+    {
+     "title": "The algorithm that would not fit on laptops",
+     "text": "In his 2007 Harvard Business Review article, Klein described a premortem on a project to put advanced algorithms into the hands of air-campaign planners. One team member had said nothing throughout the kickoff. When asked to explain a future failure, he pointed out that one of the algorithms would not run quickly enough on the laptops used in the field. The developers already knew of a shortcut but had been reluctant to mention it. It was substituted into the plan, and the project went on to succeed. The exercise had not produced new analysis so much as given someone permission to speak."
+    },
+    {
+     "title": "Health-care teams plan for failure in advance",
+     "text": "The US Agency for Healthcare Research and Quality includes a premortem in its CUSP patient-safety programme for hospital units. The facilitator's script asks the team to imagine it is two years on and, despite everyone's efforts, the programme has failed on their unit. People work alone for about ten minutes, then share one reason each, going round the room until none remain. The team ranks the list and addresses the top two or three concerns, then revisits it during the programme. It is a deliberate, institutional use of Klein's method, built into a standard toolkit."
+    },
+    {
+     "title": "Does imagining failure lower confidence?",
+     "text": "In 2010 Elizabeth Veinott, Gary Klein and Sarah Wiggins tested the technique on 178 university students who assessed a university's plan for handling an H1N1 outbreak. Different groups used a standard critique, a pros-and-cons list, a cons-only list or a premortem, in which they imagined the plan had failed and wrote down why. Confidence in the plan fell most in the premortem group, by about twice as much as with the pros-and-cons or cons-only approaches, according to summaries of the paper. The study was small and used students, but it is the main experimental support for the premortem itself."
+    }
+   ],
+   "images": [],
+   "why": [
+    "The underlying effect (more reasons generated under prospective hindsight) comes from a 1989 peer-reviewed study, but it counted reasons, not their quality.",
+    "Direct evidence for the premortem is limited to small studies such as Veinott and colleagues (2010, 178 students); the field accounts are largely Klein's own.",
+    "It helps most before a plan is locked in; it is weaker where the decision has effectively been made."
+   ],
+   "try_this": "Pick a plan you are about to commit to this week. Spend five minutes writing, as if it had already happened, the reasons it failed. Which reason would you least like to say aloud, and what is the cheapest way to deal with it now?",
+   "sources": [
+    {
+     "title": "Performing a Project Premortem — Gary Klein / Harvard Business Review, 2007",
+     "url": "https://www.researchgate.net/publication/3229642_Performing_a_Project_Premortem"
+    },
+    {
+     "title": "Premortem Tool — AHRQ Safety Program for Mechanically Ventilated Patients",
+     "url": "https://www.ahrq.gov/hai/tools/mvp/modules/cusp/premortem-tool.html"
+    },
+    {
+     "title": "The premortem — Jason Collins",
+     "url": "https://corporate.jasoncollins.blog/premortem"
+    },
+    {
+     "title": "Pre-mortem — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Pre-mortem"
+    }
+   ]
+  },
+  {
+   "id": "3",
+   "featured": false,
+   "theme": "Science & nature",
+   "title": "Peto's paradox: why giants rarely get cancer",
+   "idea": "Every cell division carries a small chance of a cancer-causing mutation. So an animal with a thousand times more cells, living many times longer, ought to be far more likely to develop cancer. Yet across species it does not work that way. Whales and elephants are not riddled with tumours, and a mouse is not safer than a human. This puzzle is called Peto's paradox, after the epidemiologist Richard Peto, who noticed it in the 1970s. The most likely answer is that evolution has repeatedly strengthened cancer defences in big, long-lived animals, because without them they would never have reached that size. Elephants are the best-studied case: they carry around 20 copies of TP53, a gene that tells damaged cells to die rather than divide. A human has one. The explanation is still argued over, but it shows cancer is not just bad luck accumulating: it is a risk that bodies are built to manage.",
+   "deep_dive": "Peto's point, made in the 1970s, came from comparing mice and people. A human has roughly a thousand times more cells than a mouse and lives about thirty times longer, so if cancer simply tracked the number of cell divisions, humans would get it constantly. In practice lifetime cancer rates are similar in the two species. Peto's observation was about mice and humans; the broader claim is that this holds across species. A 2022 analysis in Nature by Orsolya Vincze and colleagues, using records for more than 100,000 zoo animals from 191 species, found that cancer incidence was independent of body size and adult life expectancy.\n\nThe natural explanation is natural selection. An animal that grows to four tonnes without strong tumour suppression would tend not to survive to breed, so the lineages that became large are the ones that also evolved extra protection. In elephants, two teams reported in 2015 and 2016 that the genome has about 20 copies of TP53 (one full gene and 19 retrogenes, which are copies made from the gene's messenger RNA). Elephant cells in the JAMA study died more readily after DNA damage than human cells did. Other animals appear to have taken different routes. The bowhead whale, which may live beyond 200 years, shows changes in DNA repair genes rather than extra TP53.\n\nThere are limits. The TP53 evidence is correlational and the cell experiments used small samples. A 2022 re-evaluation by Leonard Nunney questioned how the retrogenes work, and a 2025 paper argued there is no clear evidence for the paradox in land vertebrates at all. The sensible reading is that the paradox is a useful question, not a settled law.",
+   "examples": [
+    {
+     "title": "Elephant cells and the extra TP53 copies",
+     "text": "In 2015 a team led by Joshua Schiffman at the University of Utah, with Carlo Maley's group, published a study in JAMA. From zoo records they estimated that about 4.8 per cent of elephants die of cancer, against 11 to 25 per cent of humans. They found at least 20 copies of TP53 in African elephants. After radiation damage, elephant white blood cells died by apoptosis at a much higher rate, about 14.6 per cent, than human control cells at about 7.2 per cent. The lab groups were small, with eight elephants, so the authors were cautious about what it proves."
+    },
+    {
+     "title": "The bowhead whale genome",
+     "text": "In 2015 Joao Pedro de Magalhaes's group at Liverpool and colleagues published the first bowhead whale genome in Cell Reports. Bowheads, which are thought to live for over 200 years, are huge and Arctic. The team found changes in genes involved in DNA repair, cell cycle control and ageing, including mutations in ERCC1 and duplications of PCNA. These are candidate explanations only. Nobody has yet shown that those variants are what protects the whales, but the work suggests that a different animal has found a different solution from the elephant."
+    },
+    {
+     "title": "A hundred thousand zoo animals",
+     "text": "Rather than rely on a few famous species, Vincze and colleagues in 2022 drew on veterinary records from zoos worldwide. They covered more than 100,000 animals from 191 mammal species. They found that species of greater size, or with longer lives, did not get cancer more often. This is the sort of broad check Peto's idea needed. It is also why later authors dispute it: a 2025 paper using other data argued that the paradox is not supported in land vertebrates, so the debate is live."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bowhead_Whale_NOAA.jpg?width=1000",
+     "caption": "A bowhead whale in Arctic waters; the species may live for more than 200 years.",
+     "credit": "NOAA, public domain, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Bowhead_Whale_NOAA.jpg"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/African_Bush_Elephants.jpg?width=1000",
+     "caption": "African bush elephants, whose genome holds around 20 copies of the TP53 tumour suppressor gene.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:African_Bush_Elephants.jpg"
+    }
+   ],
+   "why": [
+    "Two independent 2015-16 genetic studies (Abegglen et al. in JAMA; Sulak et al. in eLife) found about 20 TP53 copies in elephants, and a 2022 Nature study of 191 species supports the broader pattern.",
+    "Caveats: the cell experiments used few animals, the retrogene mechanism is debated, and some later analyses dispute the paradox itself in land vertebrates."
+   ],
+   "try_this": "Think of one risk in your own work that you assume grows in proportion to size or time. What defences has it quietly built up that make the simple multiplication wrong?",
+   "sources": [
+    {
+     "title": "Potential Mechanisms for Cancer Resistance in Elephants and Comparative Cellular Response to DNA Damage in Humans — Abegglen et al. / JAMA",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26447779/"
+    },
+    {
+     "title": "TP53 copy number expansion is associated with the evolution of increased body size and an enhanced DNA damage response in elephants — Sulak et al. / eLife",
+     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5061548/"
+    },
+    {
+     "title": "Insights into the Evolution of Longevity from the Bowhead Whale Genome — Keane et al. / Cell Reports",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4536333"
+    },
+    {
+     "title": "Peto's paradox revisited: black box vs mechanistic approaches — review in PMC (covers Peto's original mouse-human comparison and Vincze et al. 2022)",
+     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10757908/"
+    }
+   ]
+  },
+  {
+   "id": "4",
+   "featured": false,
+   "theme": "Science & nature",
+   "title": "Were we ever meant to sleep once?",
+   "idea": "The idea that a good night is eight unbroken hours may be a recent habit rather than a biological rule. The historian Roger Ekirch argues that in pre-industrial Britain and much of Europe, people commonly slept in two parts: a \"first sleep\" soon after dark, an hour or two awake, then a \"second sleep\" until morning. The waking spell was ordinary, not a problem. People prayed, talked, tended the fire, checked animals or simply lay thinking. In 1992 the psychiatrist Thomas Wehr gave volunteers long, dark winter-style nights and found that their sleep split in a similar way.\n\nThe useful point is not that we should copy the Middle Ages. It is that waking in the small hours may not always be a malfunction, and that the worry about it can make it worse. The caveat matters too: the historical reading is disputed, and studies of people living without electricity show a more mixed picture than the tidy story suggests.",
+   "deep_dive": "Ekirch first met the pattern in a 1697 legal record that mentioned a person's \"first sleep\". He kept looking and, in his 2001 paper \"Sleep We Have Lost\" and his 2005 book At Day's Close, set out references to first and second sleep in diaries, court records, medical texts, prayer books and literature, going back as far as Homer's Odyssey. Counts vary between accounts, from several hundred to over two thousand across a dozen languages, so treat any single number with care. He argues that the second sleep shrank from the late seventeenth century onwards as artificial light spread, and that consolidated sleep was the norm by the early nineteenth century.\n\nThe laboratory evidence comes from Thomas Wehr at the US National Institute of Mental Health. In a 1992 paper, \"In short photoperiods, human sleep is biphasic\", healthy volunteers were moved from a 16-hour day to a 10-hour one, so they had 14 hours of darkness. Their sleep lengthened and usually divided into two bouts of several hours with a waking interval of one to three hours. Wehr suggested this might reflect an older, more natural pattern. Accounts differ on the exact number of men and the length of the study, so I have not quoted them here.\n\nThe limits are real. In 2023 the historian Niall Boyce argued in Medical History that the phrases \"first sleep\" and \"second sleep\" were not fixed in meaning, and that the evidence is ambiguous. Ekirch replied that this reading is selective. The sleep scientist Jerome Siegel and colleagues found no segmented sleep in three hunter-gatherer groups. Wehr's volunteers were also in an artificial setting. A fair summary is that segmented sleep was probably common in some places and periods, but not proven to be universal or \"natural\".",
+   "examples": [
+    {
+     "title": "Wehr's long nights at the NIH",
+     "text": "In the early 1990s Thomas Wehr and colleagues at the US National Institute of Mental Health took healthy volunteers from a normal 16-hour day to a 10-hour day, leaving 14 hours of darkness. After an initial period of catching up on sleep, their nights tended to split into two symmetrical bouts of several hours, with one to three hours of quiet wakefulness between them. The result appeared in 1992. It does not prove that this is humanity's default, but it shows that, given long dark nights and little to do, the body can settle into two sleeps."
+    },
+    {
+     "title": "A rural village in Madagascar",
+     "text": "In a 2017 paper in the American Journal of Human Biology, David Samson and colleagues studied 21 adults in a small farming community in Madagascar with no electricity. They tracked 292 days of sleep with wrist monitors, and recorded the first full polysomnography from a traditional population. Sleep was segmented, which fits the historical pattern, and daytime napping appeared on 88 per cent of days. But sleep was also shorter and poorer than in industrial comparison groups, with 162 minutes awake after sleep onset on average. Segmented does not mean restful."
+    },
+    {
+     "title": "Hadza, San and Tsimane: a counterpoint",
+     "text": "In 2015, Gandhi Yetish and colleagues reported on sleep in three societies without electricity: the Hadza of Tanzania, the San of Namibia and the Tsimane of Bolivia. Average sleep was about 6.4 hours, people fell asleep around three hours after sunset, and napping was rare. The authors did not describe a two-part night. Ekirch has questioned how far these findings undercut his case, and Siegel has argued that such data outweigh anecdotes in old records. The disagreement is why the idea should be held loosely."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Medieval_Bed_and_Bedroom.jpg?width=1000",
+     "caption": "An 1893 furniture-history illustration of a French medieval bedroom, the kind of shared, dim space in which a night might be broken into two sleeps.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Medieval_Bed_and_Bedroom.jpg"
+    }
+   ],
+   "why": [
+    "Evidence is strongest for the documentary record in Britain and Ireland, where Ekirch found many references to a first and second sleep, and for Wehr's small laboratory study.",
+    "Caveats: Boyce (2023) argues the historical wording is ambiguous, and a 2015 study of three hunter-gatherer groups found single-block sleep. Madagascar data show segmentation but also poor sleep.",
+    "It is not medical advice. If broken sleep distresses you, speak to a doctor."
+   ],
+   "try_this": "If you wake in the night, try treating it as a quiet interval rather than a failure: no clock-checking, dim light, a few calm minutes, and notice whether the worry about it shrinks.",
+   "sources": [
+    {
+     "title": "Sleep We Have Lost: Pre-Industrial Slumber in the British Isles — A. Roger Ekirch / American Historical Review",
+     "url": "https://www.researchgate.net/publication/23149933_Sleep_We_Have_Lost_Pre-Industrial_Slumber_in_the_British_Isles"
+    },
+    {
+     "title": "In short photoperiods, human sleep is biphasic — Thomas Wehr / Journal of Sleep Research",
+     "url": "https://www.semanticscholar.org/paper/8c58170ccbcdbfafa95cd1ef967652ed48b40b71"
+    },
+    {
+     "title": "Natural Sleep and Its Seasonal Variations in Three Pre-industrial Societies — Yetish et al. / Current Biology",
+     "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(15)01157-4"
+    },
+    {
+     "title": "Segmented sleep in a nonelectric, small-scale agricultural society in Madagascar — Samson et al. / American Journal of Human Biology",
+     "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ajhb.22979"
+    }
+   ]
+  },
+  {
+   "id": "5",
+   "featured": false,
+   "theme": "Psychology & behaviour",
+   "title": "Fresh starts: why Mondays feel like beginnings",
+   "idea": "People are more likely to start something new when the calendar offers a clean break. Hengchen Dai, Katy Milkman and Jason Riis call this the fresh start effect. Dates such as the first day of a week, a month, a semester or a year, or a birthday, mark a boundary between the person you were and the person you plan to be. Past slips get filed under the old period, which makes a new attempt feel more believable. In their 2014 study, Google searches for 'diet', visits to a university gym and public commitments to goals all rose after these landmarks, and not only in January. The practical point is that motivation is not spread evenly through the year. It clusters around moments that feel like beginnings, and those moments can be borrowed. A Monday, the first of the month or your own birthday can do the job, though a burst of enthusiasm does not guarantee the habit lasts.",
+   "deep_dive": "Dai, Milkman and Riis published 'The Fresh Start Effect: Temporal Landmarks Motivate Aspirational Behavior' in Management Science in 2014. They combined three sets of archival data: Google search volume for the word 'diet', attendance records from a university gym, and goal commitments made on the website stickK. In each, the behaviour rose after landmarks such as the start of a week, month, year or semester, or a birthday. The authors' explanation is a kind of mental accounting. Landmarks cut time into new periods and push past failings into a closed one, and they also lift attention from daily detail to the bigger picture.\n\nThe strongest causal test came later. In 2021, Beshears, Dai, Milkman and Benartzi reported a randomised field experiment with 6,082 university employees, published in Organizational Behavior and Human Decision Processes. Mailings that tied a future savings increase to a fresh start, such as a birthday or the first day of spring, made people more likely to choose it. Mailings tied to Thanksgiving or Valentine's Day, which are not usually seen as beginnings, did not help.\n\nThere are limits. The 2014 data are observational, so other explanations cannot be fully excluded; one blogger has suggested regression to the mean, which is a secondary opinion rather than a formal rebuttal. I found no independent replication, and the later field experiment came from the same research group. Fresh starts also do not always help: experiments summarised by Psychology Today in 2018 found that a reset can aid performance after failure but hurt it after success. And a surge of motivation at the start says little about whether the habit survives the second week.",
+   "examples": [
+    {
+     "title": "Birthday-framed savings letters at a university",
+     "text": "In the Beshears, Dai, Milkman and Benartzi experiment, 6,082 university employees received mailings offering a choice: raise their savings-plan contributions now, or at a later point. For some, the later point was framed as a fresh start, such as the recipient's next birthday or the first day of spring. Those mailings made people more likely to choose the future increase, without reducing the number choosing an immediate one. Coverage of the study reports roughly 25% more cumulative contributions over the following eight months than from other mailings. Mailings tied to Thanksgiving or Valentine's Day had no such effect."
+    },
+    {
+     "title": "Diet searches, gym visits and stickK goals",
+     "text": "Dai, Milkman and Riis studied what people did without being prompted. Searches for 'diet' rose around New Year, but also at the start of the week, the start of the month and after national holidays. At a university gym, card-reader records showed attendance rising around landmarks such as the start of a week or semester and after a birthday. Commitments on the goal-setting site stickK followed a similar pattern. Nobody was nudged: the clean-break pattern simply showed up in ordinary behaviour, which is why the finding reaches well beyond New Year resolutions."
+    },
+    {
+     "title": "When wiping the slate backfires",
+     "text": "Four experiments, summarised by Psychology Today in 2018, tested what happens when a fresh start is imposed rather than chosen. In the first, participants were paid per correct word in a word game, and one group had their last five rounds scored from zero. The reported conclusion was that a reset helps after a failure but can make performance worse when the earlier results were good. The everyday lesson is that a clean slate suits a bad run, not a good one. The summary does not name the authors, so treat the details as secondary."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Postcards2CardsNewYearsResolution1915.jpg?width=1000",
+     "caption": "Two New Year's resolution postcards from the early twentieth century, a reminder that the calendar has long been used as a prompt to start afresh.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Postcards2CardsNewYearsResolution1915.jpg"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New-Year_Resolutions_list.jpg?width=1000",
+     "caption": "A pen-and-paper list of New Year's resolutions: the best-known fresh start, though the research shows it is far from the only one.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:New-Year_Resolutions_list.jpg"
+    }
+   ],
+   "why": [
+    "The 2014 paper draws on three archival datasets (Google searches, a university gym, stickK), and a 2021 randomised field experiment with 6,082 university employees supports it.",
+    "Caveat: the first evidence is observational, I found no independent replication, and the later experiment came from the same group.",
+    "A fresh start can lift the first step without making the habit last, and resets can hurt after success."
+   ],
+   "try_this": "Pick one thing you keep putting off and attach it to the next landmark, such as the first of next month, a Monday or your birthday. Then ask honestly whether the landmark is doing real work, or whether you could simply start today.",
+   "sources": [
+    {
+     "title": "The Fresh Start Effect: Temporal Landmarks Motivate Aspirational Behavior — Dai, Milkman & Riis / Management Science",
+     "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2014/06/Dai_Fresh_Start_2014_Mgmt_Sci.pdf"
+    },
+    {
+     "title": "How 'Fresh Start' Framing Can Boost Retirement Savings — ASPPA / Penn CHIBE",
+     "url": "https://chibe.upenn.edu/news/asppa-how-fresh-start-framing-can-boost-retirement-savings"
+    },
+    {
+     "title": "Need a Fresh Start? Here's How to Begin — Knowledge at Wharton",
+     "url": "https://knowledge.wharton.upenn.edu/article/need-fresh-start-heres-begin/"
+    },
+    {
+     "title": "The Unexpected Science of Fresh Starts and Failures — Psychology Today",
+     "url": "https://www.psychologytoday.com/ca/blog/ritual-and-the-brain/201811/the-unexpected-science-of-fresh-starts-and-failures"
+    }
+   ]
+  },
+  {
+   "id": "6",
+   "featured": false,
+   "theme": "Psychology & behaviour",
+   "title": "You understand less than you think",
+   "idea": "Ask yourself how well you understand a zip. Most people say fairly well. Now write out, step by step, how it actually works. Somewhere around the second sentence you notice the gap: you know what a zip does, not how it does it. That sudden drop in confidence is the illusion of explanatory depth, named by Leonid Rozenblit and Frank Keil at Yale in 2002.\n\nThe illusion appears because familiar things feel understood. You can use a zip, a toilet or a bicycle without fault, and the ease of use, plus the fact that you can see the parts, is mistaken for knowing the mechanism. The feeling of understanding is cheap, and it only gets tested when you are made to explain.\n\nThe practical lesson is a test, not a scolding: before you trust a feeling of understanding, try to explain the thing from start to finish, out loud or on paper.",
+   "deep_dive": "Rozenblit and Keil, writing in Cognitive Science in 2002, asked participants to rate how well they understood everyday devices such as zips, flush toilets, piano keys and cylinder locks. They then asked them to write detailed explanations, gave them a correct account, and asked them to rate themselves again. Ratings fell, often sharply. The drop was much smaller for other kinds of knowledge, such as facts (the capital of a country) or procedures (how to bake a cake), where people can tell more easily whether they know the answer. It persisted in other groups of people, and warning people in advance that they would have to explain reduced it but did not remove it.\n\nThe likely mechanism is that we confuse levels of understanding. We know what a device is for, what it looks like and how to operate it, and that high-level knowledge feels like depth. Because the world itself holds much of the detail, we rarely need to carry it in our heads, so we rarely find out that it is missing.\n\nThe idea was extended to politics. In 2013 Philip Fernbach, Todd Rogers, Craig Fox and Steven Sloman found that asking people to explain how a policy would work, rather than why they favoured it, lowered their confidence and moderated their stated views.\n\nHere honesty matters. The core finding, that explaining lowers confidence in your understanding, has replicated repeatedly. The political moderation effect has not: a preregistered replication by Crawford and Ruscio in 2021 found no significant moderation, and Sloman and Vives (2022) found it only for issues argued on consequences, not on deeply held values.",
+   "examples": [
+    {
+     "title": "Explaining policies, not defending them",
+     "text": "In the 2013 experiments reported in Psychological Science, Fernbach and colleagues asked US participants to rate their understanding of policies such as cap-and-trade or a flat tax. Some then wrote a step-by-step account of how the policy would produce its effects. Their confidence in their own understanding fell, and their attitudes became more moderate. Others merely listed reasons for their view and showed no such change. In a further experiment, people who had explained a policy gave less money to related advocacy groups. The authors argued that the confidence behind polarised views partly rests on shallow causal models."
+    },
+    {
+     "title": "Strong opponents of GM food",
+     "text": "In a 2019 study in Nature Human Behaviour, Fernbach and colleagues surveyed over 2,000 adults in the United States, France and Germany. The more strongly people opposed genetically modified food, the better they thought they understood it, yet the worse they scored on a test of actual science and genetics knowledge. The same pattern appeared for gene therapy but not for climate change denial, which the authors linked to its stronger political polarisation. They suggested that education may work only after people first notice the limits of what they know."
+    },
+    {
+     "title": "The toilet and the zip, again",
+     "text": "Fernbach, co-author of The Knowledge Illusion, opens his TEDxMileHigh talk on this subject with a diagram of a toilet and asks the audience whether they could explain how it works. The point matches the original 2002 experiment, where flush toilets and zips were among the items that people rated as well understood and then struggled to describe. It is a test anyone can run at home: try describing, without looking, what happens inside the cistern when you press the handle and why the water stops."
+    },
+    {
+     "title": "Replications that tested the political claim",
+     "text": "Science has also applied the idea to itself. In 2021 Crawford and Ruscio ran a preregistered replication of the policy-explanation experiment and found that asking people to explain complex policies did not significantly increase moderation. In 2022 Sloman and Vives, with more current issues, found that explanation lowered both understanding and extremity only for consequence-based issues, not for issues tied to protected values. The humility effect held up, while the political effect proved narrower than first claimed."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zipper_slider.gif?width=1000",
+     "caption": "A zip slider in action: familiar enough to use without thinking, yet most people cannot explain how it meshes the teeth.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Zipper_slider.gif"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistern_Flush_Toilet_diagram.svg?width=1000",
+     "caption": "A cistern flush toilet diagram, the kind of everyday mechanism people feel they understand until asked to explain it.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Cistern_Flush_Toilet_diagram.svg"
+    }
+   ],
+   "why": [
+    "The central effect, that explaining a mechanism lowers your confidence in your understanding, has been replicated several times, in the original Yale studies and later by other groups.",
+    "The claim that explaining policies makes people more moderate is much shakier: a preregistered 2021 replication did not find it, and a 2022 study found it only for consequence-based issues.",
+    "It applies to mechanisms and causal stories, not to facts or procedures, and it says nothing about who is right on any issue."
+   ],
+   "try_this": "Pick something you use daily, such as a zip, a toilet or a bicycle gear, and rate your understanding from 1 to 7. Then explain how it works, step by step, on paper. Re-rate yourself, and notice which step you could not fill in.",
+   "sources": [
+    {
+     "title": "Illusion of explanatory depth — Wikipedia (summarising Rozenblit & Keil, Cognitive Science, 2002)",
+     "url": "https://en.wikipedia.org/wiki/Illusion_of_explanatory_depth"
+    },
+    {
+     "title": "Political Extremism Is Supported by an Illusion of Understanding — Fernbach, Rogers, Fox & Sloman, Psychological Science, 2013",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23620547/"
+    },
+    {
+     "title": "Genetically modified food opponents know less than they think — Phys.org, on Fernbach et al., Nature Human Behaviour, 2019",
+     "url": "https://phys.org/news/2019-01-genetically-food-opponents.html"
+    },
+    {
+     "title": "Is political extremism supported by an illusion of understanding? — Sloman & Vives, Cognition, 2022",
+     "url": "https://Www.Gwern.net/doc/psychology/cognitive-bias/illusion-of-depth/2022-sloman.pdf"
+    }
+   ]
+  },
+  {
+   "id": "7",
+   "featured": false,
+   "theme": "Philosophy & wisdom",
+   "title": "Evil can come from not imagining others",
+   "idea": "Hannah Arendt coined 'the banality of evil' to describe something unsettling: terrible acts do not need a monster to carry them out. Reporting on the 1961 trial of Adolf Eichmann in Jerusalem, she expected a fanatic and found a man who spoke almost entirely in stock phrases and officialese. In her view the problem was not stupidity but thoughtlessness: an inability to stop and think what his actions meant for the people on the receiving end. She tied it to speech: his failure to say anything fresh seemed linked to his failure to think from anyone else's standpoint.\n\nThe idea travels well because it describes a habit rather than a type of person. Whenever we hide behind procedure, jargon or 'that's just the process', we are practising a mild version of it. Arendt did not say Eichmann was innocent, or that evil is dull. She said that refusing to imagine another person's position can pave the way for harm.",
+   "deep_dive": "Arendt attended the trial as a reporter for The New Yorker, and the resulting book, Eichmann in Jerusalem: A Report on the Banality of Evil, appeared in 1963. By 'banality' she meant that his motives looked shallow, not that his crimes were trivial. She held him fully responsible and supported his execution. What struck her was his reliance on clichés and bureaucratic language, which she read as a sign that he was not engaging with reality as other people experienced it.\n\nLater she developed this into a theory of thinking. Drawing on Kant's 'enlarged mentality', she meant the practice of considering a matter from the position of others. This is not empathy, which involves sharing feelings. It is a discipline of reasoning, and in her later essay 'Thinking and Moral Considerations' (1971) she asked whether the habit of internal dialogue works as a brake on wrongdoing.\n\nThe idea has been seriously challenged. Bettina Stangneth's Eichmann Before Jerusalem (2011) drew on interviews Eichmann gave in Argentina in the 1950s, in which he spoke with pride about his part in the killings and showed a committed ideological antisemitism. Her argument, and that of other critics, is that Arendt was taken in by a courtroom performance. Others reply that critics misread Arendt, who never claimed he was a mere order-follower, and that her concept describes how ordinary people take part in evil rather than his biography. Both points are worth holding. The safest use of the idea is as a warning about unexamined routine, not as a verdict on Eichmann.",
+   "examples": [
+    {
+     "title": "Milgram, Arendt and a challenge from St Andrews",
+     "text": "Stanley Milgram's obedience experiments were often read alongside Arendt: he proposed that people slip into an 'agentic state' and focus on following instructions. Alex Haslam and Stephen Reicher at St Andrews reviewed the evidence and argued otherwise. Across Milgram's variants, the share of people going to the top voltage ranged from 0% to nearly 100%, which an automatic state of obedience struggles to explain. They concluded that many participants identified with the scientific project and believed they were doing right. Their research challenges Arendt's picture, so it is a useful test of the idea rather than a confirmation of it."
+    },
+    {
+     "title": "A Post Office culture that closed its mind",
+     "text": "In the Post Office Horizon inquiry, closing submissions for subpostmasters were made by Edward Henry KC. He argued that the Post Office's culture, not only the faulty software, destroyed lives, and that managers 'closed their minds and closed ranks around the system'. Alan Davies, a former communications head, told the inquiry that 'we really believed we were doing the right things' and that some of his old emails now looked 'ludicrous'. The sources do not invoke Arendt, but the pattern, conviction without imagining the person on the other end, is the kind of failure she described."
+    },
+    {
+     "title": "Stangneth tests the thesis against Eichmann's own words",
+     "text": "Bettina Stangneth's Eichmann Before Jerusalem used material from interviews that Eichmann gave to the Dutch journalist Willem Sassen in Argentina. Reviewers say these show a man proud of the killing and committed to an apocalyptic view of race, and that he performed a mild, dutiful role at trial. This is the strongest scholarly objection to Arendt's reading. It leaves open whether 'thoughtlessness' still describes the many people around him, even if it does not describe him well."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hannah_Arendt_1975_(cropped).jpg?width=1000",
+     "caption": "Hannah Arendt in 1975, the year she died, the political thinker who coined the phrase 'the banality of evil'.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Hannah_Arendt_1975_(cropped).jpg"
+    }
+   ],
+   "why": [
+    "The core observation comes from Arendt's first-hand reporting at the 1961 trial and her later philosophical work on thinking, and it remains widely discussed.",
+    "Caveat: Stangneth's archival research suggests Eichmann was a committed antisemite who played a part in court, so the idea fits him poorly even if it describes other people's conduct.",
+    "Psychologists such as Haslam and Reicher argue that many perpetrators act from conviction, not unthinking obedience."
+   ],
+   "try_this": "Next time you use 'policy' or 'process' to explain a decision that affects someone, stop and describe it from that person's point of view in two sentences. Does it still sound fine?",
+   "sources": [
+    {
+     "title": "Review of Arendt and Eichmann — Stuart Jeffries / Literary Review",
+     "url": "https://literaryreview.co.uk/?p=17837"
+    },
+    {
+     "title": "Eichmann's Not So Banal Evil — First Things",
+     "url": "https://firstthings.com/eichmann-arendt-and-evil/"
+    },
+    {
+     "title": "Enthusiasm for evil — University of St Andrews news",
+     "url": "https://news.st-andrews.ac.uk/archive/enthusiasm-for-evil/"
+    },
+    {
+     "title": "Post Office's 'malignant culture' destroyed Horizon victims' lives, inquiry told — Express & Star",
+     "url": "https://www.expressandstar.com/uk-news/post-offices-malignant-culture-destroyed-horizon-victims-lives-inquiry-told-5738233"
+    }
+   ]
+  },
+  {
+   "id": "8",
+   "featured": false,
+   "theme": "Creativity, invention & systems thinking",
+   "title": "Constraints often fuel creativity, not freedom",
+   "idea": "Most of us assume creativity needs freedom: a blank page, no rules, endless options. A good deal of evidence points the other way. A tight constraint rules out the obvious answer, so you are forced to search somewhere new, and the limit gives the search a shape.\n\nDr Seuss is the usual illustration. In 1960 his publisher, Bennett Cerf, bet him $50 that he could not write an engaging children's book using only 50 different words. The result was Green Eggs and Ham, one of the best-loved children's books ever printed. Seuss had just finished The Cat in the Hat, which used 236 different words, so he was already working inside a tight vocabulary.\n\nThe psychologist Karen Haught-Tromp named this the Green Eggs and Ham hypothesis. Her experiments found that people given a constraint wrote rhymes that judges rated as more creative. The point is not that every limit helps, but that a well-chosen one often beats having none.",
+   "deep_dive": "Patricia Stokes, a psychologist, set out the argument in Creativity from Constraints (2005). Looking at painters, writers and designers, she argued that breakthroughs usually come when someone deliberately rules out their own habitual solution, then adds a second constraint that pushes the search towards something unfamiliar. Her account of Monet, for instance, stresses what he chose to avoid as much as what he chose to do. Stokes also separates constraints that open up new possibilities from those that merely push people towards conformity, so the type of limit matters.\n\nThe experimental evidence comes from Haught-Tromp (2017, Psychology of Aesthetics, Creativity, and the Arts). In two experiments, people wrote a two-line rhyme for a special occasion. In one, they had to include a noun they were given; in the other, they chose their own nouns first and then had to use them. Both studies found that constraints raised the rated creativity of the rhymes. There was also an interaction with the order of the tasks, which the author reads as a carryover effect: practising with a constraint seemed to help later, unconstrained work.\n\nThe likely mechanism is that a constraint blocks the first, most available idea. Without one, people tend to settle on the familiar answer. With one, they have to combine things that would not normally go together.\n\nThe limits are real. The experiments used a small, artificial task and subjective ratings, not novels or inventions. A constraint that is too severe, or imposed by someone else with no room to reinterpret it, can simply produce frustration. And the 'bet' stories are good ones, but they show a constraint coinciding with success, not causing it.",
+   "examples": [
+    {
+     "title": "Seuss's fifty-word bet",
+     "text": "After The Cat in the Hat (1957), which used 236 different words drawn from a list of 348 supplied by an educational publisher, Bennett Cerf wagered Seuss $50 that he could not write a book with only 50 distinct words. Seuss produced Green Eggs and Ham, published in August 1960. Forty-nine of its words are one syllable, and the fiftieth, 'anywhere', has three. Seuss reportedly used notes, charts and checklists to track the vocabulary. Accounts differ on when exactly the bet was made and on whether Cerf ever paid up."
+    },
+    {
+     "title": "Perec writes a novel without 'e'",
+     "text": "In 1969 the French writer Georges Perec, a member of the Oulipo group of writers and mathematicians, published La Disparition, a novel of roughly 300 pages that never uses the letter e, the commonest letter in French. The plot is built around the constraint: a group searches for a missing friend named Anton Vowl. Gilbert Adair then translated it into English as A Void (1994), also without an e, and it won the Scott Moncrieff Prize. Reviewers treated the English version as a feat in itself, since the translator had to rebuild the puzzle in a new language."
+    },
+    {
+     "title": "Rhymes with a noun to include",
+     "text": "In Haught-Tromp's experiments, participants wrote two-line rhymes for a special occasion, the sort of verse found in a greeting card. In one study they had to work a given noun into the rhyme; in the other they chose nouns themselves and then had to use them. Judges rated the constrained rhymes as more creative. Because the task is ordinary, you can try it at home: writing a toast or a birthday message becomes easier, and often better, if you first pick three random words and promise to include them. The study also hints that the benefit may carry over to later, unconstrained writing."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Theodor_Seuss_Geisel_(01037v).jpg?width=1000",
+     "caption": "Theodor Seuss Geisel (Dr Seuss) in a 1957 press photograph, three years before he wrote Green Eggs and Ham on a 50-word limit.",
+     "credit": "Al Ravenna, New York World-Telegram and Sun / Library of Congress, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Theodor_Seuss_Geisel_(01037v).jpg"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaque_perec.JPG?width=1000",
+     "caption": "An enamel plaque in Paris honouring Georges Perec, who wrote an entire novel without the letter e.",
+     "credit": "Christophe Verdon (plaque) / CC BY-SA 3.0, via Wikimedia Commons (photographer and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Plaque_perec.JPG"
+    }
+   ],
+   "why": [
+    "Evidence: Haught-Tromp's two experiments found a main effect of constraints on rated creativity, and Stokes's book draws the same pattern from case studies of artists and writers.",
+    "The experiments use a small, artificial rhyming task with subjective ratings, so they do not prove the effect for novels or inventions.",
+    "The famous anecdotes show constraint and success together; they do not prove one caused the other, and too severe or imposed limits can simply frustrate."
+   ],
+   "try_this": "Pick something you have been stuck on and add one deliberate limit today: half the time, half the words, or one banned obvious option. Notice what you do instead.",
+   "sources": [
+    {
+     "title": "The Green Eggs and Ham Hypothesis: How Constraints Facilitate Creativity — Haught-Tromp / Psychology of Aesthetics, Creativity, and the Arts",
+     "url": "https://www.cct.umb.edu/630/files/HaughtTromp2017-GreenEggsandHam.pdf"
+    },
+    {
+     "title": "Green Eggs and Ham — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Green_Eggs_and_Ham"
+    },
+    {
+     "title": "A Void — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/A_Void"
+    },
+    {
+     "title": "Review of Creativity from Constraints — Kaufman, S.B.",
+     "url": "https://scottbarrykaufman.com/wp-content/uploads/2011/08/Kaufman-2006-2007.pdf"
+    }
+   ]
+  },
+  {
+   "id": "9",
+   "featured": false,
+   "theme": "History & big ideas",
+   "title": "When workers are scarce, they gain power",
+   "idea": "When a large share of a population dies, the survivors become scarce, and scarce things gain bargaining power. That is roughly what happened to English workers after the Black Death of 1348–49. Landlords still needed people to plough and harvest, and labourers could ask for more or walk to a better employer.\n\nParliament tried to stop it. An Ordinance in 1349 and the Statute of Labourers in 1351 ordered wages back to their 1346 level and told able-bodied people to accept work when it was offered. It largely failed. Over the following decades real wages rose, and the old hold of lords over unfree tenants loosened. Yet it was enforced just enough to cause resentment, one strand in the revolt of 1381.\n\nThe lesson is not that plague was good for anyone. It is that pay and freedom depend heavily on who needs whom, and that laws pushing against a market's basic pressure tend to leak.",
+   "deep_dive": "The plague reached England in 1348 and killed enough people that land was suddenly plentiful and labour was not. Şevket Pamuk's reconstruction of European wage series finds that real wages roughly doubled in most countries and cities over the century after the first outbreak. A later review by Remi Jedwab, Noel Johnson and Mark Koyama agrees that wages and income per head rose, but adds that the gain lasted in the long run only in some parts of Europe.\n\nThe government's answer was to freeze the market. The 1349 Ordinance and the 1351 Statute set maximum wages at 1346 levels, obliged the able-bodied to take work and restricted movement for higher pay. Mark Bailey's recent study of manorial, borough and royal courts shows how the law actually worked, and concludes that it failed. Bailey's earlier work on 1,445 manorial court sessions from six manors found that manorial authorities made few efforts to regulate labour at all.\n\nHistorians still argue about timing and cause. Some wage series show real pay falling by about a fifth in the first two years and craftsmen's wages still sliding into the 1360s, with recovery only from the late 1370s, so it was no instant windfall. Gregory Clark finds the rise persisted, with real wages not back at pre-plague levels until the 1600s at the earliest, but sees no sign that agriculture became more efficient. Robert Allen and Pamuk stress a later split: in London and the Low Countries wages stayed well above subsistence, while elsewhere they drifted back, with a clear north-west gap after about 1450.\n\nThe limit is that scarcity does not decide everything. In parts of eastern Europe, lords responded to the same shortage by tightening their control over peasants. Law, politics and who holds power decide whether bargaining strength is allowed to bite.",
+   "examples": [
+    {
+     "title": "The wage freeze that mostly leaked",
+     "text": "In 1349 and 1351 the English Crown tried to hold pay at 1346 levels and compel people to work. Mark Bailey of the University of East Anglia has studied how this was applied in manorial, borough and royal courts, separating public presentments from private litigation. He argues the laws were more novel than historians once thought, and that they failed. His earlier study of 1,445 manorial court sessions on six manors found that landlords' own courts rarely tried to police wages. The policy was announced by the centre but depended on local employers, who also wanted workers.",
+     "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peasants'_Revolt_(death_of_Wat_Tyler).jpg?width=1000",
+      "caption": "A later illumination of the death of Wat Tyler at Smithfield in 1381.",
+      "credit": "Via Wikimedia Commons (author and licence on the file page)",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Peasants'_Revolt_(death_of_Wat_Tyler).jpg"
+     }
+    },
+    {
+     "title": "Essex, 1381: resentment boils over",
+     "text": "Parliament granted poll taxes in 1377, 1379 and 1380, the last at about a shilling a head. When evasion left a large shortfall, commissioners were sent into the counties in spring 1381, and the revolt is traced to Fobbing in Essex in late May, when one such commissioner arrived. Kent followed and the rebels reached London in mid-June. Wat Tyler was killed at Smithfield on 15 June, and many rebels, including John Ball, were executed afterwards. Historians treat the labour laws as a long-running grievance and the poll tax as the trigger."
+    },
+    {
+     "title": "The US labour market after Covid",
+     "text": "After the pandemic, American employers struggled to hire. Economists David Autor, Arindrajit Dube and Annie McGrew found that pay for low-wage workers then rose faster than pay for high earners, reversing a decades-long trend. They estimate it offset roughly a quarter to a third of the four-decade rise in wage inequality, depending on the version. Job-to-job moves rose too, especially for young workers without degrees, which they read as employers losing some power over staff. It is a modern, much milder echo of the medieval pattern."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Death_of_Wat_Tyler_-_Froissart,_Chroniques_de_France_et_d'Angleterre,_Book_II_(c.1475-1483),_f.175_-_BL_Royal_MS_18_E_I.jpg?width=1000",
+     "caption": "Froissart manuscript illumination (British Library) of Wat Tyler's death, the violent end of the 1381 rising.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Death_of_Wat_Tyler_-_Froissart,_Chroniques_de_France_et_d'Angleterre,_Book_II_(c.1475-1483),_f.175_-_BL_Royal_MS_18_E_I.jpg"
+    }
+   ],
+   "why": [
+    "Strong support that real wages rose after 1348 across much of Europe (Pamuk, Jedwab, Johnson and Koyama), and that the 1351 Statute failed (Bailey).",
+    "Caveats: wages may have dipped first and recovered only from the late 1370s; how much the shortage, rather than peasant resistance or migration, ended serfdom is still debated; eastern Europe went the other way."
+   ],
+   "try_this": "Think of a job or industry you know where workers are scarce. Who has gained bargaining power, and what rules or contracts are being used to hold it back?",
+   "sources": [
+    {
+     "title": "The Black Death and the origins of the 'Great Divergence' across Europe, 1300–1600 — Şevket Pamuk / European Review of Economic History",
+     "url": "https://ata.bogazici.edu.tr/sites/ata.boun.edu.tr/files/faculty/sevket.pamuk/pamuk_ereh_black_death.pdf"
+    },
+    {
+     "title": "The implementation of national labour legislation in England after the Black Death, 1349–1400 — Mark Bailey / Economic History Review",
+     "url": "https://ueaeprints.uea.ac.uk/95111/1/Bailey_2025_TheEconomicHistoryReview.pdf"
+    },
+    {
+     "title": "Peasants' Revolt — Encyclopedia.com",
+     "url": "https://www.encyclopedia.com/history/modern-europe/british-and-irish-history/peasants-revolt"
+    },
+    {
+     "title": "The Unexpected Compression: Competition at Work in the Low Wage Labor Market — Autor, Dube and McGrew / NBER",
+     "url": "https://www.nber.org/papers/w31010"
+    }
+   ]
+  },
+  {
+   "id": "10",
+   "featured": false,
+   "theme": "Thought for the day",
+   "title": "Awe makes the self smaller, and kinder",
+   "idea": "Awe makes us feel smaller, and that may make us kinder. Psychologists define awe as the feeling of meeting something so vast that your usual way of understanding the world cannot quite take it in: a huge tree, a night sky, a person's courage. The interesting part is what it does to the sense of self. In the moment, your own concerns shrink and you feel part of something larger.\n\nIn a 2015 study by Paul Piff, Dacher Keltner and colleagues, people who spent a minute looking up at a grove of towering eucalyptus trees then helped a researcher pick up spilled pens more readily than people who had looked at a tall building. The researchers argued that the feeling of a \"small self\" was part of the reason.\n\nThe idea to hold is modest. Awe is a cheap, repeatable way of putting your worries in proportion, and it seems to turn attention outwards.",
+   "deep_dive": "The modern science of awe starts with a 2003 paper by Dacher Keltner and Jonathan Haidt. They argued that awe has two core ingredients: perceived vastness, which can be physical, social or conceptual, and a need for accommodation, meaning the experience does not fit your existing mental structures and you have to stretch them. Other ingredients, such as threat, beauty or moral virtue, change whether awe feels pleasant or unsettling.\n\nPiff and colleagues (2015, Journal of Personality and Social Psychology) tested what awe does to the self. Across five studies with around 2,000 participants, awe was triggered by videos, recalled experiences and, in the final study, a minute spent among tall eucalyptus trees. Awe raised generosity and helping, and the authors reported that a diminished sense of self-importance explained part of that effect. Separately, Rudd, Vohs and Aaker (2012, Psychological Science) found that awe made people feel they had more time available, and made them more patient and more willing to volunteer.\n\nNow the caveats. These are mostly short laboratory studies, often with students and with self-reported measures, and the pens test is a single moment of helping, not a change in character. I found no large multi-lab replication. A later three-experiment study with 557 participants found awe reduced aggression and raised prosocial behaviour, but gave only mixed support for the small self being the mechanism. So the safest reading is that awe probably nudges people towards generosity, while exactly why remains open. It is also not a cure for anything; the effects studied are small and brief.",
+   "examples": [
+    {
+     "title": "Looking up at eucalyptus trees",
+     "text": "In the final study of Piff and colleagues' 2015 paper, carried out on the University of California, Berkeley campus, participants stood among a grove of tall eucalyptus trees and looked up for a minute. Others stood in the same spot and looked at a tall building. A researcher then appeared to drop a box of pens by accident. Those who had looked at the trees picked up more pens. The team took this as evidence that a brief dose of natural awe can shift behaviour towards helping, even when no one asks for it and nothing is gained."
+    },
+    {
+     "title": "Awe and the feeling of having more time",
+     "text": "Melanie Rudd, Kathleen Vohs and Jennifer Aaker, reported in 2012 that awe changes how time feels. In the first of three experiments, 63 students watched either a one-minute advert with awe-inspiring scenes or a cheerful parade with confetti. The awe group felt they had more time available. Across the experiments, awe also made people more patient and more willing to give their time to volunteer. The authors argued that awe changes the subjective experience of time, slowing it down."
+    },
+    {
+     "title": "Eight weeks of awe walks",
+     "text": "At the University of California, San Francisco, Virginia Sturm and colleagues asked older adults to take a weekly 15-minute walk for eight weeks, either with instructions to look for awe in their surroundings or an ordinary walk. In the published analysis of 52 people, median age 75, the awe group reported more daily compassion and gratitude over time. In their selfies, they gradually made themselves smaller in the frame, favouring the landscape, and their smiles grew broader. It is a small study, but the method is something anyone can copy."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eucalyptus_regnans.JPG?width=1000",
+     "caption": "Eucalyptus regnans, the tallest flowering plant in the world: the kind of towering tree that inspired awe in the Berkeley study (which used a eucalyptus grove).",
+     "credit": "James Aubrey, via Wikimedia Commons (licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Eucalyptus_regnans.JPG"
+    }
+   ],
+   "why": [
+    "Piff et al. (2015) ran five studies with about 2,000 people, and Rudd et al. (2012) found related effects, but they are short experiments, often with students.",
+    "The small-self explanation is the weakest part: a later 557-person study found only mixed support for it, and I found no large multi-lab replication.",
+    "The awe-walk study had 52 older adults, so treat it as encouraging rather than settled."
+   ],
+   "try_this": "Take ten minutes outdoors today and look for something vast: a big tree, the sky, the sea, a long view. Notice what happens to the thing you were worrying about, and who you feel like talking to afterwards.",
+   "sources": [
+    {
+     "title": "Awe promotes altruistic behavior, UCI-led study finds — UC Irvine News",
+     "url": "https://news.uci.edu/faculty/awe-promotes-altruistic-behavior-uci-led-study-finds"
+    },
+    {
+     "title": "Jennifer Aaker: How to Feel Like You Have More Time — Stanford GSB",
+     "url": "https://gsb.stanford.edu/insights/jennifer-aaker-how-feel-you-have-more-time"
+    },
+    {
+     "title": "'Awe Walks' Boost Emotional Well-Being — UCSF",
+     "url": "https://www.ucsf.edu/news/2020/09/418551/awe-walks-boost-emotional-well-being"
+    },
+    {
+     "title": "Approaching awe, a moral, spiritual, and aesthetic emotion — Keltner & Haidt / PubMed",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29715721/"
+    }
+   ]
+  }
+ ]
+}
