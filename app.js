@@ -454,9 +454,9 @@
   /* ---------- Today ---------- */
   function emptyBox(title, text) { return el("div", { class: "empty" }, el("p", { class: "etitle", text: title }), el("p", { text })); }
 
-  // New batches of 10 researched ideas start arriving at these Dublin times (the scheduled task's run times).
-  const BATCH_SIZE = 10;
-  const BATCH_TIMES = [[7, 40, "7:40"], [17, 40, "17:40"]];
+  // New batches of researched ideas start arriving at these Dublin times (the scheduled task's run times).
+  const BATCH_SIZE = 5;
+  const BATCH_TIMES = [[7, 40, "7:40"]];
   function nextBatchLabel() {
     const parts = new Intl.DateTimeFormat("en-GB", { timeZone: TZ, hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
     const h = +parts.find((p) => p.type === "hour").value % 24, m = +parts.find((p) => p.type === "minute").value;
