@@ -1,0 +1,263 @@
+{
+ "date": "2026-10-20",
+ "generated_at": "2026-10-20T07:55:00+01:00",
+ "ideas": [
+  {
+   "id": "1",
+   "featured": true,
+   "theme": "Science & nature",
+   "title": "Run just to stay in the same place",
+   "idea": "In Through the Looking-Glass, the Red Queen tells Alice that in her country you must run as fast as you can just to stay where you are. In 1973 the palaeontologist Leigh Van Valen borrowed the image for a puzzle in the fossil record. Species that have survived for a very long time are no less likely to go extinct tomorrow than newcomers. Being old does not make a lineage safer.\n\nHis explanation is that every species lives among others that are also evolving: parasites, predators, prey and competitors. Each improvement in one lowers the relative fitness of the rest, so nobody ever gets ahead for good. A host that evolves resistance simply selects for parasites that can get past it. The result is permanent, costly change that leaves everyone roughly where they started. Biologists still use the idea to explain why sex exists at all, and why adaptation never ends.",
+   "deep_dive": "Van Valen published the idea in 1973 in a paper called A New Evolutionary Law. He had compiled the geological durations of thousands of taxonomic groups (the figure usually quoted is about 25,000) and plotted survivorship curves for them. The curves were roughly straight on a log scale, which means the chance of a group dying out in a given interval did not depend on how long it had already existed. The rate differed from one group to another, but within a group it was steady. Age bought no immunity.\n\nHis reading was that the environment of any species is mostly other species, and that this environment is always deteriorating from its point of view, because its neighbours keep evolving. Fitness is therefore relative and zero-sum: a gain by one lineage is a loss for those it interacts with. Only continued adaptation keeps a lineage level, and a single failure to keep up can be fatal. The name came later, from a subsection of the paper that used Carroll's image.\n\nThe idea has been split into several versions. The fluctuating version, where host and parasite genotypes chase each other in cycles, is the best tested, and it underpins the leading explanation for sexual reproduction: shuffling genes makes you a moving target. Limits remain. Some lineages show long periods with little visible change, which sits awkwardly with perpetual running, and the fossil constant-rate pattern has been contested statistically. It is best treated as a powerful way of thinking about interacting species rather than a universal law.",
+   "examples": [
+    {
+     "title": "Water fleas and their mud time capsules",
+     "text": "In a shallow pond in Heverlee, Belgium, Ellen Decaestecker, Dieter Ebert and colleagues took sediment cores that preserved dormant eggs of the water flea Daphnia magna and spores of its bacterial parasite Pasteuria ramosa from different decades. They hatched hosts from old layers and infected them with parasites from other layers. Parasites were best at infecting hosts from their own period, and they did worse against hosts from the past or the future, so each side kept adapting to the other. The study, published in Nature in 2007, let them watch an arms race that had gone on in one pond for years.",
+     "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daphnia_magna_asexual.jpg?width=1000",
+      "caption": "A female Daphnia magna carrying eggs; this is the host species in the Belgian pond study.",
+      "credit": "Via Wikimedia Commons (author and licence on the file page)",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Daphnia_magna_asexual.jpg"
+     }
+    },
+    {
+     "title": "New Zealand snails and the cost of being common",
+     "text": "In New Zealand lakes the snail Potamopyrgus antipodarum includes both sexual individuals and asexual clones, which makes it a natural test of why sex persists. Researchers including Curtis Lively and Jukka Jokela followed clone frequencies for years. In a 2009 American Naturalist study, the most common clones were almost completely replaced by initially rare clones within seven to ten years, while sexual snails persisted. The formerly common clones also became more susceptible to local parasites. A castrating trematode seemed to be adapting to whichever clone was most abundant, which is what the Red Queen would predict."
+    },
+    {
+     "title": "Australia's rabbits and the myxoma virus",
+     "text": "In 1950 a South American strain of myxoma virus, which killed nearly all the European rabbits it infected, was released in Australia to control the population. Within about two years, slightly milder strains were dominating in the field. Frank Fenner's team argued that the deadliest strains killed their hosts so quickly that they had less time to spread, while rabbits also built heritable resistance. A 2019 study of later isolates found that virus lineages in the 1990s had become highly lethal again. Both sides kept changing, and the outcome never settled."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alice_&_Red_Queen.jpg?width=1000",
+     "caption": "John Tenniel's 1871 illustration of Alice and the Red Queen running hard and getting nowhere.",
+     "credit": "John Tenniel / public domain, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Alice_&_Red_Queen.jpg"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daphnia_magna_asexual.jpg?width=1000",
+     "caption": "Daphnia magna, the water flea whose sediment-preserved eggs let biologists replay a host-parasite arms race.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Daphnia_magna_asexual.jpg"
+    }
+   ],
+   "why": [
+    "Strong evidence in specific systems: water fleas in Belgium, snails in New Zealand and the myxoma virus in Australia all show hosts and parasites tracking each other.",
+    "Van Valen's constant-extinction pattern comes from a very large fossil dataset, but it has been criticised statistically, and some lineages stay stable for long stretches."
+   ],
+   "try_this": "Think of one area of your work where a standing still would really mean falling behind, such as a skill or a process. Which of your competitors or counterparts is the 'parasite', and what does your 'running' actually consist of?",
+   "sources": [
+    {
+     "title": "Red Queen hypothesis — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Red_Queen_hypothesis"
+    },
+    {
+     "title": "Mud time capsules show evolutionary arms race between host and parasite — National Geographic",
+     "url": "https://www.nationalgeographic.com/science/article/mud-time-capsules-show-evolutionary-arms-race-between-host-and-parasite"
+    },
+    {
+     "title": "Faster clonal turnover in high-infection habitats provides evidence for parasite-mediated selection — Dryad / Journal of Evolutionary Biology",
+     "url": "https://datadryad.org/dataset/doi:10.5061/dryad.dr33q"
+    },
+    {
+     "title": "Evolutionary history and attenuation of myxoma virus on two continents — PLoS Pathogens",
+     "url": "https://www.prolekare.cz/casopisy/plos-pathogens/2012-10/evolutionary-history-and-attenuation-of-myxoma-virus-on-two-continents-44252"
+    }
+   ]
+  },
+  {
+   "id": "2",
+   "theme": "Thinking tools",
+   "title": "Selection can invent a trade-off",
+   "idea": "Berkson's paradox says that two traits which are unrelated in the general population can look negatively related once you only look at a selected group. If a hospital only admits people who have at least one serious problem, then among its patients, having one illness makes another less likely to be the reason they came in. Neither illness has any effect on the other. The filter does the work.\n\nThe same thing explains why the handsome men someone dates can seem less nice. Suppose a person will only date a man whose looks and kindness add up to enough. A less handsome man needs more kindness to get in, and a very handsome man can get in with less. Among those who pass the filter, the two traits trade off, although across all men they may be unconnected. Before explaining a pattern, ask: who was never allowed into this sample, and what did they have to have to get in?",
+   "deep_dive": "Joseph Berkson, a statistician at the Mayo Clinic, described the effect in 1946 while examining hospital case records. His illustration used diabetes and cholecystitis, an inflamed gallbladder. Because a patient needs some reason to be in hospital, a patient who does not have diabetes is more likely to have cholecystitis than a member of the general public. An association appears in hospital data whether or not one exists in the population.\n\nModern statisticians describe this as conditioning on a collider: a variable that is a common effect of two others. When you select on the collider (being admitted, being famous, being tested, being published), you create a statistical link between its causes. Because the link comes from the sampling rather than the world, adjusting for it after the fact is hard, and the best remedy is to think about it when designing the study.\n\nTo see it in action, picture two independent traits, plotted as a cloud of dots. Keep only the dots where the two values sum above a threshold, and the surviving cloud slopes downwards. Limits: the paradox only applies when selection depends on both traits, and it is not a reason to dismiss every correlation found in a selected sample. Many real effects survive. The point is that you should check how your sample was assembled before treating its patterns as facts about the world.",
+   "examples": [
+    {
+     "title": "Berkson's hospital records",
+     "text": "In 1946 Joseph Berkson showed that two diseases with no real relationship can appear linked in hospital-based studies. His example paired diabetes with cholecystitis. A hospital patient without diabetes was more likely to have cholecystitis than someone in the general population, because they needed some reason to be admitted. This result would appear regardless of whether the diseases were associated outside hospital. The warning for researchers was that case-control studies using inpatients can produce associations that exist only in the hospital's admissions policy."
+    },
+    {
+     "title": "Why the handsome ones seem unkind",
+     "text": "In How Not to Be Wrong, the mathematician Jordan Ellenberg uses the dating pool to explain the effect. A woman, Alex, will only date a man whose niceness plus handsomeness exceeds a threshold. Nicer men do not have to be as handsome to qualify, so among the men she dates, niceness and handsomeness look negatively related, even if they are uncorrelated in the population. Ellenberg notes that this also means the average man in her pool is more handsome than the average man overall, which is the opposite of how the experience feels."
+    },
+    {
+     "title": "COVID-19 studies built on who got tested",
+     "text": "In 2020, Gareth Griffith and colleagues published a paper in Nature Communications warning of collider bias in COVID-19 research. Many studies drew on hospital patients, people tested for infection or volunteers. Using UK Biobank data, they showed that those who had been tested differed from the wider cohort across genetic, behavioural, cardiovascular and demographic traits. Selection into the sample could therefore distort apparent links between risk factors and severity. They concluded that the best remedy was to address sampling when designing a study."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berkson_paradox_singers.svg?width=1000",
+     "caption": "A diagram of Berkson's paradox: selecting only people who pass a combined threshold produces a negative-looking trend.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Berkson_paradox_singers.svg"
+    }
+   ],
+   "why": [
+    "The mechanism is well understood and appears in textbooks under several names: collider bias, Berkson's bias and selection bias.",
+    "Caveat: it needs selection that depends on both traits. Spotting it in real data usually requires knowing exactly how the sample was assembled."
+   ],
+   "try_this": "Pick a pattern you believe, such as 'the best restaurants have terrible service'. Write down the filter that decided what you actually get to see, and ask what the pattern would look like with the filter removed.",
+   "sources": [
+    {
+     "title": "Berkson's Paradox, Explained — Metricgate",
+     "url": "https://metricgate.com/blogs/berksons-paradox/"
+    },
+    {
+     "title": "Berkson's paradox — Healthcare Economist",
+     "url": "https://www.healthcare-economist.com/2016/11/10/berksons-paradox/"
+    },
+    {
+     "title": "Why are handsome men such jerks? — Jordan Ellenberg / Penguin Press",
+     "url": "https://medium.com/@penguinpress/why-are-handsome-men-such-jerks-f385a46d314f"
+    },
+    {
+     "title": "Collider bias undermines our understanding of COVID-19 disease risk and severity — Griffith et al. / UK Biobank",
+     "url": "https://www.ukbiobank.ac.uk/publications/collider-bias-undermines-our-understanding-of-covid-19-disease-risk-and-severity/"
+    }
+   ]
+  },
+  {
+   "id": "3",
+   "theme": "Psychology & behaviour",
+   "title": "Far fewer people notice you than you think",
+   "idea": "Most of us feel as though we walk around in a spotlight. A stain on your shirt, a stumble in a meeting, a bad haircut: it seems certain that everyone saw. The psychologists Thomas Gilovich, Victoria Medvec and Kenneth Savitsky called this the spotlight effect, and their experiments suggest we overestimate how much others notice us by about a factor of two.\n\nThe reason is not vanity so much as perspective. From the inside, you are the main character in your own life, so your appearance and mistakes are vivid and constant. Other people are busy with their own spotlight, their own worries and their own embarrassing shirt. They notice a fraction of what you expect and forget it faster than you do. That does not mean nobody ever notices, but it does mean your estimate of the audience is usually too large. The practical lesson is cheap: before you let the fear of being seen stop you, halve it.",
+   "deep_dive": "The classic study was published in 2000 in the Journal of Personality and Social Psychology by Gilovich, Medvec and Savitsky at Cornell. In its best-known version, students were asked to put on a T-shirt with Barry Manilow's face, which they had reason to find embarrassing, and then walk into a room where others were already seated. The wearers were asked how many people had noticed the shirt. Accounts vary on the exact figures, but the wearers guessed roughly twice as many as had actually noticed.\n\nFurther versions showed the effect was not limited to embarrassment. Students wearing shirts of figures they admired still overestimated how many people had noticed. In a group discussion, participants overestimated how much others registered their good and bad contributions. Notably, observers who watched a recording and estimated how many would notice someone else's shirt were much more accurate, which suggests the bias comes from the self-focused view.\n\nThe researchers described it as an egocentric anchoring effect: we start from our own intense awareness of ourselves and adjust, but not far enough. Limits apply. If you really are doing something conspicuous, people do notice. Social anxiety can make the effect stronger. Finally, the exact numbers differ between accounts, so treat 'about twice' as a rough guide rather than a constant.",
+   "examples": [
+    {
+     "title": "The Barry Manilow shirt",
+     "text": "Gilovich, Medvec and Savitsky asked Cornell students to wear a Barry Manilow T-shirt and enter a room of strangers. The wearers predicted roughly half the room would notice, and about a quarter actually did, though sources differ on the exact percentages. People who merely watched a recording of the scene estimated the noticing nearly correctly. The study is the standard illustration of the bias, and it shows that the error lies in the wearer's perspective rather than in how visible the shirt is."
+    },
+    {
+     "title": "Nerves that nobody can see",
+     "text": "In 2003 Kenneth Savitsky and Thomas Gilovich studied a close cousin called the illusion of transparency. Participants gave impromptu speeches and rated how nervous they felt and how nervous they looked. Speakers overestimated how visible their nerves were to listeners. In a follow-up, telling speakers that audiences cannot see anxiety as clearly as they believe helped them, and one summary says they gave better speeches. The finding is useful for anyone who dreads presenting."
+    },
+    {
+     "title": "Good and bad contributions in a meeting",
+     "text": "The 2000 paper also tested a group discussion about the problems facing inner cities. Participants overestimated how much their colleagues remembered their positive and negative comments. The ordinary version is a Monday meeting in which you replay a clumsy remark all afternoon, while your colleagues, each replaying their own, hardly remember it. The research does not say nobody remembers, only that the memory is much fainter than your own."
+    }
+   ],
+   "why": [
+    "The central finding comes from experiments at Cornell, published in a leading journal in 2000, with related work in 2003 on speakers.",
+    "Caveats: reports of the exact percentages and number of studies differ, and the participants were students, so the figures are rough guides."
+   ],
+   "try_this": "Next time you worry about being noticed, estimate how many people will remember it next week, then halve that number. Afterwards, check which of you was closer.",
+   "sources": [
+    {
+     "title": "The Spotlight Effect in Social Judgment — Gilovich, Medvec and Savitsky / Journal of Personality and Social Psychology (summary at Colby Cognition Blog)",
+     "url": "https://web.colby.edu/cogblog/?p=2683"
+    },
+    {
+     "title": "All eyes on us: the spotlight effect — Psychology Today",
+     "url": "https://www.psychologytoday.com/us/blog/parenting-neuroscience-perspective/202206/all-eyes-us-the-spotlight-effect"
+    },
+    {
+     "title": "Tom Gilovich on the Spotlight Effect — Social Science Bites",
+     "url": "https://www.socialsciencespace.com/2026/05/tom-gilovich-on-the-spotlight-effect/"
+    },
+    {
+     "title": "Illusion of transparency — Savitsky and Gilovich (2003), summarised on Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Illusion_of_transparency"
+    }
+   ]
+  },
+  {
+   "id": "4",
+   "theme": "Philosophy & wisdom",
+   "title": "You already know what being dead is like",
+   "idea": "The Roman poet Lucretius, following Epicurus, offered a thought experiment about death. Think of the endless time before you were born. You did not exist, you missed everything that happened, and yet it causes you no distress. Lucretius calls this a mirror that nature holds up: the time after your death will be just like it. If the first does not trouble you, he asks, why should the second?\n\nThe argument builds on Epicurus's claim that death is nothing to us, because while we exist death is not present, and when death is present we no longer exist. There is no one left to suffer. Neither argument says you should not want more life. It aims at a particular fear, that of being dead, and suggests that fear rests on a mistake. Whether it works is contested, but trying to answer it forces you to say what exactly is bad about dying.",
+   "deep_dive": "Epicurus (341 to 270 BC) taught that the aim of life is tranquillity, and that two fears most damage it: fear of the gods and fear of death. In his Letter to Menoeceus he argues that death is the loss of sensation, and that good and bad require sensation. Death therefore cannot be bad for the person who is dead. Lucretius, writing in De Rerum Natura in the first century BC, added the symmetry argument to make the conclusion feel natural.\n\nThe main reply comes from Thomas Nagel in his essay Death. He argues that a harm can befall someone without their experiencing it, and that what matters is deprivation: death takes away the good things that continued life would have contained. Nagel's example is a brilliant person who is reduced by injury to the mental level of a contented infant. We think that is a terrible misfortune, even though the person is not distressed by it.\n\nOn the symmetry itself, critics note that the two periods are not alike. You could not have been born much earlier, but you could have lived longer, and the future is something we can still lose. Others note that we are simply wired to care more about what is ahead. So the argument is best used not as a proof but as a tool: it can loosen a vague dread, even if it does not settle whether death is a harm.",
+   "examples": [
+    {
+     "title": "Lucretius and the mirror",
+     "text": "In Book 3 of De Rerum Natura, Lucretius asks his reader to look back at the time before birth. He says nature holds it up as a mirror of the time after death. The poem was written to free Roman readers from fear of the afterlife. Its argument is meant to be felt as much as followed, since it treats the past eternity as a lived comparison, and a modern reader can try the same exercise on a quiet evening."
+    },
+    {
+     "title": "David Hume's last summer",
+     "text": "In July 1776 James Boswell visited the dying philosopher David Hume, who was cheerful and calm. According to Boswell's account, Hume said the thought of annihilation did not trouble him and compared it with the time before his birth, as Lucretius observes. Boswell, who wanted to be reassured about an afterlife, was unsettled by this composure. Hume died that August. The scene shows the argument being used in earnest, by a man facing death."
+    },
+    {
+     "title": "Nagel's brilliant mind, damaged",
+     "text": "Thomas Nagel replied that the Epicurean argument misses what makes death a loss. His example is an intelligent adult who is injured so that they have the mind of a contented baby. Nobody present suffers, yet we think something bad has happened. Nagel concluded that good and evil depend on a person's history and possibilities, not just their moment-to-moment state. On the symmetry point he argued that you could not have existed earlier than you did, so pre-birth is not a loss in the same way."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Epicurus_bust.jpg?width=1000",
+     "caption": "Marble bust of Epicurus, a Roman copy of a Greek original, in the British Museum.",
+     "credit": "ChrisO / public domain, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Epicurus_bust.jpg"
+    }
+   ],
+   "why": [
+    "The arguments are among the oldest in Western philosophy and have been debated continuously, with Nagel's deprivation view the standard reply.",
+    "This is a question of argument, not experiment, and philosophers remain divided on whether the symmetry holds."
+   ],
+   "try_this": "Spend two minutes imagining the year before you were born in as much detail as you can. Then ask yourself honestly whether your dread of the future is about being dead, or about the things you would miss.",
+   "sources": [
+    {
+     "title": "Is Death Bad? Epicurus and Lucretius on the Fear of Death — 1000-Word Philosophy",
+     "url": "https://1000wordphilosophy.com/2020/10/02/is-death-bad/"
+    },
+    {
+     "title": "Immortality: Hume and Boswell — Philosophy Talk",
+     "url": "https://philosophytalk.org/?p=1657"
+    },
+    {
+     "title": "The deprivation account of death and its four challenges — PhilArchive",
+     "url": "https://www.philarchive.org/rec/CYRHDD"
+    },
+    {
+     "title": "Epicurean symmetry argument — Alex Waterhouse-Hayward",
+     "url": "https://blog.alexwaterhousehayward.com/2024/07/the-epicurean-symmetry-argument.html"
+    }
+   ]
+  },
+  {
+   "id": "5",
+   "theme": "Creativity, invention & systems thinking",
+   "title": "The box that rebuilt world trade",
+   "idea": "The shipping container is a steel box, with no clever mechanism at all. Its power is in the system around it. Before 1956, cargo was handled piece by piece: sacks, crates and barrels carried by gangs of dockworkers, loaded and unloaded at every change of vehicle. The trucker Malcom McLean saw that the waste was in the handling, not the hauling. If the thing that moved from lorry to ship to train was always the same sealed box, nothing would need unpacking in between.\n\nThat is a systems insight: improve the interfaces between steps, not each step. His first voyage, on 26 April 1956, carried 58 containers from Newark to Houston. Loading cost reportedly fell from about $5.83 a ton to 15.8 cents. The invention only mattered because ships, cranes, trucks, ports and rules were all rebuilt around it, and that is why it took years to pay off.",
+   "deep_dive": "McLean ran a trucking company and was frustrated by lorries waiting in port queues. His first idea was to put whole trailers on ships; the more efficient one was to separate the box from the wheels. He bought a converted wartime tanker, renamed the Ideal X, and had it fitted to carry boxes on its deck. On 26 April 1956 it left Port Newark with 58 containers for Houston, where trucks were waiting to take them away.\n\nThe saving was in handling. Marc Levinson, whose book The Box is the standard history, cites a loading cost of $5.83 per ton for loose cargo on a medium-sized ship in 1956, against 15.8 cents for the Ideal X. That compares loading operations only, not the total cost of shipping goods from factory to buyer, so it overstates the overall saving. Still, the difference was large enough to reorganise the industry.\n\nThe system effect was the main story. Ports needed cranes and space, and many old ones lost out. Levinson's account describes how container shipping hurt traditional ports such as New York and London and favoured newer ones such as Oakland, with the New York area's centre of gravity moving to Newark and Elizabeth. It also required years of bargaining with powerful dockworker unions. The Vietnam War then helped: supplying US forces by container persuaded sceptics. Limits: the Ideal X was not the only early container effort, and standards took years to settle.",
+   "examples": [
+    {
+     "title": "The Ideal X sails from Newark",
+     "text": "On 26 April 1956 a converted tanker, the Ideal X, left Port Newark with 58 containers bound for Houston. The boxes were secured on a platform on the deck, and trucks met them in Texas. Some accounts say a competitor, Clifford Rogers, shipped containers a few months earlier, so 'first' is disputed. What McLean did was make the approach commercially successful. It was the start of a system rather than just a ship."
+    },
+    {
+     "title": "Newark and Oakland beat old New York",
+     "text": "Levinson's history focuses on the Port of New York. The old piers of Manhattan and Brooklyn were designed for hand-loaded break-bulk cargo and had little space for cranes and container yards. Newark and Elizabeth in New Jersey offered room, and traffic moved there, so the port was later renamed the Port of New York and New Jersey. On the West Coast, Oakland rose as a container port. The pattern shows a standard changing where entire cities earn their living."
+    },
+    {
+     "title": "Supplying Vietnam in boxes",
+     "text": "According to accounts of McLean's career, the Vietnam War was the container's breakthrough. McLean persuaded Pentagon officials to build a container-handling facility near Saigon, and the military's freight contracts helped make overseas container routes pay. Supplying a war several thousand miles away showed sceptical shippers and governments that the system worked at scale, and it created shipping capacity that was later used for commercial trade."
+    }
+   ],
+   "why": [
+    "The key figures come from Marc Levinson's history, The Box, as reported in the New York Review of Books; other sources give slightly different numbers ($5.86 and 16 cents), so treat them as approximate.",
+    "The 97 per cent saving covers only loading, not the whole journey, and attributing all of globalisation to the box is an interpretation."
+   ],
+   "try_this": "Pick a process you run, at work or at home, where something is repeatedly unpacked, copied or re-handled between steps. What would a 'standard box' look like that made the hand-offs disappear?",
+   "sources": [
+    {
+     "title": "Shipping News — Marc Levinson's The Box, reviewed in The New York Review of Books",
+     "url": "https://www.nybooks.com/articles/2006/08/10/shipping-news/"
+    },
+    {
+     "title": "Ideal X — Port Houston",
+     "url": "https://porthouston.com/ideal-x/"
+    },
+    {
+     "title": "Malcolm P. McLean — NCpedia",
+     "url": "https://ncpedia.org/node/578"
+    },
+    {
+     "title": "How the shipping container revolutionized freight and trade — Marketplace",
+     "url": "https://www.marketplace.org/story/2021/11/23/how-the-shipping-container-revolutionized-freight-and-trade"
+    }
+   ]
+  }
+ ]
+}
