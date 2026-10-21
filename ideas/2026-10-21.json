@@ -116,6 +116,58 @@
     }
    ],
    "id": "2"
+  },
+  {
+   "theme": "Philosophy & wisdom",
+   "title": "Your future self is almost a stranger",
+   "idea": "The philosopher Derek Parfit argued that being the same person over time is a matter of degree, not an all-or-nothing fact. Your connection to who you were at ten, or who you will be at seventy, is a chain of memories, intentions and character that thins out with distance. If that is right, a distant future self has something in common with another person, and we may treat them accordingly: we are often generous to strangers we can see and stingy towards a future self we can't. Psychologists later took this up as a practical question. Hal Hershfield and colleagues found that people who feel more continuous with their future selves save more, and that making the future self feel real, by showing people an age-progressed picture of themselves, led them to put more aside. The philosophy gives the puzzle; the experiments suggest a lever.",
+   "deep_dive": "Parfit developed his view in Reasons and Persons (1984). He rejected the idea that personal identity is a deep further fact over and above the physical and psychological continuities between your earlier and later states. Those continuities come in degrees: your memories, intentions and personality link you to yesterday's self strongly and to your self thirty years ahead only weakly. Parfit drew a moral from this. If we care little about ourselves in the more distant future, our future selves resemble future generations, as Hershfield and colleagues note when quoting his writing. He also described how changing his own view felt: his life had seemed like a glass tunnel, moving faster each year, and the walls of the tunnel disappeared when he stopped believing in a deep further fact about identity.\n\nThe psychological work turns that into something measurable. Ersner-Hershfield, Wimmer and Knutson (2009) scanned people while they judged traits of their current and future selves, and found that differences in activity in a brain region called the rostral anterior cingulate predicted how steeply they discounted future rewards a week later. A separate self-report study found people who felt more similar to their future selves held more retirement assets, though the authors note causation could run either way, since being financially secure may itself make you feel more continuous with your future self.\n\nThe limits: you can't conclude from Parfit that you should ignore your future self. His own conclusion was that the strong dividing lines we draw between people are less deep than they seem, which cuts both ways. And the experimental effects, though real, are measured on hypothetical or small decisions.",
+   "examples": [
+    {
+     "title": "Seeing your face at seventy",
+     "text": "In 2011 Hershfield and colleagues, including Stanford's Jeremy Bailenson, had working-age adults interact in virtual reality with a realistic, age-progressed rendering of themselves. Those who did allocated a significantly higher share of hypothetical income to retirement saving than those who saw their current face. NYU Stern's summary reports approximately 33 percent more. The authors found that feeling more continuous with the future self helped explain the effect. A caution from one review: in the first of the paper's studies the undergraduate result was not statistically significant."
+    },
+    {
+     "title": "Brain scans and the discounting of rewards",
+     "text": "In a 2009 brain-imaging study at Stanford, Ersner-Hershfield, Wimmer and Knutson scanned participants while they rated how well traits described their current self and their future self. Differences in activity in the rostral anterior cingulate cortex between the two kinds of judgement predicted how steeply the same people discounted future rewards when tested a week later. In other words, how the brain treats the future self predicted real choices between now and later, as Parfit's picture would suggest."
+    },
+    {
+     "title": "Parfit's own glass tunnel",
+     "text": "Parfit described the effect of his own philosophy on his daily experience. Before he changed his view, he said, his life seemed like a glass tunnel through which he was moving faster every year, at the end of which was darkness. After the change, the walls of the tunnel disappeared, and he lived in the open air, with less concern for the rest of his own life and more for the lives of others. It is a first-person report, not an experiment, but it shows the idea being lived rather than only argued."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Derek_Parfit_at_Harvard-April_21,_2015-Effective_Altruism.jpg?width=1000",
+     "caption": "Derek Parfit at Harvard in April 2015.",
+     "credit": "Anna Riedl / CC BY-SA 4.0, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Derek_Parfit_at_Harvard-April_21,_2015-Effective_Altruism.jpg"
+    }
+   ],
+   "why": [
+    "Philosophically it is a minority but influential view; the empirical work (an fMRI study, a self-report index and virtual-reality experiments) supports a link between feeling connected to your future self and saving, but some of it is correlational.",
+    "Caveat: most of the experiments use small samples or hypothetical allocations, and one of the age-progression studies was not significant on its own."
+   ],
+   "try_this": "Write a short, kind note to yourself at 70, or imagine a specific day in their life, and then choose one thing you'll do this week for them, such as a pension top-up or a health check.",
+   "sources": [
+    {
+     "title": "Increasing Saving Behavior Through Age-Progressed Renderings of the Future Self — Hershfield, Goldstein, Sharpe et al. / Journal of Marketing Research",
+     "url": "https://www.dangoldstein.com/papers/Hershfield_Goldstein_et_al_Increasing_Saving_Behavior_Age_Progressed_Renderings_Future_Self.pdf"
+    },
+    {
+     "title": "Saving for the future self: neural measures of future self-continuity predict temporal discounting — Ersner-Hershfield, Wimmer & Knutson / SCAN",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/19047075/"
+    },
+    {
+     "title": "Don't stop thinking about tomorrow: Individual differences in future self-continuity account for saving — Ersner-Hershfield et al. / Judgment and Decision Making",
+     "url": "https://sjdm.org/~baron/journal/9310/jdm9310.html"
+    },
+    {
+     "title": "Parfit on the importance of personal identity — University of Notre Dame course page",
+     "url": "https://www3.nd.edu/~jspeaks/courses/2006-7/20208/parfit-what-matters.html"
+    }
+   ],
+   "id": "3"
   }
  ]
 }
