@@ -209,6 +209,58 @@
     }
    ],
    "id": "4"
+  },
+  {
+   "theme": "History & big ideas",
+   "title": "A stench fixed London for the wrong reason",
+   "idea": "In the hot summer of 1858 the River Thames, filled with London's untreated sewage, smelled so foul that Parliament struggled to sit beside it. This 'Great Stink' did what years of warnings about disease had not: it got a law through. Disraeli's bill passed in 18 days, and the engineer Joseph Bazalgette was able to build a huge network of intercepting sewers that carried waste downstream. The twist is that the reasoning was mistaken. Most people then believed cholera spread through foul air, 'miasma', rather than through contaminated water, so the sewers were meant to remove a smell. They also removed the sewage from the water people drank, and London's cholera epidemics came to an end. Sometimes a problem gets solved because the wrong theory happened to point at the right action, and because the crisis was impossible to ignore.",
+   "deep_dive": "By the 1850s London had a growing population, a growing number of flushing toilets and a river that took it all. In 1854 John Snow traced a cholera outbreak in Soho to the Broad Street pump, which drew on a well contaminated by a cesspit. Sources put the death toll at more than 500 in ten days. Snow's water theory met strong medical opposition, though it was later vindicated. Most official thinking held that disease came from bad air.\n\nThe summer of 1858 changed the politics. The heat and untreated waste in the Thames produced a smell that, according to accounts from the London Museum and others, drove people from the riverside buildings of Parliament. Disraeli proposed a bill which MPs debated and passed within 18 days, giving control and funding to the Metropolitan Board of Works. Its chief engineer, Bazalgette, designed a system of intercepting sewers sloping eastward to outfalls beyond the built-up area. Sources give figures of around 82 to 85 miles of intercepting sewers and about 1,100 miles of street sewers, and report that the main sewers were built between 1859 and 1865, with pumping stations such as Crossness lifting the flow.\n\nHistorians describe the motive as miasma theory: the expectation was that enclosed sewers would remove the smell thought to cause cholera. In fact, moving sewage away from the water supply broke the real route of infection. The limits of the story are worth keeping in view: the neat 'smell fixed everything' version leaves out that the 1866 outbreak in the East End hit before that area was connected to the new system, and that sources disagree on completion dates and costs.",
+   "examples": [
+    {
+     "title": "Broad Street, 1854",
+     "text": "In late August 1854, cholera killed hundreds around Broad Street in Soho. John Snow, a physician, traced the cases to a pump whose well was contaminated by a cesspit, and the handle was removed despite medical opposition. Sources put the toll at more than 500 in ten days, with some counts at 600 or more. The episode shows the problem Bazalgette's sewers answered: sewage and drinking water were too close together, and a theory about foul air could not explain why a pump was the common factor."
+    },
+    {
+     "title": "The bill passed in 18 days",
+     "text": "After the summer of 1858 the political resistance to paying for London's drains collapsed. The Metropolis Local Management Amendment Bill, proposed by Disraeli, was created, passed and signed into law within 18 days. It handed power and funding to the Metropolitan Board of Works. One account says the Board was empowered to raise £3 million. The point for modern readers: a visible, unavoidable crisis can unlock action that data about slow harm cannot."
+    },
+    {
+     "title": "East London in 1866",
+     "text": "The last major cholera epidemic in London, in 1866, struck the East End before the area's connection to the new sewers was complete. One account credits the outbreak with more than 5,000 deaths, though that figure comes from a single account, so treat it as an estimate. The episode is often read as showing the sewers worked: where the new system was connected, the disease did not return."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Crossness_Pumping_Station_-_A_Cathedral_on_the_Marsh_(14922416280).jpg?width=1000",
+     "caption": "Crossness Pumping Station, part of the London main drainage scheme planned under Bazalgette.",
+     "credit": "Via Wikimedia Commons (author and licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Crossness_Pumping_Station_-_A_Cathedral_on_the_Marsh_(14922416280).jpg"
+    }
+   ],
+   "why": [
+    "The key facts (the 1858 smell, an Act passed in 18 days, the sewers built from 1859, cholera's decline) are consistent across museum, heritage and encyclopaedic accounts.",
+    "Caveat: sources disagree on dates, costs and mileage, and on how much of the later decline in cholera was due to the sewers versus other water improvements."
+   ],
+   "try_this": "Which slow-burning problem in your own work or life is being tolerated because it isn't yet unpleasant enough? What would make it as impossible to ignore as the Thames in 1858, and could you do that deliberately?",
+   "sources": [
+    {
+     "title": "The Great Stink of 1858 — London Museum",
+     "url": "https://www.londonmuseum.org.uk/collections/london-stories/great-stink-of-1858/"
+    },
+    {
+     "title": "How Bazalgette built London's first super-sewer — London Museum",
+     "url": "https://www.londonmuseum.org.uk/collections/london-stories/how-bazalgette-built-londons-first-super-sewer/"
+    },
+    {
+     "title": "Joseph Bazalgette — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Joseph_Bazalgette"
+    },
+    {
+     "title": "Epidemic Cholera and Joseph William Bazalgette — Hektoen International",
+     "url": "https://hekint.org/2021/12/22/epidemic-cholera-and-joseph-william-bazalgette/"
+    }
+   ],
+   "id": "5"
   }
  ]
 }
