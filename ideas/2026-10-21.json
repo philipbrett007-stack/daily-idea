@@ -168,6 +168,47 @@
     }
    ],
    "id": "3"
+  },
+  {
+   "theme": "Science & nature",
+   "title": "A famine that echoed through DNA",
+   "idea": "Between November 1944 and May 1945, the western Netherlands endured the Hunger Winter, when rations fell to between 400 and 800 calories a day. The famine began and ended abruptly, and Dutch records were excellent, which accidentally created one of the cleanest natural experiments in human biology. Scientists have since followed people who were in the womb at the time. Six decades later, those exposed around the time of conception carried a measurable chemical mark on a growth-related gene, IGF2, that their unexposed brothers and sisters did not. It is a mark on how the gene is switched, not a change to the genetic code. The finding helped show that early conditions can leave a molecular trace that lasts a lifetime, and it changed how we think about nature versus nurture: they are not two separate things.",
+   "deep_dive": "The Dutch famine ran from November 1944 to May 1945 in the occupied west of the country. According to the Oregon Health & Science University's page on the Dutch Famine Birth Cohort, about 20,000 people died and 4.5 million were affected, with rations of 400 to 800 calories a day. When food returned in the spring of 1945, the shock ended as sharply as it had begun. That clear start and end date is what makes the famine so useful to scientists: anyone born in a given window can be placed precisely on a timeline of exposure.\n\nEarly studies of the people born during and after the famine found that its effects depended on when in pregnancy the mother was starved. Later work turned to the mechanism. In 2008 Bastiaan Heijmans and colleagues compared 60 people conceived during the famine with their same-sex siblings, who had not been exposed. Six decades on, the exposed group had less DNA methylation, a chemical tag that helps control whether a gene is active, near the imprinted gene IGF2. The difference appeared with exposure around conception, not in late gestation.\n\nThe finding needs careful reading. A follow-up study in PLoS ONE (2012) reported small effect sizes, under 3% in absolute terms. These tags are not a code that dictates health; they are one of many ways early life leaves a trace. Their health consequences in this cohort are still debated, and the work concerns people exposed to extreme starvation, not ordinary variations in diet. Nor does this show the effects are inherited by later generations; that is a separate and more contested question.",
+   "examples": [
+    {
+     "title": "Brothers and sisters as the control group",
+     "text": "Heijmans and colleagues' 2008 study in the Proceedings of the National Academy of Sciences compared 60 people conceived during the Hunger Winter with their same-sex siblings. Because brothers and sisters share much of their genes and family background, any consistent difference is more likely to come from the famine. The exposed group had lower methylation of IGF2 six decades later, but only when exposure was around conception. The sibling design is a model for how to find a signal in messy human data."
+    },
+    {
+     "title": "Famine and body weight at 18",
+     "text": "Conti and colleagues (2024, Economics & Human Biology) used military recruit data to study Dutch men born around the famine. They found that those exposed since early gestation had a higher body mass index and a greater chance of being overweight at age 18. The authors also found that selection and scarring both matter: because the weakest fetuses may not have survived, the people measured are not a random sample. It shows how a starving mother can shape her child's later metabolism."
+    },
+    {
+     "title": "A smaller-effect follow-up",
+     "text": "In 2012 a team re-examined the same 60 sibling pairs in PLoS ONE, measuring five regions of IGF2 and H19. They found small but consistent differences in methylation at all IGF2 regions but not at H19, with absolute effects under 3%. A separate analysis of 15 loci found changes at six of them. A good example of the scientific process: the first striking result held up, but at a much more modest scale than headlines implied."
+    }
+   ],
+   "images": [],
+   "why": [
+    "The famine's sharp start and end, plus sibling comparisons, make this unusually strong evidence for human prenatal programming; the IGF2 result comes from 60 pairs and was followed up in a second paper.",
+    "Caveat: the methylation differences are small, and their effect on health is not settled. Extreme starvation is not a model for ordinary diets."
+   ],
+   "try_this": "Think about which of your own habits or health risks you put down to 'genes' or to 'choices'. What would a third factor, such as early conditions you can't remember, change about how you judge them?",
+   "sources": [
+    {
+     "title": "Persistent epigenetic differences associated with prenatal exposure to famine in humans — Heijmans et al. / PNAS",
+     "url": "https://www.pnas.org/doi/10.1073/pnas.0806560105"
+    },
+    {
+     "title": "The Dutch Famine Birth Cohort — Oregon Health & Science University",
+     "url": "https://www.ohsu.edu/school-of-medicine/moore-institute/dutch-famine-birth-cohort"
+    },
+    {
+     "title": "DNA methylation differences after exposure to prenatal famine are common and timing- and sex-specific — Tobi et al. / Human Molecular Genetics",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/19656776/"
+    }
+   ],
+   "id": "4"
   }
  ]
 }
