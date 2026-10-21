@@ -1,0 +1,59 @@
+{
+ "date": "2026-10-21",
+ "generated_at": "2026-10-21T08:00:00+01:00",
+ "ideas": [
+  {
+   "featured": true,
+   "theme": "Psychology & behaviour",
+   "title": "You advise others better than yourself",
+   "idea": "People reason more wisely about other people's problems than about their own. In 2014 the psychologists Igor Grossmann and Ethan Kross named this Solomon's paradox, after the biblical king who judged everyone's disputes brilliantly yet, the legend goes, handled his own household badly. The gap isn't about intelligence or age. When we are inside a problem, we see it from the first-person view: we fixate on how it feels, and we find it hard to see other possibilities or admit what we don't know. The remedy turned out to be cheap. Think about your own situation as an outside observer would, for example by describing it using your own name or 'he' or 'she' instead of 'I'. In the experiments, this small shift in language closed the gap, so people reasoned about their own troubles as wisely as they did about a friend's.",
+   "deep_dive": "Grossmann and Kross's paper, 'Exploring Solomon's Paradox', appeared in Psychological Science in 2014 and reported three experiments with 693 participants in all. In the first, people imagined a partner cheating on them, or a friend's partner cheating on the friend. They then wrote about it and were scored on features of wise reasoning: recognising the limits of their own knowledge, seeing that circumstances can change, considering other perspectives, and looking for compromise. Those thinking about someone else's predicament scored higher than those thinking about their own.\n\nThe later studies tested a fix. Some participants were asked to take a distanced stance, reflecting on their own situation as an observer would, or referring to themselves by name and with third-person pronouns. That removed the gap. The effect held across younger and older adults, which is notable because wisdom is often assumed to rise simply with age. It seems to depend as much on where you stand when you think as on how much experience you have.\n\nThis fits a wider programme of work by Kross's lab on 'distanced self-talk'. In a 2014 paper in the Journal of Personality and Social Psychology (seven experiments, 585 participants), people who spoke to themselves using their name or 'you' ahead of a stressful speech did better, according to independent raters, and showed less distress and less brooding afterwards.\n\nThe limits: the wisdom scores come from what people write in a lab, not from what they later do. The studies mostly used relationship scenarios. And distancing isn't a magic wand; it helps you reflect, but it can't supply facts you don't have.",
+   "examples": [
+    {
+     "title": "The imagined affair, yours or a friend's",
+     "text": "In Grossmann and Kross's first experiment, participants considered a partner's infidelity. Half pictured it happening in their own relationship, half in a friend's. Both groups answered questions that were scored for wise reasoning, such as whether they recognised uncertainty, expected change over time and could see the other person's view. Those thinking about a friend's situation scored significantly higher than those thinking about their own. The same event, with only the owner changed, produced noticeably more balanced thinking. It is the clearest demonstration that the difficulty lies in being immersed, not in lacking the knowledge."
+    },
+    {
+     "title": "Speaking about yourself by name before a speech",
+     "text": "In a 2014 study led by Kross, students were given a short time to prepare a speech on why they were qualified for their dream job, to be judged by others. Some were told to prepare using the first-person 'I'; others used their own name or 'you'. According to the paper's abstract, the non-first-person group was rated as performing better by objective raters, showed less distress, and ruminated less afterwards. A tiny change in pronouns, made in private before a real public performance, changed how it went."
+    },
+    {
+     "title": "Writing about Ebola by name in 2014",
+     "text": "During the October 2014 Ebola scare, Kross and colleagues recruited 1,257 Americans and asked them to write about their feelings on the outbreak, using either 'I' or their own name. Among people who began with high worry, those writing in the third person produced more fact-based reasons not to be worried, and those reasons predicted lower worry and lower perceived risk. The result is an everyday case: a public anxiety eased not by new information but by looking at it from a step back."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Paul_Rubens_-_The_Judgement_of_Solomon_-_Google_Art_Project.jpg?width=1000",
+     "caption": "Rubens's workshop painting of the Judgement of Solomon, the story that gave the paradox its name.",
+     "credit": "Peter Paul Rubens (workshop) / public domain, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Judgement_of_Solomon_-_Google_Art_Project.jpg"
+    }
+   ],
+   "why": [
+    "Three experiments (693 people) found the self-other gap and its removal by distancing, in both younger and older adults; the speech and Ebola studies come from the same lab, so independent replication matters.",
+    "Caveat: the results are from lab writing tasks, mostly about relationships, and measure how wisely people reason, not how they later behave."
+   ],
+   "try_this": "Next time you're stuck on a decision, write two sentences about it in the third person, using your own name (\"Phil is torn because...\"), then ask what you would tell a friend in the same position.",
+   "sources": [
+    {
+     "title": "Exploring Solomon's Paradox: Self-Distancing Eliminates the Self-Other Asymmetry in Wise Reasoning About Close Relationships — Grossmann & Kross / Psychological Science",
+     "url": "https://sites.lsa.umich.edu/emotion-selfcontrol-psych/wp-content/uploads/sites/1322/2024/07/grossman.pdf"
+    },
+    {
+     "title": "Need to Solve a Personal Problem? Try a Third-Person Perspective — APS Observer",
+     "url": "https://www.psychologicalscience.org/publications/observer/obsonline/need-to-solve-a-personal-problem-try-a-third-person-perspective.html"
+    },
+    {
+     "title": "Self-Talk as a Regulatory Mechanism: How You Do It Matters — Kross et al. / Journal of Personality and Social Psychology",
+     "url": "https://rascl.berkeley.edu/assets/files/self-talk_as_a_regulatory_mechanism_how_you_do_it_matters.pdf"
+    },
+    {
+     "title": "Third-Person Self-Talk Reduces Ebola Worry and Risk Perception by Enhancing Rational Thinking — Kross et al. / Applied Psychology: Health and Well-Being",
+     "url": "https://deepblue.lib.umich.edu/items/411c878c-47fe-420d-ba77-6cf5e9ad20c7"
+    }
+   ],
+   "id": "1"
+  }
+ ]
+}
