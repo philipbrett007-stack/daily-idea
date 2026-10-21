@@ -54,6 +54,68 @@
     }
    ],
    "id": "1"
+  },
+  {
+   "theme": "Creativity, invention & systems thinking",
+   "title": "Adding a road can slow everyone down",
+   "idea": "Braess's paradox is the discovery that adding a new route to a network can make every user's journey slower. It sounds impossible, because more capacity should never hurt. But it can, when each person picks the route that is best for them alone. Take 4,000 drivers choosing between two routes that each include one fixed 45-minute stretch and one stretch that takes the number of cars divided by 100 minutes. They split evenly and everyone takes 65 minutes. Now add a free shortcut linking the two variable stretches. Every driver switches to use both, because it looks quicker, but the variable stretches are now jammed and the trip takes 80 minutes. Nobody has a reason to go back, so everyone stays worse off. The lesson reaches well beyond traffic: in any system where people optimise for themselves, more options can quietly lower the result for all.",
+   "deep_dive": "The German mathematician Dietrich Braess published the result in 1968, while working in Münster. The underlying insight is older: Wikipedia credits Arthur Pigou in 1920 with an early version of the idea about selfish routing. Braess showed it with a small network and simple arithmetic, which is why the example survives in textbooks.\n\nHere is the mechanism. Before the shortcut, each route has a 45-minute fixed leg and a congestible leg taking T/100 minutes, where T is the number of cars using it. With 4,000 drivers split 2,000 and 2,000, each congestible leg takes 20 minutes, so every journey takes 65. Add a free link joining the two junctions, and a single driver can pair the two congestible legs, avoiding both 45-minute legs. If everyone does so, each congestible leg now carries 4,000 cars, 40 minutes each, and the trip takes 80. A driver who returns to a 45-minute route would face 45 plus 40, which is 85, so nobody switches back. This is a Nash equilibrium: stable, but worse than before.\n\nThe conditions matter. The effect appears only for certain mixes of congestible and fixed links and certain levels of demand. At very light or very heavy traffic the new road helps or does nothing. It also relies on drivers choosing selfishly and freely, which is why it can be undone by changing the incentives (a toll) as well as by removing the road.\n\nIt is a real feature of networks, not a trick: it shows up wherever flows follow individual choices, including data networks and power grids.",
+   "examples": [
+    {
+     "title": "Stuttgart, 1969: closing the new road",
+     "text": "A widely retold case from the era of Braess's paper comes from Stuttgart, Germany. In 1969 the city invested in road building to ease traffic, but the Plus Maths article on the paradox, and other accounts, report that congestion did not improve until a newly built section of road was closed to traffic again. It is one of the earliest reported cases of the effect in a real city, although the details of the traffic counts are not widely published, so it is best read as a well-known illustration rather than a controlled test."
+    },
+    {
+     "title": "Seoul replaces a highway with a stream",
+     "text": "Early in the 2000s Seoul removed the elevated Cheonggye Expressway and restored the Cheonggyecheon stream beneath it as a five-mile park. Officials had expected the change to worsen congestion, according to a Cornell University networks course blog, yet traffic flow in the surrounding area improved. Other changes, including public transport improvements, happened at the same time, so Seoul does not prove Braess's paradox on its own. It does show that taking away a major road does not automatically produce gridlock."
+    },
+    {
+     "title": "Boston, London and New York could close roads",
+     "text": "In 2008 Hyejin Youn, Michael Gastner and Hawoong Jeong published a study in Physical Review Letters that modelled the road networks of Boston, London and New York. They found individual drivers waste up to 30%, 24% and 28% of their travel time compared with the best arrangement for everyone, and that closing particular roads could reduce delays: six candidates in Boston, seven in London and twelve in New York. These are model results using simplified assumptions, not trials."
+    },
+    {
+     "title": "42nd Street on Earth Day",
+     "text": "In 1990, New York City closed 42nd Street to traffic for Earth Day. According to accounts citing the New York Times reporter Gina Kolata, officials feared chaos but congestion in the area actually eased. It's an example anyone who has seen a street closure can picture: the expected jam never forms, because drivers re-route to a pattern that works better for the whole network."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Braess_paradox.svg?width=1000",
+     "caption": "The two-route example with and without a shortcut, alongside a spring-and-rope version that shows the same effect mechanically.",
+     "credit": "Cmglee, via Wikimedia Commons (licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Braess_paradox.svg"
+    },
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheonggyecheon_stream_at_sunrise_with_trees_in_Seoul.jpg?width=1000",
+     "caption": "The Cheonggyecheon stream in central Seoul, restored where an expressway once ran.",
+     "credit": "Basile Morin, via Wikimedia Commons (licence on the file page)",
+     "page_url": "https://commons.wikimedia.org/wiki/File:Cheonggyecheon_stream_at_sunrise_with_trees_in_Seoul.jpg"
+    }
+   ],
+   "why": [
+    "The arithmetic is exact and has been reproduced in many studies of networks; real-world confirmation is patchier and mostly consists of case studies and model results.",
+    "Caveat: it needs particular network shapes and traffic levels, so it doesn't mean fewer roads are always better."
+   ],
+   "try_this": "Think of a process at work or home where you added a step, tool or option and everything got slower. Would removing it help? Ask who is choosing selfishly and what they'd choose if the option weren't there.",
+   "sources": [
+    {
+     "title": "Want less traffic? Build fewer roads! — Plus Maths",
+     "url": "https://plus.maths.org/want-less-traffic-build-fewer-roads"
+    },
+    {
+     "title": "Braess's paradox — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Braess%27s_paradox"
+    },
+    {
+     "title": "The Price of Anarchy in Transportation Networks: Efficiency and Optimality Control — Youn, Gastner & Jeong / Physical Review Letters",
+     "url": "https://ar5iv.arxiv.org/html/0712.1598"
+    },
+    {
+     "title": "Braess's Paradox in Seoul, South Korea — Cornell Networks course blog",
+     "url": "https://blogs.cornell.edu/info2040/2019/09/19/braesss-paradox-in-seoul-south-korea/"
+    }
+   ],
+   "id": "2"
   }
  ]
 }
