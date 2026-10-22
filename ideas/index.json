@@ -1,6 +1,15 @@
 {
- "updated": "2026-10-21T08:00:00+01:00",
+ "updated": "2026-10-22T08:00:00+01:00",
  "days": [
+  {
+   "date": "2026-10-22",
+   "count": 3,
+   "titles": [
+    "Pain is one arrow; the second is optional",
+    "When a measure becomes a target, it fails",
+    "Hindsight makes the past look predictable"
+   ]
+  },
   {
    "date": "2026-10-21",
    "count": 5,

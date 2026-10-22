@@ -1,0 +1,136 @@
+{
+ "date": "2026-10-22",
+ "generated_at": "2026-10-22T08:00:00+01:00",
+ "ideas": [
+  {
+   "id": "1",
+   "featured": true,
+   "theme": "Philosophy & wisdom",
+   "title": "Pain is one arrow; the second is optional",
+   "idea": "In one of the oldest psychological observations on record, the Buddha asked how a wise person differs from an ordinary one when both feel pain. His answer, in the Sallatha Sutta, is the parable of two arrows. Everyone is struck by the first: an injury, a loss, a harsh word. The untrained mind then fires a second, worrying, resenting and agonising over the first, so that it suffers twice, in body and in mind. The wise person still feels the first arrow, because pain comes with having a body and a life, but declines the second. It isn't that pain is an illusion. It is a precise split between what happens to you and what you add on top of it. Modern pain research draws a very similar line between how intense a pain is and how much it distresses you, and finds that the second part is far more adjustable than most of us assume.",
+   "deep_dive": "The parable comes from the Sallatha Sutta (Samyutta Nikaya 36.6), a short discourse in the Pali canon. The Buddha notes that an uninstructed person and a well-instructed disciple both feel pleasant, painful and neutral feelings. The difference is what follows. In the Nyanaponika translation, the untaught person who is touched by a painful bodily feeling worries and grieves, and so experiences two kinds of feeling, bodily and mental, like someone struck by one dart and then by a second. The disciple, struck by the same first dart, is spared the second.\n\nNotice what the text does and doesn't claim. It does not say the pain goes away. It separates the raw sensation from the story and reaction built around it. Later popular commentary stretches the image to rumination, self-criticism and dread of the future; that is an interpretation, not the sutta's own wording.\n\nScience has since found something that fits the structure. Pain researchers separate how intense a sensation is from how unpleasant it is, and they measure 'pain catastrophizing': ruminating on the pain, magnifying its threat and feeling helpless about it. Higher catastrophizing goes with higher reported pain, and brain imaging links it to more activity in regions involved in attention and emotional response.\n\nThe limits matter. Telling a person in severe or chronic pain that their suffering is a second arrow they fired can sound like blame, and critics of the popular framing say exactly that. Social conditions and real injury are not removed by attitude. The parable is best read as a tool for noticing the add-on, not as a verdict on the sufferer.",
+   "examples": [
+    {
+     "title": "Four short classes, 57% less unpleasantness",
+     "text": "In a 2011 study in the Journal of Neuroscience, Fadel Zeidan and colleagues took 15 healthy volunteers who had never meditated and gave them four 20-minute classes in a simple focused-attention technique. They then applied a painful heat stimulus while scanning their brains. During meditation, the volunteers rated the pain as 57% less unpleasant and 40% less intense than at rest. The larger drop was in the unpleasantness, the part closest to the second arrow. The sample was small, but the result is a clear laboratory version of the teaching: same stimulus, very different suffering."
+    },
+    {
+     "title": "The brains of high catastrophizers",
+     "text": "In a 2004 study in the journal Brain, Richard Gracely and colleagues scanned 29 people with fibromyalgia, a chronic pain condition, while pressure was applied. They measured each person's tendency to catastrophize, then statistically removed the effect of depression. What was left still correlated, at roughly r = 0.41 to 0.51, with activity in regions tied to attention and the emotional response to pain, including the dorsolateral prefrontal cortex. The researchers' reading was that catastrophizing may amplify pain through heightened attention and emotion. That is the second arrow showing up as measurable brain activity."
+    }
+   ],
+   "why": [
+    "The parable is over two thousand years old, but its core split between sensation and reaction is supported by modern lab work, including the 2011 meditation study and the 2004 catastrophizing scans.",
+    "The brain studies are small (15 and 29 people), and the catastrophizing link is a correlation. It doesn't prove the reaction causes the pain.",
+    "It can be misused as blame. The idea explains added suffering; it doesn't deny the first arrow."
+   ],
+   "try_this": "Next time something stings, whether a pain, a slight or a setback, name the first arrow in one plain sentence ('I banged my knee', 'I was criticised in the meeting'). Then notice what you are adding: replaying, predicting, judging yourself. Ask which of those you could put down for the next ten minutes.",
+   "sources": [
+    {
+     "title": "The Dart (Sallatha Sutta, SN 36.6), Nyanaponika translation — Access to Insight",
+     "url": "https://accesstoinsight.org/tipitaka/sn/sn36/sn36.006.nypo.html"
+    },
+    {
+     "title": "Brain Mechanisms Supporting the Modulation of Pain by Mindfulness Meditation — Zeidan et al., Journal of Neuroscience",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3090218"
+    },
+    {
+     "title": "Demystifying Meditation: Brain Imaging Illustrates How Meditation Reduces Pain — Wake Forest news release",
+     "url": "https://newsroom.wakehealth.edu/news-releases/2011/04/demystifying-meditation-brain-imaging-illustrates-how-meditation-reduces-pain"
+    },
+    {
+     "title": "Pain catastrophizing and neural responses to pain among persons with fibromyalgia — Gracely et al., Brain",
+     "url": "https://www.qxmd.com/r/14960499"
+    }
+   ]
+  },
+  {
+   "id": "2",
+   "featured": false,
+   "theme": "Creativity, invention & systems thinking",
+   "title": "When a measure becomes a target, it fails",
+   "idea": "Pick a number to stand for something you care about, then reward people for raising it, and the number will improve while the thing itself may not. This is Goodhart's law. The economist Charles Goodhart made the original point in 1975 about monetary policy: a statistical regularity tends to collapse once you lean on it for control. The anthropologist Marilyn Strathern gave it the form we now quote, 'when a measure becomes a target, it ceases to be a good measure'. The reason is simple. A measure is only a proxy, a signal that normally goes along with the real goal. Once people are paid, promoted or punished by the signal, they find cheaper ways to produce the signal than to produce the goal. The useful question for any target is therefore not 'will people try to hit it?' but 'what is the easiest way to hit it that has nothing to do with what I want?'",
+   "deep_dive": "Goodhart's remark was made about British monetary policy in 1975, and he later admitted it was meant as a humorous throw-away comment. The famous short version is Strathern's. In a 1997 paper, 'Improving ratings: audit in the British university system', in European Review, she extended it to audit culture, arguing for instance that the more examination performance becomes an expectation, the poorer it becomes as a way of telling individual students apart.\n\nThe mechanism has three parts. First, the measure was chosen because it correlated with the real goal when nobody was watching. Second, once it carries consequences, people optimise it directly. Third, the optimisation breaks the link: the cheapest route to the number is rarely the route that produces the underlying good. The more high-stakes the target, and the easier it is to game, the faster the link snaps.\n\nPublic administration researchers have studied this closely. Gwyn Bevan and Christopher Hood, in a 2006 paper on the English health service, tested the assumptions behind governing by targets against the evidence on reported successes, measurement and gaming. Their conclusion was that when reported performance meets the targets, neither government nor the public can easily tell a genuine improvement from hitting the target while missing the goal.\n\nThe limits: targets are not worthless. Bevan's wider work suggests they can work where the measure is accurate and hard to fake, such as ambulance response times. The lesson is to pair any target with checks on what it is meant to protect, and to expect gaming rather than be shocked by it.",
+   "examples": [
+    {
+     "title": "Wells Fargo and the sales quotas",
+     "text": "In September 2016, US and Californian regulators fined Wells Fargo a combined $185 million: $100 million to the Consumer Financial Protection Bureau, $35 million to the Office of the Comptroller of the Currency and $50 million to the City and County of Los Angeles. The bank's employees had opened accounts that customers may not have authorised, in secret, to hit aggressive sales targets and earn bonuses. The CFPB put the figure at more than two million accounts. The city attorney's office said around 5,300 employees were fired over it. The measure, accounts opened, had become the goal."
+    },
+    {
+     "title": "Star ratings in English hospitals",
+     "text": "Bevan and Hood's 2006 study looked at target regimes in the English health service, where hospitals and ambulance services were rated on performance targets. A UK research-impact case study based on Bevan's work reports gaming by hospitals and ambulance services in response to the star ratings. The same case study notes that targets can still work where the measure is accurate enough, with ambulance response times given as an example in which gaming is of secondary importance. The pattern is clear: the same device can improve things or hollow them out, depending on how easily the number can be gamed."
+    },
+    {
+     "title": "Exam results as a ranking tool",
+     "text": "Strathern's 1997 paper used British universities and examinations as her setting. As exam performance becomes an expectation, she argued, it gets worse as a way to discriminate between individual performances. Anyone who has watched a school or course teach to the test will recognise it: the grade rises, while what the grade was supposed to signal, real understanding, is left behind. This is the everyday face of Goodhart's law."
+    }
+   ],
+   "why": [
+    "The idea has two named academic sources, Goodhart (1975) and Strathern (1997), and a well-documented modern case in Wells Fargo.",
+    "It is a tendency, not a law of nature: targets work better where the measure is accurate and hard to fake.",
+    "The popular Soviet 'giant nail' story is an anecdote that I couldn't trace to a documented source, so it is left out."
+   ],
+   "try_this": "Pick one number you or your team are judged by. Ask: what is the laziest way to improve this number that does nothing for the thing it stands for? If that route is easy, pair the number with a second check that would catch it.",
+   "sources": [
+    {
+     "title": "Goodhart's law (cites Strathern, 'Improving ratings', European Review, 1997) — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Goodhart%27s_law"
+    },
+    {
+     "title": "What's measured is what matters: Targets and gaming in the English public health care system — Bevan & Hood, LSE",
+     "url": "https://eprints.lse.ac.uk/16211"
+    },
+    {
+     "title": "Using targets and incentives to improve the quality of public services — REF 2014 case study",
+     "url": "https://impact.ref.ac.uk/casestudies/CaseStudy.aspx?Id=35163"
+    },
+    {
+     "title": "Wells Fargo fined $185 million for fake accounts — WAMC / news report",
+     "url": "https://www.wamc.org/2016-09-08/wells-fargo-fined-185-million-over-creation-of-fake-accounts-for-bonuses"
+    }
+   ]
+  },
+  {
+   "id": "3",
+   "featured": false,
+   "theme": "Psychology & behaviour",
+   "title": "Hindsight makes the past look predictable",
+   "idea": "Once you know how something turned out, it feels as though it was always going to happen, and as though you saw it coming. Psychologists call this hindsight bias, and it works on three levels. First, memory: you misremember what you predicted. Second, inevitability: the outcome seems to have been bound to occur. Third, foreseeability: you feel you personally could have called it. The classic evidence is a 1970s study around Richard Nixon's trips to China and the Soviet Union. People rated how likely various outcomes were beforehand, and when asked afterwards what they had predicted, their memories drifted toward what actually happened, while they stayed sure they were reporting accurately. The practical cost is that it blocks learning. If every result looks obvious afterwards, you never notice how uncertain things really were, and you judge decisions by their outcomes rather than by how sensible they were at the time.",
+   "deep_dive": "Baruch Fischhoff named the effect 'creeping determinism' in a 1975 paper. In one strand of his work, participants were given short stories with several possible endings and told that one of them had actually happened. They then rated how likely each ending had been, and gave a higher likelihood to whichever outcome they had been told was true. In a second strand, Fischhoff and Ruth Beyth asked people to predict outcomes of Nixon's 1972 visits to China and Moscow. Between two weeks and six months later, they asked them to recall their forecasts. People gave higher probabilities to events they believed had occurred, and lower ones to events they believed had not, while remaining convinced their recall was accurate.\n\nIn a 2012 overview in Perspectives on Psychological Science, Neal Roese and Kathleen Vohs separate the bias into three layers: memory distortion ('I said it would happen'), inevitability ('it had to happen') and foreseeability ('I knew it would happen'). They link it to both selective recall of information consistent with the outcome and to our knack for building a coherent narrative: when the story is easy to construct, we read the ease as a sign that the outcome was foreseeable.\n\nThe effect has been replicated many times across contexts. What reduces it? Roese and Vohs note that encouraging people to consider alternative causal explanations for an outcome can help.\n\nThe limits: awareness alone doesn't remove it, and the strongest evidence is from judgement tasks and recall, not from every real-world decision. It also isn't always bad. A coherent story of the past helps us make sense of things quickly, which is why it persists.",
+   "examples": [
+    {
+     "title": "Remembering forecasts about Nixon's visits",
+     "text": "In 1972, Richard Nixon visited China and the Soviet Union. Fischhoff and Beyth had people judge, before the trips, how likely various outcomes were. Between two weeks and six months afterwards, they asked the same people to recall their original predictions and whether they believed each event had occurred. Recollections shifted toward what happened: events believed to have occurred were recalled as having been given higher probability, and those believed not to have occurred, lower. The participants thought they were reporting their old forecasts faithfully. It is the cleanest real-world demonstration that memory rewrites the prediction."
+    },
+    {
+     "title": "Stories with a given ending",
+     "text": "In Fischhoff's 1975 experiments, participants read a short story that could end four ways and were told that one outcome was the true one. Asked to judge how likely each outcome would have seemed to someone who didn't know, they typically gave extra weight to the one they had been told was real. Nothing about the story changed, only what the reader knew. This is the everyday experience of watching a match, an election or a failed project and thinking 'it was obvious', and it shows how easily knowledge of the result contaminates judgement of the odds."
+    },
+    {
+     "title": "Writing down alternative explanations",
+     "text": "Roese and Vohs's 2012 review points to a practical remedy: asking people to consider alternative causal explanations for an outcome can reduce hindsight bias. The Association for Psychological Science's summary of the paper adds that the bias matters because it gets in the way of learning from experience. A person reviewing a decision who deliberately lists how it could have gone differently is using this remedy on themselves, which is the aim of the remedy."
+    }
+   ],
+   "why": [
+    "The effect is old and replicated: Fischhoff's 1975 studies and Roese and Vohs's 2012 review in Perspectives on Psychological Science.",
+    "Details of the Nixon study come from secondary summaries here, not the original paper.",
+    "Awareness alone isn't a cure; considering alternatives helps somewhat."
+   ],
+   "try_this": "Before the result of something you care about comes in, a match, a decision at work, an election, write your probability on paper. Afterwards, compare it with what you remember thinking.",
+   "sources": [
+    {
+     "title": "The perils of hindsight judgment — Scientific American",
+     "url": "https://www.scientificamerican.com/blog/literally-psyched/the-perils-of-hindsight-judgment/"
+    },
+    {
+     "title": "'I Knew It All Along... Didn't I?' Understanding Hindsight Bias — Association for Psychological Science",
+     "url": "https://www.psychologicalscience.org/news/releases/i-knew-it-all-along-didnt-i-understanding-hindsight-bias.html"
+    },
+    {
+     "title": "Hindsight bias — Roese & Vohs, Perspectives on Psychological Science 7(5), 2012",
+     "url": "https://carlsonschool-d8.prd.umn.edu/sites/carlsonschool.umn.edu/files/2019-04/roese_vohs_hindsight_bias_2012_pps_0.pdf"
+    }
+   ]
+  }
+ ]
+}
