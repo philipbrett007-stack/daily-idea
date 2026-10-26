@@ -1,6 +1,17 @@
 {
- "updated": "2026-10-22T08:00:00+01:00",
+ "updated": "2026-10-26T08:00:00+00:00",
  "days": [
+  {
+   "date": "2026-10-26",
+   "count": 5,
+   "titles": [
+    "Berkson's paradox: selection invents correlations",
+    "Bacteria count heads before they act",
+    "Repetition makes claims feel true",
+    "Epicurus: fewer wants, more friends",
+    "Safeguards that rest on one dissenter"
+   ]
+  },
   {
    "date": "2026-10-22",
    "count": 3,

@@ -1,0 +1,236 @@
+{
+ "date": "2026-10-26",
+ "generated_at": "2026-10-26T08:00:00+00:00",
+ "ideas": [
+  {
+   "id": "1",
+   "featured": true,
+   "theme": "Thinking tools",
+   "title": "Berkson's paradox: selection invents correlations",
+   "idea": "Look only at the people who passed through a filter, and two traits that have nothing to do with each other can appear to pull against each other. That is Berkson's paradox, also called collider bias. Jordan Ellenberg's popular illustration: suppose you only date people whose looks and kindness add up to something above a threshold. Among those you actually date, the kinder ones will tend to be less handsome, because a kind person doesn't need good looks to clear the bar, and vice versa. Nothing about the wider population has changed; the link was manufactured by the filter. The practical lesson is to ask, every time you see a surprising pattern, how the people in the data got there. If entry required one trait or the other, the pattern may be a by-product of the door, not a fact about the world.",
+   "deep_dive": "The statistician Joseph Berkson described the problem in a 1946 paper in Biometrics, 'Limitations of the application of fourfold table analysis to hospital data'. Hospital records, he warned, are not a random sample of the population. People are in them because something is wrong with them, and a person with two conditions has two chances of being admitted. In the standard textbook version of his example, a hospital study compared patients with cholecystitis (gallbladder inflammation) and diabetes and found a negative association, even if there is no such association in the general population.\n\nThe modern name is collider bias. In a causal diagram, a 'collider' is a variable that two other things both feed into, here 'is in hospital' or 'was tested'. Looking only at one value of the collider, for example admitted patients only, ties the two causes together. If you know a patient is in hospital and has no diabetes, the likelier explanation is that something else brought them in.\n\nThe effect doesn't always produce a negative link. Depending on the structure, selection can create a spurious positive association, hide a real one, or even reverse its direction. Fixes exist, such as weighting the sample to match the target population, but they need information about the people who were left out.\n\nThe limit: the paradox only bites when selection depends on both traits, or on things they cause. A filter unrelated to what you are studying does no harm. The skill is in spotting when the filter is not neutral.",
+   "examples": [
+    {
+     "title": "Berkson's hospital patients, 1946",
+     "text": "Berkson's own warning came from hospital data. Because patients are admitted when they have some serious condition, comparing diseases among inpatients can produce a link between them that does not exist outside the hospital. The textbook case, cholecystitis and diabetes, gives a negative association regardless of whether the two are related in the general population. Berkson was not claiming any particular finding was wrong; he was showing that the sample itself could produce the result. The point has outlived the paper. Epidemiologists still cite it when a study draws its cases and controls from a hospital, because the hospital is a filter that people pass through for reasons tied to the very things being measured."
+    },
+    {
+     "title": "Why smoking looked protective in COVID",
+     "text": "Early in the pandemic, some studies reported that smokers seemed less likely to have severe COVID-19. Researchers at Bristol, and Gareth Griffith and colleagues in Nature Communications in 2020, pointed to selection as a non-causal explanation. Using UK Biobank data, Griffith's team showed that the people who got tested were highly selected on a range of traits. Hospitalised or tested samples are filtered by factors that relate both to smoking and to COVID severity, so the filter can create or distort associations. Smokers are admitted for smoking-related illness whatever their COVID status, so among admitted patients they can look milder. Griffith's team also released tools for sensitivity analysis, so that other researchers could check how far selection might be driving their results."
+    },
+    {
+     "title": "Ellenberg's dating pool",
+     "text": "In his 2014 book How Not to Be Wrong, mathematician Jordan Ellenberg uses an everyday version of the paradox in a piece titled 'Why are handsome men such jerks?'. Suppose a woman, Alex, will date a man only if his niceness plus handsomeness exceeds some threshold. Nicer men don't need to be as handsome to qualify, so among the men she dates, the nicer ones are on average less handsome. It is a thought experiment, not a survey, but it is a precise one, and most people recognise the feeling: the colleagues you actually hire, the restaurants you actually visit and the films you actually watch have all passed through a filter that makes good and bad traits seem to trade off."
+    }
+   ],
+   "why": [
+    "Berkson's 1946 hospital warning and the later causal-diagram framework are standard teaching in epidemiology and statistics.",
+    "The COVID example is well documented but contested in detail: selection is one explanation among others for the smoking findings, not proof that smoking is irrelevant.",
+    "It only applies when selection depends on the traits you are comparing, or on their causes."
+   ],
+   "try_this": "Pick a pattern you believe, such as 'the best restaurants have the worst service' or 'clever people are lazy', and ask what it takes to get into your sample. Would anything have to be good at one thing, or the other, to be noticed at all?",
+   "sources": [
+    {
+     "title": "Limitations of the application of fourfold table analysis to hospital data — Berkson, Biometrics (PubMed)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/21001024/"
+    },
+    {
+     "title": "Collider bias undermines our understanding of COVID-19 disease risk and severity — Griffith et al., Nature Communications (via DOAJ)",
+     "url": "https://doaj.org/article/09f9c535f46548a4a4affd7e1fc10cce"
+    },
+    {
+     "title": "Be cautious about associations in hospitalised COVID-19 patients — Health Data Research UK",
+     "url": "https://www.hdruk.ac.uk/news/we-should-be-cautious-about-associations-of-patient-characteristics-with-covid-19-outcomes-that-are-identified-in-hospitalised-patients/"
+    },
+    {
+     "title": "Why Are Handsome Men Such Jerks? — Jordan Ellenberg / Penguin Press",
+     "url": "https://medium.com/@penguinpress/why-are-handsome-men-such-jerks-f385a46d314f"
+    }
+   ]
+  },
+  {
+   "id": "2",
+   "featured": false,
+   "theme": "Science & nature",
+   "title": "Bacteria count heads before they act",
+   "idea": "A single bacterium that releases light, toxin or glue is wasting its effort: nobody would notice. Many bacteria solve this by releasing a signalling molecule and sensing how much of it has built up around them. When the concentration crosses a threshold, enough neighbours must be present, and the whole population switches behaviour together. This is quorum sensing, and it was first seen in a glowing marine bacterium, Vibrio fischeri, in 1970. The deeper surprise is that the same trick runs in the opposite direction in some pathogens. Bacteria are not simply 'talking'. They are estimating how crowded it is, then deciding whether a costly group behaviour will pay off. That turns a vague idea, the bacterial colony as a society, into a mechanism you can describe, measure and, in principle, interfere with.",
+   "deep_dive": "In 1970 Kenneth Nealson, Terry Platt and J. Woodland Hastings reported that the luminous bacterium now called Aliivibrio fischeri made light only once its culture was dense. They concluded the cells were conditioning their own medium and called it autoinduction. In the mid-1980s Michael Silverman and JoAnne Engebrecht identified the genes behind the circuit. The term 'quorum sensing' was coined in 1994, and Peter Greenberg's group showed the phenomenon was general, finding a similar signal controlling virulence in Pseudomonas aeruginosa.\n\nBonnie Bassler, who joined the field around 1990 when there was little interest in it, helped show that it is the rule in bacteria, not an oddity, and that species can listen across species lines: a 1997 paper argued signalling could occur between species, and her later work found a molecule, AI-2, used for this wider conversation.\n\nThe mechanism is simple in outline. Each cell releases a small molecule. At low cell density it diffuses away. At high density it accumulates and binds receptors that flip gene expression. In Vibrio cholerae, receptors act as kinases at low density and as phosphatases once the signal binds, shutting off one programme and starting another. Two signals, CAI-1 and AI-2, report on the Vibrio population and the wider bacterial community.\n\nThe limit is the metaphor. Bacteria do not 'vote' or 'decide' in a human sense, and a high signal level can reflect a crowded population or merely a still, enclosed space. Quorum sensing is best seen as a population-level estimate with biochemical noise, not a conversation.",
+   "examples": [
+    {
+     "title": "The squid's nightly lantern",
+     "text": "The Hawaiian bobtail squid keeps a population of Vibrio fischeri in a light organ and uses their glow for counterillumination: a mild downward light that reduces the shadow it would otherwise cast under moonlight. At night the bacteria reach high density and produce autoinducers that switch on light emission. At dawn the squid vents most of them. A 2011 study in PLOS ONE reports that the exudate contains about 95% of the symbiont population, while an earlier 2006 confocal study put it near 90%. The few that remain regrow in the crypts before nightfall, so the lamp is rebuilt and re-lit every day, with quorum sensing deciding when it comes on."
+    },
+    {
+     "title": "Cholera switches itself off when crowded",
+     "text": "Vibrio cholerae reverses the usual pathogen logic. Work by Bassler's lab, including Hammer and Bassler in 2003, found that at low cell density it forms biofilms and makes virulence products, while at high density it represses biofilm formation and disperses. Mutants locked into the low-density state formed more biofilm; those locked into high density couldn't form biofilms at all. A 2002 Cell paper from the Bassler lab, with Miller, Skorupski, Lenz and Taylor, described parallel quorum-sensing systems converging on virulence regulation. A 2014 chemistry paper in Chemical Science designed agonists that trick the bacterium into acting as if crowded, an idea for repressing virulence without killing the cells."
+    },
+    {
+     "title": "From glowing squid to drug design",
+     "text": "Because quorum sensing controls costly group behaviours such as virulence and biofilm formation, it has become a drug target. A 2025 ASBMB Today feature on Bassler's work describes the field as a way to 'tap into bacterial conversations', and one proposal is to make bacteria deaf or mute, so they can't coordinate an attack, rather than kill them outright. The aim is a treatment that disarms an infection and puts less evolutionary pressure on bacteria to resist. This remains an area of research and has not produced a standard antibiotic replacement, but it shows how a mechanism first spotted in glowing plankton changed how researchers think about infection."
+    }
+   ],
+   "visual": {
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=TVfmUfr8VPA",
+    "label": "Bonnie Bassler, 'The secret, social lives of bacteria' (TED, 2009)",
+    "note": "Watch for how she explains the glowing squid and why a bacterium needs to know how many neighbours it has."
+   },
+   "why": [
+    "The mechanism is well established across decades, from the 1970 observation of autoinduction to the genes and receptors now mapped in detail.",
+    "The best-studied cases are in model organisms such as Vibrio, so each species needs checking before generalising.",
+    "'Talking' and 'voting' are metaphors: signal levels can also reflect space and flow, not just head-count."
+   ],
+   "try_this": "Think of a group decision where acting early would be costly unless enough others act too, such as a petition, a launch or a strike. What signal would tell you the quorum has been reached?",
+   "sources": [
+    {
+     "title": "Tapping into bacterial conversations — ASBMB Today",
+     "url": "https://www.asbmb.org/asbmb-today/science/011825/tapping-into-bacterial-conversations"
+    },
+    {
+     "title": "Quorum sensing controls biofilm formation in Vibrio cholerae — Hammer & Bassler / Princeton Molecular Biology",
+     "url": "https://molbio.princeton.edu/publications/quorum-sensing-controls-biofilm-formation-vibrio-cholerae"
+    },
+    {
+     "title": "Schleicher & Nyholm 2011, symbiont and host proteome, PLOS ONE",
+     "url": "https://bobtailsquid.ink/wp-content/uploads/2020/05/Schleicher2011_PLOSone_symbiont_host_proteome.pdf"
+    },
+    {
+     "title": "Bonnie Bassler — TED speaker page",
+     "url": "https://www.ted.com/speakers/bonnie_bassler"
+    }
+   ]
+  },
+  {
+   "id": "3",
+   "featured": false,
+   "theme": "Psychology & behaviour",
+   "title": "Repetition makes claims feel true",
+   "idea": "We tend to treat how easily a statement comes to mind as a clue to whether it is true. Hear a claim a second time and it feels more familiar, so it feels truer. This is the illusory truth effect, first shown in 1977 by Lynn Hasher, David Goldstein and Thomas Toppino, who had students rate plausible statements as true or false over several sessions. Repeated statements were rated truer than new ones. The unsettling part is that being well informed doesn't fully protect you. In a 2015 study Lisa Fazio and colleagues found the effect even for claims people actually knew were false, a pattern they called knowledge neglect. Familiarity is a cheap signal that is usually right, which is why the mind uses it, and why anyone who can make a claim familiar can borrow its authority.",
+   "deep_dive": "Hasher, Goldstein and Toppino published their study in the Journal of Verbal Learning and Verbal Behavior in 1977. Students saw lists of sixty plausible statements, some true and some false, on three occasions. Statements that had appeared before were judged more likely to be true than new ones. The effect is now one of the most replicated in the field: a paper in 2021 notes it has been replicated in more than 80 published articles, and a meta-analysis cited there found a medium effect (d = 0.53) when comparing verbatim repetitions with novel information.\n\nThe usual explanation is processing fluency. A statement you have met before is easier to process, and the brain uses that ease as a stand-in for truth. Fazio, Brashier, Payne and Marsh tested a natural hope in the Journal of Experimental Psychology: General in 2015: that knowledge would act as a barrier. It did not stop the effect. Their modelling suggested people sometimes lean on fluency even when knowledge was available to them.\n\nHow much repetition does it take? Hassan and Barber (2021) showed statements up to 9 times in one experiment and up to 27 in another. Perceived truth kept rising but in a logarithmic shape, with the biggest jump coming from the second exposure. Most of the damage is done early.\n\nThe limits: these are mostly lab studies using trivia statements, and the size of the effect on real, emotionally charged beliefs is harder to measure.",
+   "examples": [
+    {
+     "title": "The original 1977 experiment",
+     "text": "Hasher, Goldstein and Toppino brought the same college students back three times and showed them lists of sixty plausible statements, some true and some false. Some statements repeated from one session to the next. Participants rated each for how likely it was to be true. Those that had come up before were judged truer than those that hadn't, whether or not they actually were. Because the statements were plausible but obscure, people had no solid knowledge to fall back on, so familiarity filled the gap. The finding gave a name to something propagandists and advertisers had long relied on: repeat it, and it begins to feel like something you already knew."
+    },
+    {
+     "title": "Knowing better didn't help enough",
+     "text": "In 2015 Lisa Fazio, Nadia Brashier, Keith Payne and Elizabeth Marsh tested whether prior knowledge protects against the effect. They used statements that people could be expected to know were wrong, and checked participants' knowledge both through norms and in a test after the experiment. Repetition still shifted judgements. A second experiment used multinomial modelling and found that people sometimes relied on fluency even when knowledge was also available to them. The authors called this knowledge neglect: not a lack of knowledge, but a failure to use it when something felt familiar."
+    },
+    {
+     "title": "27 repeats, and the second one counts most",
+     "text": "In 2021 Alexis Hassan and Sarah Barber, publishing in Cognitive Research: Principles and Implications, noted that nearly all earlier studies used three or fewer repetitions. They ran two experiments with up to 9 and up to 27 exposures to trivia statements. Perceived truth kept rising, but with diminishing returns: the biggest increase came from the second encounter. For anyone reading news or social media, the practical reading is uncomfortable. You don't need to be bombarded for a claim to gain ground; being met twice already makes a difference. They also point out that this helps explain why advertising and propaganda work."
+    }
+   ],
+   "why": [
+    "The effect has been replicated in dozens of studies, with a medium effect size in a meta-analysis (d = 0.53).",
+    "Most evidence is from lab studies using trivia statements; real-world beliefs may behave differently.",
+    "Knowledge reduces but does not remove the effect, according to Fazio et al."
+   ],
+   "try_this": "Next time a claim feels obviously true, ask yourself where you first met it. If the answer is 'I'm not sure, but I've heard it a lot', treat that as no evidence at all and look for one independent source.",
+   "sources": [
+    {
+     "title": "Knowledge does not protect against illusory truth — Fazio, Brashier, Payne & Marsh, J. Exp. Psychol. General (PubMed)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26301795/"
+    },
+    {
+     "title": "The effects of repetition frequency on the illusory truth effect — Hassan & Barber, Cognitive Research: Principles and Implications",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8116821/"
+    },
+    {
+     "title": "Illusory truth effect — overview of Hasher, Goldstein & Toppino (1977)",
+     "url": "https://en.wikipedia.org/wiki/Illusory_truth_effect"
+    }
+   ]
+  },
+  {
+   "id": "4",
+   "featured": false,
+   "theme": "Philosophy & wisdom",
+   "title": "Epicurus: fewer wants, more friends",
+   "idea": "Epicurus, who taught in Athens around 300 BC, is remembered as a byword for indulgence, which is almost the opposite of what he taught. His case was that a good life is a calm one, and calm comes from sorting your desires. Some are natural and necessary, such as food and shelter. Some are natural but unnecessary, such as luxurious food. Some are neither, and arise from empty opinion, such as the wish for fame or power. Satisfy the first, enjoy the second lightly, and let the third go, because they are the ones that never feel finished. Among the things wisdom can give, he ranked friendship highest, in the Principal Doctrines, as by far the most important for lasting happiness. A modest life with good friends beats a grand one without them.",
+   "deep_dive": "The sources are fragments. Epicurus wrote a great deal, but what survives comes mainly through Diogenes Laertius, who preserves letters and the Principal Doctrines. Most scholars accept the letters to Herodotus and Menoeceus as his own. The picture below is drawn from them.\n\nPrincipal Doctrine 29 divides desires into three kinds: natural and necessary, natural but not necessary, and neither, which come from groundless opinion. The point is not that pleasure is bad. Epicurus held that pleasure is the aim of life, but defined it as freedom from bodily pain and mental disturbance. The cheapest route to that is to want little and want what is easy to get.\n\nHe thought security and peace of mind came from other people and from beliefs, not from power and wealth. Doctrine 13 says power and riches may protect you from others to a degree, but real security rests on peace of mind. Doctrine 28 says that, within life's limited troubles, nothing adds to security as much as friendship. Diogenes adds that Epicurus rejected the Pythagorean idea of shared property among friends, because it implied mistrust, and friendship needs confidence.\n\nThe limit: this is advice for people whose basic needs are met. It says little about poverty or injustice, and its withdrawal from public life is not for everyone.",
+   "examples": [
+    {
+     "title": "Epicurus and the pot of cheese",
+     "text": "Diogenes Laertius, in his Lives of the Eminent Philosophers, Book X, says Epicurus mentions in his correspondence that he was content with plain bread and water. He is quoted as asking a friend to send him a little pot of cheese, so that, when he liked, he might fare sumptuously. It is a neat demonstration of the second category in practice: because he wanted little, a small luxury felt like a feast. The anecdote also shows the point of the teaching. The aim wasn't to suffer, but to arrange life so that ordinary things give real pleasure, and so that no craving needs constant feeding."
+    },
+    {
+     "title": "The Garden: a frugal community of friends",
+     "text": "Apollodorus is reported as saying Epicurus bought the property that became the Garden for eighty minae, and Diocles describes his followers as living a very simple and frugal life. It was a community of friends living together. Notice also what it avoided. Diogenes says Epicurus rejected pooling property among friends because it implied mistrust, and without trust there is no friendship. The Garden is the clearest real attempt to put the doctrine into practice: modest means, shared time, and relationships built on confidence, not obligation."
+    },
+    {
+     "title": "The longest study on happiness",
+     "text": "The Harvard Study of Adult Development began in 1938 with 724 men, in two groups: 268 Harvard sophomores in the Grant Study, and 456 men from the Glueck Study. It now includes about 1,300 of their descendants. Robert Waldinger, who directs it, says researchers looked at midlife data for the best predictors of who would be happy and healthy at 80. They expected cholesterol or blood pressure at 50 to matter most. Instead, relationship satisfaction, especially in marriage, was the best predictor. Quality mattered more than quantity: how good close relationships are, more than how many friends or whether you are partnered. It is modern evidence for a claim Epicurus made 2,300 years ago."
+    }
+   ],
+   "visual": {
+    "type": "video",
+    "url": "https://www.ted.com/talks/robert_waldinger_what_makes_a_good_life_lessons_from_the_longest_study_on_happiness",
+    "label": "Robert Waldinger, 'What makes a good life?' (TEDxBeaconStreet, 2015)",
+    "note": "Listen for what he says predicted health at 80, and compare it with Epicurus's claim about friendship and security."
+   },
+   "why": [
+    "The Epicurean texts are authentic but fragmentary, so interpretation involves some guesswork.",
+    "The Harvard study is long and rich but began with a narrow sample of mostly white men from particular backgrounds.",
+    "The advice assumes your basic needs are already met."
+   ],
+   "try_this": "List your five biggest wants at the moment. Mark each: necessary, natural but optional, or driven by what others will think. Then ask which friend you could call this week to spend an hour with, and do it.",
+   "sources": [
+    {
+     "title": "Principal Doctrines — Epicurus (epicurus.net)",
+     "url": "https://epicurus.net/en/principal.html"
+    },
+    {
+     "title": "Life of Epicurus — Diogenes Laertius, Lives of the Eminent Philosophers, Book X (Perseus/Thayer)",
+     "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diogenes_Laertius/Lives_of_the_Eminent_Philosophers/10/Epicurus*.html"
+    },
+    {
+     "title": "Work out daily, OK, but how socially fit are you? — Harvard Gazette",
+     "url": "https://news.harvard.edu/gazette/story/2023/02/work-out-daily-ok-but-how-socially-fit-are-you"
+    }
+   ]
+  },
+  {
+   "id": "5",
+   "featured": false,
+   "theme": "History & big ideas",
+   "title": "Safeguards that rest on one dissenter",
+   "idea": "Some of the most important safety rules ever written are about who must agree. On 27 October 1962, during the Cuban Missile Crisis, the Soviet submarine B-59 was being harassed by American destroyers dropping practice depth charges, to force it to surface. Its captain and political officer reportedly believed war might have begun and prepared to use a nuclear torpedo. Launch required the agreement of all three senior officers aboard, and the third, Vasily Arkhipov, refused. The rule did its job, but only because one person on the day said no. That is the real lesson, and the uncomfortable one. A requirement for unanimity is only a safeguard if the people it depends on are in the room, informed and willing to dissent, and history shows it has sometimes depended on that.",
+   "deep_dive": "The facts of the incident are better documented than they once were. The National Security Archive published Arkhipov's own 1997 recollection and Svetlana Savranskaya's interview with another brigade commander, Ryurik Ketov. In the Archive's retelling, because the signalling officer was in the way, the captain, Valentin Savitsky, could not immediately go down the narrow stairway from the conning tower, and in those moments Arkhipov realised that the American ships were signalling rather than attacking. He urged calm.\n\nBe careful with the legend. Accounts differ. Vadim Orlov, B-59's radio intelligence chief, gives a less dramatic version in which Savitsky had lost his temper but calmed down. Another account says Arkhipov argued that the conditions for firing had not been met. Arkhipov himself, in his 1997 talk, avoided addressing the possible nuclear launch directly. What the sources agree on is the structure: three officers' consent was needed, tensions were extreme, and the submarine did not fire.\n\nThe pattern recurs. A system designed to fail safe (consensus rules, human checks) may rest on one person's judgement at the critical moment, which is a strength when that judgement is good and a weakness when it isn't.\n\nThe limit: single heroic stories invite over-claiming. The better habit is to ask how the system would behave if that person had been absent, and whether anything beyond luck would catch the error.",
+   "examples": [
+    {
+     "title": "B-59, 27 October 1962",
+     "text": "Soviet submarine B-59 was shadowed by US destroyers that dropped practice depth charges near it. Savranskaya said that had Arkhipov not been aboard that specific submarine, the nuclear torpedo would likely have been fired at the carrier USS Randolph, potentially setting off catastrophic escalation. The submarine's launch rule needed all three senior officers to agree; Arkhipov, as flotilla chief of staff, would not. National Security Archive material shows how thinly documented parts of the story remain: Orlov describes Savitsky as having lost his temper, not as having been about to fire. That uncertainty matters, and it doesn't change the structural point about what the rule required."
+    },
+    {
+     "title": "Petrov and the false alarm, 1983",
+     "text": "On 26 September 1983, Lieutenant Colonel Stanislav Petrov was on duty at the Oko early-warning centre when the system signalled a US launch, then four more missiles, five in all. He judged it a false alarm and didn't pass it up as an attack, partly because no corroborating evidence arrived. Investigators later found that Oko had mistaken sunlight reflecting off high-altitude clouds, seen from satellites in Molniya orbit, for missile launches. The context made the call harder: the Soviets had shot down a South Korean airliner only weeks earlier, and tensions were high. As with Arkhipov, a human check overrode an automated signal, and the outcome depended on one person."
+    }
+   ],
+   "why": [
+    "The core facts are documented by the National Security Archive and by investigative accounts of the 1983 false alarm.",
+    "Details of B-59 differ between participants (Savitsky, Orlov, Ketov, Arkhipov), so the dramatic versions should be treated with care.",
+    "Two cases show a pattern, not a rate: they cannot tell us how often such human checks fail."
+   ],
+   "try_this": "Think of a high-stakes decision at work or at home that needs two or more people to agree. If the one who would say no were absent, what would catch the mistake? If nothing would, add a second check now.",
+   "sources": [
+    {
+     "title": "The Underwater Cuban Missile Crisis at 60 — National Security Archive",
+     "url": "https://nsarchive.gwu.edu/briefing-book/russia-programs/2022-10-03/soviet-submarines-nuclear-torpedoes-cuban-missile-crisis"
+    },
+    {
+     "title": "Vice-Admiral Vasili Arkhipov — National Security Archive document",
+     "url": "https://nsarchive.gwu.edu/document/29078-document-1-vice-admiral-vasili-arkhipov"
+    },
+    {
+     "title": "Soviet colonel who averted nuclear war — RFE/RL",
+     "url": "https://www.rferl.org/a/soviet-colonel-averted-nuclear-war/25118749.html"
+    },
+    {
+     "title": "1983: Averting potential nuclear war — APS News",
+     "url": "https://www.aps.org/apsnews/2026/09/1983-averting-potential-nuclear-war"
+    }
+   ]
+  }
+ ]
+}
