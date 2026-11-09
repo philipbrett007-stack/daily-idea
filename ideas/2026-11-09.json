@@ -1,0 +1,195 @@
+{
+ "date": "2026-11-09",
+ "generated_at": "2026-11-09T07:55:00+00:00",
+ "ideas": [
+  {
+   "id": "1",
+   "featured": true,
+   "theme": "Thinking tools",
+   "title": "Simple rules can beat expert judgement",
+   "idea": "When the future is uncertain and the data is thin, a short list of yes/no questions can match, or beat, both sophisticated models and expert gut feeling. Gerd Gigerenzer's research group calls these fast-and-frugal trees. You check one cue at a time, and each answer either ends the decision or sends you to the next question. Nothing is weighted or added up.\n\nThe reason it works is that complex models fit the quirks of past data as well as its real patterns, and in unstable situations those quirks do not repeat. A tree ignores most of the information, so it has fewer quirks to chase. Think of it as a checklist that is honest about how little you can know: it keeps the few signals that have proven reliable and drops the rest, which also makes it easy to explain, teach and audit.",
+   "deep_dive": "The idea comes from the work of Gigerenzer, Peter Todd and their ABC Research Group, summed up in the book Simple Heuristics That Make Us Smart. Their argument is that heuristics are not just lazy shortcuts. In an uncertain world they can be more accurate than information-hungry methods, provided they fit the structure of the environment. This is called ecological rationality.\n\nA fast-and-frugal tree ranks a handful of cues in order of usefulness. After each question there is an \"exit\": one answer lets you decide immediately, and only the other answer sends you on. Because the tree uses so little information, it avoids overfitting, which is what happens when a flexible model learns the noise in a small sample and then performs badly on new cases. Reviewers describe heuristics as often more robust than cleverer methods for exactly this reason.\n\nThe limits matter. Simple rules shine when the future is genuinely uncertain, data is scarce or risks have fat tails. Where you have huge amounts of data and the relationships are stable, a complex model can win. A tree is also only as good as its cues: if they encode a bias, the tree will apply that bias quickly and consistently. And the tree has to be built and tested on real outcomes, not guessed. The point is not that less information is always better, but that more complexity is not automatically more accuracy.",
+   "examples": [
+    {
+     "title": "Triage for chest pain",
+     "text": "In 1997 Green and Mehr studied how doctors decide whether to admit a chest-pain patient to the coronary care unit. At the hospital studied, around 90% of patients with severe chest pain were sent there, which meant overcrowding and higher costs. Their tree asked a few yes/no questions. First: is there a change in the ST segment on the ECG? If so, the patient goes straight to the unit. Later questions checked other predictors. A review reports the tree was more sensitive than both physicians' judgement and a statistical instrument, while using only part of the information."
+    },
+    {
+     "title": "The Bank of England tests simplicity",
+     "text": "In 2014 a team including Gigerenzer published, through the Bank of England, Financial Stability Paper No. 28, \"Taking uncertainty seriously\". Their argument was that financial systems are better described by uncertainty than by calculable risk, so simple tools can complement complex ones. They report that simple indicators predicted individual bank failures during the global financial crisis better than more complex metrics did. When several indicators were combined, fast-and-frugal trees performed comparably to standard, more information-intensive regression techniques, while being simpler and easier to communicate to regulators and the public."
+    }
+   ],
+   "why": [
+    "Evidence: a clinical decision study, a central-bank paper and decades of laboratory work on heuristics. I checked the findings through reviews and abstracts, not the full papers.",
+    "Limit: it works best under real uncertainty with limited data. With rich, stable data, complex models can do better, and a tree can bake in a bias."
+   ],
+   "try_this": "Choose a decision you keep agonising over, such as whether to take on a request or shortlist a candidate. Write down the three questions that have actually predicted good outcomes in the past, in order, with the answer that would end the decision at each step. Use the list for a month and compare it with your instinct.",
+   "sources": [
+    {
+     "title": "Heuristic decision making in medicine — Marewski & Gigerenzer / Dialogues in Clinical Neuroscience",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3341653"
+    },
+    {
+     "title": "Taking uncertainty seriously: simplicity versus complexity in financial regulation — Aikman et al. / Bank of England",
+     "url": "https://www.bankofengland.co.uk/financial-stability-paper/2014/taking-uncertainty-seriously-simplicity-versus-complexity-in-financial-regulation"
+    }
+   ]
+  },
+  {
+   "id": "2",
+   "featured": false,
+   "theme": "Science & nature",
+   "title": "Water, not strength, caps how tall trees grow",
+   "idea": "Water does not climb a tree because the roots push it. It is pulled. As water evaporates from the leaves, it creates tension at the top of the xylem, the tree's plumbing, and because water molecules cling together, the whole column is drawn upwards like a rope. That works, but every metre of height makes the job harder: gravity and friction in the narrow tubes both increase the pull the leaves must supply.\n\nIn 2004 a team led by Koch estimated that coast redwoods should be unable to grow taller than about 122 to 130 metres. Their reasoning was that leaves near the top become so water-stressed that they cannot expand or photosynthesise well, even when the soil is soaked. So the ceiling is set not by the tree's strength or age but by its plumbing. The tallest living tree gets within about ten metres of the limit.",
+   "deep_dive": "For a long time botanists asked how water gets to the top of a 100-metre tree. A suction pump can only lift water about 10 metres, and root pressure is too weak to do the job. The accepted answer is the cohesion-tension theory: evaporation from the leaves creates negative pressure, and hydrogen bonds hold water molecules together so the column moves as one. Textbook estimates say that lifting water to the top of a giant sequoia needs a pull of at least about 1.9 megapascals, many times atmospheric pressure.\n\nThat raises a question: if the pull grows with height, is there a point where it becomes too much? Koch, Sillett, Jennings and Davis tested the idea in the field. They climbed five of the world's eight tallest trees in the wet forests of northern California and measured leaf characteristics along the height gradient. Leaves at greater height showed the signs of increasing water stress. Regression analysis of those measurements pointed to a maximum height of 122 to 130 metres, close to the tallest trees recorded in the past.\n\nThe caveats are important. This is a theoretical ceiling for redwoods in a wet climate, not a prediction. As Koch put it: \"We are not saying they will grow that tall; we are saying they can.\" Drought, lightning and storms probably stop most trees well short of it, and the water-transport explanation was one of several competing hypotheses before this study tested it.",
+   "examples": [
+    {
+     "title": "Climbing five of the tallest trees",
+     "text": "The 2004 Nature paper, \"The limits to tree height\", was based on fieldwork in the wet temperate forests of northern California. At that time the tallest known tree stood 112.7 metres tall. The researchers did not simply measure trunks. They climbed five of the world's eight tallest trees and collected leaves at different heights, so they could see how the foliage changed on the way up. From those leaf measurements they estimated a maximum redwood height of 122 to 130 metres, and argued that water stress at the top limits leaf growth and photosynthesis."
+    },
+    {
+     "title": "Hyperion, the tallest known tree",
+     "text": "Hyperion, a coast redwood in Redwood National Park, was found on 25 August 2006 by naturalists Chris Atkins and Michael Taylor. Stephen Sillett of Humboldt State University climbed it to verify the height, and the figure was about 379 feet, or roughly 115.5 metres. Guinness World Records lists it at 116.07 metres, measured in 2019. That is taller than anything found before it, yet still under the 122 to 130 metre ceiling the Nature team estimated. Its exact location is kept secret to protect it, and the park closed the surrounding area in 2022."
+    }
+   ],
+   "why": [
+    "Evidence: a peer-reviewed Nature paper based on direct climbing and sampling of the tallest trees, reported consistently by several outlets.",
+    "Limit: the 122 to 130 metre figure is an estimate for redwoods with plenty of water, not a prediction, and other factors such as storms and drought can matter more in practice."
+   ],
+   "try_this": "Next time you see a tall tree, ask what it would cost that tree to grow one more metre, and who pays. Then ask the same of a team or a project of your own: which cost rises with every extra unit of size, and where does it overtake the benefit?",
+   "sources": [
+    {
+     "title": "Published online 19 April 2004 — Nature News",
+     "url": "https://www.nature.com/news/2004/040419/full/news040419-5.html"
+    },
+    {
+     "title": "The limits to tree height — Koch, Sillett, Jennings & Davis / Nature (via NAU Experts)",
+     "url": "https://experts.nau.edu/en/publications/the-limits-to-tree-height/"
+    },
+    {
+     "title": "HSU Prof Confirms World's Tallest Tree — Humboldt State University",
+     "url": "https://now.humboldt.edu/news/hsu-prof-confirms-worlds-tallest-tree"
+    },
+    {
+     "title": "Tallest tree living — Guinness World Records",
+     "url": "https://www.guinnessworldrecords.com/world-records/tallest-tree-living"
+    }
+   ]
+  },
+  {
+   "id": "3",
+   "featured": false,
+   "theme": "Psychology & behaviour",
+   "title": "The default option decides more than preference",
+   "idea": "Most of us do not weigh every choice from scratch. We go with whatever happens if we do nothing. That makes the default one of the strongest forces in behaviour: change what happens automatically, and large numbers of people end up somewhere different, without being forced or even persuaded.\n\nThe classic case is saving for retirement. When employers move from \"sign up if you want to join\" to \"you are signed up unless you opt out\", participation jumps. Madrian and Shea found it in a large US company's 401(k) plan in 2001, and Britain saw the same pattern when it introduced automatic pension enrolment, with far fewer people opting out than officials had feared.\n\nIt is not magic. A default works because inaction is easy, and because it quietly signals what the sensible choice is. The catch is that people also tend to stay at the default amount, even when a higher one would suit them better.",
+   "deep_dive": "Brigitte Madrian and Dennis Shea published \"The Power of Suggestion: Inertia in 401(k) Participation and Savings Behavior\" in the Quarterly Journal of Economics in 2001. They studied a large US company that changed its 401(k) plan so that new employees were enrolled automatically unless they opted out, and compared employees hired before and after the change. The main finding was simple: participation was significantly higher under automatic enrolment, by a very wide margin among new hires, and a US Treasury summary puts the figure at about 86 per cent.\n\nThe paper also showed the downside. Many people stuck with the default contribution rate and the default investment fund, which had been chosen as a cautious starting point rather than as the best option. A later study by James Choi, David Laibson, Madrian and Andrew Metrick, covering three firms, found participation above 85 per cent, but participants tended to stay at the low default saving rate. The default became an anchor: it raised participation and, for some, lowered how much they saved.\n\nDefaults are strongest when the decision is complicated, the stakes feel distant and acting takes effort. They are weaker when people care strongly or have good reason to resist. They also raise an ethical question, because whoever sets the default is making a choice on everyone else's behalf. That is why the best defaults are transparent, easy to leave and set with the chooser's interests in mind.",
+   "examples": [
+    {
+     "title": "A US firm flips its pension default",
+     "text": "Madrian and Shea studied a large US firm that switched its 401(k) plan from opt-in to opt-out for new hires. Nothing else about the offer changed: the same plan, the same employer match, just a different starting position. Participation among new hires rose sharply, to about 86 per cent in a Treasury summary of the study. The same research found a side effect. Many employees stayed at the low default contribution rate and in the default fund, even though they might have chosen otherwise if they had started from a blank page."
+    },
+    {
+     "title": "Britain's auto-enrolment beats forecasts",
+     "text": "When the UK introduced automatic enrolment into workplace pensions, the Department for Work and Pensions forecast that opt-out rates could reach as high as 28 per cent. The outcomes were much better. Official figures put the share of automatically enrolled employees who opted out at about nine per cent in 2018/19, roughly a third of the forecast. Studies of individual employers found opt-out rates well under ten per cent, in some cases around five per cent. Opt-out and participation rates measure different things, so they should not be compared directly with the US figures."
+    }
+   ],
+   "why": [
+    "Evidence: a peer-reviewed study of one firm, a follow-up across three firms, and national UK statistics, all pointing the same way.",
+    "Limit: the default also anchors, so many people save less than they would have chosen. Results from pensions do not automatically carry over to other decisions, and I checked the UK figures through secondary reports."
+   ],
+   "try_this": "List three things in your week that happen only because they are the default, such as a subscription, a meeting or a notification. Change one default, and see what you do when you have to opt in instead of opt out.",
+   "sources": [
+    {
+     "title": "The Power of Suggestion: Inertia in 401(k) Participation and Savings Behavior — Madrian & Shea / NBER",
+     "url": "https://www.nber.org/papers/w7682"
+    },
+    {
+     "title": "Automatic Enrollment — US Department of the Treasury",
+     "url": "https://home.treasury.gov/system/files/136/archive-documents/autoenroll.doc"
+    },
+    {
+     "title": "Auto enrolment opt out rates are three times lower than predicted — Iris",
+     "url": "https://www.iris.co.uk/blog/payroll/auto-enrolment-opt-out-rates-are-three-times-lower-than-predicted/"
+    }
+   ]
+  },
+  {
+   "id": "4",
+   "featured": false,
+   "theme": "Philosophy & wisdom",
+   "title": "Sort what is yours to control",
+   "idea": "The Enchiridion, the handbook of the Stoic teacher Epictetus, opens with a sorting exercise. Some things are up to us: our opinions, aims, desires and aversions. Others are not: our body, property, reputation and position. The Stoic claim is that peace comes from putting your effort into the first list and treating the second as weather.\n\nThis is not resignation. It is triage. The result of an interview is not up to you, but your preparation is. A second idea sits beside it: it is not events themselves that disturb us, but the views we take of them. In Epictetus's words, \"men are disturbed not by things, but by the views which they take of things.\"\n\nTwo very different people took this seriously: a Navy pilot facing years in a Vietnamese prison, and two founders of modern talking therapy.",
+   "deep_dive": "Epictetus was born a slave in the Roman world and later taught philosophy; his lessons were recorded by his student Arrian, and the Enchiridion is the short handbook drawn from them. Its opening distinction is often called the dichotomy of control. The practice that follows is to keep two mental files, one for what is within your power and one for what is not, and to notice which file a worry belongs to before you spend energy on it.\n\nThe second claim, that our judgements about events cause distress more than the events, became the seed of a modern therapy. Albert Ellis said the Epictetus line had particularly impressed him, and he taught it to clients in the early stage of treatment. Aaron Beck's 1979 manual on cognitive therapy named the Stoic philosophers as its philosophical origin, tracing the line from Zeno of Citium to Epictetus and Marcus Aurelius.\n\nThere are limits. The Stoics did not say that health or reputation do not matter, only that they are not fully up to us. Critics worry that the idea can slide into passivity about things that groups of people can change. Donald Robertson argues that Beck and Ellis took the rational side of Stoicism and neglected its practices of mental distancing. And the stories we tell about heroes like Stockdale are accounts by those who lived them, not controlled experiments.",
+   "examples": [
+    {
+     "title": "Stockdale in the Hanoi prisons",
+     "text": "James Stockdale, a US Navy pilot, was shot down on 9 September 1965 and released on 12 February 1973. He spent four of those years in solitary confinement and two in leg irons. Before his capture he had read the Enchiridion, and in the dark he recited its lines silently to himself. He kept a mental division between what was within his power and what was not, and his own mantra under interrogation was to control fear and control guilt. Later, in his book Courage Under Fire, he described the experience as a testing of Epictetus's doctrines."
+    },
+    {
+     "title": "Ellis and Beck turn it into therapy",
+     "text": "Albert Ellis, who founded rational emotive behaviour therapy, read Epictetus, Seneca and Marcus Aurelius as a young man and later said that the line about \"views of things\" had stood out for him. In early sessions he taught it to many clients to show how beliefs, not events, drive distress. Aaron Beck, who developed cognitive therapy, named the Stoic philosophers as its philosophical roots in his 1979 manual."
+    }
+   ],
+   "why": [
+    "Evidence: well-documented historical lineage, from the Enchiridion to Stockdale's own writing to the founders of cognitive therapy. Many of the sources I found are secondary commentary rather than the originals.",
+    "Limit: it shows that Stockdale and the therapists found the idea useful, not that it caused his survival, and it can understate how much of life can be changed collectively."
+   ],
+   "try_this": "Pick one thing worrying you today. Draw two columns: what is up to me (my next action, my attitude, my preparation) and what is not. Spend the next hour only on the first column.",
+   "sources": [
+    {
+     "title": "The Stockdale Paradox — Art of Manliness",
+     "url": "https://www.artofmanliness.com/character/advice/stockdale-paradox/"
+    },
+    {
+     "title": "Courage Under Fire – James B. Stockdale — What Is Stoicism? (book highlights)",
+     "url": "https://whatisstoicism.com/book-highlights/courage-under-fire-james-b-stockdale/"
+    },
+    {
+     "title": "Stoic Philosophy as a Cognitive-Behavioral Therapy — Medium",
+     "url": "https://medium.com/stoicism-philosophy-as-a-way-of-life/stoic-philosophy-as-a-cognitive-behavioral-therapy-597fbeba786a"
+    }
+   ]
+  },
+  {
+   "id": "5",
+   "featured": false,
+   "theme": "Creativity, invention & systems thinking",
+   "title": "Efficient systems have no room to recover",
+   "idea": "Strip every buffer out of a system and it runs beautifully, right up until something goes wrong. Spare stock, backup suppliers and idle capacity look like waste in good times, which is why efficient organisations cut them. In bad times they are the only thing between a small shock and a shutdown.\n\nToyota learned this in 1997. A fire at a single Aisin plant, which made almost all of Toyota's brake proportioning valves, threatened to stop the company's entire output because Toyota's just-in-time system held only a few days of stock. One small part was the single point of failure for a famously efficient production system.\n\nThe lesson is not that efficiency is bad. It is that efficiency and resilience trade against each other, and that the question to ask is where your single points of failure are and which of them deserve a buffer.",
+   "deep_dive": "Just-in-time production means parts arrive when they are needed rather than sitting in warehouses. It cuts costs and exposes problems quickly. The price is that nothing in the system can absorb a shock. In February 1997, when fire struck Aisin Seiki's plant in Kariya, the part at stake was the P-valve, a brake component that was complex to make: it needed specialised tooling, came in many variants, and about 99 per cent of Toyota's supply came from that one plant. Accounts differ on the stock Toyota held, from a few hours at some plants to a couple of days.\n\nWhat happened next is the interesting part. Observers expected weeks of lost production. Instead, firms inside and outside the Toyota group improvised: they set up alternative P-valve production, and the MIT Sloan account describes this as a self-organised effort that got assembly plants running again after about two days of shutdown, with other sources putting the loss at up to five days. Toyota's own reading was that just-in-time still worked, and that it had the right balance of efficiency and risk; afterwards its production control department took on managing in-house P-valve production and supporting Aisin directly.\n\nThe limits of the idea: you cannot buffer everything, and buffers cost money. The useful move is to map the choke points, meaning single suppliers, single people, single machines, and spend slack where one failure would stop everything. Resilience can also live in relationships and spare skills, as the Aisin recovery shows, and not only in stock on a shelf.",
+   "examples": [
+    {
+     "title": "Toyota and the Aisin fire, 1997",
+     "text": "On 1 February 1997 a fire hit the Aisin Seiki plant in Kariya. It was the near-sole source of P-valves for Toyota, about 99 per cent of the supply, and Toyota held very little stock, with accounts ranging from hours to a couple of days. Production was expected to stop for weeks. Instead, Toyota-group and outside firms set up alternative production, and assembly plants were back after a shutdown of roughly two to five days, depending on the source. Toyota later concluded the system had held, but assigned its production control department to manage in-house P-valve production and to support Aisin directly."
+    },
+    {
+     "title": "The 2011 earthquake and a chip plant",
+     "text": "After the March 2011 Tohoku earthquake, the Renesas plant at Naka, one of two dedicated to automotive microcontrollers, was damaged. Reports put its share of Renesas's automotive microcontroller capacity at roughly 20 to 25 per cent. The plant stayed shut for about three months, and Renesas supplied most Japanese carmakers. Toyota said it would idle 18 assembly lines for a few days because of parts shortages. A 2015 academic paper examined why it took Toyota about three months to return to its pre-earthquake output, describing the disruption passing through first-tier suppliers such as Denso."
+    }
+   ],
+   "why": [
+    "Evidence: two well-documented Japanese cases, 14 years apart, with the same pattern of a concentrated supplier and a thin buffer.",
+    "Limit: accounts differ on stock levels and recovery times, so treat the numbers as approximate. Toyota itself judged that just-in-time had worked in 1997."
+   ],
+   "try_this": "Find one single point of failure in your own work or home, such as the one laptop holding your files, the one person who knows how something works, or the one supplier. What would a cheap buffer look like, and is it worth paying for?",
+   "sources": [
+    {
+     "title": "1997 Aisin fire — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/1997_Aisin_fire"
+    },
+    {
+     "title": "The Toyota Group and the Aisin Fire — MIT Sloan Management Review",
+     "url": "https://shop.sloanreview.mit.edu/the-toyota-group-and-the-aisin-fire"
+    },
+    {
+     "title": "Japanese Parts Paralysis: And Now, The Great Chip Famine — The Truth About Cars",
+     "url": "https://www.thetruthaboutcars.com/2011/05/japanese-parts-paralysis-and-now-the-great-chip-famine/"
+    },
+    {
+     "title": "Supply chain disruption after the 2011 earthquake — International Journal of Production Economics, vol. 161 (2015)",
+     "url": "https://econpapers.repec.org/RePEc:eee:proeco:v:161:y:2015:i:c:p:217-227"
+    }
+   ]
+  }
+ ]
+}
