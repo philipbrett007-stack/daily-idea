@@ -1,0 +1,219 @@
+{
+ "date": "2026-11-16",
+ "generated_at": "2026-11-16T07:58:00+00:00",
+ "ideas": [
+  {
+   "theme": "Thinking tools",
+   "title": "Look first, then leap at 37%",
+   "idea": "When you must choose one option from a sequence and cannot go back, such as a flat to rent, a candidate to hire or a house to buy, there is a surprisingly precise way to search. Look at roughly the first 37% of the options without committing to any of them, and remember the best you saw. Then take the first later option that beats that benchmark.\n\nThis is the answer to what mathematicians call the secretary problem. Following it gives you about a 37% chance of landing the single best option, however long the list is. That sounds modest, but it is the best any strategy can achieve, and picking at random from a long list would give you a tiny chance. The logic is a trade-off: look too briefly and you have no yardstick, look too long and the best option has probably already gone past.",
+   "deep_dive": "The problem became widely known through Martin Gardner's Scientific American column in February 1960. Thomas Ferguson's 1989 paper \"Who Solved the Secretary Problem?\" traces its history and concludes, deliberately, that the answer is \"nobody\": it grew up through many hands.\n\nIn the classic version, n candidates arrive in random order. You see only how each ranks against the ones already seen, you must accept or reject each on the spot, and you win only if you pick the very best. The optimal policy rejects the first n/e candidates (about 37%) and then accepts the first one who beats everyone so far. As n grows, the chance of success settles at 1/e, again about 37%.\n\nThe rule is narrow, and the narrowness matters. It assumes you know how many options there are, that rejected options are gone for good, and that only the single best counts. If a good-enough option would do, or you can sometimes go back, the best stopping point changes. People also tend to get it wrong in practice: Seale and Rapoport's 1997 experiments found participants ended their search earlier than the optimal policy dictates, and later work reports no sign that they learned to correct this across rounds. Treat 37% as a way of seeing the trade-off, not as a law of nature.",
+   "examples": [
+    {
+     "title": "Kepler's search for a second wife",
+     "text": "After his first wife died in 1611, the astronomer Johannes Kepler set out to find a new one. According to Ferguson's 1989 history of the problem, he interviewed eleven candidates and settled on the fifth. Kepler was not following any rule, but a lecture handout notes that his choice fits the 37% logic: with eleven candidates you would skip roughly the first four (11 divided by e) and then take the next one who beats them. Ferguson suggests Kepler could have saved himself time had he known the theory."
+    },
+    {
+     "title": "Real people stop searching too early",
+     "text": "In 1997 Darryl Seale and Amnon Rapoport tested the secretary problem on people, in the journal Organizational Behavior and Human Decision Processes. Participants saw candidates one at a time and were told only how each ranked against those already seen. The finding, as later papers describe it, was that subjects tended to end the search earlier than the optimal policy dictates. Later repeated-play studies report no evidence that participants learned to correct this over rounds. It is a reminder that the urge to commit early is strong, even when you know the maths."
+    }
+   ],
+   "why": [
+    "Evidence: this is a mathematical result, proven for the classic setup, plus laboratory experiments on human behaviour. The Kepler story is an anecdote from the literature, not a test.",
+    "Limit: it assumes a known pool size, no going back and a goal of picking only the single best. Real searches rarely fit that neatly."
+   ],
+   "try_this": "Next time you face a sequence of options, such as viewing ten flats, decide the number before you start. Look at about the first four without committing, note the best, and then take the first one that beats it. Afterwards, ask whether having that rule made you calmer or more decisive.",
+   "sources": [
+    {
+     "title": "Who Solved the Secretary Problem? — Thomas S. Ferguson / Statistical Science, 1989",
+     "url": "https://projecteuclid.org/euclid.ss/1177012493"
+    },
+    {
+     "title": "Secretary problem — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Secretary_problem"
+    },
+    {
+     "title": "Sequential Decision Making with Relative Ranks — Seale & Rapoport / Organizational Behavior and Human Decision Processes, 1997",
+     "url": "https://ideas.repec.org/a/eee/jobhdp/v69y1997i3p221-236.html"
+    },
+    {
+     "title": "Optimal stopping and the secretary problem (lecture notes with Kepler example) — Weber / Ferguson summary",
+     "url": "https://weber-dpoc.blogspot.com/2013/02/who-solved-secretary-problem.html"
+    }
+   ],
+   "id": "1",
+   "featured": true
+  },
+  {
+   "theme": "Science & nature",
+   "title": "Moths aren't drawn to light, they're confused",
+   "idea": "For centuries the explanation was that moths are attracted to light. A 2024 study suggests something stranger: the light scrambles their sense of which way is up. Flying insects use the brightest part of their view, normally the sky, to keep their backs towards it and stay level. This is called the dorsal light response.\n\nNear a lamp, the brightest thing is no longer overhead. An insect that keeps tilting its back towards the lamp ends up banking round and round it, and if it flies over the top it flips upside down. It is not heading for the light so much as failing to stay level beside it. That also explains why many insects circle rather than spiral cleanly inwards. The behaviour is a sensible reflex that artificial light has turned into a trap.",
+   "deep_dive": "The study, by Samuel Fabian and colleagues at Imperial College London and Florida International University, appeared in Nature Communications in 2024. The team tracked insects in three dimensions with high-speed infrared cameras, in a lab arena and at field sites in Costa Rica. Infrared was used because insects cannot see it, so the filming did not change their flight.\n\nOlder explanations had their problems. One proposed that insects steer by keeping a constant angle to the moon, which would make them spiral in to a nearby lamp; many do not. Others suggested lights act as an escape route, or mimic flowers. The new account fits the footage better: in the recordings the insects consistently kept their backs to the light source, and flipped over when they passed above it.\n\nThe limits are worth knowing. Not every species responds the same way: oleander hawk moths and vinegar flies seem less affected by UV light, and why is still an open question. The paper explains the trapping, not every route by which lights harm insects, such as disrupted feeding, mating or the loss of dark habitat, and it does not say how much any one lamp matters for a whole population. I checked the findings through the news coverage and the authors' comments, not the full paper.",
+   "examples": [
+    {
+     "title": "477 videos from a Costa Rican field site",
+     "text": "At a field light in Costa Rica, the researchers recorded 477 videos covering ten kinds of insect. According to coverage of the paper, all the species kept the light at their backs, and they flipped upside down when they flew directly over the top of the light source. The pattern matched what the team had seen in the lab: the insects were not diving towards the light, they were struggling to keep it above them. Because the field footage matched the lab results, the effect is unlikely to be a quirk of the experiment."
+    },
+    {
+     "title": "Design advice: shield the bulb",
+     "text": "If the problem is a confused sense of up, the direction of the light matters. The authors say the worst case is an upward-facing or bare bulb, and suggest that shrouding or shielding lights could reduce the harm, with unneeded upward-facing lights removed. They also plan to test whether warm and cool light tones differ. This is advice from the researchers rather than a tested policy, so treat it as a hypothesis with a good mechanism behind it."
+    },
+    {
+     "title": "Streetlights and moth numbers",
+     "text": "The wider problem shows up in the field. Butterfly Conservation describes a study as the first to show major, long-term, real-world negative impacts of light pollution on moth populations. Separately, a University of Exeter study found that amber lighting, commonly assumed to be gentler on insects, reduced moth movement just as much as typical white LEDs. Together these suggest that changing the colour of a lamp is not the same as fixing the way it is aimed."
+    }
+   ],
+   "why": [
+    "Evidence: 3D high-speed tracking in both lab and field, reported in Nature Communications and widely covered. I checked it through news coverage and the authors' comments, not the full paper.",
+    "Limit: some species, such as oleander hawk moths and vinegar flies, seem less affected. The shielding advice is a reasoned suggestion, not yet a tested fix."
+   ],
+   "try_this": "Look at the outdoor lights around your home tonight. Is any bare or pointing upwards? If one is, try a downward-facing shield or switch it off for a week, and notice what changes around it.",
+   "sources": [
+    {
+     "title": "'Like a moth to a flame' — this strange insect behaviour is finally explained — Nature news",
+     "url": "https://www.nature.com/articles/d41586-024-00261-y"
+    },
+    {
+     "title": "Millennia-old mystery about insects and light at night gets a new explanation — Florida International University",
+     "url": "https://news.fiu.edu/2024/millennia-old-mystery-about-insects-and-light-at-night-gets-a-new-explanation"
+    },
+    {
+     "title": "Streetlights reduce moth populations — Butterfly Conservation",
+     "url": "https://www.butterfly-conservation.org/news-and-blog/streetlights-reduce-moth-populations"
+    },
+    {
+     "title": "A common emerald moth (amber lighting study) — University of Exeter",
+     "url": "https://news.exeter.ac.uk/?p=25565"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "theme": "Psychology & behaviour",
+   "title": "We reach for adding before subtracting",
+   "idea": "Faced with something that needs improving, such as a cluttered plan, an overloaded schedule or a wobbly design, people tend to think of what to add. Taking something away often does not occur to them at all, even when it would work better, cost less and take less effort.\n\nIn 2021 Gabrielle Adams, Leidy Klotz and colleagues reported eight experiments showing this. It was not that people considered subtraction and rejected it. They mostly failed to generate the idea. The pattern held when the task was changing a structure, an essay or an itinerary. A simple reminder that removing things was allowed made a big difference. The practical lesson is to ask \"what could go?\" on purpose before you ask \"what could I add?\", because your mind will not volunteer it.",
+   "deep_dive": "The paper, \"People systematically overlook subtractive changes\", appeared in Nature in April 2021 (volume 592, pages 258 to 261). Scientific American's coverage reports 1,153 participants across eight experiments, with tasks that included modifying structures, essays and itineraries, in each of which a subtractive change was a good solution.\n\nThe headline numbers are modest and consistent. Participants choosing a subtractive transformation never reached 40% in an experiment, and most results were closer to 25%. In a block-structure task, 61% of people who were reminded that removing blocks was possible used subtraction, against 41% of the control group. The authors tested two explanations: people think of subtraction and discard it, or never think of it. The evidence pointed to the second. They also predicted, and found, that people overlook subtraction more when they are rushed or distracted. Adams explains that the more often people use additive strategies, the more mentally accessible those strategies become.\n\nThe limits: these are experiments with tasks designed so that subtraction clearly works. In real life, adding is often right, and Klotz himself argues for thinking \"add and subtract\" rather than \"add or subtract\". The finding is about the blind spot, not about less always being better.",
+   "examples": [
+    {
+     "title": "A Lego bridge and a three-year-old",
+     "text": "Klotz has described the moment that sparked his research. He and his three-year-old son were building a Lego bridge, and one supporting column was shorter than the other, so the bridge was not level. Klotz reached to add a block to the short side. His son simply removed a block from the longer one. Klotz says he had overlooked taking a block away. It is an anecdote, not data, but it shows how natural the additive reflex is, even for someone who studies the subject."
+    },
+    {
+     "title": "The block structure experiment",
+     "text": "In the study's structure task, participants had to improve a block structure so it could support a weight. The researchers varied whether people were reminded that taking blocks away was permitted. Among those who got the reminder, 61% made a subtractive change, compared with 41% of the control group. So even in the control group, a majority chose to add. The reminder cost nothing, which is why the finding is useful: a short prompt moves people towards an option they already had."
+    },
+    {
+     "title": "Essays and itineraries",
+     "text": "The experiments also covered everyday improvements. According to Scientific American, the tasks included modifying essays and itineraries as well as structures, in each case with a subtractive fix available. Across the eight experiments no group choosing subtraction exceeded 40%, and most were near 25%. The relevance to ordinary work is that the same reflex probably shapes how we handle overfull diaries, bloated documents and ever-growing to-do lists."
+    }
+   ],
+   "why": [
+    "Evidence: eight experiments, 1,153 participants in total, published in Nature. I checked it through the abstract record and press coverage, not the full paper.",
+    "Limit: the tasks were built so subtraction clearly helped. The finding is a blind spot, not proof that less is always better."
+   ],
+   "try_this": "Pick one thing that feels overloaded this week, such as a meeting, a document or your calendar. Before adding anything to it, write down three things you could remove, and remove one.",
+   "sources": [
+    {
+     "title": "People systematically overlook subtractive changes — Adams, Converse, Hales & Klotz / Nature, 2021",
+     "url": "https://ui.adsabs.harvard.edu/abs/2021Natur.592..258A"
+    },
+    {
+     "title": "Our Brains Typically Overlook This Brilliant Problem-Solving Strategy — Scientific American",
+     "url": "https://www.scientificamerican.com/article/our-brains-typically-overlook-this-brilliant-problem-solving-strategy/"
+    },
+    {
+     "title": "Subtract: The Untapped Science of Less (excerpt) — Leidy Klotz / Next Big Idea Club",
+     "url": "https://nextbigideaclub.com/magazine/subtract-untapped-science-less-bookbite/28351/amp/"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "theme": "Philosophy & wisdom",
+   "title": "Sitting alone is harder than it looks",
+   "idea": "Blaise Pascal wrote in his Pensées that much of human misery comes from our inability to stay quietly in a room. He thought we fill our lives with busyness, which he called diversion, to avoid being alone with ourselves.\n\nThree and a half centuries later, psychologists put the claim to a test. In a 2014 Science paper, Timothy Wilson and colleagues asked people to spend six to fifteen minutes alone with nothing to do but think. Most did not enjoy it. In one study, many people chose to give themselves an electric shock rather than sit with their thoughts, even though they had said they would pay to avoid being shocked. The finding is contested, but it is a useful prompt: how much of your day is arranged so you never have to be unoccupied?",
+   "deep_dive": "Pascal's remark comes from the Pensées, notes he left unfinished at his death in 1662 and which were published in 1670. The wording varies between translations, so treat any single English version of the line with care. Its core idea is divertissement, or diversion: the games, work and company that keep us from facing our own condition.\n\nWilson's team, writing in Science in 2014, ran eleven studies in which participants spent six to fifteen minutes alone in a room with nothing to do except think. In general people disliked it and preferred ordinary external activities. In the shock study, participants had first experienced the shock and said they would pay to avoid it, then were left alone for fifteen minutes with the option to press a button to shock themselves. Twelve of eighteen men and six of twenty-four women did so at least once. Wilson favours a \"scanner\" explanation, that minds evolved to monitor the surroundings, but admits the evidence is thin.\n\nThe study has serious critics. Fox, Thompson, Andrews-Hanna and Christoff argued in Frontiers in Psychology that the data do not support the headline claims, and that participants typically found just thinking somewhat enjoyable, somewhat entertaining and somewhat boring. The sample was small, and the setting was an unfamiliar lab. Follow-up work suggests that how you think matters more than whether you can.",
+   "examples": [
+    {
+     "title": "The electric shock experiment",
+     "text": "In one of Wilson's studies, participants first felt the shock and rated it as unpleasant, and many said they would pay to avoid it. They were then left alone for fifteen minutes, with the choice of shocking themselves. Twelve of eighteen men (67%) and six of twenty-four women (25%) did so at least once. The result was widely reported, which also made it easy to misread: it shows boredom is uncomfortable for many people, not that people are secretly masochists."
+    },
+    {
+     "title": "The critics' reading of the same data",
+     "text": "Fox and colleagues, in a commentary in Frontiers in Psychology, argued that Wilson's data were over-interpreted. In their reading, participants typically rated just thinking as somewhat enjoyable, somewhat entertaining and somewhat boring, not as aversive. They also questioned whether a short session in a lab says much about how people use solitude at home. This does not overturn the study, but it is a useful correction to the dramatic version."
+    },
+    {
+     "title": "Guided thinking is more enjoyable",
+     "text": "In a 2021 paper in Emotion, Westgate, Wilson, Buttrick, Furrer and Gilbert found that people told to think pleasurable and meaningful thoughts enjoyed it more, while those asked for meaningful thoughts only often found it hard to enjoy. A 2022 follow-up proposed a trade-off model: thinking for pleasure pays off through meaning but costs concentration. The practical message is that solitude is a skill with a method, not a test of character."
+    }
+   ],
+   "why": [
+    "Evidence: a published Science paper with eleven studies, a pointed published critique, and later experiments by the same group. I checked these through abstracts and summaries, not the full papers.",
+    "Limit: the lab setting was artificial and the sample small. Pascal's claim is philosophical, so the data only illuminate it, they do not settle it."
+   ],
+   "try_this": "Sit for six minutes this evening with your phone in another room. Before you start, pick a pleasant memory or plan to think about. Afterwards, notice when you reached for something to do, and what pulled you.",
+   "sources": [
+    {
+     "title": "Just think: The challenges of the disengaged mind — Wilson et al. / Science, 2014 (Harvard repository)",
+     "url": "https://dash.harvard.edu/handle/1/37376216"
+    },
+    {
+     "title": "Commentary on Wilson et al. 2014 — Fox, Thompson, Andrews-Hanna & Christoff / Frontiers in Psychology",
+     "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2014.01427"
+    },
+    {
+     "title": "Why we're so bad at daydreaming (Westgate et al. 2021) — ScienceDaily",
+     "url": "https://www.sciencedaily.com/releases/2021/03/210304172707.htm"
+    },
+    {
+     "title": "On Diversion (Pascal's Pensées) — Gregory Blotnick",
+     "url": "https://gregoryblotnick.com/posts/diversion"
+    }
+   ],
+   "id": "4"
+  },
+  {
+   "theme": "Creativity, invention & systems thinking",
+   "title": "Small demand swings become huge upstream",
+   "idea": "In a supply chain, a small wobble in what customers buy can become a violent swing in what factories are asked to make. This is the bullwhip effect, named for the way a flick of the wrist at the handle becomes a crack at the tip.\n\nNobody in the chain is being foolish. Each link reacts sensibly to the orders it receives: it adds a bit of safety stock, rounds up to a full truckload, or stocks up when there is a discount. But each of those reasonable moves is passed on as demand to the next link up, and the distortion compounds. By the time the signal reaches the factory it bears little resemblance to what shoppers actually did. The fix is usually not smarter forecasting but sharing real sales data along the chain.",
+   "deep_dive": "The term came from Procter & Gamble, whose logistics executives noticed that orders for Pampers varied more than consumer demand, and that orders for materials to suppliers such as 3M varied even more. Hau Lee, V. Padmanabhan and Seungjin Whang analysed the pattern in the Sloan Management Review in 1997 and in Management Science, where they identified four causes: demand signal processing (re-forecasting from the latest orders), the rationing game (inflating orders when supply is short), order batching, and price variations.\n\nThe underlying idea of delays and feedback in a system long predates this work. John Sterman's 1989 paper in Management Science used the \"beer game\", a simulated supply chain, to show that players generated big oscillations in orders. His analysis found that they ignored the feedback from their own decisions, and tended to blame outside causes for fluctuations that their own ordering created.\n\nThe limits: the four causes do not all operate in every industry, and the remedies bring their own difficulties. Sharing data requires trust and compatible systems, and a firm that benefits from sales spikes may not want to give them up. The bullwhip is a diagnosis of structure, which is why it is a good example of systems thinking: the behaviour comes from the connections, not from any one careless person.",
+   "examples": [
+    {
+     "title": "Pampers at Procter & Gamble",
+     "text": "P&G logistics executives looked at the order pattern for Pampers, one of their best-selling products. Consumer demand for nappies is fairly steady, yet orders were more variable, and P&G's orders for materials to suppliers such as 3M varied more still. The company's own investigation, as reported by Lee and colleagues, pointed to causes such as demand signalling and order batching. P&G later adopted vendor-managed inventory in its diaper supply chain, which gave it more direct information about actual sales."
+    },
+    {
+     "title": "Hewlett-Packard's printers",
+     "text": "Executives at Hewlett-Packard examined the sales of one of its printers at a major reseller. As expected, sales fluctuated modestly. But the reseller's orders to HP swung much more, and orders to HP's integrated circuit division swung more again. Lee, Padmanabhan and Whang used the case to show that the amplification was a feature of how orders propagate, not a quirk of one product. It is a good example of the effect appearing in electronics as well as in consumer goods."
+    },
+    {
+     "title": "Barilla tries to break the chain",
+     "text": "The Italian pasta maker Barilla had distributors who ordered weekly on a ten-day lead time and responded to trade discounts by buying forward, which amplified swings in orders. Logistics director Brando Vitali proposed Just-in-Time Distribution: distributors would share their sales data and Barilla would decide what to deliver. The Harvard Business School case, summarised in teaching notes, centres on distributors' reluctance to share that data."
+    }
+   ],
+   "why": [
+    "Evidence: documented company cases (P&G, HP, Barilla), a widely cited 1997 analysis and laboratory experiments with the beer game. Barilla's details come from case summaries, not the case itself.",
+    "Limit: the four causes vary by industry, and sharing data needs trust. I could not confirm in my searches who first developed the beer game, so I make no claim about that."
+   ],
+   "try_this": "Think of a system where a small change at one end produces big swings at the other, such as a team's workload, a household budget or a restaurant's ordering. Ask who sees the real demand, and who only sees someone else's orders.",
+   "sources": [
+    {
+     "title": "The Bullwhip Effect in Supply Chains — Lee, Padmanabhan & Whang / MIT Sloan Management Review, 1997",
+     "url": "https://sloanreview.mit.edu/article/the-bullwhip-effect-in-supply-chains"
+    },
+    {
+     "title": "Information Distortion in a Supply Chain: The Bullwhip Effect — Lee, Padmanabhan & Whang / Management Science, 1997",
+     "url": "https://ideas.repec.org:443/a/inm/ormnsc/v43y1997i4p546-558.html"
+    },
+    {
+     "title": "Modeling Managerial Behavior: Misperceptions of Feedback in a Dynamic Decision Making Experiment — Sterman / Management Science, 1989",
+     "url": "https://econpapers.repec.org/RePEc:inm:ormnsc:v:35:y:1989:i:3:p:321-339"
+    },
+    {
+     "title": "Barilla SpA (A) teaching summary — Harvard Business School materials",
+     "url": "https://cb.hbsp.harvard.edu/cbmp/resources/marketing/docs/SCM-InventoryManagement.pdf"
+    }
+   ],
+   "id": "5"
+  }
+ ]
+}
