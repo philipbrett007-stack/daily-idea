@@ -1,6 +1,17 @@
 {
- "updated": "2026-11-16T07:58:00+00:00",
+ "updated": "2026-11-23T08:10:00+00:00",
  "days": [
+  {
+   "date": "2026-11-23",
+   "count": 5,
+   "titles": [
+    "Count people, not percentages",
+    "The dark night sky is evidence",
+    "Naming a feeling quietens it",
+    "Marcus Aurelius and the view from above",
+    "Complex machines outgrow memory"
+   ]
+  },
   {
    "date": "2026-11-16",
    "count": 5,

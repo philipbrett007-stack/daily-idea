@@ -1,0 +1,235 @@
+{
+ "date": "2026-11-23",
+ "generated_at": "2026-11-23T08:10:00+00:00",
+ "ideas": [
+  {
+   "id": "1",
+   "featured": true,
+   "theme": "Thinking tools",
+   "title": "Count people, not percentages",
+   "idea": "A positive test result sounds decisive, but how much it tells you depends on how common the condition is. Most of us, doctors included, struggle to work this out when the facts arrive as percentages. The German psychologist Gerd Gigerenzer showed that the fix is surprisingly simple: restate the problem as counts of people.\n\nTake his standard breast screening example. About 1% of women have cancer. If a woman has it, the test is positive 90% of the time. If she doesn't, it is still positive 9% of the time. Now picture 1,000 women. Ten have cancer and nine of them test positive. Of the 990 without it, about 89 also test positive. So of roughly 98 positive results, only 9 are real: about 9%, not the 90% many people guess.\n\nWhenever you meet a risk figure, ask \"out of how many people?\" and build the little crowd in your head.",
+   "deep_dive": "Gigerenzer and Ulrich Hoffrage published their key paper in 1995. Their argument was that the mind did not evolve to handle conditional probabilities such as \"the chance of a positive test given cancer\". It copes much better with natural frequencies, the raw tallies of cases you would actually observe by counting. In their experiments, Bayesian responses to the mammography problem more than doubled when the same information was given as natural frequencies, and across 15 Bayesian tasks correct answers rose from roughly 10–20% to about 50%.\n\nThe mechanism is mostly bookkeeping. Percentages hide the size of the groups. Once you say \"10 women have cancer and 990 do not\", it becomes obvious that even a small false-positive rate applied to the large healthy group produces more false alarms than the real cases produced by the small sick group. The same sums can be done with Bayes' rule, but counting needs no formula.\n\nThere are limits. Natural frequencies help you understand a single test result; they do not tell you whether screening saves lives overall, and they cannot repair a badly designed study. The numbers also have to be honest: they must come from the population actually tested. Treat the 50% as an average from specific experiments, not a promise. The tool is a way to see the structure of a problem, and it works best with a pen and a scrap of paper.",
+   "examples": [
+    {
+     "title": "Gynaecologists and the 90% guess",
+     "text": "In a study Gigerenzer presented at the 2008 Cochrane Colloquium in Freiburg, German doctors were asked what a positive mammogram means. The correct figure, the positive predictive value, is about 10%. Yet the most common answer among 160 gynaecologists was 90%. When the same information was given as natural frequencies, their answers came close to the correct value. This matters because these are the people who explain results to frightened patients, and a nine-fold overestimate changes what they say."
+    },
+    {
+     "title": "Training 1,000 doctors to count",
+     "text": "The Cochrane abstract also reports that the improvement lasted beyond the experiment. After about 1,000 gynaecologists were trained to translate conditional probabilities into natural frequencies, they reached the same, much better, answers. This is a deliberate, practical use of the idea: not a clever theory but a short training session that teaches clinicians to say \"out of 1,000 women\" instead of quoting sensitivity and false-positive rates."
+    },
+    {
+     "title": "Physicians in the 1998 experiment",
+     "text": "Hoffrage and Gigerenzer's 1998 study gave 24 experienced physicians, some of them heads of departments, a test question in probability form. Their answers ranged from 1% to 99%. Another group of 24 physicians received the identical information as natural frequencies, and 16 of them found the correct Bayesian answer. Nothing about the doctors' training differed. Only the format changed, which is the clearest sign that the problem lies in how the numbers are presented."
+    },
+    {
+     "title": "Why a good test can still mislead",
+     "text": "The mathematician Grant Sanderson of 3Blue1Brown makes the same point in his 2020 lesson on the medical test paradox. A highly accurate test can still leave a low chance that a positive result is correct, when the disease is rare, because the false positives from the many healthy people outnumber the true positives from the few sick ones. It is the everyday version of the idea: next time a result looks alarming, ask how many people like you would test positive without having the condition."
+    }
+   ],
+   "why": [
+    "Evidence: controlled experiments with laypeople (1995) and with physicians (1998, 2008), repeated by other groups, plus training of about 1,000 gynaecologists. The claim is about how people reason, not about any one test.",
+    "Limit: natural frequencies clarify a single result. They do not show whether a screening programme saves lives overall, and the counts must reflect the real population tested."
+   ],
+   "try_this": "Take the next health or risk statistic you read, such as '95% accurate', and rewrite it as 'out of 1,000 people'. How many of the positives are real? Notice how your sense of the result changes.",
+   "sources": [
+    {
+     "title": "Helping doctors to understand screening tests — Gerd Gigerenzer / Cochrane Colloquium, Freiburg 2008",
+     "url": "https://abstracts.cochrane.org/2008-freiburg/helping-doctors-understand-screening-tests"
+    },
+    {
+     "title": "Reckoning risk — Plus Magazine",
+     "url": "https://plus.maths.org/reckoning-risk"
+    },
+    {
+     "title": "The medical test paradox: can redesigning Bayes' rule help? — Grant Sanderson / 3Blue1Brown",
+     "url": "https://www.3blue1brown.com/lessons/better-bayes"
+    }
+   ]
+  },
+  {
+   "id": "2",
+   "featured": false,
+   "theme": "Science & nature",
+   "title": "The dark night sky is evidence",
+   "idea": "Why is the sky dark at night? It sounds like a child's question, yet it troubled astronomers for centuries. If the universe were infinite, unchanging and filled evenly with stars, then in whichever direction you looked your line of sight would eventually end on the surface of a star. The whole sky should blaze as bright as the surface of the Sun.\n\nIt doesn't, so one of those assumptions must be wrong. The modern answer is that the universe has a finite age. Light from the most distant stars has not had time to reach us, so we only see a limited bubble of it. Cosmic expansion, which stretches light towards longer wavelengths, also plays a part, though astronomers disagree about how much.\n\nWhat makes this satisfying is that a plain observation, the black gap between the stars, carries real information about the history of the cosmos. You do not need a telescope to collect it. You only need to step outside after dark and ask why.",
+   "deep_dive": "The puzzle is named after the German astronomer Heinrich Olbers, (1758–1840), whose name stuck, but he was far from the first. Johannes Kepler used the dark sky in the early 1600s as an argument that the number of stars must be finite. In the eighteenth century Edmond Halley and Chéseaux developed it into its mature form, which is why historians say the name is a misnomer.\n\nThe logic is geometric. A shell of stars twice as far away contains four times as many stars, but each looks four times fainter, so every shell adds the same amount of light. With endless shells, the total would be unbounded, apart from nearer stars blocking farther ones, which would simply mean the whole sky is as bright as a stellar surface.\n\nSeveral escape routes exist. The stars could run out, which is Kepler's answer. The universe could be young, which means distant light is still on its way. The astronomer Edward Harrison, cited by Wikipedia, argued that Edgar Allan Poe's 1848 prose poem Eureka offered the first qualitative solution along these lines, and that Lord Kelvin's 1901 paper was the first satisfactory resolution. Today the finite age is the standard answer. Some sources say redshift alone would darken the sky; the Sky at Night argues expansion is by no means enough by itself. So the honest summary is that age matters most and expansion helps.",
+   "examples": [
+    {
+     "title": "Kepler uses darkness as an argument",
+     "text": "In the early 1600s Johannes Kepler, according to the Penn State astronomy course notes, treated the dark night sky as evidence that the observable universe, or at least its supply of stars, must be finite. He was reasoning from the same observation anyone can make by looking up. It is an early case of an everyday fact being used as data about the structure of the cosmos, long before telescopes could survey it."
+    },
+    {
+     "title": "Poe's poem anticipates the answer",
+     "text": "In 1848 Edgar Allan Poe published Eureka, a long speculative essay. It suggested that the stars might be so numerous and so distant that light from many of them has not yet reached us. Historian Edward Harrison, cited in the Wikipedia article on the paradox and in a 1994 Quarterly Journal of the Royal Astronomical Society paper, judged this the first qualitative solution. Popular accounts sometimes overstate it, as Big Think notes, but the central idea matches today's reading."
+    },
+    {
+     "title": "A dark sky as evidence for a Big Bang",
+     "text": "Modern cosmologists treat the darkness itself as support for a universe with a beginning. As the ScienceBlogs piece on Poe and the Big Bang puts it, a finite age means there was a time before which no stars existed. Wikipedia likewise notes that the darkness of the night sky is taken as evidence for a dynamic universe. That is the idea in use: a nightly observation anyone can make, constraining the whole history of everything."
+    }
+   ],
+   "why": [
+    "Evidence: the finite-age explanation is the standard view in cosmology, and the history of the puzzle, from Kepler to Halley to Poe, is well documented.",
+    "Limit: sources disagree on how much expansion and redshift contribute compared with finite age, and popular accounts exaggerate Poe's role."
+   ],
+   "try_this": "Look at a dark patch of sky tonight and tell someone why it is dark. If you can explain it in two sentences without the word 'paradox', you have understood it.",
+   "sources": [
+    {
+     "title": "Olbers' Paradox — Penn State, Astro 801",
+     "url": "https://courses.ems.psu.edu/astro801/content/l10_p2.html"
+    },
+    {
+     "title": "If the Universe is infinite and filled with billions of stars, why is the night sky so dark? — Sky at Night Magazine",
+     "url": "https://www.skyatnightmagazine.com/space-science/olbers-paradox"
+    },
+    {
+     "title": "Edgar Allan Poe's Physical Cosmology — Quarterly Journal of the Royal Astronomical Society, 1994",
+     "url": "https://ui.adsabs.harvard.edu/abs/1994QJRAS..35..177C/abstract"
+    },
+    {
+     "title": "Edgar Allan Poe's Eureka and the Big Bang — ScienceBlogs",
+     "url": "https://scienceblogs.com/startswithabang/2015/07/07/edgar-allen-poes-eureka-and-the-big-bang-synopsis"
+    }
+   ]
+  },
+  {
+   "id": "3",
+   "featured": false,
+   "theme": "Psychology & behaviour",
+   "title": "Naming a feeling quietens it",
+   "idea": "When a strong emotion hits, it can feel like a wave you can only endure. Brain-imaging research suggests there is a surprisingly small lever: put the feeling into words. Saying to yourself \"I am anxious\" or \"this is anger\", rather than simply staring at the cause, appears to dampen the brain's alarm response.\n\nIn 2007 a team led by Matthew Lieberman at UCLA scanned people looking at emotional images. When participants labelled the emotion they saw, activity in the amygdala, a region involved in threat and emotion, was reduced compared with other tasks. At the same time a part of the right prefrontal cortex became more active, and the more it did, the quieter the amygdala was.\n\nThis is not a cure for anything, and talking about feelings is not always soothing. But as a small, free technique it is worth testing: pause, find the most exact word you can, and notice whether the feeling changes shape.",
+   "deep_dive": "The 2007 paper, published in Psychological Science, compared affect labelling with other ways of processing emotional faces and pictures. Labelling reduced the response of the amygdala and other limbic regions to negative images, and boosted activity in the right ventrolateral prefrontal cortex. The authors proposed a pathway running from that prefrontal region through the medial prefrontal cortex to the amygdala, which acts like a brake.\n\nWhy might words help? One reading is that choosing a label forces the brain to categorise the feeling instead of being swept along by it. Lieberman and colleagues later described labelling as an incidental form of emotion regulation: people do not think they are trying to calm down, yet they do. In one set of studies, self-reported distress was lower during labelling than during passive watching of negative pictures.\n\nThe evidence has limits. Much of it uses pictures in a lab, not a row with your partner. And the strongest effects tend to be in physiological or brain measures; in at least one study self-reported fear did not differ between groups. So the safest claim is modest: labelling can take some of the heat out, and it seems to do so even when you are not trying. It is a nudge, not a treatment.",
+   "examples": [
+    {
+     "title": "Lieberman's brain-scan experiment",
+     "text": "In the 2007 study, Lieberman, Eisenberger, Crockett, Tom, Pfeifer and Way used fMRI to compare ways of handling negative emotional images. When people labelled the emotion, the amygdala's response was smaller than with other tasks, while the right ventrolateral prefrontal cortex lit up. The two were inversely related, with the medial prefrontal cortex in between. It was an early demonstration that a simple verbal act could change brain activity linked to emotion."
+    },
+    {
+     "title": "Spider fear and the live tarantula",
+     "text": "In 2012 Katharina Kircanski, Lieberman and Michelle Craske recruited people afraid of spiders and exposed them repeatedly to a live tarantula. Four groups of 22 either named their feelings, reframed them, distracted themselves, or were simply exposed. A week later the labelling group showed a smaller skin-conductance response than the others and approached the spider a little more readily than the distraction group. Using more fear and anxiety words during exposure predicted a bigger drop in fear."
+    },
+    {
+     "title": "Where self-report didn't change",
+     "text": "The same tarantula study carries a warning. At the one-week follow-up, the labelling group did not differ from the others in how afraid they said they were, even though their skin response was lower. For everyday life this means the benefit may be partly physiological, and you might not feel dramatically calmer. Plenty of people will recognise the pattern from stressful moments when naming the feeling helped a little but did not make it vanish."
+    }
+   ],
+   "why": [
+    "Evidence: an fMRI study (2007) and a comparison of four groups of 22 spider-fearful people (2012), both in Psychological Science. Later work describes labelling as incidental emotion regulation.",
+    "Limit: samples are small, many tasks are lab-based, and self-reported fear did not always change. Treat it as a modest aid, not a therapy."
+   ],
+   "try_this": "Next time you feel tense, pause and find the most exact word you can, such as 'dread', 'embarrassed' or 'let down', rather than just 'bad'. Say it, silently or aloud, and note whether the intensity shifts.",
+   "sources": [
+    {
+     "title": "Putting feelings into words: affect labeling disrupts amygdala activity — Lieberman et al. / Psychological Science, 2007",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/17576282/"
+    },
+    {
+     "title": "Feelings into words: contributions of language to exposure therapy — Kircanski, Lieberman & Craske / Psychological Science, 2012",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/22902568/"
+    },
+    {
+     "title": "Affect labeling as incidental emotion regulation — Lieberman and colleagues / PubMed Central",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3444304"
+    }
+   ]
+  },
+  {
+   "id": "4",
+   "featured": false,
+   "theme": "Philosophy & wisdom",
+   "title": "Marcus Aurelius and the view from above",
+   "idea": "Marcus Aurelius, Roman emperor and Stoic, left himself a mental exercise in his private notebook, the Meditations. Picture human affairs from a great height: armies, markets, weddings, courts, and all the busyness of the world seen as a distant, shifting crowd.\n\nThe French historian of philosophy Pierre Hadot called such practices \"spiritual exercises\", things you do to train your outlook, not just ideas to agree with. The purpose of this one is perspective. From far enough above, the quarrel that has been consuming your week shrinks. You also see that you belong to a much larger human community with the same worries, hopes and short lives.\n\nThe point is not to feel that nothing matters. It is to size your concerns more accurately, so that real priorities stand out against the small irritations that borrow their urgency. Try it as a deliberate pause, not a general mood.",
+   "deep_dive": "The main text is Meditations 7.48, with related passages at 8.48 and 12.24, according to the Modern Stoicism summary. Marcus asks the reader to look at the whole sweep of human activity from above and to see how much of it repeats. Hadot, in Philosophy as a Way of Life, treated this as one of a family of Stoic exercises, borrowing the phrase \"spiritual exercise\" from Ignatius of Loyola. Hadot's account, quoted in one commentary, is that it reveals the splendour of the universe and makes human affairs look small and unworthy of desire.\n\nScholars disagree about where the idea came from. Some trace it to Plato's Phaedrus, which describes the soul soaring above the world, while others see Pythagorean roots, and it was a common contemplative exercise across the ancient world. Donald Robertson has also linked the imagery to the view over the Athenian agora from the Acropolis.\n\nThe caution is that a view from above can slide into detachment. The Stoic aim was to stay engaged in your duties while holding your anxieties more lightly, not to retreat. Used well, it is a way to ask: how much will this matter in a year, and what does it look like to everyone else involved? Used badly, it becomes an excuse for indifference.",
+   "examples": [
+    {
+     "title": "Hadot's reading of the exercise",
+     "text": "In 1995 the French scholar Pierre Hadot, in Philosophy as a Way of Life, presented the view from above as a practice: something Marcus did, repeatedly, to retrain his attention. As summarised by the Modern Stoicism project, the exercise aims to give a sense of the bigger picture and of one's place in the wider human community. Modern Stoics rated it the second most useful of the Stoic exercises in an informal survey, with an average of 4.2 stars out of five."
+    },
+    {
+     "title": "The Pale Blue Dot photograph",
+     "text": "On 14 February 1990, Voyager 1 turned its camera back towards Earth from about 6 billion kilometres away. Carl Sagan, a member of the imaging team, had proposed the idea in 1981. In the picture Earth is about a pixel in size, a point of light caught in a beam of scattered sunlight. Sagan's 1994 book used it to urge people to deal more kindly with one another. It is a literal view from above that made the exercise physical."
+    },
+    {
+     "title": "Astronauts and the overview effect",
+     "text": "In 1987 the author Frank White gave a name to something astronauts described after seeing Earth from orbit: the overview effect, a cognitive shift in how they saw their planet. Apollo 14's Edgar Mitchell called it an instant global consciousness and later founded the Institute of Noetic Sciences. Not all astronauts report it, and the historian Jordan Bimm has argued that it is not a reliably produced mental effect. It shows the idea has real appeal, but is not proven to work for everyone."
+    }
+   ],
+   "images": [
+    {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg?width=1000",
+     "caption": "Earth as a single pixel, photographed by Voyager 1 in 1990 (2020 reprocessed version): a literal view from above.",
+     "credit": "NASA/JPL-Caltech, public domain, via Wikimedia Commons",
+     "page_url": "https://commons.wikimedia.org/wiki/File:PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg"
+    }
+   ],
+   "why": [
+    "Evidence: this is a philosophical practice documented in Marcus's own notebook and in Hadot's scholarship, not an experimental finding. Informal ratings by modern Stoics are anecdotal.",
+    "Limit: the overview effect is reported by some astronauts and contested by historians, and the exercise can drift into detachment if used carelessly."
+   ],
+   "try_this": "Pick one thing that is bothering you. Picture it from a height: your street, then your city, then the planet, as in the Pale Blue Dot photo. Then ask what is left of its importance, and what you still owe the people involved.",
+   "sources": [
+    {
+     "title": "Your favourite Stoic exercises 2: the View from Above — Modern Stoicism",
+     "url": "https://modernstoicism.com/your-favourite-stoic-exercises-2-the-view-from-above/"
+    },
+    {
+     "title": "View from above — Tricycle magazine",
+     "url": "https://tricycle.org/magazine/view-above/"
+    },
+    {
+     "title": "Voyager 1's Pale Blue Dot — NASA Science",
+     "url": "https://science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot"
+    },
+    {
+     "title": "Overview effect — Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Overview_effect"
+    }
+   ]
+  },
+  {
+   "id": "5",
+   "featured": false,
+   "theme": "Creativity, invention & systems thinking",
+   "title": "Complex machines outgrow memory",
+   "idea": "On 30 October 1935 the prototype of Boeing's Model 299, the aircraft that became the B-17 Flying Fortress, crashed on take-off at Wright Field in Ohio. The investigation found that the crew had not released the gust locks, which hold the control surfaces still while the plane is parked. The official verdict was pilot error.\n\nBut the pilots were experienced, and the aircraft was more complicated than anything they had flown. As one account puts it, the Model 299 was not too much airplane for one man to fly, it was simply too complex for any one man's memory. The response was not more training or sterner warnings. It was a short written checklist.\n\nThe idea behind it applies far beyond aviation. When a task is complex and the cost of one slip is high, don't rely on skilled people remembering everything. Design the system so that forgetting is hard.",
+   "deep_dive": "The crash of the Model 299 became a founding story of the modern pilot's checklist. Sources differ on details, such as who failed to release the gust locks and how many people died, though Major Ployer Hill, the Army test pilot, and Boeing's chief test pilot Leslie Tower were killed. One account notes that checklists already existed in scattered use in aviation, and that the Model 299 crash helped institutionalise them. Atul Gawande popularised the story in his 2009 book The Checklist Manifesto.\n\nThe logic is about the type of error. Checklists don't help when a task needs deep judgement. They help with steps that are simple, easy to skip, and costly to miss, especially when attention is divided. They work by moving the burden from memory to the page, leaving the expert free to think about the unusual.\n\nThe approach migrated to medicine, where complexity also outruns memory. Its record there is encouraging but not unmixed. Gains depend on teams actually using the list, and in the Michigan work, researchers said the later fall in deaths could not be definitively attributed to the checklist alone. A checklist is a design change in how a team behaves, not a magic sheet of paper.",
+   "examples": [
+    {
+     "title": "Michigan ICUs and central-line infections",
+     "text": "In the Keystone project, which Peter Pronovost's team reported in the New England Journal of Medicine in 2006, more than 100 intensive care units in Michigan adopted a five-step checklist for inserting central lines, alongside training in infection control and standard supply carts. Before the project, the median infection rate was above the national average. After 18 months most participating ICUs reported none of these bloodstream infections, and after three years the same was true. A 2011 follow-up found about a 10% fall in hospital deaths, though researchers said they could not attribute it solely to the checklist."
+    },
+    {
+     "title": "The WHO surgical safety checklist",
+     "text": "Between October 2007 and September 2008, researchers led by Alex Haynes tested the WHO Surgical Safety Checklist in eight hospitals in cities including Toronto, New Delhi, Amman, Auckland and Manila. Their NEJM paper in 2009 reported that complications fell from 11% to 7%. The Harvard Gazette reported that inpatient deaths after major operations fell by more than 40%, from 1.5% to 0.8%. The WHO describes the result as a reduction of more than a third in deaths and complications across all eight sites."
+    },
+    {
+     "title": "Model 299 and the first checklist",
+     "text": "After the 1935 crash, the Smithsonian notes, the inquiry board at first could find no reason for the accident, and the official finding became pilot error. Air & Space Forces Magazine reports that the accident led to the modern checklist, and the B-17 survived. The remedy was to put the easily forgotten steps on paper instead of in memory. The Gawande attribution rests on a secondary citation, but the underlying story is widely told."
+    }
+   ],
+   "why": [
+    "Evidence: a well-documented origin story, plus two large medical studies (Michigan ICUs, 2006; WHO eight-hospital study, 2009) that report big falls in infections and complications.",
+    "Limit: these are before-and-after designs, not randomised trials, and results depend on teams really using the list. Sources disagree on some details of the 1935 crash."
+   ],
+   "try_this": "Think of a task you do that is complex and costly to get wrong, such as a trip, a launch or a repeated job. Write down the five steps you'd most hate to miss, and use that list next time.",
+   "sources": [
+    {
+     "title": "The Checklist — Air & Space Forces Magazine, 2013",
+     "url": "https://www.airandspaceforces.com/article/0813checklist/"
+    },
+    {
+     "title": "Model 299 Crash — National Museum of the U.S. Air Force",
+     "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/610002/model-299-crash/"
+    },
+    {
+     "title": "Safety checklist use yields 10 percent drop in hospital deaths — Johns Hopkins Gazette, 2011",
+     "url": "https://gazette.jhu.edu/2011/02/14/safety-checklist-use-yields-10-percent-drop-in-hospital-deaths"
+    },
+    {
+     "title": "Surgical safety checklist drops deaths and complications by more than one third — Harvard Gazette, 2009",
+     "url": "https://news.harvard.edu/gazette/story/2009/01/surgical-safety-checklist-drops-deaths-and-complications-by-more-than-one-third/"
+    }
+   ]
+  }
+ ]
+}
